@@ -1,0 +1,167 @@
+
+# <div style="text-align: center;"> UNIVERSIDAD PERUANA DE CIENCIAS APLICADAS
+<p align="center">
+  <img src="/assets/logoupc.png"  style="width:200px; height:auto;">
+</p>
+
+## <div style="text-align: center;">Carrera: Ingeniería de Software </div>
+## <div style="text-align: center;"> Fundamentos de Arquitectura de Software - Presencial</div>
+## <div style="text-align: center;"> PROFESOR: Ernesto Ocampo Tello</div>
+## <div style="text-align: center;"> NRC: 6339</div>
+## <div style="text-align: center;"> INFORME TB1</div>
+## <div style="text-align: center;"> START UP: </div>
+## <div style="text-align: center;"> PRODUCTO: </div>
+
+### <div style="text-align: center;"> INTEGRANTES:</div>
+<div style="display: flex; justify-content: center;">
+    <table>
+      <thead>
+        <tr>
+          <th style="background-color: #333; color: #fff;">Apellidos y Nombres</th>
+          <th style="background-color: #333; color: #fff;">Código de Alumno</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Lang Nassi, Werner Khalil</td>
+          <td>U202310003</td>
+        </tr>
+        <tr>
+          <td>Torres Flores, Paolo Alessandro</td>
+          <td>U20221F613</td>
+        </tr>
+        <tr>
+          <td>Maita Falckenheiner, Romina Guadalupe</td>
+          <td>U202213765</td>
+        </tr>
+      </tbody>
+    </table> 
+</div>
+
+
+<div style="text-align: center;"> Ciclo 2025-10 </div>
+
+# Contenido
+## Tabla de Contenidos
+### [Registro de versiones del informe](#registro-de-versiones-del-informe)
+### [Project Report Collaboration Insights](#project-report-collaboration-insights)
+### [Contenido](#contenido)
+### [Student Outcome](#student-outcome-1)
+
+### [Capítulo I: Introducción](/chapter01.md)
+- [1.1. Startup Profile](/chapter01.md#11-startup-profile)
+    - [1.1.1. Descripción de la Startup](/chapter01.md#111-description-de-la-startup)
+    - [1.1.2. Perfiles de integrantes del equipo](/chapter01.md#112-perfiles-de-integrantes-del-equipo)
+- [1.2. Solution Profile](/chapter01.md#12-solution-profile)
+    - [1.2.1 Antecedentes y problemática](/chapter01.md#121-antecedentes-y-problematica)
+    - [1.2.2 Lean UX Process](/chapter01.md#12-solution-profile)
+        - [1.2.2.1. Lean UX Problem Statements](/chapter01.md#1221-lean-ux-problem-statements)
+        - [1.2.2.2. Lean UX Assumptions](/chapter01.md#1222-lean-ux-assumptions)
+        - [1.2.2.3. Lean UX Hypothesis Statements](/chapter01.md#1223-lean-ux-hypothesis-statements)
+        - [1.2.2.4. Lean UX Canvas](/chapter01.md#1224-lean-ux-canvas)
+- [1.3. Segmentos objetivo](/chapter01.md#13-segmentos-objetivos)
+
+### [Capítulo II: Requirements Elicitation & Analysis](/chapter02.md)
+- [2.1. Competidores](/chapter02.md#21-competidores)
+    - [2.1.1. Análisis competitivo](/chapter02.md#211-análisis-competitivo)
+    - [2.1.2. Estrategias y tácticas frente a competidores](/chapter02.md#212-estrategias-y-tácticas-frente-a-competidores)
+- [2.2. Entrevistas](/chapter02.md#22-entrevistas)
+    - [2.2.1. Diseño de entrevistas](/chapter02.md#221-diseño-de-entrevistas)
+    - [2.2.2. Registro de entrevistas](/chapter02.md#222-registro-de-entrevistas)
+    - [2.2.3. Análisis de entrevistas](/chapter02.md#223-análisis-de-entrevistas)
+- [2.3. Needfinding](/chapter02.md#23-needfinding)
+    - [2.3.1. User Personas](/chapter02.md#231-user-persona)
+    - [2.3.2. User Task Matrix](/chapter02.md#232-user-task-matrix)
+    - [2.3.3. User Journey Mapping](/chapter02.md#233-user-journey-mapping)
+    - [2.3.4. Empathy Mapping](/chapter02.md#234-emphaty-mapping)
+    - [2.3.5. As-is Scenario Mapping](/chapter02.md#235-as-is-scenario-mapping)
+
+### [Capítulo III: Requirements Specification](/chapter03.md)
+- [3.1. To-Be Scenario Mapping](/chapter03.md#31-to-be-scenario-mapping)
+- [3.2. User Stories](/chapter03.md#32-user-stories)
+- [3.3. Impact Mapping](/chapter03.md#33-impact-mapping)
+- [3.4. Product Backlog](/chapter03.md#34-product-backlog)
+
+### [Capítulo IV: Product Architecture Design](/chapter04.md)
+- [4.1. Design Concepts, ViewPoints & ER Diagrams](/chapter04.md#41-design-concepts-viewpoints--er-diagrams)
+    - [4.1.1. Principles Statements](/chapter04.md#411-principles-statements)
+    - [4.1.2. Approaches Statements Architectural Styles & Patterns](/chapter04.md#412-approaches-statements-architectural-styles--patterns)
+    - [4.1.3. Context Diagram](/chapter04.md#413-context-diagram)
+    - [4.1.4. Approach driven ViewPoints Diagrams](/chapter04.md#414-approach-driven-viewpoints-diagrams)
+    - [4.1.5. Relational/Non Relational Database Diagram](/chapter04.md#415-relationalnon-relational-database-diagram)
+    - [4.1.6. Design Patterns](/chapter04.md#416-design-patterns)
+    - [4.1.7. Tactics](/chapter04.md#417-tactics)
+    - [4.1.8. Design Purpose](/chapter04.md#418-design-purpose)
+    - [4.1.9. Primary Functionality (Primary User Stories)](/chapter04.md#419-primary-functionality-primary-user-stories)
+    - [4.1.10. Quality Attribute Scenarios](/chapter04.md#4110-quality-attribute-scenarios)
+    - [4.1.11. Constraints](/chapter04.md#4111-constraints)
+    - [4.1.12. Architectural Concerns](/chapter04.md#4112-architectural-concerns)
+- [4.2. Architectural Drivers](/chapter04.md#42-architectural-drivers)
+- [4.3. ADD Iterations](/chapter04.md#43-add-iterations)
+    - [4.2.X. Iteration N: &lt;Iteration Name&gt;](/chapter04.md#42x-iteration-n-iteration-name)
+        - [4.2.X.1. Architectural Design Backlog N](/chapter04.md#42x1-architectural-design-backlog-n)
+        - [4.2.X.2. Establish Iteration Goal by Selecting Drivers](/chapter04.md#42x2-establish-iteration-goal-by-selecting-drivers)
+        - [4.2.X.3. Choose One or More Elements of the System to Refine](/chapter04.md#42x3-choose-one-or-more-elements-of-the-system-to-refine)
+        - [4.2.X.4. Choose One or More Design Concepts That Satisfy the Selected Drivers](/chapter04.md#42x4-choose-one-or-more-design-concepts-that-satisfy-the-selected-drivers)
+        - [4.2.X.5. Instantiate Architectural Elements, Allocate Responsibilities, and Define Interfaces](/chapter04.md#42x5-instantiate-architectural-elements-allocate-responsibilities-and-define-interfaces)
+        - [4.2.X.6. Sketch Views (C4 & UML) and Record Design Decisions](/chapter04.md#42x6-sketch-views-c4--uml-and-record-design-decisions)
+        - [4.2.X.7. Analysis of Current Design and Review Iteration Goal (Kanban Board)](/chapter04.md#42x7-analysis-of-current-design-and-review-iteration-goal-kanban-board)
+
+### [Capítulo V: Product Implementation, Validation & Deployment](/chapter05.md)
+- [5.1. Testing Suites & General Patterns](/chapter05.md#51-testing-suites--general-patterns)
+    - [5.1.1. Backend Application Core Testing Suite](/chapter05.md#511-backend-application-core-testing-suite)
+    - [5.1.2. Pattern Based Backend Application(s)](/chapter05.md#512-pattern-based-backend-applications)
+    - [5.1.3. Pattern Based Custom Software Library](/chapter05.md#513-pattern-based-custom-software-library)
+    - [5.1.4. Framework Pattern Driven Refactoring Report](/chapter05.md#514-framework-pattern-driven-refactoring-report)
+- [5.2. Software Configuration Management](/chapter05.md#52-software-configuration-management)
+    - [5.2.1. Software Development Environment Configuration](/chapter05.md#521-software-development-environment-configuration)
+    - [5.2.2. Source Code Management](/chapter05.md#522-source-code-management)
+    - [5.2.3. Source Code Style Guide & Conventions](/chapter05.md#523-source-code-style-guide--conventions)
+    - [5.2.4. Software Deployment Configuration](/chapter05.md#524-software-deployment-configuration)
+- [5.3. Microservices Implementation](/chapter05.md#53-microservices-implementation)
+    - [5.2.1. Sprint 1](/chapter05.md#521-sprint-1)
+        - [5.2.1.1. Sprint Backlog 1](/chapter05.md#5211-sprint-backlog-1)
+        - [5.2.1.2. Development Evidence for Sprint Review](/chapter05.md#5212-development-evidence-for-sprint-review)
+        - [5.2.1.3. Testing Suite Evidence for Sprint Review](/chapter05.md#5213-testing-suite-evidence-for-sprint-review)
+        - [5.2.1.4. Execution Evidence for Sprint Review](/chapter05.md#5214-execution-evidence-for-sprint-review)
+        - [5.2.1.5. Microservices Documentation Evidence for Sprint Review](/chapter05.md#5215-microservices-documentation-evidence-for-sprint-review)
+        - [5.2.1.6. Software Deployment Evidence for Sprint Review](/chapter05.md#5216-software-deployment-evidence-for-sprint-review)
+        - [5.2.1.7. Team Collaboration Insights during Sprint](/chapter05.md#5217-team-collaboration-insights-during-sprint)
+        - [5.2.1.8. Kanban Board](/chapter05.md#5218-kanban-board)
+    - [5.2.2. Sprint 2](/chapter05.md#522-sprint-2)
+        - [5.2.2.1. Sprint Backlog 2](/chapter05.md#5221-sprint-backlog-2)
+        - [5.2.2.2. Development Evidence for Sprint Review](/chapter05.md#5222-development-evidence-for-sprint-review)
+        - [5.2.2.3. Testing Suite Evidence for Sprint Review](/chapter05.md#5223-testing-suite-evidence-for-sprint-review)
+        - [5.2.2.4. Execution Evidence for Sprint Review](/chapter05.md#5224-execution-evidence-for-sprint-review)
+        - [5.2.2.5. Microservices Documentation Evidence for Sprint Review](/chapter05.md#5225-microservices-documentation-evidence-for-sprint-review)
+        - [5.2.2.6. Software Deployment Evidence for Sprint Review](/chapter05.md#5226-software-deployment-evidence-for-sprint-review)
+        - [5.2.2.7. Team Collaboration Insights during Sprint](/chapter05.md#5227-team-collaboration-insights-during-sprint)
+        - [5.2.2.8. Kanban Board](/chapter05.md#5228-kanban-board)
+    - [5.2.3. Sprint 3](/chapter05.md#523-sprint-3)
+        - [5.2.3.1. Sprint Backlog 3](/chapter05.md#5231-sprint-backlog-3)
+        - [5.2.3.2. Development Evidence for Sprint Review](/chapter05.md#5232-development-evidence-for-sprint-review)
+        - [5.2.3.3. Testing Suite Evidence for Sprint Review](/chapter05.md#5233-testing-suite-evidence-for-sprint-review)
+        - [5.2.3.4. Execution Evidence for Sprint Review](/chapter05.md#5234-execution-evidence-for-sprint-review)
+        - [5.2.3.5. Microservices Documentation Evidence for Sprint Review](/chapter05.md#5235-microservices-documentation-evidence-for-sprint-review)
+        - [5.2.3.6. Software Deployment Evidence for Sprint Review](/chapter05.md#5236-software-deployment-evidence-for-sprint-review)
+        - [5.2.3.7. Team Collaboration Insights during Sprint](/chapter05.md#5237-team-collaboration-insights-during-sprint)
+        - [5.2.3.8. Kanban Board](/chapter05.md#5238-kanban-board)
+    - [5.2.4. Sprint 4](/chapter05.md#524-sprint-4)
+        - [5.2.4.1. Sprint Backlog 4](/chapter05.md#5241-sprint-backlog-4)
+        - [5.2.4.2. Development Evidence for Sprint Review](/chapter05.md#5242-development-evidence-for-sprint-review)
+        - [5.2.4.3. Testing Suite Evidence for Sprint Review](/chapter05.md#5243-testing-suite-evidence-for-sprint-review)
+        - [5.2.4.4. Execution Evidence for Sprint Review](/chapter05.md#5244-execution-evidence-for-sprint-review)
+        - [5.2.4.5. Microservices Documentation Evidence for Sprint Review](/chapter05.md#5245-microservices-documentation-evidence-for-sprint-review)
+        - [5.2.4.6. Software Deployment Evidence for Sprint Review](/chapter05.md#5246-software-deployment-evidence-for-sprint-review)
+        - [5.2.4.7. Team Collaboration Insights during Sprint](/chapter05.md#5247-team-collaboration-insights-during-sprint)
+        - [5.2.4.8. Kanban Board](/chapter05.md#5248-kanban-board)
+- [5.4. Microservices Deployment](/chapter05.md#54-microservices-deployment)
+    - [5.3.1. Cloud Architecture Diagram](/chapter05.md#531-cloud-architecture-diagram)
+    - [5.3.2. Cloud Architecture Deployment (AWS, Microsoft Azure or Google Cloud)](/chapter05.md#532-cloud-architecture-deployment-aws-microsoft-azure-or-google-cloud)
+
+## Conclusiones
+### Conclusiones y recomendaciones
+## Video About-The-Team
+## Referencias Bibliográficas
+## Anexos
+### Links 
