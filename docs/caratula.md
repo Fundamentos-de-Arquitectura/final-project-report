@@ -39,7 +39,7 @@
 </div>
 
 
-<div style="text-align: center;"> Ciclo 2025-10 </div>
+<div style="text-align: center;"> Ciclo 2025-20 </div>
 
 # Contenido
 ## Tabla de Contenidos
