@@ -109,5 +109,28 @@ En esta sección, se presenta un análisis de los competidores de FoodFlow y sus
 ## 2.3 Needfinding
 ### 2.3.1 User Personas
 ### 2.3.2 User Task Matrix
+
+En esta sección, se presenta la matriz de tareas de los usuarios, que muestra las actividades realizadas por los dueños 
+y empleados de restaurantes, junto con su frecuencia e importancia. Esta matriz ayuda a identificar las tareas clave y 
+su relevancia para cada tipo de usuario.
+
+Para ello, usamos los user persona creados en la sección anterior tomando a Daniel, segmento 1: Dueño de restaurante
+
+| Actividades                                  | Daniel (Dueño de restaurante) - Frecuencia / Importancia |
+|----------------------------------------------|----------------------------------------------------------|
+| Revisar caja diaria manualmente              | Siempre / Alta                                           |
+| Hacer cálculos de ganancias en papel/Excel   | Siempre / Alta                                           | 
+| Contar efectivo y arqueo de caja             | Con Frecuencia / Alta                                    | 
+| Calcular costos de platos manualmente        | Con Frecuencia / Alta                                    | 
+| Anotar productos faltantes en papel          | Con Frecuencia / Media                                   | 
+| Calcular necesidades de compra mentalmente   | Siempre / Alta                                           | 
+| Contar inventario físicamente                | Siempre / Alta                                           | 
+| Identificar platos populares por observación | Siempre / Alta                                           |
+| Organizar facturas y comprobantes físicos    | Con Frecuencia / Media                                   |
+
+Daniel representa a un dueño de restaurante experimentado enfocado en la optimización operativa y el 
+mejoramiento de la eficiencia del negocio. Su enfoque está en actividades estratégicas como el manejo financiero 
+y la gestión de inventario, que realiza con alta frecuencia e importancia.
+
 ### 2.3.3 Empathy Maps
 ### 2.3.4 As-is Scenario Mapping
