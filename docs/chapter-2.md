@@ -14,9 +14,12 @@ En esta sección, se presenta un análisis de los competidores de FoodFlow y sus
   <tr>
     <td colspan="2"></td>
     <td><br>FoodFlow</td>
-    <td><br>Wave</td>
-    <td><br>Xero</td>
-    <td><br>R365</td>
+    <td><img width="147" height="52" alt="image" src="https://github.com/user-attachments/assets/796ca84b-b894-47ea-a4ba-f3c20d30ce96" />
+<br>Wave</td>
+    <td><img width="51" height="51" alt="image" src="https://github.com/user-attachments/assets/2f1d8e77-95c6-4e4c-a426-d3a9fd975be2" />
+<br>Xero</td>
+    <td><img width="185" height="40" alt="image" src="https://github.com/user-attachments/assets/aac638c1-842e-451c-8ae1-634fd98f7601" />
+<br>R365</td>
   </tr>
   <tr>
     <td rowspan="2">Perfil</td>
