@@ -15,7 +15,7 @@ desperdicios operativos.
 
 **Visión:** Ser la empresa líder en Latinoamérica en el ámbito de inteligencia financiera para 
 restaurantes, transformando la manera en que los propietarios comprenden y gestionan las finanzas 
-de su negocio através de soluciones tecnológicas innovadoras.
+de su negocio a través de soluciones tecnológicas innovadoras.
 
 **Producto:** es un servicio que permite el monitoreo integral de la salud financiera de un 
 restaurante, analizando flujos de caja, rentabilidad por plato, tendencias de ventas y predicciones 
@@ -25,7 +25,7 @@ administrativa y facilitar la toma de decisiones estratégicas del propietario.
 
 ### 1.1.2 Perfiles de integrantes del equipo
 
-|                               | Apellido y Nombre                                 | Carrera                | Acerca de                                                                                                                                                                                                                                                                         | Habilidades                                                                                                                                                                        |
+| Foto                          | Apellido y Nombre                                 | Carrera                | Acerca de                                                                                                                                                                                                                                                                         | Habilidades                                                                                                                                                                        |
 |-------------------------------|---------------------------------------------------|------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | ![romina](/assets/romina.png) | Maita Falckenheiner, Romina Guadalupe(u202213765) | Ingeniería de Software | Soy estudiante a tiempo completo, me apasiona programar y me gustaría especializarme en Data Science o Desarrollo de Videojuegos en un futuro.                                                                                                                                    | Liderazgo, competitividad y organización.                                                                                                                                          |
 | ![werner](/assets/werner.png) | Lang Nassi, Werner Khalil(u202310003)             | Ingeniería de Software | Estudiante de la Universidad Peruana de Ciencias Aplicadas (UPC), cursando en 6.º ciclo. Soy un estudiante que le gusta investigar cosas nuevas.                                                                                                                                  | Investigador, Innovador, Analista, Cooperativo.                                                                                                                                    |
@@ -58,6 +58,25 @@ El perfil de la solución se centra en la usabilidad y accesibilidad, ofreciendo
 
 ### 1.2.2 Antecedentes y problemática
 
+En los últimos años, la industria gastronómica en Latinoamérica ha mostrado un crecimiento sostenido, especialmente en el segmento de pequeños y medianos restaurantes. Sin embargo, este crecimiento no siempre ha ido acompañado de una correcta gestión financiera. De acuerdo con reportes de consultoras del sector, una de las principales causas de cierre temprano de restaurantes es la falta de control sobre gastos, inventario y flujo de caja.
+
+Tradicionalmente, muchos restaurantes han manejado sus finanzas mediante registros manuales en cuadernos, hojas de cálculo de Excel o apoyándose parcialmente en sistemas de punto de venta (POS). Si bien estas herramientas permiten registrar ventas y gastos básicos, presentan limitaciones importantes:
+
+- **Escasa visibilidad global:** Los sistemas existentes se centran en la facturación, pero no muestran métricas estratégicas como rentabilidad por plato, márgenes de utilidad o tendencias de consumo.
+- **Gestión manual e ineficiente:** El uso de Excel o registros físicos implica un alto riesgo de errores humanos, duplicidad de datos y pérdida de información valiosa.
+- **Falta de integración:** No existe una herramienta accesible que consolide en un mismo espacio las finanzas, inventario y reportes visuales en tiempo real.
+- **Alto costo de soluciones avanzadas:** Algunos software de gestión empresarial (ERP) ofrecen módulos financieros completos, pero resultan inaccesibles para pequeños y medianos restaurantes por su complejidad y costo.
+
+**Problemática identificada:**  
+Los dueños de restaurantes, especialmente en el segmento de pequeños y medianos negocios, carecen de una herramienta tecnológica accesible y sencilla que les permita monitorear sus finanzas en tiempo real, identificar oportunidades de mejora y reducir pérdidas. Esta carencia genera múltiples consecuencias:
+
+1. **Toma de decisiones basada en intuición:** Al no contar con datos confiables, las decisiones sobre precios, compras o promociones suelen hacerse de manera empírica, sin sustento financiero.
+2. **Falta de control sobre el inventario:** La ausencia de alertas oportunas ocasiona quiebres de stock o sobre-compra de insumos, generando pérdidas económicas.
+3. **Desconocimiento de la rentabilidad real:** Muchos dueños desconocen cuáles son los platos más rentables y cuáles generan pérdidas, dificultando la optimización del menú.
+4. **Riesgo de sostenibilidad financiera:** La falta de control integral sobre gastos, ingresos y tendencias incrementa la probabilidad de pérdidas acumuladas que comprometan la continuidad del negocio.
+
+En este contexto surge FoodFlow, como respuesta a la necesidad de contar con una solución especializada, intuitiva y asequible que transforme la manera en que los restaurantes gestionan sus finanzas diarias.
+
 ### 1.2.3 Lean UX Process
 En esta sección, se presenta el proceso de Lean UX que se ha seguido para el desarrollo de la plataforma KeepItFresh. Este proceso incluye la creación de un Lean UX Problem Statement, Assumptions, Hypothesis Statements y un Lean UX Canvas. El objetivo es definir claramente el problema que se busca resolver, las suposiciones que se tienen sobre los usuarios y el producto, así como las hipótesis que guiarán el desarrollo del mismo.
 
@@ -65,7 +84,7 @@ En esta sección, se presenta el proceso de Lean UX que se ha seguido para el de
 En el entorno laboral actual, los restaurantes enfrentan dificultades para monitorear y gestionar sus finanzas de manera efectiva. Esto debido a la falta de herramientas adecuadas y el trabajo tedioso que esto suele ser, para hacerlo de forma continua y detallada. 
 Lo cual da a una falta de visibilidad y datos concretos que puede llevar a gastos innecesarios.<br>
 
-El desafío que hay actualmente es que las soluciones actuales no proveen este servicio a un precio accesible y ,al mismo tiempo, mantienen una alta calidad de atención.<br>
+El desafío que hay actualmente es que las soluciones actuales no proveen este servicio a un precio accesible y, al mismo tiempo, mantienen una alta calidad de atención.<br>
 
 ¿Cómo podemos ofrecer a los restaurantes una plataforma con un precio accesible que al mismo tiempo ofrezca la calidad que estos necesitan?
 
