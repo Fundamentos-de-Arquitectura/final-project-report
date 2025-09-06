@@ -1,5 +1,6 @@
 # Capítulo II: Requirements & Analysis
 ## 2.1 Competidores
+Lista de competidores:
 ## 2.2 Entrevistas
 ## 2.3 Needfinding
 ### 2.3.1 User Personas
