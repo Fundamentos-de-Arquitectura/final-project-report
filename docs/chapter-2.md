@@ -114,7 +114,7 @@ En esta sección, se presenta la matriz de tareas de los usuarios, que muestra l
 y empleados de restaurantes, junto con su frecuencia e importancia. Esta matriz ayuda a identificar las tareas clave y 
 su relevancia para cada tipo de usuario.
 
-Para ello, usamos los user persona creados en la sección anterior tomando a Daniel, segmento 1: Dueño de restaurante
+Para ello, usamos el user persona creado en la sección anterior tomando a Daniel, segmento 1: Dueño de restaurante
 
 | Actividades                                  | Daniel (Dueño de restaurante) - Frecuencia / Importancia |
 |----------------------------------------------|----------------------------------------------------------|
