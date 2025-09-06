@@ -1,6 +1,28 @@
 # Capítulo I: Introducción
 ## 1.1 Startup Profile
 ### 1.1.1 Descripción de la Startup
+
+**Go5U** es una startup dedicada a soluciones de gestión financiera digital enfocadas en restaurantes. 
+Utilizamos tecnologías web inteligentes para simplificar el control económico de restaurantes. 
+Nuestro enfoque es preventivo y estratégico, proporcionando dashboards y herramientas analíticas 
+para evitar pérdidas financieras y optimizar la rentabilidad. No ofrecemos servicios contables 
+tradicionales, ni intervención directa en procesos operativos.
+
+**Misión:** Facilitar la gestión financiera de los restaurantes a través de tecnologías que permiten 
+el monitoreo continuo de métricas económicas clave, al igual que optimizan la toma de decisiones 
+estratégicas de los propietarios, para que estos puedan maximizar su rentabilidad y reducir 
+desperdicios operativos.
+
+**Visión:** Ser la empresa líder en Latinoamérica en el ámbito de inteligencia financiera para 
+restaurantes, transformando la manera en que los propietarios comprenden y gestionan las finanzas 
+de su negocio através de soluciones tecnológicas innovadoras.
+
+**Producto:** es un servicio que permite el monitoreo integral de la salud financiera de un 
+restaurante, analizando flujos de caja, rentabilidad por plato, tendencias de ventas y predicciones 
+de inventario para confirmar los niveles de eficiencia económica del negocio. Así mismo, este servicio 
+también ofrece alertas inteligentes y reportes automatizados, con el fin de optimizar la gestión 
+administrativa y facilitar la toma de decisiones estratégicas del propietario.
+
 ### 1.1.2 Perfiles de integrantes del equipo
 
 |                               | Apellido y Nombre                                 | Carrera                | Acerca de                                                                                                                                                                                                                                                                         | Habilidades                                                                                                                                                                        |
@@ -10,6 +32,12 @@
 | ![paolo](/assets/paolo.png)   | Torres Flores, Paolo Alessandro(u20221f613)       | Ingeniería de Software | Soy un estudiante de 7mo ciclo con afán de mejorar cada día que pasa. Tengo muchas aspiraciones, ya sea en mi carrera como personalmente, y lucho diariamente para acercarme cada vez más a ellas.                                                                                | Me considero una persona adaptable al entorno, sé trabajar en equipo y aprendo rápido. Mentalidad para resolver problemas. Conocimiento básico de las funcionalidades de software. |
 
 ## 1.2 Solution Profile
+### 1.2.1 Nombre del producto
+
+**Product name:** FoodFlow
+
+**Product Description:**
+
 La solución propuesta es una aplicación web de gestión financiera para restaurantes, diseñada específicamente para brindar a los dueños de restaurantes una herramienta clara, simple y eficiente que les permita controlar y optimizar la administración de su negocio.
 
 La plataforma integra diferentes módulos que resuelven los principales puntos de dolor del segmento objetivo:
@@ -27,7 +55,6 @@ Vista de ventas por mesa, que permite conocer en detalle qué se vende, dónde y
 Notificaciones inteligentes que alertan cuando un producto o insumo está cerca de agotarse, reduciendo pérdidas por falta de stock o exceso de compras.
 
 El perfil de la solución se centra en la usabilidad y accesibilidad, ofreciendo una herramienta intuitiva para usuarios que no necesariamente dominan la contabilidad o los sistemas complejos. Al enfocarse en reportes visuales, alertas automáticas y funciones prácticas, la aplicación se convierte en un aliado estratégico para mejorar la rentabilidad, reducir desperdicios y dar mayor control a los dueños de restaurantes sobre su operación diaria.
-### 1.2.1 Nombre del producto
 
 ### 1.2.2 Antecedentes y problemática
 
