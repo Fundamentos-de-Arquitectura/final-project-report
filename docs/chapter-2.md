@@ -108,6 +108,7 @@ En esta sección, se presenta un análisis de los competidores de FoodFlow y sus
 ## 2.2 Entrevistas
 ## 2.3 Needfinding
 ### 2.3.1 User Personas
+
 ### 2.3.2 User Task Matrix
 
 En esta sección, se presenta la matriz de tareas de los usuarios, que muestra las actividades realizadas por los dueños 
@@ -134,3 +135,4 @@ y la gestión de inventario, que realiza con alta frecuencia e importancia.
 
 ### 2.3.3 Empathy Maps
 ### 2.3.4 As-is Scenario Mapping
+<img width="1151" height="687" alt="image" src="https://github.com/user-attachments/assets/23c02bfc-9ef3-4dc4-982b-0b9f2e41a32a" />
