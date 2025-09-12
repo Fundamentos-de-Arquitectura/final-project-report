@@ -1,4 +1,5 @@
-<img width="1050" height="1930" alt="image" src="https://github.com/user-attachments/assets/b6fa2c6a-7cd2-4b8a-83b5-168eae46cac2" /># Capítulo II: Requirements & Analysis
+# Capítulo II: Requirements & Analysis
+
 ## 2.1 Competidores
 En esta sección, se presenta un análisis de los competidores de FoodFlow y sus respectivas estrategias y tácticas. Se incluye un análisis competitivo, así como una comparación de las fortalezas y debilidades de cada competidor.
 <br>
