@@ -113,7 +113,3 @@ Este proyecto se enfoca en ellos porque:
 - Necesitan optimizar el control de ganancias y pérdidas sin depender de procesos manuales o conocimientos contables avanzados.
 - Requieren una solución que les permita ahorrar tiempo y reducir errores, a través de reportes automáticos y visualizaciones claras.
 - Valoran funciones prácticas como las notificaciones de inventario bajo, que impactan directamente en la reducción de desperdicios y en la continuidad del servicio.
-
-
-
-pepito
