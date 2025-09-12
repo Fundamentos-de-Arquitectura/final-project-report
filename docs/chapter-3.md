@@ -45,22 +45,67 @@ ventas y finanzas del negocio.
 
 ## 3.4 Alcance
 
-Alcance del Proyecto: FoodFlow
 El alcance del proyecto FoodFlow se centra en proveer una solución web de gestión financiera y de inventario para dueños de restaurantes, con el objetivo de optimizar la toma de decisiones y mejorar la rentabilidad.
-
 El proyecto se enfoca en la usabilidad y accesibilidad, utilizando reportes visuales y alertas automáticas. Está diseñado para un usuario que no tiene conocimientos contables avanzados.
+No es parte de la solución la incorporacón de IOT, ni la gestión de personal o clientes, ni la integración con sistemas de pago o contabilidad externa.
 
 Escenario de Atributo de Calidad
-A continuación, se desglosa el escenario de calidad de FoodFlow según los elementos de la imagen proporcionada:
 
-| Elemento            | Definición                                      | Aplicación a FoodFlow                                                                                                                                                      |
-|---------------------|-------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Fuente de Estímulo  | Entidad que genera el estímulo.                 | El dueño del restaurante, quien busca información financiera o de inventario.                                                                                              |
-| Estímulo            | Condición a ser considerada por el sistema.     | La necesidad del dueño de obtener un reporte de ganancias y pérdidas o una alerta sobre el inventario bajo.                                                                |
-| Entorno             | Condiciones en las que se presenta el estímulo. | El dueño del restaurante se encuentra en su negocio, en un momento de gestión diaria, y necesita tomar una decisión rápida sobre costos o stock.                           |
-| Artefacto           | Componente que recibe el estímulo.              | El módulo de Dashboard financiero o el módulo de gestión de inventario de la aplicación web.                                                                               |
-| Respuesta           | Acciones realizadas como respuesta al estímulo. | El sistema muestra un gráfico visual de las ganancias del día o envía una notificación al dueño informando que un insumo se está agotando.                                 |
-| Medida de Respuesta | Métrica para cuantificar la respuesta.          | La reducción del tiempo que le toma al dueño entender la rentabilidad (por ejemplo, de 30 minutos a 1 minuto) o el porcentaje de reducción en el desperdicio de alimentos. |
+| Atributo   | Fuente | Estímulo                                                  | Artefacto                       | Entorno                        | Respuesta                                                                       | Medida                                                 |
+| ---------- | ------ | --------------------------------------------------------- | ------------------------------- | ------------------------------ | ------------------------------------------------------------------------------- | ------------------------------------------------------ |
+| Seguridad  | Dueño  | Intenta acceder varias veces con credenciales incorrectas | Módulo de login                 | Operación normal               | El sistema bloquea la cuenta y registra el evento en bitácora                   | Bloqueo tras 3 intentos fallidos                       |
+| Usabilidad | Dueño  | Solicita un reporte de ganancias y pérdidas               | Módulo de Dashboard financiero  | Gestión diaria del restaurante | El sistema genera un gráfico visual e intuitivo con la información financiera   | Tiempo de comprensión ≤ 1 min (reducción desde 30 min) |
+| Desempeño  | Dueño  | Consulta el estado del inventario (stock disponible)      | Módulo de gestión de inventario | Horario de operación normal    | El sistema muestra el reporte de inventario o envía notificación de insumo bajo | Tiempo de respuesta ≤ 3 segundos                       |
+
+El atributo más crítico es la Usabilidad, ya que el usuario objetivo no tiene conocimientos contables avanzados y necesita una interfaz intuitiva para interpretar los datos financieros y tomar decisiones informadas rápidamente.
+
+## Requisitos Funcionales (RF):
+
+| ID   | Nombre                              | Descripción                                                                                                                | Relación                        |
+|------|-------------------------------------|----------------------------------------------------------------------------------------------------------------------------|---------------------------------|
+| RF1  | Búsqueda de platos                  | El sistema debe permitir la búsqueda de platos existentes por nombre en tiempo real.                                       | Gestión de Menú                 |
+| RF2  | Mensaje de búsqueda vacía           | El sistema debe mostrar mensajes cuando no se encuentren resultados en la búsqueda.                                        | QA / Usabilidad                 |
+| RF3  | Limpiar búsqueda                    | El sistema debe permitir limpiar el campo de búsqueda y mostrar nuevamente todos los platos.                               | Gestión de Menú                 |
+| RF4  | Visualización de menú               | El sistema debe mostrar una tabla con todos los platos registrados, incluyendo nombre, descripción, precio e ingredientes. | Gestión de Menú                 |
+| RF5  | Lista vacía de menú                 | El sistema debe mostrar un mensaje cuando no existan platos y habilitar el formulario para añadir nuevos.                  | QA / Gestión de Menú            |
+| RF6  | Gestión de menú                     | El sistema debe permitir agregar, editar y eliminar platos del menú.                                                       | Gestión de Menú                 |
+| RF7  | Visualización de notificaciones     | El sistema debe mostrar una lista de notificaciones en tiempo real (pedidos, inventario y reseñas).                        | Gestión de Notificaciones       |
+| RF8  | Marcar todas como leídas            | El sistema debe permitir marcar todas las notificaciones como leídas con un solo clic.                                     | Gestión de Notificaciones       |
+| RF9  | Marcar notificación individual      | El sistema debe permitir marcar notificaciones individuales como leídas, mostrando un indicador visual.                    | Gestión de Notificaciones       |
+| RF10 | Visualización de órdenes            | El sistema debe mostrar en una tabla todas las órdenes registradas, incluyendo: mesa, platos, precio total y fecha.        | Gestión de Órdenes              |
+| RF11 | Orden cronológica                   | El sistema debe ordenar las órdenes de forma cronológica por defecto.                                                      | Gestión de Órdenes              |
+| RF12 | Registrar nueva orden               | El sistema debe permitir registrar nuevas órdenes desde el botón “New Order”.                                              | Gestión de Órdenes              |
+| RF13 | Formulario de pedido                | El sistema debe mostrar un formulario para crear pedidos, permitiendo seleccionar mesa, platillo y fecha.                  | Gestión de Órdenes              |
+| RF14 | Cálculo automático de totales       | El sistema debe calcular automáticamente el precio total por platillo (precio unitario × cantidad).                        | Gestión de Órdenes              |
+| RF15 | Confirmar pedido                    | El sistema debe permitir confirmar pedidos, almacenándolos en la base de datos y actualizando el inventario.               | Gestión de Órdenes / Inventario |
+| RF16 | Editar o eliminar platillo de orden | El sistema debe permitir editar o eliminar platillos de la lista antes de confirmar la orden.                              | Gestión de Órdenes              |
+| RF17 | Cancelar creación de pedido         | El sistema debe permitir cancelar la creación de una orden, limpiando el formulario sin guardar cambios.                   | Gestión de Órdenes              |
+| RF18 | Reportes diarios                    | El sistema debe mostrar reportes de ingresos y gastos diarios con porcentaje de variación respecto al día anterior.        | Gestión de Reportes             |
+| RF19 | Navegación entre períodos           | El sistema debe permitir alternar entre reportes diarios, semanales y mensuales mediante pestañas de navegación.           | Gestión de Reportes             |
+| RF20 | Reporte de gastos por categoría     | El sistema debe mostrar el desglose de gastos por categorías con representación visual (gráficos o diagramas).             | Gestión de Reportes             |
+| RF21 | Comparación de categorías de gasto  | El sistema debe permitir comparar visualmente categorías de gasto para identificar la de mayor impacto.                    | Gestión de Reportes             |
+| RF22 | Exportar reportes a Excel           | El sistema debe permitir la exportación de reportes financieros a Excel.                                                   | Gestión de Reportes             |
+
+
+## Requisitos No Funcionales (RNF):
+
+| ID    | Categoría      | Descripción                                                                                                         | Relación           |
+|-------|----------------|---------------------------------------------------------------------------------------------------------------------|--------------------|
+| RNF1  | Usabilidad     | La interfaz debe ser intuitiva y accesible para usuarios sin conocimientos contables o técnicos.                    | QA / Usabilidad    |
+| RNF2  | Usabilidad     | Los gráficos y reportes deben presentarse en formato visual claro, con etiquetas y leyendas comprensibles.          | QA / Reportes      |
+| RNF3  | Usabilidad     | El sistema debe permitir la navegación entre módulos (menú, órdenes, reportes, notificaciones).                	    | QA / Usabilidad    |
+| RNF4  | Rendimiento    | El sistema debe responder a las búsquedas de platos en menos de 2 segundos.                                         | QA / Rendimiento   |
+| RNF5  | Rendimiento    | La carga de reportes no debe superar los 5 segundos, incluso con datos de un año de operación.                      | QA / Reportes      |
+| RNF6  | Rendimiento    | El sistema debe soportar al menos 50 usuarios concurrentes en la versión inicial.                                   | QA / Escalabilidad |
+| RNF7  | Seguridad      | El acceso al sistema debe estar protegido mediante credenciales seguras (usuario y contraseña).                     | Seguridad / QA     |
+| RNF8  | Seguridad      | La información financiera y de pedidos debe almacenarse en bases de datos seguras con cifrado de datos sensibles.   | Seguridad / Datos  |
+| RNF9  | Seguridad      | El sistema debe permitir la creación de copias de seguridad automáticas de la información.                          | Seguridad / Backup |
+| RNF10 | Compatibilidad | La aplicación debe ser accesible desde navegadores modernos (Chrome, Edge, Firefox, Safari).                        | Compatibilidad     |
+| RNF11 | Compatibilidad | El sistema debe ser responsivo, adaptándose a dispositivos de escritorio, tablets y smartphones.                    | Compatibilidad     |
+| RNF12 | Fiabilidad     | El sistema debe garantizar una disponibilidad mínima del 95% en horarios de operación.                              | QA / Fiabilidad    |
+| RNF13 | Fiabilidad     | En caso de error en el registro de órdenes o platos, el sistema debe mostrar mensajes claros y permitir reintentar. | QA / Fiabilidad    |
+| RNF14 | Mantenibilidad | El sistema debe estar diseñado con arquitectura modular para facilitar futuras ampliaciones.                        | Mantenibilidad     |
+| RNF15 | Escalabilidad  | El sistema debe permitir añadir nuevos módulos de análisis sin alterar la funcionalidad base.                       | Escalabilidad      |
 
 ## 3.5 Product Backlog
 
