@@ -1,15 +1,43 @@
 # Capítulo I: Introducción
 ## 1.1 Startup Profile
 ### 1.1.1 Descripción de la Startup
+
+**Go5U** es una startup dedicada a soluciones de gestión financiera digital enfocadas en restaurantes. 
+Utilizamos tecnologías web inteligentes para simplificar el control económico de restaurantes. 
+Nuestro enfoque es preventivo y estratégico, proporcionando dashboards y herramientas analíticas 
+para evitar pérdidas financieras y optimizar la rentabilidad. No ofrecemos servicios contables 
+tradicionales, ni intervención directa en procesos operativos.
+
+**Misión:** Facilitar la gestión financiera de los restaurantes a través de tecnologías que permiten 
+el monitoreo continuo de métricas económicas clave, al igual que optimizan la toma de decisiones 
+estratégicas de los propietarios, para que estos puedan maximizar su rentabilidad y reducir 
+desperdicios operativos.
+
+**Visión:** Ser la empresa líder en Latinoamérica en el ámbito de inteligencia financiera para 
+restaurantes, transformando la manera en que los propietarios comprenden y gestionan las finanzas 
+de su negocio a través de soluciones tecnológicas innovadoras.
+
+**Producto:** es un servicio que permite el monitoreo integral de la salud financiera de un 
+restaurante, analizando flujos de caja, rentabilidad por plato, tendencias de ventas y predicciones 
+de inventario para confirmar los niveles de eficiencia económica del negocio. Así mismo, este servicio 
+también ofrece alertas inteligentes y reportes automatizados, con el fin de optimizar la gestión 
+administrativa y facilitar la toma de decisiones estratégicas del propietario.
+
 ### 1.1.2 Perfiles de integrantes del equipo
 
-|                               | Apellido y Nombre                                 | Carrera                | Acerca de                                                                                                                                                                                                                                                                         | Habilidades                                                                                                                                                                        |
+| Foto                          | Apellido y Nombre                                 | Carrera                | Acerca de                                                                                                                                                                                                                                                                         | Habilidades                                                                                                                                                                        |
 |-------------------------------|---------------------------------------------------|------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | ![romina](/assets/romina.png) | Maita Falckenheiner, Romina Guadalupe(u202213765) | Ingeniería de Software | Soy estudiante a tiempo completo, me apasiona programar y me gustaría especializarme en Data Science o Desarrollo de Videojuegos en un futuro.                                                                                                                                    | Liderazgo, competitividad y organización.                                                                                                                                          |
-| ![werner](/assets/werner.png) | Lang Nassi, Werner Khalil(u202310003)             | Ingeniería de Software | Estudiante de la Universidad Peruana de Ciencias Aplicadas (UPC), cursando en 5.º ciclo. Soy un estudiante que le gusta investigar cosas nuevas.                                                                                                                                  | Investigador, Innovador, Analista, Cooperativo.                                                                                                                                    |
-| ![paolo](/assets/paolo.png)   | Torres Flores, Paolo Alessandro(u20221f613)       | Ingeniería de Software | Soy un estudiante de 5to ciclo con afán de mejorar cada día que pasa. Tengo muchas aspiraciones, ya sea en mi carrera como personalmente, y lucho diariamente para acercarme cada vez más a ellas.                                                                                | Me considero una persona adaptable al entorno, sé trabajar en equipo y aprendo rápido. Mentalidad para resolver problemas. Conocimiento básico de las funcionalidades de software. |
+| ![werner](/assets/werner.png) | Lang Nassi, Werner Khalil(u202310003)             | Ingeniería de Software | Estudiante de la Universidad Peruana de Ciencias Aplicadas (UPC), cursando en 6.º ciclo. Soy un estudiante que le gusta investigar cosas nuevas.                                                                                                                                  | Investigador, Innovador, Analista, Cooperativo.                                                                                                                                    |
+| ![paolo](/assets/paolo.png)   | Torres Flores, Paolo Alessandro(u20221f613)       | Ingeniería de Software | Soy un estudiante de 7mo ciclo con afán de mejorar cada día que pasa. Tengo muchas aspiraciones, ya sea en mi carrera como personalmente, y lucho diariamente para acercarme cada vez más a ellas.                                                                                | Me considero una persona adaptable al entorno, sé trabajar en equipo y aprendo rápido. Mentalidad para resolver problemas. Conocimiento básico de las funcionalidades de software. |
 
 ## 1.2 Solution Profile
+### 1.2.1 Nombre del producto
+
+**Product name:** FoodFlow
+
+**Product Description:**
+
 La solución propuesta es una aplicación web de gestión financiera para restaurantes, diseñada específicamente para brindar a los dueños de restaurantes una herramienta clara, simple y eficiente que les permita controlar y optimizar la administración de su negocio.
 
 La plataforma integra diferentes módulos que resuelven los principales puntos de dolor del segmento objetivo:
@@ -27,9 +55,27 @@ Vista de ventas por mesa, que permite conocer en detalle qué se vende, dónde y
 Notificaciones inteligentes que alertan cuando un producto o insumo está cerca de agotarse, reduciendo pérdidas por falta de stock o exceso de compras.
 
 El perfil de la solución se centra en la usabilidad y accesibilidad, ofreciendo una herramienta intuitiva para usuarios que no necesariamente dominan la contabilidad o los sistemas complejos. Al enfocarse en reportes visuales, alertas automáticas y funciones prácticas, la aplicación se convierte en un aliado estratégico para mejorar la rentabilidad, reducir desperdicios y dar mayor control a los dueños de restaurantes sobre su operación diaria.
-### 1.2.1 Nombre del producto
 
 ### 1.2.2 Antecedentes y problemática
+
+En los últimos años, la industria gastronómica en Latinoamérica ha mostrado un crecimiento sostenido, especialmente en el segmento de pequeños y medianos restaurantes. Sin embargo, este crecimiento no siempre ha ido acompañado de una correcta gestión financiera. De acuerdo con reportes de consultoras del sector, una de las principales causas de cierre temprano de restaurantes es la falta de control sobre gastos, inventario y flujo de caja.
+
+Tradicionalmente, muchos restaurantes han manejado sus finanzas mediante registros manuales en cuadernos, hojas de cálculo de Excel o apoyándose parcialmente en sistemas de punto de venta (POS). Si bien estas herramientas permiten registrar ventas y gastos básicos, presentan limitaciones importantes:
+
+- **Escasa visibilidad global:** Los sistemas existentes se centran en la facturación, pero no muestran métricas estratégicas como rentabilidad por plato, márgenes de utilidad o tendencias de consumo.
+- **Gestión manual e ineficiente:** El uso de Excel o registros físicos implica un alto riesgo de errores humanos, duplicidad de datos y pérdida de información valiosa.
+- **Falta de integración:** No existe una herramienta accesible que consolide en un mismo espacio las finanzas, inventario y reportes visuales en tiempo real.
+- **Alto costo de soluciones avanzadas:** Algunos software de gestión empresarial (ERP) ofrecen módulos financieros completos, pero resultan inaccesibles para pequeños y medianos restaurantes por su complejidad y costo.
+
+**Problemática identificada:**  
+Los dueños de restaurantes, especialmente en el segmento de pequeños y medianos negocios, carecen de una herramienta tecnológica accesible y sencilla que les permita monitorear sus finanzas en tiempo real, identificar oportunidades de mejora y reducir pérdidas. Esta carencia genera múltiples consecuencias:
+
+1. **Toma de decisiones basada en intuición:** Al no contar con datos confiables, las decisiones sobre precios, compras o promociones suelen hacerse de manera empírica, sin sustento financiero.
+2. **Falta de control sobre el inventario:** La ausencia de alertas oportunas ocasiona quiebres de stock o sobre-compra de insumos, generando pérdidas económicas.
+3. **Desconocimiento de la rentabilidad real:** Muchos dueños desconocen cuáles son los platos más rentables y cuáles generan pérdidas, dificultando la optimización del menú.
+4. **Riesgo de sostenibilidad financiera:** La falta de control integral sobre gastos, ingresos y tendencias incrementa la probabilidad de pérdidas acumuladas que comprometan la continuidad del negocio.
+
+En este contexto surge FoodFlow, como respuesta a la necesidad de contar con una solución especializada, intuitiva y asequible que transforme la manera en que los restaurantes gestionan sus finanzas diarias.
 
 ### 1.2.3 Lean UX Process
 En esta sección, se presenta el proceso de Lean UX que se ha seguido para el desarrollo de la plataforma KeepItFresh. Este proceso incluye la creación de un Lean UX Problem Statement, Assumptions, Hypothesis Statements y un Lean UX Canvas. El objetivo es definir claramente el problema que se busca resolver, las suposiciones que se tienen sobre los usuarios y el producto, así como las hipótesis que guiarán el desarrollo del mismo.
@@ -38,7 +84,7 @@ En esta sección, se presenta el proceso de Lean UX que se ha seguido para el de
 En el entorno laboral actual, los restaurantes enfrentan dificultades para monitorear y gestionar sus finanzas de manera efectiva. Esto debido a la falta de herramientas adecuadas y el trabajo tedioso que esto suele ser, para hacerlo de forma continua y detallada. 
 Lo cual da a una falta de visibilidad y datos concretos que puede llevar a gastos innecesarios.<br>
 
-El desafío que hay actualmente es que las soluciones actuales no proveen este servicio a un precio accesible y ,al mismo tiempo, mantienen una alta calidad de atención.<br>
+El desafío que hay actualmente es que las soluciones actuales no proveen este servicio a un precio accesible y, al mismo tiempo, mantienen una alta calidad de atención.<br>
 
 ¿Cómo podemos ofrecer a los restaurantes una plataforma con un precio accesible que al mismo tiempo ofrezca la calidad que estos necesitan?
 
@@ -83,13 +129,13 @@ Sabremos que esto es cierto cuando más del 50% de los usuarios exporten al meno
 
 **User Hypotheses**
 
-Creemos que al mostrar reportes de ganancias y pérdidas, los dueños tomarán decisiones más rápidas. 
+1. Creemos que al mostrar reportes de ganancias y pérdidas, los dueños tomarán decisiones más rápidas. 
 Sabremos que esto es cierto cuando el 80% de los usuarios consulte reportes semanales sin apoyo de otras herramientas externas.
 
-Creemos que un ranking de platos más vendidos ayudará al dueño a optimizar el menú.
+2. Creemos que un ranking de platos más vendidos ayudará al dueño a optimizar el menú.
 Sabremos que esto es cierto cuando al menos el 50% de los usuarios haga ajustes de menú en los primeros 2 meses.
 
-Creemos que las notificaciones de inventario crítico ayudarán a los dueños a reducir quiebres de stock.
+3. Creemos que las notificaciones de inventario crítico ayudarán a los dueños a reducir quiebres de stock.
 Sabremos que esto es cierto cuando los usuarios reporten una disminución de al menos 30% en pedidos no atendidos por falta de insumos.
 
 **Solution Hypotheses**
@@ -103,6 +149,8 @@ Sabremos que esto es cierto cuando al menos el 40% de los usuarios lo consulte s
 3. Creemos que un sistema de alertas en tiempo real (notificaciones) ayudará al dueño a planificar mejor las compras.
 Sabremos que esto es cierto cuando el 60% de los usuarios reduzca en un 20% sus compras de emergencia durante el primer trimestre.
 #### 1.2.3.4 Lean UX Canvas
+
+<img src="https://cdn.discordapp.com/attachments/1413922708428951554/1416131913600471060/image.png?ex=68c5bb1e&is=68c4699e&hm=12d97435ced8503185053abd29f76e786d5ac0023d1eb27a93ad21a02023732f&" />
 
 ## 1.3 Segmentos objetivo
 **Dueños de restaurante:**
