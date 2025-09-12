@@ -16,7 +16,8 @@ ventas y finanzas del negocio.
 
 ## 3.2 User Stories
 
-**Epics:**
+Para la planeación y desarrollo del proyecto, se han definido las siguientes épicas y user stories que describen las funcionalidades clave del sistema desde la perspectiva del usuario final, en este caso, el dueño de un restaurante.
+
 ### Épicas del Proyecto
 
 | ID | Título | Descripción |
@@ -28,7 +29,7 @@ ventas y finanzas del negocio.
 | **E5** | Orders | Permite a los dueños de restaurantes gestionar las órdenes de los clientes, desde la visualización de órdenes existentes hasta el registro, confirmación, edición, eliminación y cálculo de los pedidos. |
 | **E6** | Reports | Permite a los dueños de restaurantes generar y visualizar reportes financieros, incluyendo ingresos y gastos diarios, con la capacidad de navegar entre diferentes períodos de tiempo y analizar el desglose de gastos por categorías. |
 
-**User Stories:**
+### User Stories
 
 | Epic / Story ID | Título | Descripción | Criterios de Aceptación | Relacionado con (Epic ID) |
 | :--- | :--- | :--- | :--- | :--- |
