@@ -188,6 +188,36 @@ pagar alrededor de S/100 mensuales por ella y aprovechar la información financi
 la seguridad de los datos.
 
 
+- _Entrevista 2_
+
+| Nombre               | Gonzalo    |
+|----------------------|------------|
+| Apellido             | Elio       |
+| Edad                 | 58 años    |
+| Distrito             | San Isidro |
+| Evidencia            |            |
+| Url                  |            |
+| Inicio de entrevista |            |
+| Fin de entrevista    |            |
+
+- Distrito de residencia: San Isidro
+- Estado civil: Conviviente
+- Ocupación: Dueño de restaurante
+- Dispositivo de preferencia: Laptop
+- Canales de interacción digital: Facebook, LinkedIn
+
+### Resumen de entrevista:
+Gonzalo Elio es dueño de un restaurante donde principalmente ofrece cafe y postres, con 1 año y media de experiencia en el rubro.
+Su mayor desafío es gestionar el inventario y las finanzas de manera eficiente. Actualmente, utiliza un sistema rudimentario 
+para llevar el control financiero y revisa los números mensualmente, aunque le gustaría hacerlo con mayor frecuencia.
+Identifica que sus productos más rentables son los cafés y postres. Aunque no tiene un sistema formal para controlar el inventario,
+suele quedarse sin ingredientes esenciales una vez al mes. Valora la idea de recibir alertas automáticas y 
+tener un panel visual que le permita monitorear ganancias, pérdidas y tendencias de manera sencilla.
+Está dispuesto a usar una aplicación web, pagar alrededor de S/300 mensuales y aprovechar la información 
+financiera para optimizar precios y menú.
+Sin embargo, expresa preocupación por la seguridad de los datos y la facilidad de uso de la herramienta.
+
+
 ### 2.2.3. Análisis de entrevistas
 
 
