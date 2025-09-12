@@ -16,6 +16,20 @@ ventas y finanzas del negocio.
 
 ## 3.2 User Stories
 
+**Epics:**
+### Épicas del Proyecto
+
+| ID | Título | Descripción |
+| :--- | :--- | :--- |
+| **E1** | Dashboard | Permite a los dueños de restaurantes visualizar un resumen de los ingresos y pérdidas, así como identificar los platos más populares y la situación financiera general del negocio. |
+| **E2** | Inventory | Permite a los dueños de restaurantes gestionar y controlar el inventario de productos, incluyendo la visualización del stock actual y la adición de nuevos productos con validación de campos. |
+| **E3** | Menu Management | Permite a los dueños de restaurantes gestionar el menú, incluyendo la adición de nuevos platos, la búsqueda de platos existentes y la visualización de la información completa del menú. |
+| **E4** | Notifications | Permite a los dueños de restaurantes recibir y gestionar notificaciones en tiempo real sobre pedidos, inventario y reseñas, con la capacidad de marcarlas como leídas. |
+| **E5** | Orders | Permite a los dueños de restaurantes gestionar las órdenes de los clientes, desde la visualización de órdenes existentes hasta el registro, confirmación, edición, eliminación y cálculo de los pedidos. |
+| **E6** | Reports | Permite a los dueños de restaurantes generar y visualizar reportes financieros, incluyendo ingresos y gastos diarios, con la capacidad de navegar entre diferentes períodos de tiempo y analizar el desglose de gastos por categorías. |
+
+**User Stories:**
+
 | Epic / Story ID | Título | Descripción | Criterios de Aceptación | Relacionado con (Epic ID) |
 | :--- | :--- | :--- | :--- | :--- |
 | **US1** | Visualizar ingresos y pérdidas | Como dueño de restaurante, quiero ver en el dashboard un resumen de mis ingresos y pérdidas para conocer rápidamente la situación financiera de mi negocio. | **Escenario 1:** Dado que estoy en la pantalla principal del dashboard, cuando ingreso al sistema, entonces puedo visualizar el monto total de ingresos y pérdidas, junto con el porcentaje de variación (+ o -). | Dashboard |
