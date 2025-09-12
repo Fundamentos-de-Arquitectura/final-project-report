@@ -20,6 +20,24 @@ ventas y finanzas del negocio.
 ![ImpactMap.jpg](../assets/ImpactMap.jpg)
 
 ## 3.4 Alcance
+
+Alcance del Proyecto: FoodFlow
+El alcance del proyecto FoodFlow se centra en proveer una solución web de gestión financiera y de inventario para dueños de restaurantes, con el objetivo de optimizar la toma de decisiones y mejorar la rentabilidad.
+
+El proyecto se enfoca en la usabilidad y accesibilidad, utilizando reportes visuales y alertas automáticas. Está diseñado para un usuario que no tiene conocimientos contables avanzados.
+
+Escenario de Atributo de Calidad
+A continuación, se desglosa el escenario de calidad de FoodFlow según los elementos de la imagen proporcionada:
+
+| Elemento            | Definición                                      | Aplicación a FoodFlow                                                                                                                                                      |
+|---------------------|-------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Fuente de Estímulo  | Entidad que genera el estímulo.                 | El dueño del restaurante, quien busca información financiera o de inventario.                                                                                              |
+| Estímulo            | Condición a ser considerada por el sistema.     | La necesidad del dueño de obtener un reporte de ganancias y pérdidas o una alerta sobre el inventario bajo.                                                                |
+| Entorno             | Condiciones en las que se presenta el estímulo. | El dueño del restaurante se encuentra en su negocio, en un momento de gestión diaria, y necesita tomar una decisión rápida sobre costos o stock.                           |
+| Artefacto           | Componente que recibe el estímulo.              | El módulo de Dashboard financiero o el módulo de gestión de inventario de la aplicación web.                                                                               |
+| Respuesta           | Acciones realizadas como respuesta al estímulo. | El sistema muestra un gráfico visual de las ganancias del día o envía una notificación al dueño informando que un insumo se está agotando.                                 |
+| Medida de Respuesta | Métrica para cuantificar la respuesta.          | La reducción del tiempo que le toma al dueño entender la rentabilidad (por ejemplo, de 30 minutos a 1 minuto) o el porcentaje de reducción en el desperdicio de alimentos. |
+
 ## 3.5 Product Backlog
 
 | Orden | User Story Id | Título | Descripción | Story Points |
