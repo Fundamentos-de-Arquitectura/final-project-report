@@ -105,8 +105,95 @@ En esta sección, se presenta un análisis de los competidores de FoodFlow y sus
   </tr>
 </table>
 
+## 2.1.2. Estrategias y Tácticas Competitivas de FoodFlow
+
+| Competidor                                                                  | Estrategia de FoodFlow                                                                                                                                                              | Tácticas concretas                                                                                                                                                                                                                                                                                                                                                      |
+|-----------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Wave** (software gratuito para pequeños negocios)                         | **Diferenciación en especialización**: Wave es gratis, pero genérico. FoodFlow debe posicionarse como solución **hecha para restaurantes**, con herramientas que Wave no ofrece.    | - Campañas de marketing destacando funciones exclusivas para restaurantes (ej. “control de rentabilidad por plato” o “alertas de inventario inteligente”). <br> - Ofrecer un **plan freemium básico** (limitado) para competir con la gratuidad de Wave y enganchar clientes. <br> - Generar alianzas con asociaciones de restaurantes locales para aumentar confianza. |
+| **Xero** (software contable robusto y global)                               | **Enfoque en simplicidad y curva de aprendizaje baja**: competir con facilidad de uso frente a la complejidad y costo de Xero.                                                      | - Ofrecer **onboarding guiado** con tutoriales sencillos para dueños de restaurantes sin experiencia contable. <br> - Precio competitivo enfocado en pequeños y medianos restaurantes de LATAM. <br> - Integrar funciones de reportes financieros con ejemplos prácticos del sector gastronómico (ej. “costos por plato más vendido”).                                  |
+| **R365** (plataforma integral, cara y compleja)                             | **Accesibilidad en costos + cercanía con negocios independientes**: mientras R365 apunta a grandes cadenas, FoodFlow se posiciona como la **alternativa ligera, ágil y asequible**. | - Estrategia de precios escalonados (plan para pequeños restaurantes, plan avanzado para medianas cadenas). <br> - Marketing enfocado en **“empoderar a restaurantes independientes”**. <br> - Incorporar progresivamente módulos opcionales para crecer sin perder simplicidad.                                                                                        |
+
+
+### Estrategia Global de FoodFlow
+1. **Posicionamiento claro**: “La plataforma de gestión financiera hecha a medida para restaurantes independientes y medianos”.
+2. **Modelo Freemium + Upselling**: captar usuarios con un plan gratuito básico, y escalar con planes premium.
+3. **Go-to-Market en LATAM**: aprovechar la baja digitalización financiera de restaurantes en la región para ganar mercado más rápido que competidores globales.
+4. **Simplicidad como bandera**: mientras otros ofrecen robustez y complejidad, FoodFlow se mantiene ágil y fácil de usar.
+5. **Construcción de comunidad**: generar una red de dueños de restaurantes que compartan experiencias y testimonios.
+
 ## 2.2 Entrevistas
+En esta sección, se presentan los resultados de las entrevistas realizadas a dueños de restaurantes para comprender sus necesidades, desafíos y expectativas en relación con la gestión financiera y operativa de sus negocios. Se incluyen citas textuales y análisis de las respuestas obtenidas.
+
+### 2.2.1. Diseño de entrevistas
+
+A continuación, se presentan las preguntas para las entrevistas del segmento objetivo.  
+Con el fin de optimizar el tiempo y facilitar la recopilación de datos, se hará uso de Google Forms para recolectar información adicional.
+
+#### Preguntas para el segmento "Dueños de restaurantes"
+
+- ¿Cuántos años lleva operando su restaurante y qué tipo de comida ofrecen?
+- ¿Cuál diría que es su principal reto operativo día a día?
+- ¿Cómo lleva actualmente el control de sus finanzas? (Excel, cuaderno, sistema POS, contador, etc.)
+- ¿Con qué frecuencia revisa los números de su negocio y qué tan fácil le resulta obtener esa información?
+- ¿Tiene claridad sobre cuáles son sus platos más rentables?
+- ¿Exporta información a Excel o comparte reportes financieros con alguien más?
+- ¿Qué información le gustaría tener para tomar mejores decisiones sobre precios, menú o compras?
+- ¿Ha tenido que quitar o cambiar platos del menú? ¿En base a qué criterios?
+- ¿Cómo controla su inventario y con qué frecuencia se queda sin ingredientes importantes?
+- ¿Le gustaría recibir alertas automáticas cuando un producto esté por agotarse?
+- ¿Le sería útil tener un panel donde pueda ver de un vistazo sus ganancias, pérdidas y tendencias?
+- ¿Valoraría tener gráficos que muestren sus platos más y menos vendidos para hacer ajustes en su menú?
+- ¿Con qué frecuencia le gustaría revisar esta información? (diaria, semanal, mensual)
+- ¿Prefiere ver la información en gráficos o en tablas con números?
+- ¿Estaría dispuesto a usar una aplicación web que le ayude a monitorear las finanzas de su restaurante?
+- ¿Qué tan cómodo se siente usando tecnología para su negocio?
+- ¿Cuánto estaría dispuesto a pagar mensualmente por una herramienta que le ayude a gestionar mejor las finanzas?
+- ¿Preferiría algo muy intuitivo o no le importaría dedicar tiempo a aprender?
+- ¿Si tuviera acceso a mejor información financiera, qué cambios haría en su restaurante?
+- ¿Qué dudas o preocupaciones tendría antes de usar una herramienta como FoodFlow?
+
+### 2.2.2. Registro de entrevistas.
+
+En esta sección se aborda la información recolectada de cada entrevista incluyendo un resumen de las respuestas de los entrevistados.
+
+#### Segmento 1: Dueños de restaurantes.
+
+- _Entrevista 1_
+
+| Nombre               | Liliana    |
+|----------------------|------------|
+| Apellido             | Barrera    |
+| Edad                 | 52 años    |
+| Distrito             | Los Olivos |
+| Evidencia            |            |
+| Url                  |            |
+| Inicio de entrevista |            |    
+| Fin de entrevista    |            |
+
+- Distrito de residencia: Los Olivos
+- Estado civil: Casada
+- Ocupación: Dueño de restaurante
+- Dispositivo de preferencia: Smartphone
+- Canales de interacción digital: Instagram, X
+
+### Resumen de entrevista:
+La entrevistada es Liliana Barrera, dueña de un restaurante de comida criolla con 3 años de operación, 
+donde su principal reto diario es mantener la frescura de los ingredientes y la calidad del servicio. 
+Actualmente, gestiona sus finanzas en Excel con apoyo de un contador y revisa sus números semanalmente, 
+identificando que platos como el ceviche y el lomo saltado son los más rentables. Aunque controla el inventario manualmente, 
+suele quedarse sin insumos un par de veces al mes, por lo que valora la posibilidad de recibir alertas automáticas y contar con un panel 
+visual que muestre ganancias, pérdidas, tendencias y rentabilidad por plato en gráficos fáciles de interpretar. Está dispuesta a usar una aplicación web intuitiva, 
+pagar alrededor de S/100 mensuales por ella y aprovechar la información financiera para ajustar precios y menú; sin embargo, expresa preocupación por la facilidad de uso y 
+la seguridad de los datos.
+
+
+### 2.2.3. Análisis de entrevistas
+
+
+
 ## 2.3 Needfinding
+En esta sección se presenta el análisis detallado de la información recolectada durante las entrevistas realizadas a los distintos perfiles involucrados en la gestión financiera de restaurantes. El objetivo principal del proceso de Needfinding ha sido identificar necesidades reales, motivaciones, frustraciones y patrones de comportamiento de los usuarios para guiar el diseño de una solución centrada en ellos.<br>
+Los artefactos incluidos User Persona, User Task Matrix, User Journey Maps, Empathy Mapping y As-Is Scenario Mapping, permiten visualizar, sintetizar y comprender de manera estructurada la experiencia actual de los usuarios, sus tareas clave, emociones, puntos de dolor y oportunidades de mejora. Este análisis constituye la base para el diseño de soluciones alineadas con sus contextos y objetivos reales.
 ### 2.3.1 User Personas
 
 ### 2.3.2 User Task Matrix
