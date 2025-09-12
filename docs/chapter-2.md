@@ -220,6 +220,10 @@ Daniel representa a un dueño de restaurante experimentado enfocado en la optimi
 mejoramiento de la eficiencia del negocio. Su enfoque está en actividades estratégicas como el manejo financiero 
 y la gestión de inventario, que realiza con alta frecuencia e importancia.
 
-### 2.3.3 Empathy Maps
+### 2.3.3 Empathy Map
+Esta sección presenta el Empathy Map desarrollado para el User Persona. El proceso de elaboración incluyó la reflexión colaborativa del equipo en torno a la experiencia, necesidades, pensamientos, emociones y percepciones de cada usuario. Este mapa permite profundizar en la comprensión de sus contextos y motivaciones, respondiendo preguntas clave sobre lo que ven, escuchan, piensan, sienten, dicen y hacen. A partir de este análisis, se identificaron sus Pains y Gains, los cuales servirán como base para el diseño de una propuesta de valor relevante. <br>
+#### Segmento Objetivo: Dueños de restaurantes. <br>
+<img width="774" height="652" alt="image" src="https://github.com/user-attachments/assets/77ab6fd0-017d-4cae-a71d-3fe5ef1c2174" />
+
 ### 2.3.4 As-is Scenario Mapping
 <img width="1151" height="687" alt="image" src="https://github.com/user-attachments/assets/23c02bfc-9ef3-4dc4-982b-0b9f2e41a32a" />
