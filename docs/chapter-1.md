@@ -149,7 +149,8 @@ Sabremos que esto es cierto cuando al menos el 40% de los usuarios lo consulte s
 3. Creemos que un sistema de alertas en tiempo real (notificaciones) ayudará al dueño a planificar mejor las compras.
 Sabremos que esto es cierto cuando el 60% de los usuarios reduzca en un 20% sus compras de emergencia durante el primer trimestre.
 #### 1.2.3.4 Lean UX Canvas
-<img width="989" height="624" alt="image" src="https://github.com/user-attachments/assets/fed407f4-87ca-450a-8541-4b456d8d59d8" />
+
+<img src="https://cdn.discordapp.com/attachments/1413922708428951554/1416131913600471060/image.png?ex=68c5bb1e&is=68c4699e&hm=12d97435ced8503185053abd29f76e786d5ac0023d1eb27a93ad21a02023732f&" />
 
 ## 1.3 Segmentos objetivo
 **Dueños de restaurante:**
