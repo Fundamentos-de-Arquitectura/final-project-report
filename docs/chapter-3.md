@@ -1,9 +1,6 @@
 # Capítulo III: Requirements Specification
 ## 3.1 To-Be Scenario Mapping
 ## 3.2 User Stories
-A continuación, te presento el contenido de tu Excel convertido a formato Markdown, organizado en tablas para una mejor visualización.
-
-### Backlog de Épicas e Historias de Usuario
 
 | Epic / Story ID | Título | Descripción | Criterios de Aceptación | Relacionado con (Epic ID) |
 | :--- | :--- | :--- | :--- | :--- |
@@ -27,6 +24,7 @@ A continuación, te presento el contenido de tu Excel convertido a formato Markd
 | **US18** | Visualización de Reportes Financieros Diarios | Como dueño de restaurante, quiero ver mis ingresos y gastos diarios en un dashboard centralizado para tomar decisiones informadas sobre el rendimiento financiero de mi negocio. | **Escenario 1: Visualización de ingresos diarios** Dado que estoy en la sección de Reportes, cuando selecciono la pestaña "Daily", entonces debo ver el total de ingresos del día y debo ver el porcentaje de cambio respecto al día anterior.\<br\>\<br\>**Escenario 2: Visualización de gastos diarios** Dado que estoy en la sección de Reportes diarios, cuando reviso la sección de gastos, entonces debo ver el total de gastos del día y debo ver el porcentaje de cambio respecto al día anterior. | Reports |
 | **US19** | Navegación entre Períodos de Tiempo | Como dueño de restaurante, quiero poder alternar entre reportes diarios, semanales y mensuales para analizar tendencias en diferentes períodos de tiempo. | **Escenario 1: Cambio a vista semanal** Dado que estoy visualizando reportes diarios, cuando hago clic en la pestaña "Weekly", entonces debo ver los datos financieros agregados de la semana actual y la pestaña "Weekly" debe aparecer como activa.\<br\>\<br\>**Escenario 2: Cambio a vista mensual** Dado que estoy en cualquier vista de reportes, cuando selecciono la pestaña "Monthly", entonces debo ver los datos financieros del mes en curso y todos los gráficos deben actualizarse para mostrar datos mensuales. | Reports |
 | **US20** | Análisis de Categorías de Gastos | Como dueño de restaurante, quiero visualizar el desglose de mis gastos por categorías para identificar áreas donde puedo optimizar costos. | **Escenario 1: Visualización de gastos por categoría** Dado que estoy en la sección de reportes, cuando reviso la sección de gastos, entonces debo ver las categorías con sus respectivos montos y cada categoría debe tener una representación visual.\<br\>\<br\>**Escenario 2: Comparación entre categorías** Dado que tengo gastos en múltiples categorías, cuando visualizo el desglose de gastos, entonces debo poder comparar fácilmente qué categoría representa mayor gasto y los datos deben estar claramente etiquetados. | Reports |
+
 ## 3.3 Impact Map
 ## 3.4 Alcance
 ## 3.5 Product Backlog
