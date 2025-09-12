@@ -1,4 +1,4 @@
-# Capítulo II: Requirements & Analysis
+<img width="1050" height="1930" alt="image" src="https://github.com/user-attachments/assets/b6fa2c6a-7cd2-4b8a-83b5-168eae46cac2" /># Capítulo II: Requirements & Analysis
 ## 2.1 Competidores
 En esta sección, se presenta un análisis de los competidores de FoodFlow y sus respectivas estrategias y tácticas. Se incluye un análisis competitivo, así como una comparación de las fortalezas y debilidades de cada competidor.
 <br>
@@ -195,6 +195,8 @@ la seguridad de los datos.
 En esta sección se presenta el análisis detallado de la información recolectada durante las entrevistas realizadas a los distintos perfiles involucrados en la gestión financiera de restaurantes. El objetivo principal del proceso de Needfinding ha sido identificar necesidades reales, motivaciones, frustraciones y patrones de comportamiento de los usuarios para guiar el diseño de una solución centrada en ellos.<br>
 Los artefactos incluidos User Persona, User Task Matrix, User Journey Maps, Empathy Mapping y As-Is Scenario Mapping, permiten visualizar, sintetizar y comprender de manera estructurada la experiencia actual de los usuarios, sus tareas clave, emociones, puntos de dolor y oportunidades de mejora. Este análisis constituye la base para el diseño de soluciones alineadas con sus contextos y objetivos reales.
 ### 2.3.1 User Personas
+
+<img src="https://media.discordapp.net/attachments/1413922708428951554/1413935397129682996/Hernan_Agudelo.png?ex=68c4fdb4&is=68c3ac34&hm=afc13ba0da0393ca606dca8b1a5624a59e76a2fa1209a7cd9507dfbd677d7b34&=&format=webp&quality=lossless&width=526&height=968">
 
 ### 2.3.2 User Task Matrix
 
