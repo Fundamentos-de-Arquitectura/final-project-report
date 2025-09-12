@@ -1,7 +1,7 @@
 
 # <div style="text-align: center;"> UNIVERSIDAD PERUANA DE CIENCIAS APLICADAS
 <p align="center">
-  <img src="/assets/logoupc.png"  style="width:200px; height:auto;">
+  <img src="https://github.com/Fundamentos-de-Arquitectura/final-project-report/blob/master/assets/logoupc.png?raw=true"  style="width:200px; height:auto;">
 </p>
 
 ## <div style="text-align: center;">Carrera: Ingeniería de Software </div>
