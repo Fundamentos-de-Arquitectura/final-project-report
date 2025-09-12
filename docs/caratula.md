@@ -158,10 +158,9 @@
 - [5.4. Microservices Deployment](/chapter05.md#54-microservices-deployment)
     - [5.3.1. Cloud Architecture Diagram](/chapter05.md#531-cloud-architecture-diagram)
     - [5.3.2. Cloud Architecture Deployment (AWS, Microsoft Azure or Google Cloud)](/chapter05.md#532-cloud-architecture-deployment-aws-microsoft-azure-or-google-cloud)
-
-## Conclusiones
-### Conclusiones y recomendaciones
-## Video About-The-Team
-## Referencias Bibliográficas
-## Anexos
-### Links 
+- [5.1. Conclusiones](/chapter05.md#51-conclusiones)
+- [5.2. Conclusiones y Recomendaciones](/chapter05.md#52-conclusiones-y-recomendaciones)
+- [6.1. Video About-The-Team](/chapter06.md#61-video-about-the-team)
+- [6.2. Referencias Bibliográficas](/chapter06.md#62-referencias-bibliográficas)
+- [6.3. Anexos](/chapter06.md#63-anexos)
+- [6.4. Links](/chapter06.md#64-links)
