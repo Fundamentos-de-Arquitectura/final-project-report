@@ -129,13 +129,13 @@ Sabremos que esto es cierto cuando más del 50% de los usuarios exporten al meno
 
 **User Hypotheses**
 
-Creemos que al mostrar reportes de ganancias y pérdidas, los dueños tomarán decisiones más rápidas. 
+1. Creemos que al mostrar reportes de ganancias y pérdidas, los dueños tomarán decisiones más rápidas. 
 Sabremos que esto es cierto cuando el 80% de los usuarios consulte reportes semanales sin apoyo de otras herramientas externas.
 
-Creemos que un ranking de platos más vendidos ayudará al dueño a optimizar el menú.
+2. Creemos que un ranking de platos más vendidos ayudará al dueño a optimizar el menú.
 Sabremos que esto es cierto cuando al menos el 50% de los usuarios haga ajustes de menú en los primeros 2 meses.
 
-Creemos que las notificaciones de inventario crítico ayudarán a los dueños a reducir quiebres de stock.
+3. Creemos que las notificaciones de inventario crítico ayudarán a los dueños a reducir quiebres de stock.
 Sabremos que esto es cierto cuando los usuarios reporten una disminución de al menos 30% en pedidos no atendidos por falta de insumos.
 
 **Solution Hypotheses**
