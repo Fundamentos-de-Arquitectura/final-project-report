@@ -9,8 +9,8 @@
 ## <div style="text-align: center;"> PROFESOR: Ernesto Ocampo Tello</div>
 ## <div style="text-align: center;"> NRC: 6339</div>
 ## <div style="text-align: center;"> INFORME TB1</div>
-## <div style="text-align: center;"> START UP: </div>
-## <div style="text-align: center;"> PRODUCTO: </div>
+## <div style="text-align: center;"> START UP: Go5U </div>
+## <div style="text-align: center;"> PRODUCTO: FoodFlow </div>
 
 ### <div style="text-align: center;"> INTEGRANTES:</div>
 <div style="display: flex; justify-content: center;">
