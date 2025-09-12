@@ -164,3 +164,22 @@
 - [6.2. Referencias Bibliográficas](/chapter06.md#62-referencias-bibliográficas)
 - [6.3. Anexos](/chapter06.md#63-anexos)
 - [6.4. Links](/chapter06.md#64-links)
+
+
+## Registro de versiones del informe
+
+nota: hacerlo con ia llegando a cada 
+
+| Versión | Fecha | Descripción | Autor | Descripción de la modificación |
+|-----|-----|-------------|-------|--------------------------------|
+|     |     |             |       |                                |
+
+
+## Project Report Collaboration Insights
+
+Para el desarrollo de este informe se utilizó GitHub como plataforma de colaboración y control de versiones. A continuación, se presentan algunos insights sobre la colaboración del equipo durante la elaboración del informe:
+
+![img_2.png](img_2.png)
+
+## Student Outcome
+
