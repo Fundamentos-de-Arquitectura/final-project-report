@@ -218,6 +218,35 @@ financiera para optimizar precios y menú.
 Sin embargo, expresa preocupación por la seguridad de los datos y la facilidad de uso de la herramienta.
 
 
+- _Entrevista 2_
+
+| Nombre               | Clara      |
+|----------------------|------------|
+| Apellido             | Canahualpa |
+| Edad                 | 49         |
+| Distrito             | La Molina  |
+| Evidencia            |            |
+| Url                  |            |
+| Inicio de entrevista |            |
+| Fin de entrevista    |            |
+
+- Distrito de residencia: 
+- Estado civil: 
+- Ocupación: Dueño de restaurante
+- Dispositivo de preferencia: Laptop
+- Canales de interacción digital: Facebook, LinkedIn
+
+### Resumen de entrevista:
+
+La entrevistada es Clara Canahualpa, encargada de la producción de postres en la pastelería–cafetería Horneando Amores, ubicada en La Molina, Lima. El negocio lleva alrededor de diez años en funcionamiento y su principal reto diario es lograr mayores ventas. Actualmente, el 80% de la oferta corresponde a productos dulces y el 20% a salados.
+Para la gestión financiera, utilizan el sistema ODO, aunque Clara no revisa personalmente los números; esta labor la realizan dos de sus hijas. Una se encarga de la contabilidad, control de inventario y materiales, mientras que la otra gestiona al personal, siendo este último un punto crítico debido a la alta rotación en el área de salados.
+En cuanto a la oferta de productos, los más rentables y demandados son el queque de arándano, tres leches (de algarrobina y coco), carrot cake, queques de plátano, crocante de chocolate y pie de limón. Clara recibe reportes diarios en Excel sobre el stock y la producción necesaria, lo que le permite planificar la elaboración de postres.
+Sobre el control de inventarios, la información se obtiene principalmente del sistema ODO y de registros manuales en una pizarra. El sistema genera alertas de productos bajos en stock, siempre que la información sea cargada de forma adecuada.
+Clara considera muy útil contar con paneles gráficos interactivos que muestren ventas, ganancias, pérdidas y platos más vendidos, y afirma que los consultaría cada tres o cuatro días. Respecto al costo de la plataforma, sabe que es anual y solía rondar los $1,500, aunque ahora es menor; sin embargo, este aspecto también lo maneja su hija.
+En cuanto a los planes futuros, se encuentran en un proceso de relanzamiento con nuevos postres, manteniendo su estilo artesanal. Uno de los objetivos principales es fortalecer la presencia en redes sociales, para lo cual han contactado a una persona encargada de marketing digital.
+En síntesis, Clara se enfoca principalmente en la producción y el control básico de personal, mientras delega las finanzas y el inventario a sus hijas. El negocio busca innovar con nuevos postres y crecer a través de una mejor estrategia de marketing digital.
+
+
 ### 2.2.3. Análisis de entrevistas
 
 
@@ -225,6 +254,7 @@ Sin embargo, expresa preocupación por la seguridad de los datos y la facilidad 
 ## 2.3 Needfinding
 En esta sección se presenta el análisis detallado de la información recolectada durante las entrevistas realizadas a los distintos perfiles involucrados en la gestión financiera de restaurantes. El objetivo principal del proceso de Needfinding ha sido identificar necesidades reales, motivaciones, frustraciones y patrones de comportamiento de los usuarios para guiar el diseño de una solución centrada en ellos.<br>
 Los artefactos incluidos User Persona, User Task Matrix, User Journey Maps, Empathy Mapping y As-Is Scenario Mapping, permiten visualizar, sintetizar y comprender de manera estructurada la experiencia actual de los usuarios, sus tareas clave, emociones, puntos de dolor y oportunidades de mejora. Este análisis constituye la base para el diseño de soluciones alineadas con sus contextos y objetivos reales.
+
 ### 2.3.1 User Personas
 
 <img src="https://media.discordapp.net/attachments/1413922708428951554/1413935397129682996/Hernan_Agudelo.png?ex=68c4fdb4&is=68c3ac34&hm=afc13ba0da0393ca606dca8b1a5624a59e76a2fa1209a7cd9507dfbd677d7b34&=&format=webp&quality=lossless&width=526&height=968">
