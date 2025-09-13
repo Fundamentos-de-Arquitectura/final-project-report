@@ -62,14 +62,9 @@ Para la planeación y desarrollo del proyecto, se han definido las siguientes é
 
 El alcance del proyecto FoodFlow se centra en proveer una solución web de gestión financiera y de inventario para dueños de restaurantes, con el objetivo de optimizar la toma de decisiones y mejorar la rentabilidad.
 El proyecto se enfoca en la usabilidad y accesibilidad, utilizando reportes visuales y alertas automáticas. Está diseñado para un usuario que no tiene conocimientos contables avanzados.
-No es parte de la solución la incorporacón de IOT, ni la gestión de personal o clientes, ni la integración con sistemas de pago o contabilidad externa.
+No es parte de la solución la incorporación de IOT, ni la gestión de personal o clientes, ni la integración con sistemas de pago o contabilidad externa.
 
-#### Drivers Arquitectónicos:
-
-Los drivers arquitectónicos son los factores clave que influyen en las decisiones de diseño y arquitectura del sistema 
-FoodFlow. Estos se clasifican en:
-
-Drivers de Propósito:
+Propósito:
 
 | Driver                          | Descripción                                                                                  | Impacto Arquitectónico                                                                                     |
 |---------------------------------|----------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------|
@@ -77,18 +72,17 @@ Drivers de Propósito:
 | Dashboard Interactivo           | Panel centralizado con métricas clave y navegación intuitiva                                 | Arquitectura de frontend modular con componentes reutilizables.                                            |
 | Gestión de Inventario           | Control de stock con alertas cuando los productos estén por agotarse                         | Integración con bases de datos en tiempo real y sistema de notificaciones.                                 |
 
-Drivers de Constraints:
+Constraints:
 
-| Driver                             | Descripción                                                                  | Impacto Arquitectónico                                                       |
-|------------------------------------|------------------------------------------------------------------------------|------------------------------------------------------------------------------|
-| Responsividad                      | El sistema debe ser accesible desde dispositivos móviles y de escritorio     | Diseño responsivo y adaptativo con frameworks modernos de frontend.          |
-| Presupuesto Limitado               | Solución costo-efectiva para el segmento de pequeños y medianos restaurantes | Arquitectura en la nube con servicios gestionados, optimización de recursos. |
-| Seguridad de Datos                 | Protección de información financiera y de inventario                         | Implementación de autenticación robusta y políticas de acceso.               |
-| Exclusión de IoT                   | No se incluirán dispositivos IoT en la solución inicial                      | Enfoque en desarrollo web sin integración de hardware adicional.             |
-| Compatibilidad Web                 | Accesible desde navegadores modernos (Chrome, Edge, Firefox, Safari)         | Uso de tecnologías web estándar y pruebas de compatibilidad.                 |
-| Conocimiento Técnico del Usuario   | Usuarios sin conocimientos contables o técnicos avanzados                    | Interfaz simplificada, arquitectura que soporte UX intuitivo                 |
+| Driver                           | Descripción                                                                  | Impacto Arquitectónico                                                       |
+|----------------------------------|------------------------------------------------------------------------------|------------------------------------------------------------------------------|
+| Presupuesto Limitado             | Solución costo-efectiva para el segmento de pequeños y medianos restaurantes | Arquitectura en la nube con servicios gestionados, optimización de recursos. |
+| Seguridad de Datos               | Protección de información financiera y de inventario                         | Implementación de autenticación robusta y políticas de acceso.               |
+| Exclusión de IoT                 | No se incluirán dispositivos IoT en la solución inicial                      | Enfoque en desarrollo web sin integración de hardware adicional.             |
+| Compatibilidad Web               | Accesible desde navegadores modernos (Chrome, Edge, Firefox, Safari)         | Uso de tecnologías web estándar y pruebas de compatibilidad.                 |
+| Conocimiento Técnico del Usuario | Usuarios sin conocimientos contables o técnicos avanzados                    | Interfaz simplificada, arquitectura que soporte UX intuitivo                 |
 
-Escenario de Atributo de Calidad
+Escenario de Atributo de Calidad:
 
 | Atributo   | Fuente | Estímulo                                                  | Artefacto                       | Entorno                        | Respuesta                                                                       | Medida                                                 |
 | ---------- | ------ | --------------------------------------------------------- | ------------------------------- | ------------------------------ | ------------------------------------------------------------------------------- | ------------------------------------------------------ |
