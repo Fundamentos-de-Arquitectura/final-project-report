@@ -166,6 +166,14 @@ El atributo más crítico es la Usabilidad, ya que el usuario objetivo no tiene 
 | 20 | US10 | Marcar las notificaciones como leídas | Como dueño de restaurante quiero poder marcar las notificaciones como leídas para mantener mi panel organizado. | 1 |
 
 
+### Conclusiones
+- Necesidad del mercado: Existe una carencia clara de herramientas accesibles y simples para la gestión financiera en pequeños y medianos restaurantes, lo cual genera pérdidas económicas, decisiones poco estratégicas y riesgo de sostenibilidad.
+- Propuesta de valor de FoodFlow: La solución se diferencia al ofrecer un dashboard intuitivo, reportes visuales, alertas automáticas y análisis de rentabilidad por plato, lo que la hace más asequible y usable que los ERP tradicionales o sistemas POS genéricos.
+- Validación con usuarios: Las entrevistas a dueños de restaurantes confirman que los principales puntos de dolor son el control de inventario y la falta de visibilidad financiera, reforzando la pertinencia de la propuesta.
+- Estrategia competitiva: FoodFlow se posiciona frente a competidores globales (Wave, Xero, R365) destacando simplicidad, costos accesibles y especialización en restaurantes independientes de LATAM.
+- Diseño centrado en el usuario: El uso de Lean UX permitió identificar supuestos, hipótesis y validar funcionalidades clave como reportes, exportación a Excel y alertas, asegurando que la solución esté alineada con las necesidades reales del segmento.
+- Viabilidad y escalabilidad: El alcance definido muestra una arquitectura modular, con enfoque en usabilidad y seguridad de datos, lo que permite pensar en una evolución del producto hacia nuevas funciones sin perder simplicidad ni accesibilidad.
+
 ### Anexos
 
 - Formulario para entrevistas: https://forms.fillout.com/t/xcdy5bB5ZKus
