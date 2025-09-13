@@ -284,19 +284,19 @@ En esta sección, se presenta la matriz de tareas de los usuarios, que muestra l
 y empleados de restaurantes, junto con su frecuencia e importancia. Esta matriz ayuda a identificar las tareas clave y 
 su relevancia para cada tipo de usuario.
 
-Para ello, usamos el user persona creado en la sección anterior tomando a Hernán, segmento: Dueño de restaurante
+Para ello, usamos el user persona creado en la sección anterior tomando a Sofía Ríos, segmento: Dueños de restaurantes
 
-| Actividades                                  | Hernán (Dueño de restaurante) - Frecuencia / Importancia |
-|----------------------------------------------|----------------------------------------------------------|
-| Revisar caja diaria manualmente              | Siempre / Alta                                           |
-| Hacer cálculos de ganancias en papel/Excel   | Siempre / Alta                                           | 
-| Contar efectivo y arqueo de caja             | Con Frecuencia / Alta                                    | 
-| Calcular costos de platos manualmente        | Con Frecuencia / Alta                                    | 
-| Anotar productos faltantes en papel          | Con Frecuencia / Media                                   | 
-| Calcular necesidades de compra mentalmente   | Siempre / Alta                                           | 
-| Contar inventario físicamente                | Siempre / Alta                                           | 
-| Identificar platos populares por observación | Siempre / Alta                                           |
-| Organizar facturas y comprobantes físicos    | Con Frecuencia / Media                                   |
+| Actividades                                  | Sofía Ríos (Dueña de restaurante) - Frecuencia / Importancia |
+|----------------------------------------------|--------------------------------------------------------------|
+| Revisar caja diaria manualmente              | Siempre / Alta                                               |
+| Hacer cálculos de ganancias en papel/Excel   | Siempre / Alta                                               | 
+| Contar efectivo y arqueo de caja             | Con Frecuencia / Alta                                        | 
+| Calcular costos de platos manualmente        | Con Frecuencia / Alta                                        | 
+| Anotar productos faltantes en papel          | Con Frecuencia / Media                                       | 
+| Calcular necesidades de compra mentalmente   | Siempre / Alta                                               | 
+| Contar inventario físicamente                | Siempre / Alta                                               | 
+| Identificar platos populares por observación | Siempre / Alta                                               |
+| Organizar facturas y comprobantes físicos    | Con Frecuencia / Media                                       |
 
 Daniel representa a un dueño de restaurante experimentado enfocado en la optimización operativa y el 
 mejoramiento de la eficiencia del negocio. Su enfoque está en actividades estratégicas como el manejo financiero 
