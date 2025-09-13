@@ -161,77 +161,18 @@ En esta sección se aborda la información recolectada de cada entrevista incluy
 
 - _Entrevista 1_
 
-| Nombre               | Liliana    |
-|----------------------|------------|
-| Apellido             | Barrera    |
-| Edad                 | 52 años    |
-| Distrito             | Los Olivos |
-| Evidencia            |            |
-| Url                  |            |
-| Inicio de entrevista |            |    
-| Fin de entrevista    |            |
+| Nombre               | Clara                                                                                                                                                                                                                             |
+|----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Apellido             | Canahualpa                                                                                                                                                                                                                        |
+| Edad                 | 49                                                                                                                                                                                                                                |
+| Distrito             | La Molina                                                                                                                                                                                                                         |
+| Evidencia            | <img src="https://media.discordapp.net/attachments/1413922708428951554/1416240152854003822/image.png?ex=68c61fec&is=68c4ce6c&hm=219d5d59e9ba213f465b3ce331adcc6b892ff7af1c984e4c27a704dbf70175c2&=&format=webp&quality=lossless"> |
+| Url                  | https://upcedupe-my.sharepoint.com/:v:/g/personal/u202213765_upc_edu_pe/EQbGCZQqNStEiOr3ASX3J74BIwBZ_cqT66YpSpBcX0tiAA?e=BfCmc6                                                                                                   |
+| Inicio de entrevista | 00:00:01                                                                                                                                                                                                                          |
+| Fin de entrevista    | 00:11:19                                                                                                                                                                                                                          |
 
-- Distrito de residencia: Los Olivos
-- Estado civil: Casada
-- Ocupación: Dueño de restaurante
-- Dispositivo de preferencia: Smartphone
-- Canales de interacción digital: Instagram, X
-
-### Resumen de entrevista:
-La entrevistada es Liliana Barrera, dueña de un restaurante de comida criolla con 3 años de operación, 
-donde su principal reto diario es mantener la frescura de los ingredientes y la calidad del servicio. 
-Actualmente, gestiona sus finanzas en Excel con apoyo de un contador y revisa sus números semanalmente, 
-identificando que platos como el ceviche y el lomo saltado son los más rentables. Aunque controla el inventario manualmente, 
-suele quedarse sin insumos un par de veces al mes, por lo que valora la posibilidad de recibir alertas automáticas y contar con un panel 
-visual que muestre ganancias, pérdidas, tendencias y rentabilidad por plato en gráficos fáciles de interpretar. Está dispuesta a usar una aplicación web intuitiva, 
-pagar alrededor de S/100 mensuales por ella y aprovechar la información financiera para ajustar precios y menú; sin embargo, expresa preocupación por la facilidad de uso y 
-la seguridad de los datos.
-
-
-- _Entrevista 2_
-
-| Nombre               | Gonzalo    |
-|----------------------|------------|
-| Apellido             | Elio       |
-| Edad                 | 58 años    |
-| Distrito             | San Isidro |
-| Evidencia            |            |
-| Url                  |            |
-| Inicio de entrevista |            |
-| Fin de entrevista    |            |
-
-- Distrito de residencia: San Isidro
-- Estado civil: Conviviente
-- Ocupación: Dueño de restaurante
-- Dispositivo de preferencia: Laptop
-- Canales de interacción digital: Facebook, LinkedIn
-
-### Resumen de entrevista:
-Gonzalo Elio es dueño de un restaurante donde principalmente ofrece cafe y postres, con 1 año y media de experiencia en el rubro.
-Su mayor desafío es gestionar el inventario y las finanzas de manera eficiente. Actualmente, utiliza un sistema rudimentario 
-para llevar el control financiero y revisa los números mensualmente, aunque le gustaría hacerlo con mayor frecuencia.
-Identifica que sus productos más rentables son los cafés y postres. Aunque no tiene un sistema formal para controlar el inventario,
-suele quedarse sin ingredientes esenciales una vez al mes. Valora la idea de recibir alertas automáticas y 
-tener un panel visual que le permita monitorear ganancias, pérdidas y tendencias de manera sencilla.
-Está dispuesto a usar una aplicación web, pagar alrededor de S/300 mensuales y aprovechar la información 
-financiera para optimizar precios y menú.
-Sin embargo, expresa preocupación por la seguridad de los datos y la facilidad de uso de la herramienta.
-
-
-- _Entrevista 2_
-
-| Nombre               | Clara      |
-|----------------------|------------|
-| Apellido             | Canahualpa |
-| Edad                 | 49         |
-| Distrito             | La Molina  |
-| Evidencia            |            |
-| Url                  |            |
-| Inicio de entrevista |            |
-| Fin de entrevista    |            |
-
-- Distrito de residencia: 
-- Estado civil: 
+- Distrito de residencia:
+- Estado civil:
 - Ocupación: Dueño de restaurante
 - Dispositivo de preferencia: Laptop
 - Canales de interacción digital: Facebook, LinkedIn
@@ -246,14 +187,88 @@ Clara considera muy útil contar con paneles gráficos interactivos que muestren
 En cuanto a los planes futuros, se encuentran en un proceso de relanzamiento con nuevos postres, manteniendo su estilo artesanal. Uno de los objetivos principales es fortalecer la presencia en redes sociales, para lo cual han contactado a una persona encargada de marketing digital.
 En síntesis, Clara se enfoca principalmente en la producción y el control básico de personal, mientras delega las finanzas y el inventario a sus hijas. El negocio busca innovar con nuevos postres y crecer a través de una mejor estrategia de marketing digital.
 
-### Estadísticas de entrevistas
+- _Entrevista 2_
 
-Además de las entrevistas personales, a cada entrevistado se le compartió un enlace al formulario realizado con el objetivo de conocer su personalidad a detalle. A continuación se demuestran las estadísticas a las respuestas obtenidas
+| Nombre               | Liliana                                                                                                                                                                                                                           |
+|----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Apellido             | Barrera                                                                                                                                                                                                                           |
+| Edad                 | 52 años                                                                                                                                                                                                                           |
+| Distrito             | Los Olivos                                                                                                                                                                                                                        |
+| Evidencia            | <img src="https://media.discordapp.net/attachments/1413922708428951554/1416240347993870469/image.png?ex=68c6201b&is=68c4ce9b&hm=90ec02491773bc3a16546c166c6936d43fd61cd862c1af3e0cbbe69bda8de6f7&=&format=webp&quality=lossless"> |
+| Url                  | https://upcedupe-my.sharepoint.com/:v:/g/personal/u202213765_upc_edu_pe/EQbGCZQqNStEiOr3ASX3J74BIwBZ_cqT66YpSpBcX0tiAA?e=BfCmc6                                                                                                   |
+| Inicio de entrevista | 00:11:28                                                                                                                                                                                                                          |    
+| Fin de entrevista    | 00:17:40                                                                                                                                                                                                                          |
+
+- Distrito de residencia: Los Olivos
+- Estado civil: Casada
+- Ocupación: Dueño de restaurante
+- Dispositivo de preferencia: Smartphone
+- Canales de interacción digital: Instagram, X
+
+### Resumen de entrevista:
+La entrevistada es Liliana Barrera, dueña de un restaurante de comida criolla con 3 años de operación,
+donde su principal reto diario es mantener la frescura de los ingredientes y la calidad del servicio.
+Actualmente, gestiona sus finanzas en Excel con apoyo de un contador y revisa sus números semanalmente,
+identificando que platos como el ceviche y el lomo saltado son los más rentables. Aunque controla el inventario manualmente,
+suele quedarse sin insumos un par de veces al mes, por lo que valora la posibilidad de recibir alertas automáticas y contar con un panel
+visual que muestre ganancias, pérdidas, tendencias y rentabilidad por plato en gráficos fáciles de interpretar. Está dispuesta a usar una aplicación web intuitiva,
+pagar alrededor de S/100 mensuales por ella y aprovechar la información financiera para ajustar precios y menú; sin embargo, expresa preocupación por la facilidad de uso y
+la seguridad de los datos.
+
+- _Entrevista 3_
+
+| Nombre               | Gonzalo                                                                                                                                                                                                                           |
+|----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Apellido             | Elio                                                                                                                                                                                                                              |
+| Edad                 | 58 años                                                                                                                                                                                                                           |
+| Distrito             | San Isidro                                                                                                                                                                                                                        |
+| Evidencia            | <img src="https://media.discordapp.net/attachments/1413922708428951554/1416240262774128730/image.png?ex=68c62007&is=68c4ce87&hm=7fe7881b3b5a4c5425d5c59fa1b366a3fc22e30d9d1971c7c637565f77889f2f&=&format=webp&quality=lossless"> |
+| Url                  | https://upcedupe-my.sharepoint.com/:v:/g/personal/u202213765_upc_edu_pe/EQbGCZQqNStEiOr3ASX3J74BIwBZ_cqT66YpSpBcX0tiAA?e=BfCmc6                                                                                                   |
+| Inicio de entrevista | 00:17:44                                                                                                                                                                                                                          |
+| Fin de entrevista    | 00:28:10                                                                                                                                                                                                                          |
+
+- Distrito de residencia: San Isidro
+- Estado civil: Conviviente
+- Ocupación: Dueño de restaurante
+- Dispositivo de preferencia: Laptop
+- Canales de interacción digital: Facebook, LinkedIn
+
+### Resumen de entrevista:
+Gonzalo Elio es dueño de un restaurante donde principalmente ofrece cafe y postres, con 1 año y media de experiencia en el rubro.
+Su mayor desafío es gestionar el inventario y las finanzas de manera eficiente. Actualmente, utiliza un sistema rudimentario
+para llevar el control financiero y revisa los números mensualmente, aunque le gustaría hacerlo con mayor frecuencia.
+Identifica que sus productos más rentables son los cafés y postres. Aunque no tiene un sistema formal para controlar el inventario,
+suele quedarse sin ingredientes esenciales una vez al mes. Valora la idea de recibir alertas automáticas y
+tener un panel visual que le permita monitorear ganancias, pérdidas y tendencias de manera sencilla.
+Está dispuesto a usar una aplicación web, pagar alrededor de S/300 mensuales y aprovechar la información
+financiera para optimizar precios y menú.
+Sin embargo, expresa preocupación por la seguridad de los datos y la facilidad de uso de la herramienta.
 
 
 ### 2.2.3. Análisis de entrevistas
+El análisis de las tres entrevistas revela que, a pesar de las diferencias en tamaño, experiencia y tipo de negocio, todos los entrevistados comparten retos similares relacionados con la gestión de inventarios y la necesidad de contar con información financiera clara y accesible. Clara Canahualpa, con un negocio de mayor trayectoria, utiliza un sistema más estructurado pero depende de sus hijas para la revisión de finanzas e inventario, lo que la aleja de la toma directa de decisiones. Gonzalo Elio, con menor tiempo en el rubro, enfrenta dificultades en el control de insumos y finanzas, usando métodos rudimentarios que limitan la eficiencia de su gestión. Liliana Barrera, en cambio, trabaja con Excel y apoyo de un contador, lo que le permite tener mayor control, aunque aún enfrenta problemas de quiebres de stock.
 
+En los tres casos se evidencia la necesidad de una herramienta digital que facilite el control financiero y de inventario, especialmente mediante paneles gráficos y alertas automáticas que ayuden a evitar pérdidas y mejorar la planificación. También coinciden en que contar con información clara les permitiría ajustar precios, introducir nuevos productos y tomar mejores decisiones estratégicas. Las diferencias surgen en la disposición de inversión, pues mientras Gonzalo está dispuesto a pagar un monto relativamente alto por una solución web, Liliana considera un pago más reducido y Clara ya invierte en un sistema, aunque no se involucra directamente en los costos. Finalmente, tanto Gonzalo como Liliana expresan preocupación por la seguridad de los datos y la facilidad de uso, lo que refuerza la importancia de diseñar soluciones intuitivas y confiables.
 
+#### Estadísticas de entrevistas
+
+Además de las entrevistas personales, a cada entrevistado se le compartió un enlace al formulario realizado con el objetivo de conocer su personalidad a detalle. A continuación se demuestran las estadísticas a las respuestas obtenidas
+
+<img src="https://media.discordapp.net/attachments/1413922708428951554/1416234916659855471/image.png?ex=68c61b0c&is=68c4c98c&hm=4d1e32a0a01093ca23c1c10bd3ba621afe512f51d7f7f246865ef90569b214b0&=&format=webp&quality=lossless">
+
+<img src="https://media.discordapp.net/attachments/1413922708428951554/1416234946909044806/image.png?ex=68c61b13&is=68c4c993&hm=82d6ef9e7e7d78383da9b6de688e34109ea8877b631faa7780eec3eb0ab681ba&=&format=webp&quality=lossless">
+
+<img src="https://media.discordapp.net/attachments/1413922708428951554/1416234987790929940/image.png?ex=68c61b1d&is=68c4c99d&hm=2abdef4ad201cde459427ad18b949a60aaa6592b02839cffe9b12ab70ec31ed3&=&format=webp&quality=lossless">
+
+<img src="https://media.discordapp.net/attachments/1413922708428951554/1416235042929246330/image.png?ex=68c61b2a&is=68c4c9aa&hm=24d6ab47bd8497462e3026762e2ada8da4214da177f0deee728e7958614053aa&=&format=webp&quality=lossless">
+
+<img src="https://media.discordapp.net/attachments/1413922708428951554/1416235079969148988/image.png?ex=68c61b33&is=68c4c9b3&hm=672433836802d05f04f5129443448e5fc31b36fcfc1c2fec306d51d3826679ed&=&format=webp&quality=lossless">
+
+<img src="https://media.discordapp.net/attachments/1413922708428951554/1416235113758330982/image.png?ex=68c61b3b&is=68c4c9bb&hm=00c58de50e8cb5c4f6a73de63995c08c797374e21eb1ca3654b53016fbe468cf&=&format=webp&quality=lossless">
+
+<img src="https://media.discordapp.net/attachments/1413922708428951554/1416235148214800465/image.png?ex=68c61b43&is=68c4c9c3&hm=3cd98360d3487f71fa424c9bf570c61b0b5eca755b9971f2485d9616532f68e5&=&format=webp&quality=lossless">
+
+Enlace al formulario: https://forms.fillout.com/t/xcdy5bB5ZKus
 
 ## 2.3 Needfinding
 En esta sección se presenta el análisis detallado de la información recolectada durante las entrevistas realizadas a los distintos perfiles involucrados en la gestión financiera de restaurantes. El objetivo principal del proceso de Needfinding ha sido identificar necesidades reales, motivaciones, frustraciones y patrones de comportamiento de los usuarios para guiar el diseño de una solución centrada en ellos.<br>
