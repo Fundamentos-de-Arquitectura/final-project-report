@@ -246,6 +246,10 @@ Clara considera muy útil contar con paneles gráficos interactivos que muestren
 En cuanto a los planes futuros, se encuentran en un proceso de relanzamiento con nuevos postres, manteniendo su estilo artesanal. Uno de los objetivos principales es fortalecer la presencia en redes sociales, para lo cual han contactado a una persona encargada de marketing digital.
 En síntesis, Clara se enfoca principalmente en la producción y el control básico de personal, mientras delega las finanzas y el inventario a sus hijas. El negocio busca innovar con nuevos postres y crecer a través de una mejor estrategia de marketing digital.
 
+### Estadísticas de entrevistas
+
+Además de las entrevistas personales, a cada entrevistado se le compartió un enlace al formulario realizado con el objetivo de conocer su personalidad a detalle. A continuación se demuestran las estadísticas a las respuestas obtenidas
+
 
 ### 2.2.3. Análisis de entrevistas
 
@@ -257,7 +261,7 @@ Los artefactos incluidos User Persona, User Task Matrix, User Journey Maps, Empa
 
 ### 2.3.1 User Personas
 
-<img src="https://media.discordapp.net/attachments/1413922708428951554/1413935397129682996/Hernan_Agudelo.png?ex=68c4fdb4&is=68c3ac34&hm=afc13ba0da0393ca606dca8b1a5624a59e76a2fa1209a7cd9507dfbd677d7b34&=&format=webp&quality=lossless&width=526&height=968">
+<img src="https://media.discordapp.net/attachments/1413922708428951554/1416231013398352063/Sofia_Rios.png?ex=68c61769&is=68c4c5e9&hm=87f06456381640ed25e4d05cbeaa96658426098c38bcca5cbb66a8cb526036ab&=&format=webp&quality=lossless&width=571&height=968">
 
 ### 2.3.2 User Task Matrix
 
