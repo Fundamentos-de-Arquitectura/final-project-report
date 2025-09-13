@@ -14,7 +14,7 @@ En esta sección, se presenta un análisis de los competidores de FoodFlow y sus
   </tr>
   <tr>
     <td colspan="2"></td>
-    <td><img width="646" height="618" alt="image" src="https://github.com/user-attachments/assets/ea9f01cd-e244-4de2-9f8d-8e95d1b32267" />
+    <td><img width="100" height="100" alt="image" src="https://github.com/user-attachments/assets/ea9f01cd-e244-4de2-9f8d-8e95d1b32267" />
 <br>FoodFlow</td>
     <td><img width="147" height="52" alt="image" src="https://github.com/user-attachments/assets/796ca84b-b894-47ea-a4ba-f3c20d30ce96" />
 <br>Wave</td>

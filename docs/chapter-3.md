@@ -164,3 +164,9 @@ El atributo más crítico es la Usabilidad, ya que el usuario objetivo no tiene 
 | 18 | US17 | Cancelar creación de pedido | Como dueño de restaurante quiero poder cancelar la creación de un pedido para no guardar información incorrecta. | 2 |
 | 19 | US7 | Buscar Platos Existentes | Como dueño de restaurante, quiero buscar platos específicos en mi menú para encontrar rápidamente la información que necesito actualizar. | 2 |
 | 20 | US10 | Marcar las notificaciones como leídas | Como dueño de restaurante quiero poder marcar las notificaciones como leídas para mantener mi panel organizado. | 1 |
+
+
+### Anexos
+
+- Formulario para entrevistas: https://forms.fillout.com/t/xcdy5bB5ZKus
+- Enlace a video de entrevistas: https://goo.su/bD7IT    
