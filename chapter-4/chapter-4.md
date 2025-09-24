@@ -1,7 +1,7 @@
 # Capítulo IV: Product Architecture Design
 
 ## 4.1 Desing Concepts, ViewPoints & ER Diagrams
-El presente diseño se realiza aplicando el método Attribute-Driven Design (ADD) v3 del SEI, identificando principios, enfoques, estilos y patrones arquitectónicos
+El presente diseño se realiza aplicando el método Attribute-Driven Design (ADD), identificando principios, enfoques, estilos y patrones arquitectónicos
 ### 4.1.1 Principles Statements
 Para el diseño de la arquitectura representada en el diagrama, se establecen los siguientes principios:
 
@@ -22,7 +22,7 @@ Para el diseño de la arquitectura representada en el diagrama, se establecen lo
   Se prioriza la incorporación de métricas, trazas y logs centralizados que permitan detectar incidentes y facilitar el mantenimiento preventivo.
   <br><br>
 - **Consistencia de interfaz**  
-  La *Single Page Application* en Angular mantiene un diseño coherente y unificado para los usuarios finales, integrando la Landing Page con las distintas funcionalidades sin interrumpir la experiencia de navegación.
+  La Single Page Application (SPA) en Angular mantiene un diseño coherente y unificado para los usuarios finales, integrando la Landing Page con las distintas funcionalidades sin interrumpir la experiencia de navegación.
 
 
 ### 4.1.2 Approaches Statements, Architectural Styles & Patterns
