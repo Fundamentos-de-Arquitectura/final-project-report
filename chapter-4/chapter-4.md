@@ -6,7 +6,7 @@ El presente diseño se realiza aplicando el método Attribute-Driven Design (ADD
 Para el diseño de la arquitectura representada en el diagrama, se establecen los siguientes principios:
 
 - **Desacoplamiento de microservicios**  
-  Cada servicio (Pagos, Reportes, IAM, Inventario, Orders, Profiles) se diseña y despliega de forma independiente, facilitando la escalabilidad horizontal, el mantenimiento y la posibilidad de reemplazar o actualizar componentes sin afectar al resto.
+  Cada servicio (Suscripción, Reportes, IAM, Inventario, Orders, Profiles) se diseña y despliega de forma independiente, facilitando la escalabilidad horizontal, el mantenimiento y la posibilidad de reemplazar o actualizar componentes sin afectar al resto.
 <br><br>
 - **Seguridad por diseño**  
   Se integra la seguridad en todos los niveles, desde el API Gateway con Spring Cloud Gateway hasta la autenticación y autorización gestionadas por el servicio IAM.  
