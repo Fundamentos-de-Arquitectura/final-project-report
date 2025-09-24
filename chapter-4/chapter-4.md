@@ -61,6 +61,10 @@ Para el diseño de la arquitectura representada en el diagrama, se establecen lo
   Apache Kafka permite la distribución de eventos a múltiples consumidores, clave para la actualización de inventarios en tiempo real.
   <br><br>
 ### 4.1.3 Context Diagram
+
+<img width="276" height="557" alt="image" src="https://github.com/user-attachments/assets/fbb14dd3-77b0-4e1d-b029-77c18f19b80f" />
+
+
 ### 4.1.4 Approach Driven ViewPoints Diagrams
 ### 4.1.5 Relational/Non Relational Database Diagram
 ### 4.1.6 Design Patterns
