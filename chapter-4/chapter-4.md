@@ -6,7 +6,7 @@ El presente diseño se realiza aplicando el método Attribute-Driven Design (ADD
 Para el diseño de la arquitectura representada en el diagrama, se establecen los siguientes principios:
 
 - **Desacoplamiento de microservicios**  
-  Cada servicio (Suscripción, Reportes, IAM, Inventario, Orders, Profiles) se diseña y despliega de forma independiente, facilitando la escalabilidad horizontal, el mantenimiento y la posibilidad de reemplazar o actualizar componentes sin afectar al resto.
+  Cada servicio (Subscription, Reports, Inventory, Orders, Profiles) se diseña y despliega de forma independiente, facilitando la escalabilidad horizontal, el mantenimiento y la posibilidad de reemplazar o actualizar componentes sin afectar al resto.
 
   Cada microservicio se desarrolla y despliega con su propia base de datos.
   Esto asegura independencia en el ciclo de vida y permite escalar o modificar servicios sin afectar al resto.
