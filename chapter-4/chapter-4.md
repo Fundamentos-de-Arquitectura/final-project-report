@@ -371,7 +371,6 @@ OrderService → Frontend (OK)
 | Driver ID | Descripción                          | Prioridad | Complejidad |
 |-----------|--------------------------------------|-----------|-------------|
 | QA-05     | Respuesta < 3s con carga             | Alta      | Alta        |
-| QA-06     | Disponibilidad 95%+                  | Alta      | Media       |
 | UX-01     | Interfaz responsive y accesible      | Alta      | Media       |
 | QA-07     | Escalabilidad a 50+ usuarios         | Media     | Alta        |
 
@@ -473,7 +472,6 @@ AuthService → Frontend (devuelve tokens)
 
 ### 4.3.5.5 Instantiate Elements
 - `GET /api/v1/reports/summary`
-- `GET /api/v1/reports/trends`
 
 ### 4.3.5.6 Sketch Views
 [Analytics] ← [ReportsService]
@@ -567,10 +565,9 @@ IzyPay → [PaymentService] (webhook confirmación)
 | Driver ID | Descripción                 | Prioridad | Complejidad |
 |-----------|-----------------------------|-----------|-------------|
 | QA-12     | Alta disponibilidad en nube | Alta      | Alta        |
-| QA-13     | CI/CD automatizado          | Alta      | Media       |
 
 ### 4.3.8.2 Establish Iteration Goal
-**Objetivo:** Desplegar en Azure (backend) y Netlify (frontend) con CI/CD.
+**Objetivo:** Desplegar en Azure (backend) y Netlify (frontend).
 
 ### 4.3.8.3 Elements to Refine
 - Infraestructura cloud
@@ -580,7 +577,6 @@ IzyPay → [PaymentService] (webhook confirmación)
 ### 4.3.8.4 Design Concepts
 - Azure App Service + MySQL managed.
 - Docker para orquestación.
-- GitHub Actions para CI/CD.
 
 ### 4.3.8.5 Instantiate Elements
 - Backend → Azure
@@ -593,9 +589,9 @@ Backend ←→ [Docker Cluster]
 
 
 ### 4.3.8.7 Analysis (Kanban)
-| TO DO            | IN PROGRESS  | TESTING         | DONE                |
-|------------------|--------------|-----------------|---------------------|
-| Configurar CI/CD | Deploy Azure | Load balancing  | Frontend en Netlify |
-| Réplicas DB      |              | Monitoreo cloud | Backend en Azure    |
+| TO DO                 | IN PROGRESS  | TESTING         | DONE                |
+|-----------------------|--------------|-----------------|---------------------|
+| Configurar deployment | Deploy Azure | Load balancing  | Frontend en Netlify |
+|                       |              | Monitoreo cloud | Backend en Azure    |
 
 ---
