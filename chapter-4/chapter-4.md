@@ -177,9 +177,45 @@ En esta sección se presentan las historias de usuario principales que guían el
 ### 4.1.10 Quality Attribute Scenarios
 Aquí se detallan los escenarios de calidad que guían las decisiones arquitectónicas, asegurando que la solución cumpla con los requisitos no funcionales esenciales para el éxito del proyecto.
 ### 4.1.11 Constraints
-
+- Uso de microservicios con bases de datos independientes (MySQL) para cada servicio.
+- Comunicación asíncrona entre Orders e Inventory mediante Apache Kafka.
+- Implementación de un API Gateway con Spring Cloud Gateway para centralizar el acceso a los microservicios.
+- Desarrollo del frontend como una Single Page Application (SPA) en Angular.
+- Autenticación y autorización gestionadas por un microservicio IAM utilizando JWT.
+- No utilizaremos IOT ni Machine Learning en esta versión del producto.
+- El tiempo de desarrollo es limitado, por lo que se priorizarán las funcionalidades esenciales para el lanzamiento inicial. Tiempo estimado de 3 meses.
 
 ### 4.1.12 Architectural Concerns
+
+**Seguridad de la información**
+- Proteger las credenciales de acceso de los dueños de restaurante.
+- Garantizar que solo usuarios autenticados puedan consultar reportes financieros y modificar el inventario.
+- Evitar fugas de datos sensibles mediante cifrado en tránsito y almacenamiento seguro de contraseñas.
+- Consistencia de datos entre órdenes e inventario
+- Asegurar que cada orden registrada impacte correctamente en el inventario.
+- Manejar escenarios de falta de stock y mantener un estado coherente en la plataforma.
+- Desempeño en generación de reportes
+- Los reportes diarios, semanales y mensuales deben generarse en tiempos razonables aun con un alto volumen de registros.
+- Evitar bloqueos o latencias excesivas que perjudiquen la experiencia del usuario.
+
+**Usabilidad para dueños de restaurantes**
+- Interfaz intuitiva y clara, con dashboards que faciliten la interpretación de métricas financieras.
+- Reducción del tiempo de análisis manual a través de visualizaciones gráficas y alertas automáticas.
+
+**Escalabilidad de la solución**
+- Capacidad de desplegar y escalar microservicios de manera independiente.
+- Asegurar que el sistema soporte crecimiento en número de órdenes y productos gestionados.
+
+**Resiliencia frente a fallos**
+- Evitar que un fallo en un microservicio afecte la disponibilidad de toda la plataforma.
+- Manejar interrupciones temporales en la comunicación entre servicios mediante mecanismos de recuperación.
+
+**Mantenibilidad y evolución**
+- Estructura modular que permita añadir nuevas funcionalidades (ej. otros tipos de reportes o integraciones externas) sin modificar el núcleo de la aplicación.
+- Documentación clara para facilitar el trabajo de nuevos desarrolladores en el futuro.
+- Restricciones tecnológicas
+- Uso exclusivo de Angular en frontend, Spring Boot en backend y MySQL en las bases de datos.
+- Despliegue en Azure, evitando dependencias en proveedores alternativos.
 
 ## 4.3 ADD Iterations
 ### 4.2.X Iteration N: \<Iteration Name\>
