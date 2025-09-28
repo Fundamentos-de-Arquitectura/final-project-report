@@ -160,8 +160,25 @@ La arquitectura se orienta a cumplir con los siguientes objetivos:
 
 ### 4.1.9 Primary Functionality (Primary User Stories)
 
+En esta sección se presentan las historias de usuario principales que guían el desarrollo de la arquitectura de la aplicación. Estas historias reflejan las necesidades y expectativas del dueño del restaurante, asegurando que la solución propuesta cumpla con los requisitos funcionales esenciales.
+
+| Orden | User Story Id | Título | Descripción | Story Points |
+| :--- | :--- | :--- | :--- | :--- |
+| 1 | US1 | Visualizar ingresos y pérdidas | Como dueño de restaurante quiero ver en el dashboard un resumen de mis ingresos y pérdidas para conocer rápidamente la situación financiera de mi negocio. | 8 |
+| 2 | US18 | Visualización de Reportes Financieros Diarios | Como dueño de restaurante, quiero ver mis ingresos y gastos diarios en un dashboard centralizado para tomar decisiones informadas sobre el rendimiento financiero de mi negocio. | 8 |
+| 3 | US19 | Navegación entre Períodos de Tiempo | Como dueño de restaurante, quiero poder alternar entre reportes diarios, semanales y mensuales para analizar tendencias en diferentes períodos de tiempo. | 8 |
+| 4 | US20 | Análisis de Categorías de Gastos | Como dueño de restaurante, quiero visualizar el desglose de mis gastos por categorías para identificar áreas donde puedo optimizar costos. | 8 |
+| 5 | US3 | Visualizar inventario actual | Como dueño de restaurante quiero ver una tabla con el stock, costo unitario y unidad de medida de cada producto para controlar el inventario de manera clara y rápida. | 5 |
+| 6 | US11 | Visualizar órdenes existentes | Como dueño de restaurante quiero ver en una tabla las órdenes realizadas con su mesa, platos, precio total y fecha para llevar un control claro y rápido de los pedidos. | 5 |
+| 7 | US2 | Identificar platos más populares | Como dueño de restaurante quiero ver un listado de mis platos más vendidos para saber cuáles son los más rentables y tomar decisiones sobre el menú. | 5 |
+| 8 | US6 | Agregar Nuevo Plato | Como dueño de restaurante, quiero agregar nuevos platos al menú para mantener mi oferta actualizada y atractiva para los clientes. | 5 |
+| 9 | US8 | Visualizar Información Completa del Menú | Como dueño de restaurante, quiero visualizar toda la información de mis platos (nombre, descripción, precio, ingredientes) en una tabla organizada para tener control total sobre mi menú. | 5 |
+
 ### 4.1.10 Quality Attribute Scenarios
+Aquí se detallan los escenarios de calidad que guían las decisiones arquitectónicas, asegurando que la solución cumpla con los requisitos no funcionales esenciales para el éxito del proyecto.
 ### 4.1.11 Constraints
+
+
 ### 4.1.12 Architectural Concerns
 
 ## 4.3 ADD Iterations
