@@ -218,11 +218,108 @@ Aquí se detallan los escenarios de calidad que guían las decisiones arquitect�
 - Despliegue en Azure, evitando dependencias en proveedores alternativos.
 
 ## 4.3 ADD Iterations
-### 4.2.X Iteration N: \<Iteration Name\>
-#### 4.2.X.1 Architectural Design Backlog N
-#### 4.2.X.2 Establish Iteration Goal by Selecting Drivers
-#### 4.2.X.3 Choose One or More Elements of the System to Refine
-#### 4.2.X.4 Choose One or More Design Concepts That Satisfy the Selected Drivers
-#### 4.2.X.5 Instantiate Architectural Elements, Allocate Responsibilities, and Define Interfaces
+
+## 4.3.1 Iteration 1: Core System Foundation
+### 4.3.1.1 Architectural Design Backlog 1
+
+| Driver ID | Descripción                                               | Prioridad | Complejidad |
+|-----------|-----------------------------------------------------------|-----------|-------------|
+| QA-01     | Sistema debe responder en menos de 3 segundos             | Alta      | Media       |
+| QA-02     | Disponibilidad mínima del 95%                             | Alta      | Alta        |
+| UC-01     | Dashboard con reportes visuales                           | Alta      | Media       |
+| UC-02     | Gestión de inventario con alertas                         | Alta      | Media       |
+| CON-01    | Arquitectura modular para escalabilidad                   | Alta      | Alta        |
+| CON-02    | Compatibilidad web multiplataforma                        | Media     | Baja        |
+
+### 4.3.1.2 Establish Iteration Goal by Selecting Drivers
+
+**Objetivo de la Iteración 1:** Establecer la arquitectura base del sistema FoodFlow que soporte el dashboard financiero y la gestión básica de inventario, asegurando rendimiento adecuado y modularidad para futuras expansiones.
+
+**Drivers Seleccionados:**
+- **QA-01 (Rendimiento):** Respuesta en menos de 3 segundos
+- **UC-01 (Funcionalidad):** Dashboard con reportes visuales
+- **UC-02 (Funcionalidad):** Gestión de inventario
+- **CON-01 (Constraints):** Arquitectura modular
+
+### 4.3.1.3 Choose One or More Elements of the System to Refine
+
+**Elementos del Sistema a Refinar:**
+1. **Capa de Presentación (Frontend)**
+2. **Capa de Lógica de Negocio (Backend Services)**
+3. **Capa de Datos (Database Layer)**
+4. **Capa de Integración (API Gateway)**
+
+### 4.3.1.4 Choose One or More Design Concepts That Satisfy the Selected Drivers
+
+**Conceptos de Diseño Seleccionados:**
+
+1. **Arquitectura de Microservicios**
+  - Satisface CON-01 (modularidad)
+  - Facilita escalabilidad independiente de módulos
+
+2. **Patrón Model-View-Controller (MVC)**
+  - Separación clara de responsabilidades
+  - Satisface UC-01 y UC-02 (funcionalidades del dashboard e inventario)
+
+3. **Caché de Aplicación**
+  - Satisface QA-01 (rendimiento)
+  - Reduce tiempo de respuesta para consultas frecuentes
+
+4. **Base de Datos Relacional con Índices Optimizados**
+  - Satisface QA-01 (rendimiento en consultas)
+  - Integridad de datos financieros
+
+### 4.3.1.5 Instantiate Architectural Elements, Allocate Responsibilities, and Define Interfaces
+
+**Elementos Arquitectónicos Instanciados:**
+
+#### Frontend Service
+**Responsabilidades:**
+- Renderización del dashboard financiero
+- Interfaz de gestión de inventario
+- Manejo de estado de aplicación
+- Validación de formularios
+
+**Interfaces:**
+- REST API calls al Backend
+- WebSocket para notificaciones en tiempo real
+
+#### Dashboard Service
+**Responsabilidades:**
+- Procesamiento de datos financieros
+- Generación de reportes visuales
+- Cálculo de métricas de rentabilidad
+- Análisis de tendencias de ventas
+
+**Interfaces:**
+- GET /api/dashboard/financial-summary
+- GET /api/dashboard/top-dishes
+- GET /api/dashboard/revenue-trends
+
+#### Inventory Service
+**Responsabilidades:**
+- Gestión de productos y stock
+- Sistema de alertas de inventario bajo
+- Control de movimientos de inventario
+- Cálculo de costos por plato
+
+**Interfaces:**
+- GET /api/inventory/products
+- POST /api/inventory/products
+- PUT /api/inventory/products/{id}
+- GET /api/inventory/alerts
+
+#### Data Service
+**Responsabilidades:**
+- Acceso a base de datos
+- Gestión de transacciones
+- Implementación de patrones Repository
+- Optimización de consultas
+
+**Interfaces:**
+- Interfaz IRestaurantRepository
+- Interfaz IInventoryRepository
+- Interfaz IOrderRepository
+
 #### 4.2.X.6 Sketch Views (C4 & UML) and Record Design Decisions
 #### 4.2.X.7 Analysis of Current Design and Review Iteration Goal (Kanban Board)
