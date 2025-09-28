@@ -80,14 +80,86 @@ Nuestro único usuario es el dueño del restaurante, quien accede a la plataform
 El servicio externo que usaremos es IzyPay, que se encargará de procesar los pagos realizados por los clientes del restaurante. 
 
 ### 4.1.4 Approach Driven ViewPoints Diagrams
+El diseño arquitectónico de FoodFlow se representa mediante diferentes puntos de vista, siguiendo las buenas prácticas de modelado (UML y C4 Model). Estos diagramas buscan capturar cómo interactúan los componentes, cómo fluye la información y cómo se organizan las entidades de dominio.
+
+Diagramas UML:
+
+Diagramas C4:
 
 ### 4.1.5 Relational/Non Relational Database Diagram
+
 ### 4.1.6 Design Patterns
+
+A continuación, se describen los patrones de diseño qeu se aplicarán:
+
+| Patrón                            | Propósito general                                                        | Aplicación en FoodFlow / microservicios                                                                                                                                           | Justificación contextual                                                                                                                |
+|-----------------------------------|--------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
+| **Singleton**                     | Garantizar que una clase tenga una única instancia                       | El microservicio **IAM** implementa un único punto de control para la autenticación, la emisión de tokens y la gestión de roles de usuario.                                       | Se asegura un manejo consistente y centralizado de la seguridad, evitando estados inconsistentes en la gestión de credenciales.          |
+| **Factory Method / Abstract Factory** | Crear objetos de una familia sin depender de su implementación concreta  | El microservicio **Reports** utiliza fábricas para generar diferentes tipos de reportes (diario, semanal, mensual) y adaptadores de persistencia para distintas fuentes de datos. | Facilita la extensión de nuevos formatos de reportes sin modificar la lógica cliente, manteniendo flexibilidad en el procesamiento.     |
+| **Strategy**                      | Encapsular algoritmos intercambiables detrás de una interfaz común       | En **Reports** se aplican diferentes estrategias de cálculo de pérdidas y ganancias, como costo promedio, según la necesidad del análisis financiero.                      | Permite cambiar o agregar métodos de cálculo sin alterar el resto del sistema, garantizando flexibilidad en el análisis contable.        |
+| **Observer**                      | Permitir que objetos se suscriban a cambios en otro objeto               | El microservicio **Inventory** actualiza sus módulos internos de alertas cuando cambia el stock de un producto, notificando al dueño en caso de que un insumo se agote.           | Los componentes internos reaccionan automáticamente a cambios en inventario, generando alertas sin acoplarse directamente al núcleo.    |
+| **Decorator**                     | Agregar responsabilidades a objetos dinámicamente                        | El **API Gateway** y sus middleware incorporan validaciones adicionales como logging, control de acceso y verificación de tokens de forma dinámica.                               | Permite añadir capas transversales sin modificar la lógica base de enrutamiento, reforzando seguridad y trazabilidad de peticiones.     |
+| **Adapter**                       | Permitir que clases con interfaces incompatibles trabajen juntas         | **Inventory** dispone de adaptadores que permiten integrar librerías externas de cálculo de costos o conectores con sistemas de terceros.                                         | Asegura compatibilidad con APIs externas y facilita la interoperabilidad con herramientas ajenas al núcleo de la plataforma.             |
+| **Template Method**               | Definir el esqueleto de un algoritmo dejando pasos concretos a subclases | En **Reports** se define un flujo general de generación de reportes, delegando pasos específicos como filtrado de datos o agregación a subclases especializadas.                   | Reduce duplicación de lógica común entre diferentes tipos de reportes, manteniendo un proceso estándar y extensible.                    |
+
 ### 4.1.7 Tactics
+A continuación, se describen las tácticas arquitectónicas implementadas en la arquitectura de FoodFlow para abordar los atributos de calidad identificados:
+
+**Seguridad**
+
+- Autenticación y Autorización Centralizada: el microservicio IAM administra las credenciales de los dueños de restaurante mediante login con JWT, garantizando control de acceso uniforme.
+
+- Protección de datos sensibles: las contraseñas se almacenan con algoritmos de hash, evitando exposición de información crítica.
+
+- API Gateway seguro: se asegura que todas las peticiones pasen por el Gateway, donde se validan los tokens antes de redirigir a los microservicios.
+
+- Conexiones seguras: se recomienda el uso de HTTPS/TLS para proteger la comunicación entre frontend y backend.
+
+**Desempeño**
+- Comunicación asíncrona con Kafka: la interacción entre Orders e Inventory se realiza mediante eventos, evitando bloqueos y permitiendo procesar un gran volumen de órdenes sin afectar la experiencia del usuario.
+
+- Database per Service: cada microservicio usa su propia base de datos MySQL, lo que elimina cuellos de botella de acceso a datos compartidos.
+
+- Proyecciones para reportes: el microservicio Reports mantiene vistas materializadas alimentadas por eventos de Orders e Inventory, reduciendo el tiempo de respuesta en consultas financieras.
+
+**Usabilidad**
+ 
+- Dashboards visuales: los reportes se presentan con gráficos comprensibles, reduciendo la curva de aprendizaje para los dueños de restaurantes.
+
+- Consistencia en interfaz: la SPA en Angular mantiene un diseño uniforme y una navegación fluida.
+
+- Feedback inmediato: el sistema entrega mensajes claros al usuario, como alertas cuando un producto de inventario está por agotarse.
+
+**Resiliencia y disponibilidad**
+- Circuit Breaker y Retry: se utilizan en llamadas síncronas para evitar cascadas de fallos y reintentar operaciones bajo condiciones controladas.
+
+- Eventual Consistency: se adopta para sincronizar órdenes e inventario mediante eventos, reduciendo dependencia de transacciones distribuidas.
+
+- Logs básicos y monitoreo: cada microservicio expone métricas mínimas para supervisar su estado y detectar fallos de forma preventiva.
+
+**Escalabilidad**
+
+- Despliegue independiente de microservicios: cada servicio se ejecuta en contenedores aislados, lo que facilita la escalabilidad selectiva.
+
+- Particionamiento en Kafka: los eventos se distribuyen por claves como restaurantId, permitiendo paralelismo y procesamiento balanceado en escenarios de alto volumen.
 
 ## 4.2 Architectural Drivers
+
 ### 4.1.8 Design Purpose
+
+FoodFlow tiene como propósito fundamental proporcionar una plataforma segura y escalable que permita a los dueños de restaurantes gestionar de manera eficiente sus finanzas y operaciones.
+La arquitectura se orienta a cumplir con los siguientes objetivos:
+
+| Objetivo                                   | Descripción                                                                                                                                                                                                   |
+|--------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Soporte a la gestión financiera**        | Permitir la generación de reportes claros y confiables sobre ingresos, pérdidas y balances, reduciendo significativamente el tiempo que el dueño invierte en cálculos manuales.                               |
+| **Automatización de procesos internos**    | Sincronizar automáticamente las órdenes con el inventario, evitando errores de registro manual y reflejando en tiempo real las pérdidas por insumos y las ganancias por ventas.                               |
+| **Escalabilidad y mantenimiento a futuro** | Diseñar el sistema bajo el estilo de microservicios, facilitando la evolución del producto, el despliegue independiente de componentes y la incorporación de nuevas funcionalidades o integraciones externas. |
+| **Seguridad como eje principal**           | Proteger la información sensible de los usuarios mediante autenticación centralizada, control de accesos y cifrado en la comunicación entre servicios.                                                        |
+| **Usabilidad y simplicidad**               | Garantizar que la interfaz sea intuitiva y accesible, con dashboards visuales que permitan al dueño interpretar su estado financiero en menos de un minuto.                                                   |
+
 ### 4.1.9 Primary Functionality (Primary User Stories)
+
 ### 4.1.10 Quality Attribute Scenarios
 ### 4.1.11 Constraints
 ### 4.1.12 Architectural Concerns
