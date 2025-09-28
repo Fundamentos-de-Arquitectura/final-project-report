@@ -83,6 +83,17 @@ El servicio externo que usaremos es IzyPay, que se encargará de procesar los pa
 El diseño arquitectónico de FoodFlow se representa mediante diferentes puntos de vista, siguiendo las buenas prácticas de modelado (UML y C4 Model). Estos diagramas buscan capturar cómo interactúan los componentes, cómo fluye la información y cómo se organizan las entidades de dominio.
 
 Diagramas UML:
+<br>
+Diagrama de actividad:
+<img width="3840" height="3344" alt="diagram_activity" src="https://github.com/user-attachments/assets/a38db829-32e0-42aa-9343-204af86dc8d3" />
+
+<br>
+
+Diagrama de estados:
+
+<img width="3840" height="939" alt="state_diagram" src="https://github.com/user-attachments/assets/c8f5771f-1628-42cf-9ffd-7e12a9b5f5a5" />
+
+<br>
 
 Diagramas C4:
 
