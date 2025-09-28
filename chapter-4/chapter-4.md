@@ -12,13 +12,13 @@ Para el diseño de la arquitectura representada en el diagrama, se establecen lo
   Esto asegura independencia en el ciclo de vida y permite escalar o modificar servicios sin afectar al resto.
 
 - **Seguridad por diseño**  
-  Se integra la seguridad en todos los niveles, desde el API Gateway con Spring Cloud Gateway hasta la autenticación y autorización gestionadas por el servicio IAM.  
+  Se integra la seguridad en todos los niveles, desde el API Gateway con Spring Cloud Gateway hasta la autenticación y autorización gestionadas por el servicio Profile.  
   Se utilizan conexiones seguras y políticas de acceso basadas en roles.
 
-  Todas las funcionalidades de la plataforma requieren autenticación previa mediante login con JWT (JSON Web Tokens), gestionado por el microservicio IAM.
+  Todas las funcionalidades de la plataforma requieren autenticación previa mediante login con JWT (JSON Web Tokens), gestionado por el microservicio Profile.
   Las contraseñas se almacenan con algoritmos de hash seguro y la comunicación entre frontend y backend se asegura mediante HTTPS/TLS.
 
-  El message broker (Kafka) se configura con autenticación SASL y cifrado en tránsito.
+  El message broker (Apache Kafka) se configura con autenticación SASL y cifrado en tránsito.
 
 - **Escalabilidad y alta disponibilidad**  
   Los contenedores de base de datos MySQL y el Message Broker (Apache Kafka) se preparan para replicación y balanceo, garantizando tolerancia a fallos y crecimiento según demanda.
@@ -94,7 +94,7 @@ A continuación, se describen los patrones de diseño qeu se aplicarán:
 
 | Patrón                                | Propósito general                                                        | Aplicación en FoodFlow / microservicios                                                                                                                                           | Justificación contextual                                                                                                             |
 |---------------------------------------|--------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------|
-| **Singleton**                         | Garantizar que una clase tenga una única instancia                       | El microservicio **IAM** implementa un único punto de control para la autenticación, la emisión de tokens y la gestión de roles de usuario.                                       | Se asegura un manejo consistente y centralizado de la seguridad, evitando estados inconsistentes en la gestión de credenciales.      |
+| **Singleton**                         | Garantizar que una clase tenga una única instancia                       | El microservicio **Profile** implementa un único punto de control para la autenticación, la emisión de tokens y la gestión de roles de usuario.                                   | Se asegura un manejo consistente y centralizado de la seguridad, evitando estados inconsistentes en la gestión de credenciales.      |
 | **Factory Method / Abstract Factory** | Crear objetos de una familia sin depender de su implementación concreta  | El microservicio **Reports** utiliza fábricas para generar diferentes tipos de reportes (diario, semanal, mensual) y adaptadores de persistencia para distintas fuentes de datos. | Facilita la extensión de nuevos formatos de reportes sin modificar la lógica cliente, manteniendo flexibilidad en el procesamiento.  |
 | **Strategy**                          | Encapsular algoritmos intercambiables detrás de una interfaz común       | En **Reports** se aplican diferentes estrategias de cálculo de pérdidas y ganancias, como costo promedio, según la necesidad del análisis financiero.                             | Permite cambiar o agregar métodos de cálculo sin alterar el resto del sistema, garantizando flexibilidad en el análisis contable.    |
 | **Observer**                          | Permitir que objetos se suscriban a cambios en otro objeto               | El microservicio **Inventory** actualiza sus módulos internos de alertas cuando cambia el stock de un producto, notificando al dueño en caso de que un insumo se agote.           | Los componentes internos reaccionan automáticamente a cambios en inventario, generando alertas sin acoplarse directamente al núcleo. |
@@ -107,7 +107,7 @@ A continuación, se describen las tácticas arquitectónicas implementadas en la
 
 **Seguridad**
 
-- Autenticación y Autorización Centralizada: el microservicio IAM administra las credenciales de los dueños de restaurante mediante login con JWT, garantizando control de acceso uniforme.
+- Autenticación y Autorización Centralizada: el microservicio Profile administra las credenciales de los dueños de restaurante mediante login con JWT, garantizando control de acceso uniforme.
 
 - Protección de datos sensibles: las contraseñas se almacenan con algoritmos de hash, evitando exposición de información crítica.
 
@@ -261,25 +261,21 @@ Aquí se detallan los escenarios de calidad que guían las decisiones arquitect�
   - Separación clara de responsabilidades
   - Satisface UC-01 y UC-02 (funcionalidades del dashboard e inventario)
 
-3. **Caché de Aplicación**
-  - Satisface QA-01 (rendimiento)
-  - Reduce tiempo de respuesta para consultas frecuentes
-
-4. **Base de Datos Relacional con Índices Optimizados**
-  - Satisface QA-01 (rendimiento en consultas)
-  - Integridad de datos financieros
+3. **Base de Datos Relacional con Índices Optimizados**
+- Satisface QA-01 (rendimiento en consultas)
+- Integridad de datos financieros
 
 ### 4.3.1.5 Instantiate Architectural Elements, Allocate Responsibilities, and Define Interfaces
 - **Frontend Service**: UI en React, consume APIs REST.
-- **Dashboard Service**: genera reportes financieros (`/api/dashboard/*`).
-- **Inventory Service**: gestiona stock y alertas (`/api/inventory/*`).
+- **Reports Service**: genera reportes financieros (`/api/v1/reports/*`).
+- **Inventory Service**: gestiona stock y alertas (`/api/v1/inventory/*`).
 - **Data Service**: repositorios y transacciones.
 - **API Gateway**: entrada única al sistema.
 
 ### 4.3.1.6 Sketch Views (C4 & UML) and Record Design Decisions
 
 #### C4 Context
-Usuario (Dueño) ──► Frontend (React) ──► API Gateway ──► Services (Dashboard, Inventory) ──► Database
+Usuario (Dueño) ──► Frontend (Angular) ──► API Gateway ──► Services (Dashboard, Inventory) ──► Database
 
 
 #### UML (simplificado)
@@ -290,19 +286,17 @@ Usuario (Dueño) ──► Frontend (React) ──► API Gateway ──► Serv
 
 
 #### Design Decisions
-| Decisión       | Justificación               | Alternativas         | Trade-off                 |
-|----------------|-----------------------------|----------------------|---------------------------|
-| Microservicios | Modularidad y escalabilidad | Monolito, SOA        | Mayor complejidad inicial |
-| PostgreSQL     | Integridad ACID             | MySQL, MongoDB       | Menos flexibilidad NoSQL  |
-| Redis Cache    | Rendimiento                 | Memcached, in-memory | Capa extra de complejidad |
+| Decisión       | Justificación               | Alternativas  | Trade-off                 |
+|----------------|-----------------------------|---------------|---------------------------|
+| Microservicios | Modularidad y escalabilidad | Monolito, SOA | Mayor complejidad inicial |
+| MySQL          | Integridad ACID             | PostgreSQL    | Menos flexibilidad NoSQL  |
 
 ### 4.3.1.7 Analysis of Current Design and Review Iteration Goal (Kanban Board)
 
-| TO DO                   | IN PROGRESS       | TESTING              | DONE                      |
-|-------------------------|-------------------|----------------------|---------------------------|
-| Notificaciones realtime | Configuración DB  | API Gateway básico   | Estructura microservicios |
-| Optimizar consultas     | Dashboard Service | Endpoints inventario | Frontend base             |
-| Cache avanzado          | Inventory Service |                      | Redis configurado         |
+| TO DO                   | IN PROGRESS      | TESTING            | DONE                      |
+|-------------------------|------------------|--------------------|---------------------------|
+| Notificaciones realtime | Configuración DB | API Gateway básico | Estructura microservicios |
+| Optimizar consultas     | Reports Service  | Endpoints reports  | Frontend base             |
 
 ---
 
@@ -335,8 +329,8 @@ Usuario (Dueño) ──► Frontend (React) ──► API Gateway ──► Serv
 
 ### 4.3.2.5 Instantiate Architectural Elements, Allocate Responsibilities, and Define Interfaces
 - **Order Service**: ciclo de vida de órdenes, validación de stock.
-- **Reports Service**: métricas de rentabilidad (`/api/reports/*`).
-- **Security Service**: login, refresh, auditoría (`/api/auth/*`).
+- **Reports Service**: métricas de rentabilidad (`/api/v1/reports/*`).
+- **Security Service**: login, refresh, auditoría (`/api/v1/login/*`).
 - **Export Service**: exportar Excel/PDF/CSV.
 
 ### 4.3.2.6 Sketch Views (C4 & UML)
@@ -391,21 +385,18 @@ OrderService → Frontend (OK)
 - UX Components
 
 ### 4.3.3.4 Choose One or More Design Concepts That Satisfy the Selected Drivers
-- Multi-level caching (CDN + Redis).
 - Circuit breaker.
 - Progressive Web App.
 - Horizontal scaling + load balancing.
 
 ### 4.3.3.5 Instantiate Architectural Elements, Allocate Responsibilities, and Define Interfaces
-- **Performance Service**: caching, compresión.
-- **Monitoring Service**: métricas y health checks.
 - **Load Balancer**: distribución de carga.
 - **Frontend UX**: PWA accesible y responsive.
 
 ### 4.3.3.6 Sketch Views (Deployment)
 [CDN] → [Load Balancer] → [API Gateway] → [Services Cluster] → [DB Cluster]
 │
-[Monitoring + Alerts]
+[Reports]
 
 
 
@@ -422,11 +413,11 @@ OrderService → Frontend (OK)
 
 ### 4.3.4.1 Architectural Design Backlog 4
 
-| Driver ID | Descripción              | Prioridad | Complejidad |
-|-----------|--------------------------|-----------|-------------|
-| SEC-01    | Autenticación JWT segura | Alta      | Alta        |
-| SEC-02    | Gestión de usuarios      | Alta      | Media       |
-| SEC-03    | Integración multi-serv   | Alta      | Alta        |
+| Driver ID | Descripción                 | Prioridad | Complejidad |
+|-----------|-----------------------------|-----------|-------------|
+| SEC-01    | Autenticación JWT segura    | Alta      | Alta        |
+| SEC-02    | Gestión de usuarios         | Alta      | Media       |
+| SEC-03    | Integración multi-servicios | Alta      | Alta        |
 
 ### 4.3.4.2 Establish Iteration Goal
 **Objetivo:** Crear servicio IAM independiente para login, sign-up y refresh tokens.
@@ -474,26 +465,25 @@ AuthService → Frontend (devuelve tokens)
 **Objetivo:** Implementar módulo de analytics para visualizar ingresos y pérdidas en gráficos.
 
 ### 4.3.5.3 Elements to Refine
-- AnalyticsService
+- ReportsService
 - ChartingLibrary (frontend)
 
 ### 4.3.5.4 Design Concepts
-- Reutilización de Reportes Service.
-- Frontend con librerías de gráficos (Chart.js).
+- Frontend con librerías de gráficos.
 
 ### 4.3.5.5 Instantiate Elements
-- `GET /api/analytics/summary`
-- `GET /api/analytics/trends`
+- `GET /api/v1/reports/summary`
+- `GET /api/v1/reports/trends`
 
 ### 4.3.5.6 Sketch Views
-[AnalyticsService] ← [ReportsService]
-[AnalyticsService] → [Frontend Charts]
+[Analytics] ← [ReportsService]
+[Analytics] → [Frontend Charts]
 
 
 ### 4.3.5.7 Analysis (Kanban)
-| TO DO       | IN PROGRESS        | TESTING       | DONE             |
-|-------------|--------------------|---------------|------------------|
-| Nuevos KPIs | Integración Charts | Validar datos | AnalyticsService |
+| TO DO       | IN PROGRESS        | TESTING       | DONE      |
+|-------------|--------------------|---------------|-----------|
+| Nuevos KPIs | Integración Charts | Validar datos | Analytics |
 
 ---
 
@@ -501,17 +491,17 @@ AuthService → Frontend (devuelve tokens)
 
 ### 4.3.6.1 Architectural Design Backlog 6
 
-| Driver ID | Descripción                   | Prioridad | Complejidad |
-|-----------|-------------------------------|-----------|-------------|
-| UC-07     | Registrar platos en el menú   | Alta      | Media       |
-| UC-08     | Vincular con inventario       | Alta      | Media       |
-| QA-09     | Alertas de ingredientes falt. | Media     | Media       |
+| Driver ID | Descripción                        | Prioridad | Complejidad |
+|-----------|------------------------------------|-----------|-------------|
+| UC-07     | Registrar platos en el menú        | Alta      | Media       |
+| UC-08     | Vincular con inventario            | Alta      | Media       |
+| QA-09     | Alertas de ingredientes faltantes. | Media     | Media       |
 
 ### 4.3.6.2 Establish Iteration Goal
 **Objetivo:** Permitir registro de platos vinculados con inventario y emitir alertas cuando un insumo esté por agotarse.
 
 ### 4.3.6.3 Elements to Refine
-- MenuService
+- OrderService
 - InventoryService (extensión)
 
 ### 4.3.6.4 Design Concepts
@@ -519,126 +509,90 @@ AuthService → Frontend (devuelve tokens)
 - Alertas en frontend (no persistentes).
 
 ### 4.3.6.5 Instantiate Elements
-- `POST /api/menu/dishes`
-- `GET /api/menu/dishes`
+- `POST /api/v1/orders/dishes`
+- `GET /api/v1/orders/dishes`
 
 ### 4.3.6.6 Sketch Views
-[MenuService] → [InventoryService]
-[MenuService] → [Frontend Alerts]
+[OrderService] → [InventoryService]
+[OrderService] → [Frontend Alerts]
 
 
 ### 4.3.6.7 Analysis (Kanban)
-| TO DO       | IN PROGRESS             | TESTING | DONE               |
-|-------------|-------------------------|---------|--------------------|
-| CRUD platos | Relación con inventario | Alertas | MenuService básico |
+| TO DO       | IN PROGRESS             | TESTING | DONE                |
+|-------------|-------------------------|---------|---------------------|
+| CRUD platos | Relación con inventario | Alertas | OrderService básico |
 
 ---
 
-## 4.3.7 Iteration 7: IoT Sensor Integration
+## 4.3.7 Iteration 7: Payment Integration (IzyPay)
 
 ### 4.3.7.1 Architectural Design Backlog 7
-
-| Driver ID | Descripción                   | Prioridad | Complejidad |
-|-----------|-------------------------------|-----------|-------------|
-| UC-09     | Monitoreo en tiempo real      | Alta      | Alta        |
-| QA-10     | Control de frescura alimentos | Alta      | Alta        |
-
-### 4.3.7.2 Establish Iteration Goal
-**Objetivo:** Integrar datos de sensores IoT (temperatura/humedad).
-
-### 4.3.7.3 Elements to Refine
-- IoTService
-- SensorRepository
-
-### 4.3.7.4 Design Concepts
-- Comunicación MQTT.
-- Alertas por umbrales.
-
-### 4.3.7.5 Instantiate Elements
-- `POST /api/iot/data`
-- Entidad SensorData
-
-### 4.3.7.6 Sketch Views
-[SensorDevice] → [IoTService] → [SensorRepository]
-IoTService → Alerts
-
-
-### 4.3.7.7 Analysis (Kanban)
-| TO DO            | IN PROGRESS | TESTING            | DONE             |
-|------------------|-------------|--------------------|------------------|
-| Integración MQTT | IoTService  | Validar thresholds | SensorRepository |
-
----
-
-## 4.3.8 Iteration 8: Payment Integration (IzyPay)
-
-### 4.3.8.1 Architectural Design Backlog 8
 
 | Driver ID | Descripción                   | Prioridad | Complejidad |
 |-----------|-------------------------------|-----------|-------------|
 | UC-10     | Integración con IzyPay        | Alta      | Alta        |
 | QA-11     | Seguridad transaccional       | Alta      | Alta        |
 
-### 4.3.8.2 Establish Iteration Goal
+### 4.3.7.2 Establish Iteration Goal
 **Objetivo:** Integrar pagos con IzyPay como servicio externo.
 
-### 4.3.8.3 Elements to Refine
+### 4.3.7.3 Elements to Refine
 - PaymentService
 - External API Gateway
 
-### 4.3.8.4 Design Concepts
+### 4.3.7.4 Design Concepts
 - API REST + Webhooks.
 - Mensajería asíncrona para confirmar pagos.
 
-### 4.3.8.5 Instantiate Elements
-- `POST /api/payments/initiate`
-- `POST /api/payments/confirm`
+### 4.3.7.5 Instantiate Elements
+- `POST /api/v1/payments/initiate`
+- `POST /api/v1/payments/confirm`
 
-### 4.3.8.6 Sketch Views
+### 4.3.7.6 Sketch Views
 [Frontend] → [PaymentService] → [IzyPay API]
 IzyPay → [PaymentService] (webhook confirmación)
 
 
-### 4.3.8.7 Analysis (Kanban)
+### 4.3.7.7 Analysis (Kanban)
 | TO DO    | IN PROGRESS    | TESTING               | DONE               |
 |----------|----------------|-----------------------|--------------------|
 | Webhooks | PaymentService | Validar transacciones | Integración básica |
 
 ---
 
-## 4.3.9 Iteration 9: Cloud Deployment & Scalability
+## 4.3.8 Iteration 8: Cloud Deployment & Scalability
 
-### 4.3.9.1 Architectural Design Backlog 9
+### 4.3.8.1 Architectural Design Backlog 8
 
 | Driver ID | Descripción                 | Prioridad | Complejidad |
 |-----------|-----------------------------|-----------|-------------|
 | QA-12     | Alta disponibilidad en nube | Alta      | Alta        |
 | QA-13     | CI/CD automatizado          | Alta      | Media       |
 
-### 4.3.9.2 Establish Iteration Goal
+### 4.3.8.2 Establish Iteration Goal
 **Objetivo:** Desplegar en Azure (backend) y Netlify (frontend) con CI/CD.
 
-### 4.3.9.3 Elements to Refine
+### 4.3.8.3 Elements to Refine
 - Infraestructura cloud
 - Contenedores Docker
 - Balanceador de carga
 
-### 4.3.9.4 Design Concepts
+### 4.3.8.4 Design Concepts
 - Azure App Service + MySQL managed.
-- Kubernetes para orquestación.
+- Docker para orquestación.
 - GitHub Actions para CI/CD.
 
-### 4.3.9.5 Instantiate Elements
+### 4.3.8.5 Instantiate Elements
 - Backend → Azure
 - Frontend → Netlify
 - Database → Azure MySQL
 
-### 4.3.9.6 Sketch Views
+### 4.3.8.6 Sketch Views
 [Netlify Frontend] → [Azure App Service Backend] → [Azure MySQL]
-Backend ←→ [Kubernetes Cluster]
+Backend ←→ [Docker Cluster]
 
 
-### 4.3.9.7 Analysis (Kanban)
+### 4.3.8.7 Analysis (Kanban)
 | TO DO            | IN PROGRESS  | TESTING         | DONE                |
 |------------------|--------------|-----------------|---------------------|
 | Configurar CI/CD | Deploy Azure | Load balancing  | Frontend en Netlify |
