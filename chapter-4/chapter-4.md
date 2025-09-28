@@ -270,56 +270,378 @@ Aquí se detallan los escenarios de calidad que guían las decisiones arquitect�
   - Integridad de datos financieros
 
 ### 4.3.1.5 Instantiate Architectural Elements, Allocate Responsibilities, and Define Interfaces
+- **Frontend Service**: UI en React, consume APIs REST.
+- **Dashboard Service**: genera reportes financieros (`/api/dashboard/*`).
+- **Inventory Service**: gestiona stock y alertas (`/api/inventory/*`).
+- **Data Service**: repositorios y transacciones.
+- **API Gateway**: entrada única al sistema.
 
-**Elementos Arquitectónicos Instanciados:**
+### 4.3.1.6 Sketch Views (C4 & UML) and Record Design Decisions
 
-#### Frontend Service
-**Responsabilidades:**
-- Renderización del dashboard financiero
-- Interfaz de gestión de inventario
-- Manejo de estado de aplicación
-- Validación de formularios
+#### C4 Context
+Usuario (Dueño) ──► Frontend (React) ──► API Gateway ──► Services (Dashboard, Inventory) ──► Database
 
-**Interfaces:**
-- REST API calls al Backend
-- WebSocket para notificaciones en tiempo real
 
-#### Dashboard Service
-**Responsabilidades:**
-- Procesamiento de datos financieros
-- Generación de reportes visuales
-- Cálculo de métricas de rentabilidad
-- Análisis de tendencias de ventas
+#### UML (simplificado)
+[Frontend] → [DashboardService]
+[Frontend] → [InventoryService]
+[DashboardService] ↔ [Database]
+[InventoryService] ↔ [Database]
 
-**Interfaces:**
-- GET /api/dashboard/financial-summary
-- GET /api/dashboard/top-dishes
-- GET /api/dashboard/revenue-trends
 
-#### Inventory Service
-**Responsabilidades:**
-- Gestión de productos y stock
-- Sistema de alertas de inventario bajo
-- Control de movimientos de inventario
-- Cálculo de costos por plato
+#### Design Decisions
+| Decisión       | Justificación               | Alternativas         | Trade-off                 |
+|----------------|-----------------------------|----------------------|---------------------------|
+| Microservicios | Modularidad y escalabilidad | Monolito, SOA        | Mayor complejidad inicial |
+| PostgreSQL     | Integridad ACID             | MySQL, MongoDB       | Menos flexibilidad NoSQL  |
+| Redis Cache    | Rendimiento                 | Memcached, in-memory | Capa extra de complejidad |
 
-**Interfaces:**
-- GET /api/inventory/products
-- POST /api/inventory/products
-- PUT /api/inventory/products/{id}
-- GET /api/inventory/alerts
+### 4.3.1.7 Analysis of Current Design and Review Iteration Goal (Kanban Board)
 
-#### Data Service
-**Responsabilidades:**
-- Acceso a base de datos
-- Gestión de transacciones
-- Implementación de patrones Repository
-- Optimización de consultas
+| TO DO                   | IN PROGRESS       | TESTING              | DONE                      |
+|-------------------------|-------------------|----------------------|---------------------------|
+| Notificaciones realtime | Configuración DB  | API Gateway básico   | Estructura microservicios |
+| Optimizar consultas     | Dashboard Service | Endpoints inventario | Frontend base             |
+| Cache avanzado          | Inventory Service |                      | Redis configurado         |
 
-**Interfaces:**
-- Interfaz IRestaurantRepository
-- Interfaz IInventoryRepository
-- Interfaz IOrderRepository
+---
 
-#### 4.2.X.6 Sketch Views (C4 & UML) and Record Design Decisions
-#### 4.2.X.7 Analysis of Current Design and Review Iteration Goal (Kanban Board)
+## 4.3.2 Iteration 2: Business Logic and Integration
+
+### 4.3.2.1 Architectural Design Backlog 2
+
+| Driver ID | Descripción                         | Prioridad | Complejidad |
+|-----------|-------------------------------------|-----------|-------------|
+| UC-03     | Sistema de órdenes completo         | Alta      | Alta        |
+| UC-04     | Reportes financieros avanzados      | Alta      | Media       |
+| QA-03     | Seguridad de datos financieros      | Alta      | Alta        |
+| UC-05     | Exportación de reportes (Excel/PDF) | Media     | Media       |
+| QA-04     | Backup automático                   | Media     | Media       |
+
+### 4.3.2.2 Establish Iteration Goal by Selecting Drivers
+**Objetivo:** Implementar la lógica de negocio completa para órdenes y reportes avanzados con seguridad y exportación.
+
+### 4.3.2.3 Choose One or More Elements of the System to Refine
+- Order Service
+- Financial Reports Service
+- Security Layer
+- Export Service
+
+### 4.3.2.4 Choose One or More Design Concepts That Satisfy the Selected Drivers
+- DDD (aggregates y servicios de dominio).
+- JWT Authentication.
+- Event-driven architecture (event bus).
+- Strategy pattern para exportación.
+
+### 4.3.2.5 Instantiate Architectural Elements, Allocate Responsibilities, and Define Interfaces
+- **Order Service**: ciclo de vida de órdenes, validación de stock.
+- **Reports Service**: métricas de rentabilidad (`/api/reports/*`).
+- **Security Service**: login, refresh, auditoría (`/api/auth/*`).
+- **Export Service**: exportar Excel/PDF/CSV.
+
+### 4.3.2.6 Sketch Views (C4 & UML)
+
+#### C4 Component
+[OrderService] ──► [InventoryService]
+[OrderService] ──► [EventBus]
+[ReportsService] ──► [Database]
+[ExportService] ──► [ReportsService]
+[SecurityService] ──► [API Gateway]
+
+
+#### Sequence Diagram (crear orden)
+Usuario → Frontend: POST /orders
+Frontend → OrderService
+OrderService → InventoryService (valida stock)
+InventoryService → OrderService (OK)
+OrderService → EventBus (OrderCreated)
+EventBus → NotificationService
+OrderService → DB (guardar orden)
+OrderService → Frontend (OK)
+
+
+### 4.3.2.7 Analysis of Current Design and Review Iteration Goal (Kanban Board)
+
+| TO DO                  | IN PROGRESS    | TESTING             | DONE             |
+|------------------------|----------------|---------------------|------------------|
+| Backup automático      | Event Bus      | Export Excel básico | Order Service    |
+| Auditoría de seguridad | Export Service | Validaciones orden  | Reports Service  |
+|                        |                | JWT auth            | Security Service |
+
+---
+
+## 4.3.3 Iteration 3: Performance Optimization & UX
+
+### 4.3.3.1 Architectural Design Backlog 3
+
+| Driver ID | Descripción                          | Prioridad | Complejidad |
+|-----------|--------------------------------------|-----------|-------------|
+| QA-05     | Respuesta < 3s con carga             | Alta      | Alta        |
+| QA-06     | Disponibilidad 95%+                  | Alta      | Media       |
+| UX-01     | Interfaz responsive y accesible      | Alta      | Media       |
+| QA-07     | Escalabilidad a 50+ usuarios         | Media     | Alta        |
+
+### 4.3.3.2 Establish Iteration Goal by Selecting Drivers
+**Objetivo:** Optimizar rendimiento, asegurar disponibilidad y mejorar experiencia de usuario.
+
+### 4.3.3.3 Choose One or More Elements of the System to Refine
+- Performance Layer
+- Monitoring & Observability
+- Load Balancer
+- UX Components
+
+### 4.3.3.4 Choose One or More Design Concepts That Satisfy the Selected Drivers
+- Multi-level caching (CDN + Redis).
+- Circuit breaker.
+- Progressive Web App.
+- Horizontal scaling + load balancing.
+
+### 4.3.3.5 Instantiate Architectural Elements, Allocate Responsibilities, and Define Interfaces
+- **Performance Service**: caching, compresión.
+- **Monitoring Service**: métricas y health checks.
+- **Load Balancer**: distribución de carga.
+- **Frontend UX**: PWA accesible y responsive.
+
+### 4.3.3.6 Sketch Views (Deployment)
+[CDN] → [Load Balancer] → [API Gateway] → [Services Cluster] → [DB Cluster]
+│
+[Monitoring + Alerts]
+
+
+
+### 4.3.3.7 Analysis of Current Design and Review Iteration Goal (Kanban Board)
+| TO DO         | IN PROGRESS   | TESTING               | DONE                |
+|---------------|---------------|-----------------------|---------------------|
+| Auto-scaling  | PWA           | Load balancer         | Multi-level caching |
+| Benchmarks    | UI responsive | CDN                   | Circuit breaker     |
+| Recovery plan |               | Monitoring dashboards | Health check system |
+
+---
+
+## 4.3.4 Iteration 4: Login & Authentication (IAM)
+
+### 4.3.4.1 Architectural Design Backlog 4
+
+| Driver ID | Descripción              | Prioridad | Complejidad |
+|-----------|--------------------------|-----------|-------------|
+| SEC-01    | Autenticación JWT segura | Alta      | Alta        |
+| SEC-02    | Gestión de usuarios      | Alta      | Media       |
+| SEC-03    | Integración multi-serv   | Alta      | Alta        |
+
+### 4.3.4.2 Establish Iteration Goal
+**Objetivo:** Crear servicio IAM independiente para login, sign-up y refresh tokens.
+
+### 4.3.4.3 Elements to Refine
+- AuthController
+- AuthService
+- UserRepository
+- TokenProvider
+
+### 4.3.4.4 Design Concepts
+- JWT + refresh tokens.
+- Password hashing (bcrypt).
+- Middleware de autorización.
+
+### 4.3.4.5 Instantiate Elements
+- `POST /login`, `POST /sign-up`, `POST /refresh`.
+- UserRepository con tabla `Users`.
+- TokenProvider que firma tokens.
+
+### 4.3.4.6 Sketch Views
+Usuario → AuthController → AuthService → UserRepository
+AuthService → TokenProvider (genera JWT)
+AuthService → Frontend (devuelve tokens)
+
+
+### 4.3.4.7 Analysis (Kanban)
+| TO DO    | IN PROGRESS    | TESTING           | DONE                  |
+|----------|----------------|-------------------|-----------------------|
+| MFA      | Middleware JWT | Validación tokens | Login/Sign-up/Refresh |
+| Auditing |                |                   | UserRepository        |
+
+---
+
+## 4.3.5 Iteration 5: Analytics Module
+
+### 4.3.5.1 Architectural Design Backlog 5
+
+| Driver ID | Descripción                  | Prioridad | Complejidad |
+|-----------|------------------------------|-----------|-------------|
+| UC-06     | Visualización de métricas    | Alta      | Media       |
+| QA-08     | Actualización en tiempo real | Media     | Media       |
+
+### 4.3.5.2 Establish Iteration Goal
+**Objetivo:** Implementar módulo de analytics para visualizar ingresos y pérdidas en gráficos.
+
+### 4.3.5.3 Elements to Refine
+- AnalyticsService
+- ChartingLibrary (frontend)
+
+### 4.3.5.4 Design Concepts
+- Reutilización de Reportes Service.
+- Frontend con librerías de gráficos (Chart.js).
+
+### 4.3.5.5 Instantiate Elements
+- `GET /api/analytics/summary`
+- `GET /api/analytics/trends`
+
+### 4.3.5.6 Sketch Views
+[AnalyticsService] ← [ReportsService]
+[AnalyticsService] → [Frontend Charts]
+
+
+### 4.3.5.7 Analysis (Kanban)
+| TO DO       | IN PROGRESS        | TESTING       | DONE             |
+|-------------|--------------------|---------------|------------------|
+| Nuevos KPIs | Integración Charts | Validar datos | AnalyticsService |
+
+---
+
+## 4.3.6 Iteration 6: Menu Module
+
+### 4.3.6.1 Architectural Design Backlog 6
+
+| Driver ID | Descripción                   | Prioridad | Complejidad |
+|-----------|-------------------------------|-----------|-------------|
+| UC-07     | Registrar platos en el menú   | Alta      | Media       |
+| UC-08     | Vincular con inventario       | Alta      | Media       |
+| QA-09     | Alertas de ingredientes falt. | Media     | Media       |
+
+### 4.3.6.2 Establish Iteration Goal
+**Objetivo:** Permitir registro de platos vinculados con inventario y emitir alertas cuando un insumo esté por agotarse.
+
+### 4.3.6.3 Elements to Refine
+- MenuService
+- InventoryService (extensión)
+
+### 4.3.6.4 Design Concepts
+- Relación Plato–Producto.
+- Alertas en frontend (no persistentes).
+
+### 4.3.6.5 Instantiate Elements
+- `POST /api/menu/dishes`
+- `GET /api/menu/dishes`
+
+### 4.3.6.6 Sketch Views
+[MenuService] → [InventoryService]
+[MenuService] → [Frontend Alerts]
+
+
+### 4.3.6.7 Analysis (Kanban)
+| TO DO       | IN PROGRESS             | TESTING | DONE               |
+|-------------|-------------------------|---------|--------------------|
+| CRUD platos | Relación con inventario | Alertas | MenuService básico |
+
+---
+
+## 4.3.7 Iteration 7: IoT Sensor Integration
+
+### 4.3.7.1 Architectural Design Backlog 7
+
+| Driver ID | Descripción                   | Prioridad | Complejidad |
+|-----------|-------------------------------|-----------|-------------|
+| UC-09     | Monitoreo en tiempo real      | Alta      | Alta        |
+| QA-10     | Control de frescura alimentos | Alta      | Alta        |
+
+### 4.3.7.2 Establish Iteration Goal
+**Objetivo:** Integrar datos de sensores IoT (temperatura/humedad).
+
+### 4.3.7.3 Elements to Refine
+- IoTService
+- SensorRepository
+
+### 4.3.7.4 Design Concepts
+- Comunicación MQTT.
+- Alertas por umbrales.
+
+### 4.3.7.5 Instantiate Elements
+- `POST /api/iot/data`
+- Entidad SensorData
+
+### 4.3.7.6 Sketch Views
+[SensorDevice] → [IoTService] → [SensorRepository]
+IoTService → Alerts
+
+
+### 4.3.7.7 Analysis (Kanban)
+| TO DO            | IN PROGRESS | TESTING            | DONE             |
+|------------------|-------------|--------------------|------------------|
+| Integración MQTT | IoTService  | Validar thresholds | SensorRepository |
+
+---
+
+## 4.3.8 Iteration 8: Payment Integration (IzyPay)
+
+### 4.3.8.1 Architectural Design Backlog 8
+
+| Driver ID | Descripción                   | Prioridad | Complejidad |
+|-----------|-------------------------------|-----------|-------------|
+| UC-10     | Integración con IzyPay        | Alta      | Alta        |
+| QA-11     | Seguridad transaccional       | Alta      | Alta        |
+
+### 4.3.8.2 Establish Iteration Goal
+**Objetivo:** Integrar pagos con IzyPay como servicio externo.
+
+### 4.3.8.3 Elements to Refine
+- PaymentService
+- External API Gateway
+
+### 4.3.8.4 Design Concepts
+- API REST + Webhooks.
+- Mensajería asíncrona para confirmar pagos.
+
+### 4.3.8.5 Instantiate Elements
+- `POST /api/payments/initiate`
+- `POST /api/payments/confirm`
+
+### 4.3.8.6 Sketch Views
+[Frontend] → [PaymentService] → [IzyPay API]
+IzyPay → [PaymentService] (webhook confirmación)
+
+
+### 4.3.8.7 Analysis (Kanban)
+| TO DO    | IN PROGRESS    | TESTING               | DONE               |
+|----------|----------------|-----------------------|--------------------|
+| Webhooks | PaymentService | Validar transacciones | Integración básica |
+
+---
+
+## 4.3.9 Iteration 9: Cloud Deployment & Scalability
+
+### 4.3.9.1 Architectural Design Backlog 9
+
+| Driver ID | Descripción                 | Prioridad | Complejidad |
+|-----------|-----------------------------|-----------|-------------|
+| QA-12     | Alta disponibilidad en nube | Alta      | Alta        |
+| QA-13     | CI/CD automatizado          | Alta      | Media       |
+
+### 4.3.9.2 Establish Iteration Goal
+**Objetivo:** Desplegar en Azure (backend) y Netlify (frontend) con CI/CD.
+
+### 4.3.9.3 Elements to Refine
+- Infraestructura cloud
+- Contenedores Docker
+- Balanceador de carga
+
+### 4.3.9.4 Design Concepts
+- Azure App Service + MySQL managed.
+- Kubernetes para orquestación.
+- GitHub Actions para CI/CD.
+
+### 4.3.9.5 Instantiate Elements
+- Backend → Azure
+- Frontend → Netlify
+- Database → Azure MySQL
+
+### 4.3.9.6 Sketch Views
+[Netlify Frontend] → [Azure App Service Backend] → [Azure MySQL]
+Backend ←→ [Kubernetes Cluster]
+
+
+### 4.3.9.7 Analysis (Kanban)
+| TO DO            | IN PROGRESS  | TESTING         | DONE                |
+|------------------|--------------|-----------------|---------------------|
+| Configurar CI/CD | Deploy Azure | Load balancing  | Frontend en Netlify |
+| Réplicas DB      |              | Monitoreo cloud | Backend en Azure    |
+
+---
