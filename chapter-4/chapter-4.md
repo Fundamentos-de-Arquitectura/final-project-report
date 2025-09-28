@@ -1,6 +1,6 @@
 # Capítulo IV: Product Architecture Design
 
-## 4.1 Desing Concepts, ViewPoints & ER Diagrams
+## 4.1 Design Concepts, ViewPoints & ER Diagrams
 El presente diseño se realiza aplicando el método Attribute-Driven Design (ADD), identificando principios, enfoques, estilos y patrones arquitectónicos
 ### 4.1.1 Principles Statements
 Para el diseño de la arquitectura representada en el diagrama, se establecen los siguientes principios:
