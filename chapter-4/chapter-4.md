@@ -86,53 +86,64 @@ El diseño arquitectónico de FoodFlow se representa mediante diferentes puntos 
 <br>
 <br>
 - Diagrama de actividad:
+<br>
 <img width="276" height="557" alt="diagram_activity" src="https://github.com/user-attachments/assets/a38db829-32e0-42aa-9343-204af86dc8d3" />
 
 <br>
 <br>
 
 - Diagrama de estados:
-
-<img width="3840" height="939" alt="state_diagram" src="https://github.com/user-attachments/assets/c8f5771f-1628-42cf-9ffd-7e12a9b5f5a5" />
+<br>
+<img width="276" height="557" alt="state_diagram" src="https://github.com/user-attachments/assets/c8f5771f-1628-42cf-9ffd-7e12a9b5f5a5" />
 
 <br>
 <br>
 
 - Diagrama de clases:
-<img width="3840" height="591" alt="class_diagram" src="https://github.com/user-attachments/assets/3e9598b4-027c-4b42-9605-197721d13c6f" />
+<br>
+<img width="276" height="557" alt="class_diagram" src="https://github.com/user-attachments/assets/3e9598b4-027c-4b42-9605-197721d13c6f" />
 
 <br>
 <br>
 
 **Diagramas C4:**
+<br>
 **Containers diagram:**
-<img width="2236" height="2218" alt="containers" src="https://github.com/user-attachments/assets/5be1ba30-97d8-40d2-91f0-1bf0befa3f93" />
+<br>
+<img width="276" height="557" alt="containers" src="https://github.com/user-attachments/assets/5be1ba30-97d8-40d2-91f0-1bf0befa3f93" />
 <br>
 <br>
 
 **Components diagrams:**
+<br>
 - Subscription component diagram:
-<img width="4600" height="5428" alt="subscription_component" src="https://github.com/user-attachments/assets/f13c188b-7b87-41bd-b146-e81c43afc821" />
+<br>
+<img width="276" height="557" alt="subscription_component" src="https://github.com/user-attachments/assets/f13c188b-7b87-41bd-b146-e81c43afc821" />
 <br>
 <br>
 - Reports component diagram:
-<img width="5350" height="6628" alt="reports_component" src="https://github.com/user-attachments/assets/da998903-4813-49a2-8bb9-a70550d0a29a" />
+<br>
+<img width="276" height="557" alt="reports_component" src="https://github.com/user-attachments/assets/da998903-4813-49a2-8bb9-a70550d0a29a" />
   <br>
   <br>
 - Inventory component diagram:
-<img width="5350" height="9028" alt="inventory_component" src="https://github.com/user-attachments/assets/b5396072-3911-4947-8f24-941416e4b2d2" />
+<br>
+<img width="276" height="557" alt="inventory_component" src="https://github.com/user-attachments/assets/b5396072-3911-4947-8f24-941416e4b2d2" />
   <br>
   <br>
 - Order component diagram:
-<img width="4621" height="11179" alt="order_component" src="https://github.com/user-attachments/assets/ba60b12b-5d46-4417-bd76-b351a9582129" />
+<br>
+<img width="276" height="557" alt="order_component" src="https://github.com/user-attachments/assets/ba60b12b-5d46-4417-bd76-b351a9582129" />
   <br>
   <br>
 - Profile component diagram:
-<img width="5350" height="10161" alt="profile_component" src="https://github.com/user-attachments/assets/a340c6d7-e2b5-4a09-95a2-bc129254aa77" />
+<br>
+<img width="276" height="557" alt="profile_component" src="https://github.com/user-attachments/assets/a340c6d7-e2b5-4a09-95a2-bc129254aa77" />
   <br>
   <br>
 
 ### 4.1.5 Relational/Non Relational Database Diagram
+<br>
 <img width="579" height="681" alt="bd" src="https://github.com/user-attachments/assets/ea427efc-5df4-4fd1-bced-3c10796279c8" />
 <br>
 <br>
