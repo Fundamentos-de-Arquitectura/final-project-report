@@ -180,8 +180,15 @@
 ## Project Report Collaboration Insights
 
 Para el desarrollo de este informe se utilizó GitHub como plataforma de colaboración y control de versiones. A continuación, se presentan algunos insights sobre la colaboración del equipo durante la elaboración del informe:
-
-<img src="https://media.discordapp.net/attachments/1413922708428951554/1416264025188339743/image.png?ex=68c63628&is=68c4e4a8&hm=dc1394314d36db19573c731852b7f55261bc85a0bf3cad78e6c7a6bcc96251d7&=&format=webp&quality=lossless">
+<br>
+**TB1:**
+<img width="917" height="475" alt="ant" src="https://github.com/user-attachments/assets/87dc0bc6-5283-4aec-9588-e3e3e111e775" />
+<br>
+<br>
+**TB2:**
+<img width="1148" height="618" alt="new" src="https://github.com/user-attachments/assets/d6a9c05c-55b8-4247-bc94-0bf39b33ac8a" />
+<br>
+<br>
 
 ## Student Outcome
 
