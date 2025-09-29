@@ -94,14 +94,14 @@ El diseño arquitectónico de FoodFlow se representa mediante diferentes puntos 
 
 - Diagrama de estados:
 <br>
-<img width="276" height="557" alt="state_diagram" src="https://github.com/user-attachments/assets/c8f5771f-1628-42cf-9ffd-7e12a9b5f5a5" />
+<img width="600" height="557" alt="state_diagram" src="https://github.com/user-attachments/assets/c8f5771f-1628-42cf-9ffd-7e12a9b5f5a5" />
 
 <br>
 <br>
 
 - Diagrama de clases:
 <br>
-<img width="276" height="557" alt="class_diagram" src="https://github.com/user-attachments/assets/3e9598b4-027c-4b42-9605-197721d13c6f" />
+<img width="600" height="557" alt="class_diagram" src="https://github.com/user-attachments/assets/3e9598b4-027c-4b42-9605-197721d13c6f" />
 
 <br>
 <br>
