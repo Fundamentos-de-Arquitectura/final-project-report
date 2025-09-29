@@ -182,10 +182,12 @@
 Para el desarrollo de este informe se utilizó GitHub como plataforma de colaboración y control de versiones. A continuación, se presentan algunos insights sobre la colaboración del equipo durante la elaboración del informe:
 <br>
 **TB1:**
+<br>
 <img width="917" height="475" alt="ant" src="https://github.com/user-attachments/assets/87dc0bc6-5283-4aec-9588-e3e3e111e775" />
 <br>
 <br>
 **TB2:**
+<br>
 <img width="1148" height="618" alt="new" src="https://github.com/user-attachments/assets/d6a9c05c-55b8-4247-bc94-0bf39b33ac8a" />
 <br>
 <br>
