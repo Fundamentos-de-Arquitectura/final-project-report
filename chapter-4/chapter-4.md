@@ -86,7 +86,7 @@ El diseño arquitectónico de FoodFlow se representa mediante diferentes puntos 
 <br>
 <br>
 - Diagrama de actividad:
-<img width="3840" height="3344" alt="diagram_activity" src="https://github.com/user-attachments/assets/a38db829-32e0-42aa-9343-204af86dc8d3" />
+<img width="276" height="557" alt="diagram_activity" src="https://github.com/user-attachments/assets/a38db829-32e0-42aa-9343-204af86dc8d3" />
 
 <br>
 <br>
