@@ -181,7 +181,9 @@ El atributo más crítico es la Usabilidad, ya que el usuario objetivo no tiene 
 
 ### Bibliografía
 
-Conne, M. (2024). Markdown Guide. https://www.markdownguide.org/
+- Conne, M. (2024). Markdown Guide. https://www.markdownguide.org/
 Conventional commits. (s. f.). Conventional Commits. https://www.conventionalcommits.org/en/v1.0.0/
-Saraiya, Z. (2025, 21 agosto). 7 Best Restaurant Accounting Software for 2025: Features, Costs & Tools That Actually Work. KNOW | Digitize Your Workforce. https://www-getknowapp-com.translate.goog/blog/restaurant-accounting-software/?_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=es&_x_tr_pto=tc
-Ministerio de la Producción (2023). Estudio sobre transformación digital en MYPE del sector gastronómico. https://www.gob.pe/produce
+
+- Saraiya, Z. (2025, 21 agosto). 7 Best Restaurant Accounting Software for 2025: Features, Costs & Tools That Actually Work. KNOW | Digitize Your Workforce. https://www-getknowapp-com.translate.goog/blog/restaurant-accounting-software/?_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=es&_x_tr_pto=tc
+
+- Ministerio de la Producción (2023). Estudio sobre transformación digital en MYPE del sector gastronómico. https://www.gob.pe/produce
