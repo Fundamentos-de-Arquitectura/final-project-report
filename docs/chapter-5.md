@@ -320,7 +320,8 @@ El despliegue del backend se realiza en **FreeSQL** para la base de datos.
 
 **Deployment Diagram (C4):**
 
-<!-- Inserta aquí la imagen del diagrama de despliegue -->
+![WhatsApp Image 2025-10-05 at 12 12 29 PM](https://github.com/user-attachments/assets/f0f83d4f-a5d8-4867-ac9a-adeba86eb358)
+
 
 ---
 
