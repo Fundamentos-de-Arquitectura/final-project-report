@@ -3,8 +3,6 @@
 El presente capítulo documenta el proceso de **implementación, validación y despliegue** del sistema *FoodFlow*, una aplicación web de gestión financiera para restaurantes desarrollada bajo una arquitectura de **microservicios RESTful**.  
 El proyecto fue construido aplicando metodologías ágiles, asegurando un producto usable, seguro y de buen desempeño.
 
----
-
 ## 5.1 Testing Suites & General Patterns
 
 ### 5.1.1 Backend Application Core Testing Suite
@@ -471,7 +469,8 @@ El tablero se estructuró con las siguientes columnas:
 https://trello.com/invite/b/68acc5a626e4614f12ee778f/ATTIb0400bfaba199996d200f641b89abc646996230A/arquitectura-de-software
 
 **Captura del tablero Kanban:**
-<!-- ![Kanban Board Sprint 1](URL_AQUI) -->
+<img width="1220" height="639" alt="image" src="https://github.com/user-attachments/assets/9b6ebaf0-f1e5-4178-b3cd-5617c76094a2" />
+
 
 ---
 
