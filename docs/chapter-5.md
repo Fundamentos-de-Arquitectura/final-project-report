@@ -882,10 +882,6 @@ A continuación se resume la evidencia obtenida:
 | Órdenes       | `/api/v1/orders`                                | Registro, visualización y confirmación de órdenes       | Passed |
 | Reportes      | `/api/v1/reports`                               | Visualización de ingresos, gastos y navegación temporal | Passed |
 
-**Capturas de ejecución de pruebas:**
-<!-- Insertar imágenes de ejecución de pruebas de Postman, Jest o Cucumber -->
-<!-- ![Ejecución de pruebas backend](URL_AQUI) -->
-<!-- ![Ejecución de pruebas frontend](URL_AQUI) -->
 
 ---
 
