@@ -12,7 +12,7 @@ Esta es la descripción del escenario futuro (To-Be) para el dueño de un restau
 tecnológica. Esta solución está diseñada para mejorar las operaciones del restaurante, aumentar la eficiencia, las
 ventas y finanzas del negocio.
 
-![tbdue](https://github.com/user-attachments/assets/f719d110-a59a-41de-b324-3b7c165ed761)
+<img width="1101" height="605" alt="tobecorrecto" src="https://github.com/user-attachments/assets/0b6e9d1c-a980-4360-9673-ea1085cdd601" />
 
 ## 3.2 User Stories
 
