@@ -19,7 +19,7 @@ de su negocio a través de soluciones tecnológicas innovadoras.
 
 **Producto:** es un servicio que permite el monitoreo integral de la salud financiera de un 
 restaurante, analizando flujos de caja, rentabilidad por plato y tendencias de ventas para confirmar los niveles de eficiencia económica del negocio. Así mismo, este servicio 
-también ofrece alertas inteligentes y reportes automatizados, con el fin de optimizar la gestión 
+también ofrece reportes automatizados, con el fin de optimizar la gestión 
 administrativa y facilitar la toma de decisiones estratégicas del propietario.
 
 ### 1.1.2 Perfiles de integrantes del equipo
