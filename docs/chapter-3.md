@@ -12,7 +12,7 @@ Esta es la descripción del escenario futuro (To-Be) para el dueño de un restau
 tecnológica. Esta solución está diseñada para mejorar las operaciones del restaurante, aumentar la eficiencia, las
 ventas y finanzas del negocio.
 
-<img src="https://media.discordapp.net/attachments/1413922708428951554/1416261859022995598/a9aa23c3-d5be-4d00-a4ef-617b9e52f9c9.png?ex=68c63424&is=68c4e2a4&hm=2aaa6290005ae0b15f0724892aff239ff0c9e42a68133cc51c2a9eed161e79b9&=&format=webp&quality=lossless">
+![tbdue](https://github.com/user-attachments/assets/f719d110-a59a-41de-b324-3b7c165ed761)
 
 ## 3.2 User Stories
 
@@ -56,7 +56,7 @@ Para la planeación y desarrollo del proyecto, se han definido las siguientes é
 
 ## 3.3 Impact Map
 
-<img src="https://media.discordapp.net/attachments/1413922708428951554/1416261314589884466/ec48eee7-a453-4793-b3d1-01278fe9793d.png?ex=68c633a2&is=68c4e222&hm=58665126ebfba14c7254a59707f7df17688baf20d83065f13161ad5ab3464d9c&=&format=webp&quality=lossless&width=727&height=968">
+<img width="1202" height="1600" alt="impact" src="https://github.com/user-attachments/assets/480f1f01-8447-47e6-acbb-6e020f3f417f" />
 
 ## 3.4 Alcance
 
