@@ -166,7 +166,7 @@ En esta sección se aborda la información recolectada de cada entrevista incluy
 | Apellido             | Canahualpa                                                                                                                                                                                                                        |
 | Edad                 | 49                                                                                                                                                                                                                                |
 | Distrito             | La Molina                                                                                                                                                                                                                         |
-| Evidencia            | <img src="https://media.discordapp.net/attachments/1413922708428951554/1416240152854003822/image.png?ex=68c61fec&is=68c4ce6c&hm=219d5d59e9ba213f465b3ce331adcc6b892ff7af1c984e4c27a704dbf70175c2&=&format=webp&quality=lossless"> |
+| Evidencia            | <img width="967" height="290" alt="clara" src="https://github.com/user-attachments/assets/b1abe27d-4eed-4fca-9521-c41f69050d5d" /> |
 | Url                  | https://goo.su/bD7IT                                                                                                                                                                                                              |
 | Inicio de entrevista | 00:00:01                                                                                                                                                                                                                          |
 | Fin de entrevista    | 00:11:19                                                                                                                                                                                                                          |
@@ -194,7 +194,7 @@ En síntesis, Clara se enfoca principalmente en la producción y el control bás
 | Apellido             | Barrera                                                                                                                                                                                                                           |
 | Edad                 | 52 años                                                                                                                                                                                                                           |
 | Distrito             | Los Olivos                                                                                                                                                                                                                        |
-| Evidencia            | <img src="https://media.discordapp.net/attachments/1413922708428951554/1416240347993870469/image.png?ex=68c6201b&is=68c4ce9b&hm=90ec02491773bc3a16546c166c6936d43fd61cd862c1af3e0cbbe69bda8de6f7&=&format=webp&quality=lossless"> |
+| Evidencia            | <img width="1006" height="296" alt="barrera" src="https://github.com/user-attachments/assets/dbee5e0a-a6ad-4b38-960d-82c18a16e80e" /> |
 | Url                  | https://goo.su/bD7IT                                                                                                                                                                                                              |
 | Inicio de entrevista | 00:11:28                                                                                                                                                                                                                          |    
 | Fin de entrevista    | 00:17:40                                                                                                                                                                                                                          |
@@ -222,7 +222,7 @@ la seguridad de los datos.
 | Apellido             | Elio                                                                                                                                                                                                                              |
 | Edad                 | 58 años                                                                                                                                                                                                                           |
 | Distrito             | San Isidro                                                                                                                                                                                                                        |
-| Evidencia            | <img src="https://media.discordapp.net/attachments/1413922708428951554/1416240262774128730/image.png?ex=68c62007&is=68c4ce87&hm=7fe7881b3b5a4c5425d5c59fa1b366a3fc22e30d9d1971c7c637565f77889f2f&=&format=webp&quality=lossless"> |
+| Evidencia            | <img width="936" height="434" alt="werner" src="https://github.com/user-attachments/assets/8391123a-2d53-45e7-bf9b-407177041d5f" /> |
 | Url                  | https://goo.su/bD7IT                                                                                                                                                                                                              |
 | Inicio de entrevista | 00:17:44                                                                                                                                                                                                                          |
 | Fin de entrevista    | 00:28:10                                                                                                                                                                                                                          |
@@ -254,19 +254,19 @@ En los tres casos se evidencia la necesidad de una herramienta digital que facil
 
 Además de las entrevistas personales, a cada entrevistado se le compartió un enlace al formulario realizado con el objetivo de conocer su personalidad a detalle. A continuación se demuestran las estadísticas a las respuestas obtenidas
 
-<img src="https://media.discordapp.net/attachments/1413922708428951554/1416234916659855471/image.png?ex=68c61b0c&is=68c4c98c&hm=4d1e32a0a01093ca23c1c10bd3ba621afe512f51d7f7f246865ef90569b214b0&=&format=webp&quality=lossless">
+<img width="916" height="406" alt="1" src="https://github.com/user-attachments/assets/cdf933b2-255f-4d91-bead-7c73eef19096" />
 
-<img src="https://media.discordapp.net/attachments/1413922708428951554/1416234946909044806/image.png?ex=68c61b13&is=68c4c993&hm=82d6ef9e7e7d78383da9b6de688e34109ea8877b631faa7780eec3eb0ab681ba&=&format=webp&quality=lossless">
+<img width="920" height="297" alt="2" src="https://github.com/user-attachments/assets/ee63e3bb-a6f3-4c20-952e-cbad7bf24b30" />
 
-<img src="https://media.discordapp.net/attachments/1413922708428951554/1416234987790929940/image.png?ex=68c61b1d&is=68c4c99d&hm=2abdef4ad201cde459427ad18b949a60aaa6592b02839cffe9b12ab70ec31ed3&=&format=webp&quality=lossless">
+<img width="916" height="297" alt="3" src="https://github.com/user-attachments/assets/9a934f16-4dcd-4e0a-922d-2b85195c8411" />
 
-<img src="https://media.discordapp.net/attachments/1413922708428951554/1416235042929246330/image.png?ex=68c61b2a&is=68c4c9aa&hm=24d6ab47bd8497462e3026762e2ada8da4214da177f0deee728e7958614053aa&=&format=webp&quality=lossless">
+<img width="915" height="295" alt="4" src="https://github.com/user-attachments/assets/86d192a7-8323-4db8-a30a-d3efabe9ed30" />
 
-<img src="https://media.discordapp.net/attachments/1413922708428951554/1416235079969148988/image.png?ex=68c61b33&is=68c4c9b3&hm=672433836802d05f04f5129443448e5fc31b36fcfc1c2fec306d51d3826679ed&=&format=webp&quality=lossless">
+<img width="919" height="406" alt="5" src="https://github.com/user-attachments/assets/00251e3d-119c-417e-8967-c8ee26380fc5" />
 
-<img src="https://media.discordapp.net/attachments/1413922708428951554/1416235113758330982/image.png?ex=68c61b3b&is=68c4c9bb&hm=00c58de50e8cb5c4f6a73de63995c08c797374e21eb1ca3654b53016fbe468cf&=&format=webp&quality=lossless">
+<img width="914" height="397" alt="6" src="https://github.com/user-attachments/assets/4b207734-acaf-48c1-bf13-b3d13bc85615" />
 
-<img src="https://media.discordapp.net/attachments/1413922708428951554/1416235148214800465/image.png?ex=68c61b43&is=68c4c9c3&hm=3cd98360d3487f71fa424c9bf570c61b0b5eca755b9971f2485d9616532f68e5&=&format=webp&quality=lossless">
+<img width="915" height="402" alt="7" src="https://github.com/user-attachments/assets/e94e21e4-b784-408c-bc7c-336ebb833502" />
 
 Enlace al formulario: https://forms.fillout.com/t/xcdy5bB5ZKus
 
@@ -276,7 +276,7 @@ Los artefactos incluidos User Persona, User Task Matrix, User Journey Maps, Empa
 
 ### 2.3.1 User Personas
 
-<img src="https://media.discordapp.net/attachments/1413922708428951554/1416231013398352063/Sofia_Rios.png?ex=68c61769&is=68c4c5e9&hm=87f06456381640ed25e4d05cbeaa96658426098c38bcca5cbb66a8cb526036ab&=&format=webp&quality=lossless&width=571&height=968">
+<img width="1050" height="1780" alt="up" src="https://github.com/user-attachments/assets/429040b1-6c9f-48b6-b20e-78ef7922135a" />
 
 ### 2.3.2 User Task Matrix
 
