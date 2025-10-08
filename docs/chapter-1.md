@@ -37,7 +37,7 @@ administrativa y facilitar la toma de decisiones estratégicas del propietario.
 
 **Product Description:**
 
-La solución propuesta es una aplicación web de gestión financiera para restaurantes, diseñada específicamente para brindar a los dueños de restaurantes una herramienta clara, simple y eficiente que les permita controlar y optimizar la administración de su negocio.
+La solución propuesta es una aplicación web de gestión financiera para restaurantes, diseñada específicamente para brindar a los dueños de restaurantes una herramienta clara, simple y eficiente que les permita controlar y optimizar la administración de la economía de su negocio.
 
 La plataforma integra diferentes módulos que resuelven los principales puntos de dolor del segmento objetivo:
 
