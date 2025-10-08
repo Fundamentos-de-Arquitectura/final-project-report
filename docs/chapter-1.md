@@ -4,7 +4,7 @@
 
 **Go5U** es una startup dedicada a soluciones de gestión financiera digital enfocadas en restaurantes. 
 Utilizamos tecnologías web inteligentes para simplificar el control económico de restaurantes. 
-Nuestro enfoque es  estratégico, proporcionando dashboards y herramientas analíticas 
+Nuestro enfoque es preventivo, proporcionando dashboards y herramientas analíticas 
 para evitar pérdidas financieras y optimizar la rentabilidad. No ofrecemos servicios contables 
 tradicionales, ni intervención directa en procesos operativos.
 
@@ -17,10 +17,7 @@ desperdicios operativos.
 restaurantes, transformando la manera en que los propietarios comprenden y gestionan las finanzas 
 de su negocio a través de soluciones tecnológicas innovadoras.
 
-**Producto:** es un servicio que permite el monitoreo integral de la salud financiera de un 
-restaurante, analizando flujos de caja, rentabilidad por plato y tendencias de ventas para confirmar los niveles de eficiencia económica del negocio. Así mismo, este servicio 
-también ofrece reportes automatizados, con el fin de optimizar la gestión 
-administrativa y facilitar la toma de decisiones estratégicas del propietario.
+**Producto:** es un servicio que permite el monitoreo de la salud financiera de un restaurante, analizando flujos de caja, rentabilidad por plato y tendencias de ventas para confirmar los niveles de eficiencia económica del negocio. Así mismo, el fin de este servicio es optimizar la gestión financiera y facilitar la toma de decisiones estratégicas del propietario.
 
 ### 1.1.2 Perfiles de integrantes del equipo
 
@@ -47,7 +44,7 @@ Gráficos que destacan los platos más vendidos y los de menor rotación, facili
 
 Gestión del menú, con opción de agregar, editar o eliminar platos de manera rápida.
 
-El perfil de la solución se centra en la usabilidad y accesibilidad, ofreciendo una herramienta intuitiva para usuarios que no necesariamente dominan la contabilidad o los sistemas complejos. Al enfocarse en reportes visuales y funciones prácticas, la aplicación se convierte en un aliado estratégico para mejorar la rentabilidad, reducir desperdicios y dar mayor control a los dueños de restaurantes sobre su operación diaria.
+El perfil de la solución se centra en la usabilidad, seguridad y desemepeño ofreciendo una herramienta intuitiva para usuarios que no necesariamente dominan la contabilidad o los sistemas complejos. Al enfocarse en reportes visuales y funciones prácticas, la aplicación se convierte en un aliado estratégico para mejorar la rentabilidad, reducir desperdicios y dar mayor control a los dueños de restaurantes sobre su operación diaria.
 
 ### 1.2.2 Antecedentes y problemática
 
