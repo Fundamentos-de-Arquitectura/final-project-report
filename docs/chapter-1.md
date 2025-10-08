@@ -47,8 +47,6 @@ Gráficos que destacan los platos más vendidos y los de menor rotación, facili
 
 Gestión del menú, con opción de agregar, editar o eliminar platos de manera rápida.
 
-Vista de ventas por mesa, que permite conocer en detalle qué se vende, dónde y en qué volumen.
-
 El perfil de la solución se centra en la usabilidad y accesibilidad, ofreciendo una herramienta intuitiva para usuarios que no necesariamente dominan la contabilidad o los sistemas complejos. Al enfocarse en reportes visuales y funciones prácticas, la aplicación se convierte en un aliado estratégico para mejorar la rentabilidad, reducir desperdicios y dar mayor control a los dueños de restaurantes sobre su operación diaria.
 
 ### 1.2.2 Antecedentes y problemática
