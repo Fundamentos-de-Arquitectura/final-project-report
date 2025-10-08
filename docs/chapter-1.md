@@ -64,9 +64,8 @@ Tradicionalmente, muchos restaurantes han manejado sus finanzas mediante registr
 Los dueños de restaurantes, especialmente en el segmento de pequeños y medianos negocios, carecen de una herramienta tecnológica accesible y sencilla que les permita monitorear sus finanzas en tiempo real, identificar oportunidades de mejora y reducir pérdidas. Esta carencia genera múltiples consecuencias:
 
 1. **Toma de decisiones basada en intuición:** Al no contar con datos confiables, las decisiones sobre precios, compras o promociones suelen hacerse de manera empírica, sin sustento financiero.
-2. **Falta de control sobre el inventario:** La ausencia de alertas oportunas ocasiona quiebres de stock o sobre-compra de insumos, generando pérdidas económicas.
-3. **Desconocimiento de la rentabilidad real:** Muchos dueños desconocen cuáles son los platos más rentables y cuáles generan pérdidas, dificultando la optimización del menú.
-4. **Riesgo de sostenibilidad financiera:** La falta de control integral sobre gastos, ingresos y tendencias incrementa la probabilidad de pérdidas acumuladas que comprometan la continuidad del negocio.
+2. **Desconocimiento de la rentabilidad real:** Muchos dueños desconocen cuáles son los platos más rentables y cuáles generan pérdidas, dificultando la optimización del menú.
+3. **Riesgo de sostenibilidad financiera:** La falta de control integral sobre gastos, ingresos y tendencias incrementa la probabilidad de pérdidas acumuladas que comprometan la continuidad del negocio.
 
 En este contexto surge FoodFlow, como respuesta a la necesidad de contar con una solución especializada, intuitiva y asequible que transforme la manera en que los restaurantes gestionan sus finanzas diarias.
 
@@ -96,8 +95,7 @@ El desafío que hay actualmente es que las soluciones actuales no proveen este s
 1. Creemos que los dueños necesitan reportes claros de ganancias y pérdidas para tener control real del negocio.
 2. Creemos que los dueños requieren identificar los platos más vendidos para ajustar el menú y maximizar rentabilidad.
 3. Creemos que los dueños valoran la opción de exportar reportes a Excel porque facilita compartir la información con socios o contadores.
-4. Creemos que los dueños necesitan alertas cuando un insumo está por agotarse para evitar quiebres de stock.
-5. Creemos que los dueños prefieren visualizar la información en gráficos y paneles consolidados en lugar de revisar tablas largas.
+4. Creemos que los dueños prefieren visualizar la información en gráficos y paneles consolidados en lugar de revisar tablas largas.
 
 **Solution Assumptions**
 
