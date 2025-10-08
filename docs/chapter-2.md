@@ -117,10 +117,9 @@ En esta sección, se presenta un análisis de los competidores de FoodFlow y sus
 
 ### Estrategia Global de FoodFlow
 1. **Posicionamiento claro**: “La plataforma de gestión financiera hecha a medida para restaurantes independientes y medianos”.
-2. **Modelo Freemium + Upselling**: captar usuarios con un plan gratuito básico, y escalar con planes premium.
-3. **Go-to-Market en LATAM**: aprovechar la baja digitalización financiera de restaurantes en la región para ganar mercado más rápido que competidores globales.
-4. **Simplicidad como bandera**: mientras otros ofrecen robustez y complejidad, FoodFlow se mantiene ágil y fácil de usar.
-5. **Construcción de comunidad**: generar una red de dueños de restaurantes que compartan experiencias y testimonios.
+2. **Go-to-Market en LATAM**: aprovechar la baja digitalización financiera de restaurantes en la región para ganar mercado más rápido que competidores globales.
+3. **Simplicidad como bandera**: mientras otros ofrecen robustez y complejidad, FoodFlow se mantiene ágil y fácil de usar.
+4. **Construcción de comunidad**: generar una red de dueños de restaurantes que compartan experiencias y testimonios.
 
 ## 2.2 Entrevistas
 En esta sección, se presentan los resultados de las entrevistas realizadas a dueños de restaurantes para comprender sus necesidades, desafíos y expectativas en relación con la gestión financiera y operativa de sus negocios. Se incluyen citas textuales y análisis de las respuestas obtenidas.
