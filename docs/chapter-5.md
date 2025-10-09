@@ -68,52 +68,6 @@ Given que agrego un plato con precio unitario
 When especifico la cantidad
 Then el sistema calcula y muestra el precio total en la columna correspondiente
 
-### US14 - Registrar una nueva orden - gherkin:
-Feature: Registrar una nueva orden
-Como dueño de restaurante
-Quiero registrar una nueva orden desde el botón "New Order"
-Para mantener actualizado el historial de órdenes
-
-Scenario: Navegación al formulario de nueva orden
-Given que estoy en la sección "Orders"
-When hago clic en el botón "New Order"
-Then el sistema me lleva al formulario para registrar la nueva orden
-
-### US15 - Crear un nuevo orden - gherkin:
-Feature: Crear un nuevo orden
-Como dueño de restaurante
-Quiero registrar una nueva orden seleccionando mesa, plato y fecha
-Para llevar un control digital de las órdenes
-
-Scenario: Registro de nueva orden
-Given que estoy en la pantalla "Add New Order"
-When selecciono número de mesa, plato y fecha
-Then el sistema muestra el orden en la tabla de detalles
-And se visualizan cantidad, precio unitario y total
-
-### US16 - Confirmar un orden - gherkin:
-Feature: Confirmar un orden
-Como dueño de restaurante
-Quiero confirmar un orden
-Para que quede registrado en el sistema y se actualice el inventario
-
-Scenario: Confirmación exitosa del orden
-Given que he agregado uno o más platos al orden
-When presiono el botón "Confirm Order"
-Then el orden se guarda en la base de datos
-And se refleja en el historial de órdenes
-
-### US17 - Cancelar creación de orden - gherkin:
-Feature: Cancelar creación de orden
-Como dueño de restaurante
-Quiero cancelar la creación de una orden
-Para no guardar información incorrecta
-
-Scenario: Cancelar formulario
-Given que estoy en el formulario "Add New Order"
-When presiono el botón "Cancel"
-Then el sistema limpia los datos sin guardar nada en la base
-
 ---
 
 ### 5.1.2 Pattern Based Backend Application(s)
@@ -262,150 +216,112 @@ https://trello.com/invite/b/68acc5a626e4614f12ee778f/ATTIb0400bfaba199996d200f64
   </thead>
   <tbody>
     <tr>
-      <td rowspan="2">US03</td>
-      <td rowspan="2">Visualizar inventario actual</td>
-      <td>T3.1</td>
-      <td>API: Listar Inventario</td>
-      <td>Desarrollar el endpoint para obtener la lista completa de productos del inventario.</td>
-      <td>6</td>
-      <td>Paolo Torres</td>
-      <td>Done</td>
-    </tr>
-    <tr>
-      <td>T3.2</td>
-      <td>FE: Tabla de Inventario</td>
-      <td>Crear la tabla en Angular para mostrar stock, costo unitario y unidad de medida.</td>
-      <td>10</td>
-      <td>Paolo Torres</td>
-      <td>Done</td>
-    </tr>
-    <tr>
-      <td rowspan="2">US04</td>
-      <td rowspan="2">Agregar un nuevo producto al inventario</td>
-      <td>T4.1</td>
-      <td>API: Agregar Producto</td>
-      <td>Desarrollar el endpoint de POST para registrar un nuevo producto en la base de datos.</td>
+      <td rowspan="2">US06</td>
+      <td rowspan="2">Agregar Nuevo Plato</td>
+      <td>T6.1</td>
+      <td>API: Agregar Plato</td>
+      <td>Desarrollar el endpoint de POST para registrar un nuevo plato en la base de datos.</td>
       <td>8</td>
       <td>Paolo Torres</td>
-      <td>Done</td>
+      <td>To Do</td>
     </tr>
     <tr>
-      <td>T4.2</td>
-      <td>FE: Formulario Agregar Producto</td>
-      <td>Crear el formulario en Angular para ingresar los datos del nuevo producto y conectar con el backend.</td>
+      <td>T6.2</td>
+      <td>FE: Formulario Agregar Plato</td>
+      <td>Crear el formulario en Angular para ingresar los datos del nuevo plato y conectar con el backend.</td>
       <td>12</td>
       <td>Paolo Torres</td>
-      <td>Done</td>
+      <td>To Do</td>
     </tr>
     <tr>
-      <td rowspan="2">US05</td>
-      <td rowspan="2">Validar campos al agregar producto</td>
-      <td>T5.1</td>
-      <td>BE: Validaciones de Producto</td>
-      <td>Implementar validaciones en el backend para campos obligatorios y formato de datos (ej. costo unitario numérico).</td>
-      <td>6</td>
-      <td>Paolo Torres</td>
-      <td>Done</td>
-    </tr>
-    <tr>
-      <td>T5.2</td>
-      <td>FE: Mensajes de Error</td>
-      <td>Implementar validaciones y mensajes de error reactivos en el formulario de Angular.</td>
-      <td>8</td>
-      <td>Paolo Torres</td>
-      <td>Done</td>
-    </tr>
-    <tr>
-      <td rowspan="2">US09</td>
-      <td rowspan="2">Visualizar órdenes existentes</td>
-      <td>T9.1</td>
-      <td>API: Obtener Órdenes</td>
-      <td>Crear endpoint para listar las órdenes (mesa, platos, precio total, fecha) ordenadas cronológicamente.</td>
-      <td>8</td>
-      <td>Romina Maita</td>
-      <td>Done</td>
-    </tr>
-    <tr>
-      <td>T9.2</td>
-      <td>FE: Tabla de Órdenes</td>
-      <td>Desarrollar la tabla en Angular para mostrar el historial de órdenes.</td>
-      <td>10</td>
-      <td>Romina Maita</td>
-      <td>Done</td>
-    </tr>
-    <tr>
-      <td>US10</td>
-      <td>Calcular el total por plato</td>
-      <td>T10.1</td>
-      <td>FE: Cálculo Automático</td>
-      <td>Implementar la lógica en el componente Angular para calcular y mostrar el precio total al cambiar la cantidad.</td>
-      <td>5</td>
-      <td>Romina Maita</td>
-      <td>Done</td>
-    </tr>
-    <tr>
-      <td>US14</td>
-      <td>Registrar una nueva orden</td>
-      <td>T14.1</td>
-      <td>FE: Botón "New Order"</td>
-      <td>Implementar el botón "New Order" en la vista de órdenes y configurar la navegación (routing en Angular) al formulario de creación.</td>
-      <td>4</td>
-      <td>Romina Maita</td>
-      <td>Done</td>
-    </tr>
-    <tr>
-      <td rowspan="2">US15</td>
-      <td rowspan="2">Crear un nuevo orden</td>
-      <td>T15.1</td>
-      <td>FE: Formulario Creación de Orden</td>
-      <td>Crear la interfaz de Angular para seleccionar mesa, plato y fecha, incluyendo la lógica para manejar la lista de detalles del orden.</td>
-      <td>16</td>
-      <td>Romina Maita</td>
-      <td>Done</td>
-    </tr>
-    <tr>
-      <td>T15.2</td>
-      <td>API: Consultar Platos y Mesas</td>
-      <td>Desarrollar endpoints para obtener la lista de platos y mesas disponibles (Dropdowns).</td>
+      <td rowspan="2">US07</td>
+      <td rowspan="2">Buscar Platos Existentes</td>
+      <td>T7.1</td>
+      <td>FE: Campo de Búsqueda</td>
+      <td>Implementar un campo de búsqueda en Angular para filtrar platos en tiempo real.</td>
       <td>6</td>
       <td>Romina Maita</td>
-      <td>Done</td>
+      <td>To Do</td>
     </tr>
     <tr>
-      <td rowspan="3">US16</td>
-      <td rowspan="3">Confirmar un orden</td>
-      <td>T16.1</td>
-      <td>API: Guardar Orden</td>
-      <td>Crear el endpoint de POST para registrar la orden final y sus detalles en la base de datos.</td>
-      <td>10</td>
-      <td>Romina Maita</td>
-      <td>Done</td>
-    </tr>
-    <tr>
-      <td>T16.2</td>
-      <td>BE: Actualización de Inventario</td>
-      <td>Implementar la lógica en el backend para descontar el stock de los productos del inventario al confirmar la orden.</td>
+      <td>T7.2</td>
+      <td>BE: Endpoint de Búsqueda</td>
+      <td>Desarrollar un endpoint en el backend para buscar platos por nombre.</td>
       <td>8</td>
       <td>Romina Maita</td>
-      <td>Done</td>
+      <td>To Do</td>
     </tr>
     <tr>
-      <td>T16.3</td>
-      <td>FE: Botón Confirmar</td>
-      <td>Implementar el botón "Confirm Order" y la llamada al servicio de guardar orden.</td>
-      <td>4</td>
-      <td>Romina Maita</td>
-      <td>Done</td>
+      <td rowspan="2">US08</td>
+      <td rowspan="2">Visualizar Información Completa del Menú</td>
+      <td>T8.1</td>
+      <td>FE: Tabla de Platos</td>
+      <td>Crear una tabla en Angular para mostrar la información completa de los platos.</td>
+      <td>10</td>
+      <td>Paolo Torres</td>
+      <td>To Do</td>
     </tr>
     <tr>
-      <td>US17</td>
-      <td>Cancelar creación de orden</td>
-      <td>T17.1</td>
-      <td>FE: Botón Cancelar</td>
-      <td>Implementar la función de cancelar que limpia el formulario de la orden y retorna a la vista de historial de órdenes.</td>
-      <td>3</td>
+      <td>T8.2</td>
+      <td>BE: Endpoint de Listado</td>
+      <td>Desarrollar un endpoint en el backend para obtener la información completa de los platos.</td>
+      <td>8</td>
+      <td>Paolo Torres</td>
+      <td>To Do</td>
+    </tr>
+    <tr>
+      <td rowspan="2">US11</td>
+      <td rowspan="2">Visualización de Reportes Financieros Diarios</td>
+      <td>T11.1</td>
+      <td>FE: Dashboard de Reportes</td>
+      <td>Crear un dashboard en Angular para mostrar los ingresos y gastos diarios.</td>
+      <td>12</td>
       <td>Romina Maita</td>
-      <td>Done</td>
+      <td>To Do</td>
+    </tr>
+    <tr>
+      <td>T11.2</td>
+      <td>BE: Endpoint de Reportes</td>
+      <td>Desarrollar un endpoint en el backend para calcular ingresos y gastos diarios.</td>
+      <td>10</td>
+      <td>Romina Maita</td>
+      <td>To Do</td>
+    </tr>
+    <tr>
+      <td rowspan="2">US12</td>
+      <td rowspan="2">Navegación entre Períodos de Tiempo</td>
+      <td>T12.1</td>
+      <td>FE: Navegación de Períodos</td>
+      <td>Implementar la funcionalidad de cambio entre vistas diarias, semanales y mensuales en el dashboard.</td>
+      <td>8</td>
+      <td>Paolo Torres</td>
+      <td>To Do</td>
+    </tr>
+    <tr>
+      <td>T12.2</td>
+      <td>BE: Endpoint de Períodos</td>
+      <td>Desarrollar un endpoint en el backend para obtener datos agregados por período.</td>
+      <td>10</td>
+      <td>Paolo Torres</td>
+      <td>To Do</td>
+    </tr>
+    <tr>
+      <td rowspan="2">US13</td>
+      <td rowspan="2">Análisis de Categorías de Gastos</td>
+      <td>T13.1</td>
+      <td>FE: Visualización de Categorías</td>
+      <td>Crear gráficos en Angular para mostrar el desglose de gastos por categoría.</td>
+      <td>10</td>
+      <td>Romina Maita</td>
+      <td>To Do</td>
+    </tr>
+    <tr>
+      <td>T13.2</td>
+      <td>BE: Endpoint de Categorías</td>
+      <td>Desarrollar un endpoint en el backend para calcular los gastos por categoría.</td>
+      <td>8</td>
+      <td>Romina Maita</td>
+      <td>To Do</td>
     </tr>
   </tbody>
 </table>
@@ -499,62 +415,61 @@ A continuación se presentan los archivos `.feature` correspondientes:
     Then el sistema actualiza automáticamente el campo "Precio Total" a $30.00
 ```
 
-- US14 - Inicio del Registro de una Nueva Orden
+- US14 - Crear un nuevo orden
 
-```Feature: Inicio del Registro de una Nueva Orden
+```Feature: Crear un nuevo orden
   Como dueño de restaurante
-  Quiero registrar una nueva orden
-  Para mantener actualizado el historial de órdenes
-
-  Scenario: Navegación al formulario de nueva orden
-    Given que estoy en la sección "Orders"
-    When hago clic en el botón principal "New Order"
-    Then el sistema me redirige a la pantalla o formulario de "Add New Order"
-```
-
-- US15 - Detalle de Creación de Orden
-
-```Feature: Detalle de Creación de Orden
-  Como dueño de restaurante
-  Quiero registrar los detalles de un nuevo orden (mesa, plato, fecha)
+  Quiero registrar un nuevo orden con los detalles de la mesa, platos y fecha
   Para llevar un control digital de las órdenes
 
-  Scenario: Agregar un plato al detalle de la orden
-    Given que estoy en la pantalla "Add New Order"
-    When selecciono el Número de Mesa
-    And selecciono un Plato del menú y su Cantidad
-    Then el plato se añade a la tabla de detalles del orden
-    And la tabla de detalles muestra la Cantidad, el Precio Unitario y el Precio Total calculado para ese plato
+  Scenario: Registro exitoso de un nuevo orden
+    Given que estoy en la sección "Add New Order"
+    When ingreso los detalles de la mesa, platos y fecha válidos
+    And presiono "Save Order"
+    Then el nuevo orden se registra correctamente en el sistema
+    And aparece un mensaje de confirmación
 ```
 
-- US16 - Finalización y Registro de un Orden
+- US15 - Confirmar un orden
 
-```Feature: Finalización y Registro de un Orden
+```Feature: Confirmar un orden
   Como dueño de restaurante
-  Quiero confirmar un orden
-  Para que quede registrado en el sistema y se actualice el inventario
+  Quiero confirmar un orden para que quede registrado en el sistema y se actualice el inventario
+  Para asegurar la consistencia de los datos
 
-  Scenario: Confirmación exitosa y registro del orden
-    Given que he completado todos los detalles del orden con al menos un plato
+  Scenario: Confirmación exitosa de un orden
+    Given que he completado todos los detalles del orden
     When presiono el botón "Confirm Order"
     Then el sistema guarda el orden completo en la base de datos
-    And el stock de los productos utilizados se descuenta del inventario
-    And el orden aparece en el historial de órdenes
+    And actualiza el inventario correctamente
 ```
 
-- US17 - Cancelación de Orden en Progreso
+- US16 - Cancelar creación de orden
 
-```Feature: Cancelación de Orden en Progreso
+```Feature: Cancelar creación de orden
   Como dueño de restaurante
-  Quiero poder cancelar la creación de un orden
+  Quiero cancelar la creación de un orden
   Para evitar guardar información incorrecta o incompleta
 
-  Scenario: Cancelar y limpiar el formulario
-    Given que he comenzado a registrar una orden con algunos platos agregados
+  Scenario: Cancelación exitosa de un orden
+    Given que he comenzado a registrar una orden
     When presiono el botón "Cancel"
-    Then el sistema limpia todos los datos del formulario de "Add New Order"
-    And no se guarda ningún registro de orden en la base de datos
-    And soy redirigido a la vista de historial de órdenes
+    Then el sistema limpia todos los datos del formulario
+    And no guarda ningún registro de orden en la base de datos
+```
+
+- US17 - Visualizar historial de órdenes
+
+```Feature: Visualizar historial de órdenes
+  Como dueño de restaurante
+  Quiero ver un historial de órdenes realizadas
+  Para analizar tendencias y patrones de consumo
+
+  Scenario: Visualización del historial de órdenes
+    Given que estoy en la sección "Order History"
+    When ingreso al sistema
+    Then puedo ver una tabla con todas las órdenes realizadas
+    And cada fila incluye detalles como mesa, platos, precio total y fecha
 ```
 
 ---
