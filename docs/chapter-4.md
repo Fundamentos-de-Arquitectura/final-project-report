@@ -167,12 +167,21 @@ Diagrama de clases
 | **ReportStatus** | Enum | Estados del reporte | Rastrea el proceso de generación: solicitado, generando, obteniendo datos, calculando, generado, almacenado |
 | **ReportRepository** | Repositorio | Acceso a datos de reportes | Maneja operaciones CRUD de reportes generados, con filtros por tipo y fecha |
 
-Diagrama de contenedores 
+## Diagrama de contenedores 
 
 <img width="1647" height="1683" alt="contenedores" src="https://github.com/user-attachments/assets/2b0231c1-0869-40ee-ba53-8645b19eb128" />
 
+## Diagrama de componentes
 
-Diagrama de componentes
+<img width="4600" height="5428" alt="c1" src="https://github.com/user-attachments/assets/5a142364-277e-4e40-984a-3a65dc4e2def" />
+
+<img width="5350" height="6628" alt="c2" src="https://github.com/user-attachments/assets/12d23836-b139-49b1-88ec-9cfb1eaead3a" />
+
+<img width="5350" height="9028" alt="c3" src="https://github.com/user-attachments/assets/9f8e1fd3-5006-4cb7-beb9-24bf79dac2ff" />
+
+<img width="4621" height="11179" alt="c4" src="https://github.com/user-attachments/assets/40a2610b-85ad-444b-b91b-f518b05fc4b9" />
+
+<img width="5350" height="10161" alt="c5" src="https://github.com/user-attachments/assets/ade772bc-0968-4f07-877c-70e7b11e9132" />
 
 ---
 
