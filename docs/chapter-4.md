@@ -72,12 +72,26 @@ Estas vistas garantizan trazabilidad entre requerimientos y decisiones arquitect
 
 Diagrama de actvidad
 
-
+<img width="3578" height="3217" alt="Untitled diagram-2025-10-09-034604" src="https://github.com/user-attachments/assets/c55947bf-afc2-4729-8492-a3c308429ab6" />
 
 Diagrama de estados
 
+<img width="7233" height="1969" alt="Untitled diagram-2025-10-09-035453" src="https://github.com/user-attachments/assets/12a5a58e-0f0b-46bd-96e9-97859e9c63ab" />
 
 Diagrama de clases 
+
+<img width="15211" height="2558" alt="Untitled diagram-2025-10-09-034906" src="https://github.com/user-attachments/assets/7cd76b45-2db5-4829-947f-626c5e9c8989" />
+
+
+<img width="1374" height="743" alt="1" src="https://github.com/user-attachments/assets/215ac1e6-a2cf-402c-860a-5bc39099118a" />
+
+<img width="511" height="737" alt="2" src="https://github.com/user-attachments/assets/7de7aabb-a9af-430c-8132-bd98b56e7e32" />
+
+<img width="391" height="719" alt="3" src="https://github.com/user-attachments/assets/375c8a3e-7681-464c-b13c-a81289038fe0" />
+
+<img width="1249" height="733" alt="4" src="https://github.com/user-attachments/assets/7b090aca-b29f-4046-b750-085e7ca219ab" />
+
+<img width="1180" height="659" alt="5" src="https://github.com/user-attachments/assets/050f0fe3-540b-4dd1-ac65-31cc6efa786f" />
 
 
 Diagrama de contenedores 
