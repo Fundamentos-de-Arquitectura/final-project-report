@@ -39,7 +39,6 @@ El estilo adoptado es **RESTful**, con comunicación **HTTP/JSON** y documentaci
 - Repository + Service Layer: aislamiento de persistencia.
 - Factory Method: instanciación controlada de entidades.
 - Observer: alertas automáticas ante cambios en stock.
-- Strategy: formatos de reportes (PDF, CSV).
 - Template Method: flujo de generación de reportes.
 - Singleton: control del contexto de seguridad y configuración.
 
