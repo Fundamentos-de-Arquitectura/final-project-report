@@ -94,6 +94,79 @@ Diagrama de clases
 <img width="1180" height="659" alt="5" src="https://github.com/user-attachments/assets/050f0fe3-540b-4dd1-ac65-31cc6efa786f" />
 
 
+# Tabla de Características del Diagrama de Clases
+
+## Servicio de Suscripción
+
+| Clase | Tipo | Descripción | Propósito |
+|-------|------|-------------|-----------|
+| **SubscriptionController** | Controlador | Maneja las peticiones HTTP relacionadas con suscripciones | Expone endpoints REST para que los usuarios puedan ver planes, suscribirse, consultar su suscripción y cancelarla |
+| **SubscriptionService** | Servicio | Contiene la lógica de negocio de las suscripciones | Orquesta el proceso completo: valida datos, procesa pagos, activa suscripciones y gestiona renovaciones |
+| **Subscription** | Entidad | Representa una suscripción activa de un usuario | Almacena información de la suscripción individual: qué usuario, qué plan eligió, cuándo inicia/termina, estado del pago |
+| **SubscriptionPlan** | Entidad/Catálogo | Representa los planes de suscripción disponibles | Define los diferentes planes que se ofrecen (Básico, Premium, Enterprise) con sus precios, características y límites |
+| **SubscriptionRepository** | Repositorio | Acceso a datos de suscripciones de usuarios | Maneja operaciones CRUD de las **suscripciones activas/históricas de usuarios**. Cada vez que un usuario se suscribe, se crea un registro aquí |
+| **PlanRepository** | Repositorio | Acceso a datos de planes disponibles | Maneja operaciones CRUD de los **planes que ofreces como negocio** (catálogo de productos). Son los planes base que no cambian por usuario |
+| **SubscriptionStatus** | Enum | Estados posibles de una suscripción | Rastrea el flujo: desde que el usuario selecciona un plan, valida pago, procesa, hasta que queda activa o falla |
+| **BillingPeriod** | Enum | Períodos de facturación | Define si el plan se cobra mensual, trimestral o anualmente |
+| **PaymentClient** | Cliente | Interfaz para procesar pagos | Se comunica con una pasarela de pago externa (Stripe, PayPal, etc.) para procesar transacciones |
+| **PaymentData** | DTO | Datos de pago del usuario | Encapsula información sensible: tarjeta, titular, fecha de expiración, CVV |
+| **PaymentResult** | DTO | Resultado del procesamiento de pago | Contiene si el pago fue exitoso, ID de transacción y mensajes de error si aplica |
+
+---
+
+## Servicio de Inventario
+
+| Clase | Tipo | Descripción | Propósito |
+|-------|------|-------------|-----------|
+| **InventoryController** | Controlador | Maneja peticiones HTTP de inventario | Expone endpoints para registrar productos, actualizar stock y consultar inventario |
+| **InventoryService** | Servicio | Lógica de negocio del inventario | Gestiona operaciones de productos: crear, actualizar stock, descontar ingredientes usados en órdenes |
+| **Product** | Entidad | Representa un producto/ingrediente en inventario | Almacena información del producto: nombre, categoría, precio de compra, stock actual, proveedor |
+| **ProductStatus** | Enum | Estados del producto | Indica el estado del producto en el sistema: pendiente, registrado, stock disponible, bajo o agotado |
+| **ProductRepository** | Repositorio | Acceso a datos de productos | Maneja operaciones CRUD de productos en inventario |
+
+---
+
+## Servicio de Menú
+
+| Clase | Tipo | Descripción | Propósito |
+|-------|------|-------------|-----------|
+| **MenuController** | Controlador | Maneja peticiones HTTP del menú | Expone endpoints para crear platos y consultar el menú |
+| **MenuService** | Servicio | Lógica de negocio del menú | Gestiona la creación y consulta de platos disponibles para venta |
+| **Dish** | Entidad | Representa un plato del menú | Almacena información del plato: nombre, descripción, precio de venta, categoría |
+| **DishStatus** | Enum | Estados del plato | Indica si el plato está en proceso de creación o ya está registrado en el menú |
+| **DishRepository** | Repositorio | Acceso a datos de platos | Maneja operaciones CRUD de platos del menú |
+
+---
+
+## Servicio de Órdenes
+
+| Clase | Tipo | Descripción | Propósito |
+|-------|------|-------------|-----------|
+| **OrderController** | Controlador | Maneja peticiones HTTP de órdenes | Expone endpoints para cargar órdenes, consultarlas y filtrar por rango de fechas |
+| **OrderService** | Servicio | Lógica de negocio de órdenes | Procesa órdenes de venta, calcula totales, actualiza inventario y coordina con otros servicios |
+| **Order** | Entidad | Representa una orden de venta | Almacena información de la orden: número, items vendidos, total, fecha, estado de procesamiento |
+| **OrderItem** | Entidad | Representa un ítem dentro de una orden | Detalle de cada plato vendido: qué plato, cantidad, precio unitario, subtotal |
+| **OrderStatus** | Enum | Estados de la orden | Rastrea el procesamiento: cargada, procesando, actualizando stock, registrada, completada |
+| **OrderRepository** | Repositorio | Acceso a datos de órdenes | Maneja operaciones CRUD de órdenes, con filtros por fecha y estado |
+| **MessagingService** | Servicio de mensajería | Publica eventos entre microservicios | Comunica eventos importantes: orden procesada, actualización de stock, suscripción activada |
+| **StockUpdateEvent** | Evento | Evento de actualización de inventario | Mensaje que se envía cuando una orden requiere descontar stock |
+| **InventoryClient** | Cliente | Interfaz para comunicarse con Inventario | Permite al servicio de órdenes consultar y actualizar el inventario de otros microservicios |
+
+---
+
+## Servicio de Reportes
+
+| Clase | Tipo | Descripción | Propósito |
+|-------|------|-------------|-----------|
+| **ReportsController** | Controlador | Maneja peticiones HTTP de reportes | Expone endpoints para generar reportes de ingresos, pérdidas y consultar reportes almacenados |
+| **ReportsService** | Servicio | Lógica de negocio de reportes | Genera reportes consolidados obteniendo datos de órdenes e inventario, calcula métricas financieras |
+| **Report** | Entidad | Representa un reporte generado | Almacena metadatos del reporte: tipo, período, estado de generación, datos calculados |
+| **IncomeReport** | DTO | Reporte de ingresos | Contiene métricas de ventas: total de ventas, cantidad de órdenes, promedio por orden, ventas por plato y por día |
+| **LossReport** | DTO | Reporte de pérdidas/gastos | Contiene métricas de compras: total de compras, cantidad de compras, gastos por categoría y por día |
+| **ReportType** | Enum | Tipo de reporte | Define si es un reporte de ingresos o de pérdidas/gastos |
+| **ReportStatus** | Enum | Estados del reporte | Rastrea el proceso de generación: solicitado, generando, obteniendo datos, calculando, generado, almacenado |
+| **ReportRepository** | Repositorio | Acceso a datos de reportes | Maneja operaciones CRUD de reportes generados, con filtros por tipo y fecha |
+
 Diagrama de contenedores 
 
 
