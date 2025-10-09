@@ -179,6 +179,231 @@ Diagrama de componentes
 
 La base de datos **MySQL** mantiene las entidades descritas en los capítulos anteriores:
 
+<img width="4782" height="3457" alt="Untitled diagram-2025-10-09-040617" src="https://github.com/user-attachments/assets/e360620e-0a50-40c8-951a-b29ca1736343" />
+
+## Entidades del Sistema
+
+### 1. USER (Usuario)
+Almacena la información de los usuarios del sistema.
+
+| Campo | Tipo | Descripción |
+|-------|------|-------------|
+| id | string (PK) | Identificador único del usuario |
+| email | string (UK) | Correo electrónico único del usuario |
+| name | string | Nombre completo del usuario |
+| role | string | Rol del usuario en el sistema (admin, user, etc.) |
+| created_at | datetime | Fecha de creación del registro |
+| updated_at | datetime | Fecha de última actualización |
+
+**Propósito**: Gestionar los usuarios que interactúan con el sistema y pueden adquirir suscripciones.
+
+---
+
+### 2. SUBSCRIPTION (Suscripción)
+Registra las suscripciones activas e históricas de los usuarios.
+
+| Campo | Tipo | Descripción |
+|-------|------|-------------|
+| id | string (PK) | Identificador único de la suscripción |
+| user_id | string (FK) | Referencia al usuario suscrito |
+| plan_id | string (FK) | Referencia al plan seleccionado |
+| status | string | Estado de la suscripción (ACTIVO, EXPIRADO, CANCELADO, etc.) |
+| start_date | datetime | Fecha de inicio de la suscripción |
+| end_date | datetime | Fecha de finalización de la suscripción |
+| auto_renew | boolean | Indica si la suscripción se renueva automáticamente |
+| payment_method | string | Método de pago utilizado |
+| transaction_id | string | ID de la transacción de pago |
+| created_at | datetime | Fecha de creación del registro |
+| updated_at | datetime | Fecha de última actualización |
+
+**Propósito**: Controlar el acceso de los usuarios a las funcionalidades del sistema según su plan activo.
+
+---
+
+### 3. SUBSCRIPTION_PLAN (Plan de Suscripción)
+Define los diferentes planes de suscripción disponibles.
+
+| Campo | Tipo | Descripción |
+|-------|------|-------------|
+| id | string (PK) | Identificador único del plan |
+| name | string | Nombre del plan (Básico, Premium, Enterprise, etc.) |
+| description | string | Descripción detallada del plan |
+| price | decimal | Precio del plan |
+| billing_period | string | Periodo de facturación (MENSUAL, TRIMESTRAL, ANUAL) |
+| features | string | Lista de características incluidas (JSON o texto) |
+| max_users | int | Número máximo de usuarios permitidos |
+| max_orders | int | Número máximo de órdenes permitidas |
+| created_at | datetime | Fecha de creación del registro |
+| updated_at | datetime | Fecha de última actualización |
+
+**Propósito**: Definir las opciones de suscripción disponibles con sus características y limitaciones.
+
+---
+
+### 4. PAYMENT_TRANSACTION (Transacción de Pago)
+Registra todas las transacciones de pago relacionadas con suscripciones.
+
+| Campo | Tipo | Descripción |
+|-------|------|-------------|
+| id | string (PK) | Identificador único de la transacción |
+| subscription_id | string (FK) | Referencia a la suscripción asociada |
+| amount | decimal | Monto de la transacción |
+| currency | string | Moneda utilizada (USD, PEN, etc.) |
+| status | string | Estado de la transacción (EXITOSO, FALLIDO, PENDIENTE) |
+| transaction_id | string | ID único de la transacción del proveedor de pagos |
+| payment_method | string | Método de pago usado (tarjeta, PayPal, etc.) |
+| processed_at | datetime | Fecha y hora en que se procesó el pago |
+| created_at | datetime | Fecha de creación del registro |
+
+**Propósito**: Mantener un historial completo de todas las transacciones de pago para auditoría y seguimiento.
+
+---
+
+### 5. PRODUCT (Producto)
+Almacena información de los productos del inventario.
+
+| Campo | Tipo | Descripción |
+|-------|------|-------------|
+| id | string (PK) | Identificador único del producto |
+| name | string | Nombre del producto |
+| category | string | Categoría del producto |
+| purchase_price | decimal | Precio de compra del producto |
+| current_stock | int | Stock actual disponible |
+| unit | string | Unidad de medida (kg, unidad, litro, etc.) |
+| purchase_date | datetime | Fecha de compra del producto |
+| supplier | string | Proveedor del producto |
+| status | string | Estado del producto (DISPONIBLE, STOCK_BAJO, AGOTADO) |
+| created_at | datetime | Fecha de creación del registro |
+| updated_at | datetime | Fecha de última actualización |
+
+**Propósito**: Gestionar el inventario de productos y materia prima del negocio.
+
+---
+
+### 6. DISH (Platillo)
+Contiene los platillos disponibles en el menú.
+
+| Campo | Tipo | Descripción |
+|-------|------|-------------|
+| id | string (PK) | Identificador único del platillo |
+| name | string | Nombre del platillo |
+| description | string | Descripción del platillo |
+| price | decimal | Precio de venta del platillo |
+| category | string | Categoría del platillo (entrada, principal, postre, etc.) |
+| status | string | Estado del platillo (DISPONIBLE, NO_DISPONIBLE) |
+| created_at | datetime | Fecha de creación del registro |
+| updated_at | datetime | Fecha de última actualización |
+
+**Propósito**: Administrar el menú de platillos ofrecidos a los clientes.
+
+---
+
+### 7. ORDER (Orden)
+Registra las órdenes realizadas por los clientes.
+
+| Campo | Tipo | Descripción |
+|-------|------|-------------|
+| id | string (PK) | Identificador único de la orden |
+| order_number | string (UK) | Número único de orden para identificación |
+| total_amount | decimal | Monto total de la orden |
+| status | string | Estado de la orden (CARGADA, PROCESANDO, COMPLETADA) |
+| order_date | datetime | Fecha y hora en que se realizó la orden |
+| processed_at | datetime | Fecha y hora en que se procesó la orden |
+| created_at | datetime | Fecha de creación del registro |
+| updated_at | datetime | Fecha de última actualización |
+
+**Propósito**: Gestionar las órdenes de los clientes y su procesamiento.
+
+---
+
+### 8. ORDER_ITEM (Item de Orden)
+Detalla los platillos incluidos en cada orden.
+
+| Campo | Tipo | Descripción |
+|-------|------|-------------|
+| id | string (PK) | Identificador único del item |
+| order_id | string (FK) | Referencia a la orden principal |
+| dish_id | string (FK) | Referencia al platillo ordenado |
+| dish_name | string | Nombre del platillo (desnormalizado) |
+| quantity | int | Cantidad de platillos ordenados |
+| unit_price | decimal | Precio unitario del platillo |
+| subtotal | decimal | Subtotal del item (cantidad × precio) |
+| created_at | datetime | Fecha de creación del registro |
+
+**Propósito**: Detallar el contenido específico de cada orden.
+
+---
+
+### 9. REPORT (Reporte)
+Almacena reportes generados del sistema.
+
+| Campo | Tipo | Descripción |
+|-------|------|-------------|
+| id | string (PK) | Identificador único del reporte |
+| type | string | Tipo de reporte (INCOME, LOSS) |
+| period_from | date | Fecha de inicio del periodo reportado |
+| period_to | date | Fecha de fin del periodo reportado |
+| total_income | decimal | Total de ingresos en el periodo |
+| total_loss | decimal | Total de pérdidas en el periodo |
+| net_profit | decimal | Ganancia neta (ingresos - pérdidas) |
+| profit_margin | decimal | Margen de ganancia porcentual |
+| status | string | Estado del reporte (GENERANDO, GENERADO, ALMACENADO) |
+| generated_at | datetime | Fecha de generación del reporte |
+| income_data | string | Datos de ingresos en formato JSON |
+| loss_data | string | Datos de pérdidas en formato JSON |
+| created_at | datetime | Fecha de creación del registro |
+| updated_at | datetime | Fecha de última actualización |
+
+**Propósito**: Generar y almacenar reportes financieros del negocio.
+
+---
+
+### 10. INCOME_DETAIL (Detalle de Ingresos)
+Desglosa la información detallada de ingresos en un reporte.
+
+| Campo | Tipo | Descripción |
+|-------|------|-------------|
+| id | string (PK) | Identificador único del detalle |
+| report_id | string (FK) | Referencia al reporte principal |
+| total_sales | decimal | Total de ventas en el periodo |
+| order_count | int | Cantidad de órdenes procesadas |
+| average_order_value | decimal | Valor promedio por orden |
+| sales_by_dish | string | Ventas desglosadas por platillo (JSON) |
+| sales_by_day | string | Ventas desglosadas por día (JSON) |
+| created_at | datetime | Fecha de creación del registro |
+
+**Propósito**: Proporcionar análisis detallado de los ingresos generados.
+
+---
+
+### 11. LOSS_DETAIL (Detalle de Pérdidas)
+Desglosa la información detallada de pérdidas en un reporte.
+
+| Campo | Tipo | Descripción |
+|-------|------|-------------|
+| id | string (PK) | Identificador único del detalle |
+| report_id | string (FK) | Referencia al reporte principal |
+| total_purchases | decimal | Total de compras en el periodo |
+| purchase_count | int | Cantidad de compras realizadas |
+| purchases_by_category | string | Compras desglosadas por categoría (JSON) |
+| purchases_by_day | string | Compras desglosadas por día (JSON) |
+| created_at | datetime | Fecha de creación del registro |
+
+**Propósito**: Proporcionar análisis detallado de las pérdidas o gastos incurridos.
+
+---
+
+## Relaciones entre Entidades
+
+| Relación | Cardinalidad | Descripción |
+|----------|--------------|-------------|
+| USER → SUBSCRIPTION | 1:N | Un usuario puede tener múltiples suscripciones (historial de suscripciones actuales y pasadas) |
+| SUBSCRIPTION → SUBSCRIPTION_PLAN | N:1 | Cada suscripción pertenece a un plan específico; un plan puede ser usado por múltiples suscripciones |
+| SUBSCRIPTION → PAYMENT_TRANSACTION | 1:N | Una suscripción puede generar múltiples transacciones (pagos iniciales, renovaciones, intentos fallidos) |
+| ORDER → ORDER_ITEM | 1:N | Una orden contiene múltiples items; cada item pertenece a una única orden |
+| DISH → ORDER_ITEM | 1:N | Un platillo puede estar en múltiples items de orden; cada item referencia un único platillo |
+| REPORT → INCOME_DETAIL | 1:N | Un reporte puede tener múltiples detalles de ingresos (aunque típicamente será 1:1) |
+| REPORT → LOSS_DETAIL | 1:N | Un reporte puede tener múltiples detalles de pérdidas (aunque típicamente será 1:1) |
 
 ---
 
