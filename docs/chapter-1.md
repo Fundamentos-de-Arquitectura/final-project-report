@@ -13,19 +13,19 @@ el monitoreo continuo de métricas económicas clave, al igual que optimizan la 
 estratégicas de los propietarios, para que estos puedan maximizar su rentabilidad y reducir 
 desperdicios operativos.
 
-**Visión:** Ser la empresa líder en Latinoamérica en el ámbito de inteligencia financiera para 
+**Visión:** Ser la empresa líder en Latinoamérica en un periodo de 2 años en el ámbito de inteligencia financiera para 
 restaurantes, transformando la manera en que los propietarios comprenden y gestionan las finanzas 
-de su negocio a través de soluciones tecnológicas innovadoras.
+de su negocio a través de soluciones tecnológicas innovadoras, logrando un 80% de adopción en usuarios meta.
 
 **Producto:** es un servicio que permite el monitoreo de la salud financiera de un restaurante, analizando flujos de caja, rentabilidad por plato y tendencias de ventas para confirmar los niveles de eficiencia económica del negocio. Así mismo, el fin de este servicio es optimizar la gestión financiera y facilitar la toma de decisiones estratégicas del propietario.
 
 ### 1.1.2 Perfiles de integrantes del equipo
 
-| Foto                                                                                                                      | Apellido y Nombre                                 | Carrera                | Acerca de                                                                                                                                                                                                                                                                         | Habilidades                                                                                                                                                                        |
-|---------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------|------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <img src="https://github.com/Fundamentos-de-Arquitectura/final-project-report/blob/master/assets/romina.png?raw=true">    | Maita Falckenheiner, Romina Guadalupe(u202213765) | Ingeniería de Software | Soy estudiante de Ingeniería de Software, actualmente estoy haciendo prácticas como desarrolladora Full Stack para un proyecto de Django. Me apasiona la tecnología y la música.                                                                                                                                    | Liderazgo, competitividad y organización.                                                                                                                                          |
-| <img src="https://github.com/Fundamentos-de-Arquitectura/final-project-report/blob/master/assets/werner.png?raw=true">    | Lang Nassi, Werner Khalil(u202310003)             | Ingeniería de Software | Estudiante de la Universidad Peruana de Ciencias Aplicadas (UPC), cursando en 6.º ciclo. Soy un estudiante que le gusta investigar cosas nuevas.                                                                                                                                  | Investigador, Innovador, Analista, Cooperativo.                                                                                                                                    |
-| <img src="https://github.com/Fundamentos-de-Arquitectura/final-project-report/blob/master/assets/paolo.png?raw=true">     | Torres Flores, Paolo Alessandro(u20221f613)       | Ingeniería de Software | Soy un estudiante de 7mo ciclo con afán de mejorar cada día que pasa. Tengo muchas aspiraciones, ya sea en mi carrera como personalmente, y lucho diariamente para acercarme cada vez más a ellas.                                                                                | Me considero una persona adaptable al entorno, sé trabajar en equipo y aprendo rápido. Mentalidad para resolver problemas. Conocimiento básico de las funcionalidades de software. |
+| Foto                                                                                                                   | Apellido y Nombre                                 | Carrera                | Acerca de                                                                                                                                                                                          | Habilidades                                                                                                                                                                        |
+|------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------|------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| <img src="https://github.com/Fundamentos-de-Arquitectura/final-project-report/blob/master/assets/romina.png?raw=true"> | Maita Falckenheiner, Romina Guadalupe(u202213765) | Ingeniería de Software | Soy estudiante de Ingeniería de Software, actualmente estoy haciendo prácticas como desarrolladora Full Stack para un proyecto de Django. Me apasiona la tecnología y la música.                   | Liderazgo, competitividad y organización.                                                                                                                                          |
+| <img src="https://github.com/Fundamentos-de-Arquitectura/final-project-report/blob/master/assets/werner.png?raw=true"> | Lang Nassi, Werner Khalil(u202310003)             | Ingeniería de Software | Estudiante de la Universidad Peruana de Ciencias Aplicadas (UPC), cursando en 6.º ciclo. Soy un estudiante que le gusta investigar cosas nuevas.                                                   | Investigador, Innovador, Analista, Cooperativo.                                                                                                                                    |
+| <img src="https://github.com/Fundamentos-de-Arquitectura/final-project-report/blob/master/assets/paolo.png?raw=true">  | Torres Flores, Paolo Alessandro(u20221f613)       | Ingeniería de Software | Soy un estudiante de 7mo ciclo con afán de mejorar cada día que pasa. Tengo muchas aspiraciones, ya sea en mi carrera como personalmente, y lucho diariamente para acercarme cada vez más a ellas. | Me considero una persona adaptable al entorno, sé trabajar en equipo y aprendo rápido. Mentalidad para resolver problemas. Conocimiento básico de las funcionalidades de software. |
 
 ## 1.2 Solution Profile
 ### 1.2.1 Nombre del producto
@@ -67,7 +67,7 @@ Los dueños de restaurantes, especialmente en el segmento de pequeños y mediano
 En este contexto surge FoodFlow, como respuesta a la necesidad de contar con una solución especializada, intuitiva y asequible que transforme la manera en que los restaurantes gestionan sus finanzas diarias.
 
 ### 1.2.3 Lean UX Process
-En esta sección, se presenta el proceso de Lean UX que se ha seguido para el desarrollo de la plataforma KeepItFresh. Este proceso incluye la creación de un Lean UX Problem Statement, Assumptions, Hypothesis Statements y un Lean UX Canvas. El objetivo es definir claramente el problema que se busca resolver, las suposiciones que se tienen sobre los usuarios y el producto, así como las hipótesis que guiarán el desarrollo del mismo.
+En esta sección, se presenta el proceso de Lean UX que se ha seguido para el desarrollo de la plataforma FoodFlow. Este proceso incluye la creación de un Lean UX Problem Statement, Assumptions, Hypothesis Statements y un Lean UX Canvas. El objetivo es definir claramente el problema que se busca resolver, las suposiciones que se tienen sobre los usuarios y el producto, así como las hipótesis que guiarán el desarrollo del mismo.
 
 #### 1.2.3.1 Lean UX Problem Statement
 En el entorno laboral actual, los restaurantes enfrentan dificultades para monitorear y gestionar sus finanzas de manera efectiva. Esto debido a la falta de herramientas adecuadas y el trabajo tedioso que esto suele ser, para hacerlo de forma continua y detallada. 
@@ -100,7 +100,7 @@ El desafío que hay actualmente es que las soluciones actuales no proveen este s
 2. Creemos que la función de exportar a Excel será clave para la adopción, ya que se integra con su forma de trabajo actual.
 3. Creemos que mostrar reportes históricos (diarios, semanales y mensuales) ayudará al dueño a tomar decisiones estratégicas.
 4. Creemos que incluir un módulo para registrar y analizar ventas de platos permitirá al dueño identificar patrones de consumo.
-5. Creemos que un sistema de notificaciones sobre inventario crítico reducirá pérdidas y mejorará la planificación de compras.
+5. Creemos que un sistema de gestión sobre inventario crítico reducirá pérdidas y mejorará la planificación de compras.
 
 #### 1.2.3.3 Lean UX Hypothesis
 
@@ -123,7 +123,7 @@ Sabremos que esto es cierto cuando el 80% de los usuarios consulte reportes sema
 2. Creemos que un ranking de platos más vendidos ayudará al dueño a optimizar el menú.
 Sabremos que esto es cierto cuando al menos el 50% de los usuarios haga ajustes de menú en los primeros 2 meses.
 
-3. Creemos que las notificaciones de inventario crítico ayudarán a los dueños a reducir quiebres de stock.
+3. Creemos que la gestión de inventario ayudarán a los dueños a reducir quiebres de stock.
 Sabremos que esto es cierto cuando los usuarios reporten una disminución de al menos 30% en pedidos no atendidos por falta de insumos.
 
 **Solution Hypotheses**
@@ -134,8 +134,6 @@ Sabremos que esto es cierto cuando el 70% de los usuarios valore positivamente l
 2. Creemos que incluir el módulo de ventas por plato permitirá al dueño identificar patrones de consumo.
 Sabremos que esto es cierto cuando al menos el 40% de los usuarios lo consulte semanalmente en los primeros 3 meses.
 
-3. Creemos que un sistema de alertas en tiempo real (notificaciones) ayudará al dueño a planificar mejor las compras.
-Sabremos que esto es cierto cuando el 60% de los usuarios reduzca en un 20% sus compras de emergencia durante el primer trimestre.
 #### 1.2.3.4 Lean UX Canvas
 
 <img width="1088" height="692" alt="canvas" src="https://github.com/user-attachments/assets/9879f033-5002-4fc1-9968-c69588592fcd" />
@@ -148,4 +146,3 @@ Este proyecto se enfoca en ellos porque:
 - Son los principales responsables de las finanzas y de la toma de decisiones estratégicas.
 - Necesitan optimizar el control de ganancias y pérdidas sin depender de procesos manuales o conocimientos contables avanzados.
 - Requieren una solución que les permita ahorrar tiempo y reducir errores, a través de reportes automáticos y visualizaciones claras.
-- Valoran funciones prácticas como las notificaciones de inventario bajo, que impactan directamente en la reducción de desperdicios y en la continuidad del servicio.
