@@ -21,15 +21,16 @@ Estos principios derivan de los requerimientos no funcionales (RNF) y la visión
 El sistema adopta una arquitectura de **microservicios con enfoque DDD (Domain-Driven Design)**.  
 Cada *bounded context* se implementa como un servicio independiente desplegable en contenedores.
 
-| Bounded Context        | Microservicio           | Descripción                                                                             |
-|------------------------|-------------------------|-----------------------------------------------------------------------------------------|
-| Inventario             | Inventory Service       | Control de productos y cantidades.                                                      |
-| Gestión de Menú        | Menu Management Service | Administración de los platos de la carta, con sus precios, categorías y disponibilidad. |
-| Reportes               | Reports Service         | Generación de informes financieros y operativos.                                        |
-| IAM                    | IAM Service             | Autenticación y autorización basada en roles.                                           |
-| Perfíles               | Profiles Service        | Datos personales y configuraciones de usuario.                                          |
-| Suscripciones          | Subscriptions Service   | Gestión de planes SaaS y periodos de servicio.                                          |
-| Órdenes (solo lectura) | Orders Service          | Muestra información estática o preconfigurada para pruebas, sin operaciones CRUD.       |
+| Bounded Context | Microservicio         | Descripción                                                                             |
+|-----------------|-----------------------|-----------------------------------------------------------------------------------------|
+| Inventory       | Inventory Service     | Control de productos y cantidades.                                                      |
+| Menu            | Menu Service          | Administración de los platos de la carta, con sus precios, categorías y disponibilidad. |
+| Report          | Reports Service       | Generación de informes financieros y operativos.                                        |
+| Analytics       | Reports Service       | Visualización y análisis de métricas de negocio.                                        |
+| IAM             | IAM Service           | Autenticación y autorización basada en roles.                                           |
+| Profiles        | Profiles Service      | Datos personales y configuraciones de usuario.                                          |
+| Subscription    | Subscriptions Service | Gestión de planes SaaS y periodos de servicio.                                          |
+| Orders          | Orders Service        | Muestra información estática para pruebas, sin operaciones CRUD.                        |
 
 El **API Gateway** centraliza peticiones, aplica seguridad y distribuye tráfico hacia los microservicios internos.  
 El estilo adoptado es **RESTful**, con comunicación **HTTP/JSON** y documentación de endpoints mediante **Swagger**.
@@ -44,8 +45,7 @@ El estilo adoptado es **RESTful**, con comunicación **HTTP/JSON** y documentaci
 
 ### 4.1.3 Context Diagram
 
-El sistema tiene como actor principal al **propietario del restaurante**, quien accede desde una interfaz web Angular.  
-En futuras versiones se contempla añadir **empleados o contadores** como roles secundarios.
+El sistema tiene como actor principal al **dueño del restaurante**, quien accede desde una interfaz web Angular.
 
 **Flujo general:**
 
@@ -73,31 +73,19 @@ Estas vistas garantizan trazabilidad entre requerimientos y decisiones arquitect
 
 La base de datos **MySQL** mantiene las entidades descritas en los capítulos anteriores:
 
-- **Usuario** (idUsuario, nombre, correo, rol, contraseñaHash)
-- **Producto** (idProducto, nombre, categoría, precioUnitario, stockActual)
-- **Plato** (idPlato, nombre, descripción, precio, categoría, disponible)
-- **Reporte** (idReporte, tipo, fechaGeneración, idUsuario)
-- **Suscripción** (idSuscripción, plan, fechaInicio, fechaFin, idUsuario)
-
-**Relaciones principales:**
-
-- Usuario (1) — (N) Reporte
-- Usuario (1) — (1) Suscripción
-- Producto y Plato se gestionan en contextos distintos (Inventario vs Menú).
-- Cada reporte puede incluir referencias a ambas entidades según el módulo origen.
 
 ---
 
 ### 4.1.6 Design Patterns
 
-| Microservicio   | Patrón principal           | Finalidad                                   |
-|-----------------|----------------------------|---------------------------------------------|
-| Inventory       | Repository / Observer      | Sincronización de stock.                    |
-| Menu Management | Repository / Factory       | Alta, baja y edición de platos de la carta. |
-| Reports         | Strategy / Template Method | Generación y formato de informes.           |
-| IAM             | Singleton / Proxy          | Control de autenticación.                   |
-| Subscriptions   | Repository / Observer      | Renovaciones y vencimientos.                |
-| Orders          | Repository (solo lectura)  | Consulta de datos estáticos de ejemplo.     |
+| Microservicio | Patrón principal           | Finalidad                                   |
+|---------------|----------------------------|---------------------------------------------|
+| Inventory     | Repository / Observer      | Sincronización de stock.                    |
+| Menu          | Repository / Factory       | Alta, baja y edición de platos de la carta. |
+| Reports       | Strategy / Template Method | Generación y formato de informes.           |
+| IAM           | Singleton / Proxy          | Control de autenticación.                   |
+| Subscriptions | Repository / Observer      | Renovaciones y vencimientos.                |
+| Orders        | Repository (solo lectura)  | Consulta de datos estáticos de ejemplo.     |
 
 ---
 
@@ -126,11 +114,10 @@ La arquitectura de **FoodFlow** busca ofrecer una plataforma modular y segura pa
 
 | Código | User Story resumida                             |
 |--------|-------------------------------------------------|
-|        | Registrar y actualizar productos en inventario. |
-|        | Administrar platos del menú.                    |
-|        | Generar reportes financieros y de operaciones.  |
-|        | Visualizar métricas en dashboard.               |
-|        | Autenticarse y gestionar perfil de usuario.     |
+| US04   | Registrar y actualizar productos en inventario. |
+| US06   | Administrar platos del menú.                    |
+| US11   | Generar reportes financieros y de operaciones.  |
+| US01   | Visualizar métricas en dashboard.               |
 
 ---
 
@@ -238,10 +225,10 @@ Usuario (Dueño) ──► Frontend (Angular) ──► API Gateway ──► Se
 
 ### 4.3.1.7 Analysis of Current Design and Review Iteration Goal (Kanban Board)
 
-| TO DO                   | IN PROGRESS      | TESTING            | DONE                      |
-|-------------------------|------------------|--------------------|---------------------------|
-| Notificaciones realtime | Configuración DB | API Gateway básico | Estructura microservicios |
-| Optimizar consultas     | Reports Service  | Endpoints reports  | Frontend base             |
+| TO DO               | IN PROGRESS      | TESTING            | DONE                      |
+|---------------------|------------------|--------------------|---------------------------|
+| Optimizar consultas | Configuración DB | API Gateway básico | Estructura microservicios |
+|                     | Reports Service  | Endpoints reports  | Frontend base             |
 
 ---
 
@@ -293,7 +280,6 @@ Frontend → OrderService
 OrderService → InventoryService (valida stock)
 InventoryService → OrderService (OK)
 OrderService → EventBus (OrderCreated)
-EventBus → NotificationService
 OrderService → DB (guardar orden)
 OrderService → Frontend (OK)
 
@@ -454,7 +440,6 @@ AuthService → Frontend (devuelve tokens)
 
 ### 4.3.6.6 Sketch Views
 [OrderService] → [InventoryService]
-[OrderService] → [Frontend Alerts]
 
 
 ### 4.3.6.7 Analysis (Kanban)

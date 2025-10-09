@@ -26,14 +26,14 @@ En esta sección, se presenta un análisis de los competidores de FoodFlow y sus
   <tr>
     <td rowspan="2">Perfil</td>
     <td>Overview</td>
-    <td>FoodFlow es una aplicación web que ofrece gestión financiera especializada para restaurantes. Integra dashboards con reportes visuales, notificaciones y análisis de rentabilidad por plato, con un enfoque en simplicidad y accesibilidad para dueños de restaurantes</td>
+    <td>FoodFlow es una aplicación web que ofrece gestión financiera especializada para restaurantes. Integra dashboards con reportes visuales y análisis de rentabilidad por plato, con un enfoque en simplicidad y accesibilidad para dueños de restaurantes</td>
     <td>Wave es una plataforma gratuita de contabilidad en la nube que ofrece facturación, gestión de ingresos/gastos, reportes financieros básicos y nómina opcional, enfocada en pequeños negocios y freelancers.</td>
     <td>Xero es un software de contabilidad en la nube para pequeñas y medianas empresas. Ofrece conciliación bancaria automática, facturación, pagos, inventario, proyectos y reportes colaborativos en tiempo real.</td>
     <td>Restaurant365 (R365) es una solución integral para la industria restaurantera, que combina contabilidad, inventario, nómina, recursos humanos y analítica avanzada en una sola plataforma.</td>
   </tr>
   <tr>
     <td>Ventaja competitiva ¿Qué valor ofrece a los clientes?</td>
-    <td>FoodFlow ofrece simplicidad y accesibilidad: dashboards visuales, análisis de platos, reportes y alertas de inventario. Su propuesta de valor se centra en la inteligencia financiera especializada para restaurantes, sin ser un software contable complejo</td>
+    <td>FoodFlow ofrece simplicidad y accesibilidad: dashboards visuales, análisis de platos y reportes de inventario. Su propuesta de valor se centra en la inteligencia financiera especializada para restaurantes, sin ser un software contable complejo</td>
     <td>Ofrece un software gratuito e intuitivo que permite a pequeños negocios manejar sus finanzas sin conocimientos contables avanzados. Su valor clave es accesibilidad y simplicidad.</td>
     <td>Proporciona un ecosistema financiero robusto con integraciones a más de 1,000 apps, escalabilidad y colaboración en tiempo real, ideal para pymes con crecimiento acelerado.</td>
     <td>Proporciona a restaurantes un control total de operaciones: inventario, contabilidad, nómina y gestión operativa, con datos en tiempo real y optimización de costos alimentarios.</td>
@@ -108,11 +108,11 @@ En esta sección, se presenta un análisis de los competidores de FoodFlow y sus
 
 ## 2.1.2. Estrategias y Tácticas Competitivas de FoodFlow
 
-| Competidor                                                                  | Estrategia de FoodFlow                                                                                                                                                              | Tácticas concretas                                                                                                                                                                                                                                                                                                                                                      |
-|-----------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Wave** (software gratuito para pequeños negocios)                         | **Diferenciación en especialización**: Wave es gratis, pero genérico. FoodFlow debe posicionarse como solución **hecha para restaurantes**, con herramientas que Wave no ofrece.    | - Campañas de marketing destacando funciones exclusivas para restaurantes (ej. “control de rentabilidad por plato” o “alertas de inventario inteligente”). <br> - Generar alianzas con asociaciones de restaurantes locales para aumentar confianza. |
-| **Xero** (software contable robusto y global)                               | **Enfoque en simplicidad y curva de aprendizaje baja**: competir con facilidad de uso frente a la complejidad y costo de Xero.                                                      | - Ofrecer **onboarding guiado** con tutoriales sencillos para dueños de restaurantes sin experiencia contable. <br> - Precio competitivo enfocado en pequeños y medianos restaurantes de LATAM. <br> - Integrar funciones de reportes financieros con ejemplos prácticos del sector gastronómico (ej. “costos por plato más vendido”).                                  |
-| **R365** (plataforma integral, cara y compleja)                             | **Accesibilidad en costos + cercanía con negocios independientes**: mientras R365 apunta a grandes cadenas, FoodFlow se posiciona como la **alternativa ligera, ágil y asequible**. | - Estrategia de precios escalonados (plan para pequeños restaurantes, plan avanzado para medianas cadenas). <br> - Marketing enfocado en **“empoderar a restaurantes independientes”**. <br> - Incorporar progresivamente módulos opcionales para crecer sin perder simplicidad.                                                                                        |
+| Competidor                                                                  | Estrategia de FoodFlow                                                                                                                                                              | Tácticas concretas                                                                                                                                                                                                                                                                                                                                                      |\
+|-----------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|\
+| **Wave** (software gratuito para pequeños negocios)                         | **Diferenciación en especialización**: Wave es gratis, pero genérico. FoodFlow debe posicionarse como solución **hecha para restaurantes**, con herramientas que Wave no ofrece.    | - Campañas de marketing destacando funciones exclusivas para restaurantes (ej. “control de rentabilidad por plato” o “gestión de inventario inteligente”). <br> - Generar alianzas con asociaciones de restaurantes locales para aumentar confianza. |\
+| **Xero** (software contable robusto y global)                               | **Enfoque en simplicidad y curva de aprendizaje baja**: competir con facilidad de uso frente a la complejidad y costo de Xero.                                                      | - Ofrecer **onboarding guiado** con tutoriales sencillos para dueños de restaurantes sin experiencia contable. <br> - Precio competitivo enfocado en pequeños y medianos restaurantes de LATAM. <br> - Integrar funciones de reportes financieros con ejemplos prácticos del sector gastronómico (ej. “costos por plato más vendido”).                                  |\
+| **R365** (plataforma integral, cara y compleja)                             | **Accesibilidad en costos + cercanía con negocios independientes**: mientras R365 apunta a grandes cadenas, FoodFlow se posiciona como la **alternativa ligera, ágil y asequible**. | - Estrategia de precios escalonados (plan para pequeños restaurantes, plan avanzado para medianas cadenas). <br> - Marketing enfocado en **“empoderar a restaurantes independientes”**. <br> - Incorporar progresivamente módulos opcionales para crecer sin perder simplicidad.                                                                                        |\
 
 
 ### Estrategia Global de FoodFlow
@@ -140,7 +140,6 @@ Con el fin de optimizar el tiempo y facilitar la recopilación de datos, se har�
 - ¿Qué información le gustaría tener para tomar mejores decisiones sobre precios, menú o compras?
 - ¿Ha tenido que quitar o cambiar platos del menú? ¿En base a qué criterios?
 - ¿Cómo controla su inventario y con qué frecuencia se queda sin ingredientes importantes?
-- ¿Le gustaría recibir alertas automáticas cuando un producto esté por agotarse?
 - ¿Le sería útil tener un panel donde pueda ver de un vistazo sus ganancias, pérdidas y tendencias?
 - ¿Valoraría tener gráficos que muestren sus platos más y menos vendidos para hacer ajustes en su menú?
 - ¿Con qué frecuencia le gustaría revisar esta información? (diaria, semanal, mensual)
@@ -160,15 +159,15 @@ En esta sección se aborda la información recolectada de cada entrevista incluy
 
 - _Entrevista 1_
 
-| Nombre               | Clara                                                                                                                                                                                                                             |
+| Nombre               | Liliana                                                                                                                                                                                                                           |
 |----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Apellido             | Canahualpa                                                                                                                                                                                                                        |
-| Edad                 | 49                                                                                                                                                                                                                                |
-| Distrito             | La Molina                                                                                                                                                                                                                         |
-| Evidencia            | <img width="967" height="290" alt="clara" src="https://github.com/user-attachments/assets/b1abe27d-4eed-4fca-9521-c41f69050d5d" /> |
+| Apellido             | Barrera                                                                                                                                                                                                                           |
+| Edad                 | 52 años                                                                                                                                                                                                                           |
+| Distrito             | Los Olivos                                                                                                                                                                                                                        |
+| Evidencia            | <img width="1006" height="296" alt="barrera" src="https://github.com/user-attachments/assets/dbee5e0a-a6ad-4b38-960d-82c18a16e80e" /> |
 | Url                  | https://goo.su/bD7IT                                                                                                                                                                                                              |
-| Inicio de entrevista | 00:00:01                                                                                                                                                                                                                          |
-| Fin de entrevista    | 00:11:19                                                                                                                                                                                                                          |
+| Inicio de entrevista | 00:11:28                                                                                                                                                                                                                          |    
+| Fin de entrevista    | 00:17:40                                                                                                                                                                                                                          |
 
 - Distrito de residencia:
 - Estado civil:
@@ -181,7 +180,7 @@ En esta sección se aborda la información recolectada de cada entrevista incluy
 La entrevistada es Clara Canahualpa, encargada de la producción de postres en la pastelería–cafetería Horneando Amores, ubicada en La Molina, Lima. El negocio lleva alrededor de diez años en funcionamiento y su principal reto diario es lograr mayores ventas. Actualmente, el 80% de la oferta corresponde a productos dulces y el 20% a salados.
 Para la gestión financiera, utilizan el sistema ODO, aunque Clara no revisa personalmente los números; esta labor la realizan dos de sus hijas. Una se encarga de la contabilidad, control de inventario y materiales, mientras que la otra gestiona al personal, siendo este último un punto crítico debido a la alta rotación en el área de salados.
 En cuanto a la oferta de productos, los más rentables y demandados son el queque de arándano, tres leches (de algarrobina y coco), carrot cake, queques de plátano, crocante de chocolate y pie de limón. Clara recibe reportes diarios en Excel sobre el stock y la producción necesaria, lo que le permite planificar la elaboración de postres.
-Sobre el control de inventarios, la información se obtiene principalmente del sistema ODO y de registros manuales en una pizarra. El sistema genera alertas de productos bajos en stock, siempre que la información sea cargada de forma adecuada.
+Sobre el control de inventarios, la información se obtiene principalmente del sistema ODO y de registros manuales en una pizarra. El sistema permite monitorear productos bajos en stock, siempre que la información sea cargada de forma adecuada.
 Clara considera muy útil contar con paneles gráficos interactivos que muestren ventas, ganancias, pérdidas y platos más vendidos, y afirma que los consultaría cada tres o cuatro días. Respecto al costo de la plataforma, sabe que es anual y solía rondar los $1,500, aunque ahora es menor; sin embargo, este aspecto también lo maneja su hija.
 En cuanto a los planes futuros, se encuentran en un proceso de relanzamiento con nuevos postres, manteniendo su estilo artesanal. Uno de los objetivos principales es fortalecer la presencia en redes sociales, para lo cual han contactado a una persona encargada de marketing digital.
 En síntesis, Clara se enfoca principalmente en la producción y el control básico de personal, mientras delega las finanzas y el inventario a sus hijas. El negocio busca innovar con nuevos postres y crecer a través de una mejor estrategia de marketing digital.
@@ -189,7 +188,7 @@ En síntesis, Clara se enfoca principalmente en la producción y el control bás
 - _Entrevista 2_
 
 | Nombre               | Liliana                                                                                                                                                                                                                           |
-|----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|\
 | Apellido             | Barrera                                                                                                                                                                                                                           |
 | Edad                 | 52 años                                                                                                                                                                                                                           |
 | Distrito             | Los Olivos                                                                                                                                                                                                                        |
@@ -209,7 +208,7 @@ La entrevistada es Liliana Barrera, dueña de un restaurante de comida criolla c
 donde su principal reto diario es mantener la frescura de los ingredientes y la calidad del servicio.
 Actualmente, gestiona sus finanzas en Excel con apoyo de un contador y revisa sus números semanalmente,
 identificando que platos como el ceviche y el lomo saltado son los más rentables. Aunque controla el inventario manualmente,
-suele quedarse sin insumos un par de veces al mes, por lo que valora la posibilidad de recibir alertas automáticas y contar con un panel
+suele quedarse sin insumos un par de veces al mes, por lo que valora la posibilidad de tener un control de inventario y contar con un panel
 visual que muestre ganancias, pérdidas, tendencias y rentabilidad por plato en gráficos fáciles de interpretar. Está dispuesta a usar una aplicación web intuitiva,
 pagar alrededor de S/100 mensuales por ella y aprovechar la información financiera para ajustar precios y menú; sin embargo, expresa preocupación por la facilidad de uso y
 la seguridad de los datos.
@@ -237,8 +236,8 @@ Gonzalo Elio es dueño de un restaurante donde principalmente ofrece cafe y post
 Su mayor desafío es gestionar el inventario y las finanzas de manera eficiente. Actualmente, utiliza un sistema rudimentario
 para llevar el control financiero y revisa los números mensualmente, aunque le gustaría hacerlo con mayor frecuencia.
 Identifica que sus productos más rentables son los cafés y postres. Aunque no tiene un sistema formal para controlar el inventario,
-suele quedarse sin ingredientes esenciales una vez al mes. Valora la idea de recibir alertas automáticas y
-tener un panel visual que le permita monitorear ganancias, pérdidas y tendencias de manera sencilla.
+suele quedarse sin ingredientes esenciales una vez al mes. Valora la idea de tener un control de inventario y
+un panel visual que le permita monitorear ganancias, pérdidas y tendencias de manera sencilla.
 Está dispuesto a usar una aplicación web, pagar alrededor de S/300 mensuales y aprovechar la información
 financiera para optimizar precios y menú.
 Sin embargo, expresa preocupación por la seguridad de los datos y la facilidad de uso de la herramienta.
@@ -247,7 +246,7 @@ Sin embargo, expresa preocupación por la seguridad de los datos y la facilidad 
 ### 2.2.3. Análisis de entrevistas
 El análisis de las tres entrevistas revela que, a pesar de las diferencias en tamaño, experiencia y tipo de negocio, todos los entrevistados comparten retos similares relacionados con la gestión de inventarios y la necesidad de contar con información financiera clara y accesible. Clara Canahualpa, con un negocio de mayor trayectoria, utiliza un sistema más estructurado pero depende de sus hijas para la revisión de finanzas e inventario, lo que la aleja de la toma directa de decisiones. Gonzalo Elio, con menor tiempo en el rubro, enfrenta dificultades en el control de insumos y finanzas, usando métodos rudimentarios que limitan la eficiencia de su gestión. Liliana Barrera, en cambio, trabaja con Excel y apoyo de un contador, lo que le permite tener mayor control, aunque aún enfrenta problemas de quiebres de stock.
 
-En los tres casos se evidencia la necesidad de una herramienta digital que facilite el control financiero y de inventario, especialmente mediante paneles gráficos y alertas automáticas que ayuden a evitar pérdidas y mejorar la planificación. También coinciden en que contar con información clara les permitiría ajustar precios, introducir nuevos productos y tomar mejores decisiones estratégicas. Las diferencias surgen en la disposición de inversión, pues mientras Gonzalo está dispuesto a pagar un monto relativamente alto por una solución web, Liliana considera un pago más reducido y Clara ya invierte en un sistema, aunque no se involucra directamente en los costos. Finalmente, tanto Gonzalo como Liliana expresan preocupación por la seguridad de los datos y la facilidad de uso, lo que refuerza la importancia de diseñar soluciones intuitivas y confiables.
+En los tres casos se evidencia la necesidad de una herramienta digital que facilite el control financiero y de inventario, especialmente mediante paneles gráficos y un sistema de gestión de inventario que ayuden a evitar pérdidas y mejorar la planificación. También coinciden en que contar con información clara les permitiría ajustar precios, introducir nuevos productos y tomar mejores decisiones estratégicas. Las diferencias surgen en la disposición de inversión, pues mientras Gonzalo está dispuesto a pagar un monto relativamente alto por una solución web, Liliana considera un pago más reducido y Clara ya invierte en un sistema, aunque no se involucra directamente en los costos. Finalmente, tanto Gonzalo como Liliana expresan preocupación por la seguridad de los datos y la facilidad de uso, lo que refuerza la importancia de diseñar soluciones intuitivas y confiables.
 
 #### Estadísticas de entrevistas
 
@@ -279,8 +278,8 @@ Los artefactos incluidos User Persona, User Task Matrix, User Journey Maps, Empa
 
 ### 2.3.2 User Task Matrix
 
-En esta sección, se presenta la matriz de tareas de los usuarios, que muestra las actividades realizadas por los dueños 
-y empleados de restaurantes, junto con su frecuencia e importancia. Esta matriz ayuda a identificar las tareas clave y 
+En esta sección, se presenta la matriz de tareas de los usuarios, que muestra las actividades realizadas por los dueños
+y empleados de restaurantes, junto con su frecuencia e importancia. Esta matriz ayuda a identificar las tareas clave y
 su relevancia para cada tipo de usuario.
 
 Para ello, usamos el user persona creado en la sección anterior tomando a Sofía Ríos, segmento: Dueños de restaurantes
@@ -297,7 +296,7 @@ Para ello, usamos el user persona creado en la sección anterior tomando a Sofí
 | Identificar platos populares por observación | Siempre / Alta                                               |
 | Organizar facturas y comprobantes físicos    | Con Frecuencia / Media                                       |
 
-Daniel representa a un dueño de restaurante experimentado enfocado en la optimización operativa y el 
+Sofía representa a una dueña de restaurante experimentada enfocada en la optimización operativa y el 
 mejoramiento de la eficiencia del negocio. Su enfoque está en actividades estratégicas como el manejo financiero 
 y la gestión de inventario, que realiza con alta frecuencia e importancia.
 

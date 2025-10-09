@@ -97,7 +97,7 @@ When ingreso un precio inválido (negativo, texto o vacío)
 Then el sistema muestra un mensaje de error sobre el formato del precio
 And no permite guardar el plato hasta corregirlo
 
-### US11 - Visualizar órdenes existentes - gherkin:
+### US09 - Visualizar órdenes existentes - gherkin:
 Feature: Visualización de órdenes existentes
 Como dueño de restaurante
 Quiero ver las órdenes registradas con mesa, platos, precio total y fecha
@@ -118,42 +118,7 @@ Given que visualizo las órdenes registradas
 When reviso cada fila
 Then puedo identificar la mesa y los platos correspondientes
 
-### US12 - Registrar una nueva orden - gherkin:
-Feature: Registrar una nueva orden
-Como dueño de restaurante
-Quiero registrar una nueva orden desde el botón "New Order"
-Para mantener actualizado el historial de órdenes
-
-Scenario: Navegación al formulario de nueva orden
-Given que estoy en la sección "Orders"
-When hago clic en el botón "New Order"
-Then el sistema me lleva al formulario para registrar la nueva orden
-
-### US13 - Crear un nuevo orden - gherkin:
-Feature: Crear un nuevo orden
-Como dueño de restaurante
-Quiero registrar una nueva orden seleccionando mesa, plato y fecha
-Para llevar un control digital de las órdenes
-
-Scenario: Registro de nueva orden
-Given que estoy en la pantalla "Add New Order"
-When selecciono número de mesa, plato y fecha
-Then el sistema muestra el orden en la tabla de detalles
-And se visualizan cantidad, precio unitario y total
-
-### US14 - Confirmar un orden - gherkin:
-Feature: Confirmar un orden
-Como dueño de restaurante
-Quiero confirmar un orden
-Para que quede registrado en el sistema y se actualice el inventario
-
-Scenario: Confirmación exitosa del orden
-Given que he agregado uno o más platos al orden
-When presiono el botón "Confirm Order"
-Then el orden se guarda en la base de datos
-And se refleja en el historial de órdenes
-
-### US16 - Calcular el total por plato - gherkin:
+### US10 - Calcular el total por plato - gherkin:
 Feature: Calcular el total por plato
 Como dueño de restaurante
 Quiero que el sistema calcule automáticamente el precio total de cada plato
@@ -164,18 +129,7 @@ Given que agrego un plato con precio unitario
 When especifico la cantidad
 Then el sistema calcula y muestra el precio total en la columna correspondiente
 
-### US17 - Cancelar creación de orden - gherkin:
-Feature: Cancelar creación de orden
-Como dueño de restaurante
-Quiero cancelar la creación de una orden
-Para no guardar información incorrecta
-
-Scenario: Cancelar formulario
-Given que estoy en el formulario "Add New Order"
-When presiono el botón "Cancel"
-Then el sistema limpia los datos sin guardar nada en la base
-
-### US18 - Visualización de reportes financieros diarios - gherkin:
+### US11 - Visualización de reportes financieros diarios - gherkin:
 Feature: Reportes financieros diarios
 Como dueño de restaurante
 Quiero ver mis ingresos y gastos diarios en un dashboard
@@ -193,7 +147,7 @@ When reviso la sección de gastos
 Then debo ver el total de gastos del día
 And el porcentaje de cambios respecto al día anterior
 
-### US19 - Navegación entre períodos de tiempo - gherkin:
+### US12 - Navegación entre períodos de tiempo - gherkin:
 Feature: Navegación entre períodos de tiempo
 Como dueño de restaurante
 Quiero alternar entre reportes diarios, semanales y mensuales
@@ -211,6 +165,52 @@ When selecciono la pestaña "Monthly"
 Then debo ver los datos financieros del mes en curso
 And los gráficos deben actualizarse con datos mensuales
 
+### US14 - Registrar una nueva orden - gherkin:
+Feature: Registrar una nueva orden
+Como dueño de restaurante
+Quiero registrar una nueva orden desde el botón "New Order"
+Para mantener actualizado el historial de órdenes
+
+Scenario: Navegación al formulario de nueva orden
+Given que estoy en la sección "Orders"
+When hago clic en el botón "New Order"
+Then el sistema me lleva al formulario para registrar la nueva orden
+
+### US15 - Crear un nuevo orden - gherkin:
+Feature: Crear un nuevo orden
+Como dueño de restaurante
+Quiero registrar una nueva orden seleccionando mesa, plato y fecha
+Para llevar un control digital de las órdenes
+
+Scenario: Registro de nueva orden
+Given que estoy en la pantalla "Add New Order"
+When selecciono número de mesa, plato y fecha
+Then el sistema muestra el orden en la tabla de detalles
+And se visualizan cantidad, precio unitario y total
+
+### US16 - Confirmar un orden - gherkin:
+Feature: Confirmar un orden
+Como dueño de restaurante
+Quiero confirmar un orden
+Para que quede registrado en el sistema y se actualice el inventario
+
+Scenario: Confirmación exitosa del orden
+Given que he agregado uno o más platos al orden
+When presiono el botón "Confirm Order"
+Then el orden se guarda en la base de datos
+And se refleja en el historial de órdenes
+
+### US17 - Cancelar creación de orden - gherkin:
+Feature: Cancelar creación de orden
+Como dueño de restaurante
+Quiero cancelar la creación de una orden
+Para no guardar información incorrecta
+
+Scenario: Cancelar formulario
+Given que estoy en el formulario "Add New Order"
+When presiono el botón "Cancel"
+Then el sistema limpia los datos sin guardar nada en la base
+
 ---
 
 ### 5.1.2 Pattern Based Backend Application(s)
@@ -224,7 +224,7 @@ La arquitectura del backend se diseñó siguiendo patrones de diseño estándar 
 - **Factory Pattern:** estandariza la creación de instancias de entidades.
 - **Dependency Injection:** mejora la testabilidad y reduce el acoplamiento.
 
-Estos patrones se aplicaron uniformemente en los microservicios de **autenticación**, **menú**, **ventas** y **reportes financieros**.
+Estos patrones se aplicaron uniformemente en los microservicios de **autenticación**, **menú**, **órdenes** y **reportes financieros**.
 
 ---
 
@@ -335,7 +335,7 @@ El despliegue del backend se realiza en **FreeSQL** para la base de datos.
 Construir la base funcional del sistema, implementando los módulos de autenticación, menú, ventas y dashboard financiero.
 
 **Avance general:**  
-En este sprint se completaron todas las historias de usuario planificadas, **excepto las US07, US08, US09, US10, US15 y US20**, que quedaron pendientes para el siguiente sprint.  
+En este sprint se completaron todas las historias de usuario planificadas, **excepto las US07, US08 y US13**, que quedaron pendientes para el siguiente sprint.  
 El resto fueron implementadas, probadas y documentadas conforme a los criterios de aceptación.
 
 **Herramienta utilizada:** Trello  
@@ -360,7 +360,7 @@ https://trello.com/invite/b/68acc5a626e4614f12ee778f/ATTIb0400bfaba199996d200f64
   </thead>
   <tbody>
     <tr>
-      <td rowspan="2">US1</td>
+      <td rowspan="2">US01</td>
       <td rowspan="2">Visualizar ingresos y pérdidas</td>
       <td>T1.1</td>
       <td>API: Ingresos y Pérdidas</td>
@@ -378,7 +378,7 @@ https://trello.com/invite/b/68acc5a626e4614f12ee778f/ATTIb0400bfaba199996d200f64
       <td>Done</td>
     </tr>
     <tr>
-      <td rowspan="2">US2</td>
+      <td rowspan="2">US02</td>
       <td rowspan="2">Identificar platos más populares</td>
       <td>T2.1</td>
       <td>API: Top 5 Platos</td>
@@ -396,7 +396,7 @@ https://trello.com/invite/b/68acc5a626e4614f12ee778f/ATTIb0400bfaba199996d200f64
       <td>Done</td>
     </tr>
     <tr>
-      <td rowspan="2">US3</td>
+      <td rowspan="2">US03</td>
       <td rowspan="2">Visualizar inventario actual</td>
       <td>T3.1</td>
       <td>API: Listar Inventario</td>
@@ -414,7 +414,7 @@ https://trello.com/invite/b/68acc5a626e4614f12ee778f/ATTIb0400bfaba199996d200f64
       <td>Done</td>
     </tr>
     <tr>
-      <td rowspan="2">US4</td>
+      <td rowspan="2">US04</td>
       <td rowspan="2">Agregar un nuevo producto al inventario</td>
       <td>T4.1</td>
       <td>API: Agregar Producto</td>
@@ -432,7 +432,7 @@ https://trello.com/invite/b/68acc5a626e4614f12ee778f/ATTIb0400bfaba199996d200f64
       <td>Done</td>
     </tr>
     <tr>
-      <td rowspan="2">US5</td>
+      <td rowspan="2">US05</td>
       <td rowspan="2">Validar campos al agregar producto</td>
       <td>T5.1</td>
       <td>BE: Validaciones de Producto</td>
@@ -450,7 +450,7 @@ https://trello.com/invite/b/68acc5a626e4614f12ee778f/ATTIb0400bfaba199996d200f64
       <td>Done</td>
     </tr>
     <tr>
-      <td rowspan="3">US6</td>
+      <td rowspan="3">US06</td>
       <td rowspan="3">Agregar Nuevo Plato</td>
       <td>T6.1</td>
       <td>API: Registro de Plato</td>
@@ -476,7 +476,7 @@ https://trello.com/invite/b/68acc5a626e4614f12ee778f/ATTIb0400bfaba199996d200f64
       <td>Done</td>
     </tr>
     <tr>
-      <td rowspan="2">US11</td>
+      <td rowspan="2">US09</td>
       <td rowspan="2">Visualizar órdenes existentes</td>
       <td>T11.1</td>
       <td>API: Obtener Órdenes</td>
@@ -494,7 +494,53 @@ https://trello.com/invite/b/68acc5a626e4614f12ee778f/ATTIb0400bfaba199996d200f64
       <td>Done</td>
     </tr>
     <tr>
-      <td>US12</td>
+      <td>US10</td>
+      <td>Calcular el total por plato</td>
+      <td>T16.1</td>
+      <td>FE: Cálculo Automático</td>
+      <td>Implementar la lógica en el componente Angular para calcular y mostrar el precio total al cambiar la cantidad.</td>
+      <td>5</td>
+      <td>Romina Maita</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td rowspan="2">US11</td>
+      <td rowspan="2">Visualización de Reportes Financieros Diarios</td>
+      <td>T18.1</td>
+      <td>API: Reporte Diario</td>
+      <td>Desarrollar el endpoint para obtener ingresos y gastos diarios y su variación respecto al día anterior.</td>
+      <td>12</td>
+      <td>Werner Lang</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>T18.2</td>
+      <td>FE: Vista de Reportes Diarios</td>
+      <td>Crear la interfaz de reportes en Angular para mostrar los datos diarios con la lógica de variación (+/-).</td>
+      <td>15</td>
+      <td>Werner Lang</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td rowspan="2">US12</td>
+      <td rowspan="2">Navegación entre Períodos de Tiempo</td>
+      <td>T19.1</td>
+      <td>API: Reportes Semanales/Mensuales</td>
+      <td>Crear endpoints que permitan agregar los datos de ingresos y gastos por semana y mes.</td>
+      <td>10</td>
+      <td>Werner Lang</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>T19.2</td>
+      <td>FE: Tabs de Navegación</td>
+      <td>Implementar la navegación (Daily, Weekly, Monthly Tabs) en Angular para cambiar la vista de reportes.</td>
+      <td>8</td>
+      <td>Werner Lang</td>
+      <td>Done</td>
+    </tr>
+    <tr>
+      <td>US14</td>
       <td>Registrar una nueva orden</td>
       <td>T12.1</td>
       <td>FE: Botón "New Order"</td>
@@ -504,7 +550,7 @@ https://trello.com/invite/b/68acc5a626e4614f12ee778f/ATTIb0400bfaba199996d200f64
       <td>Done</td>
     </tr>
     <tr>
-      <td rowspan="2">US13</td>
+      <td rowspan="2">US15</td>
       <td rowspan="2">Crear un nuevo orden</td>
       <td>T13.1</td>
       <td>FE: Formulario Creación de Orden</td>
@@ -522,7 +568,7 @@ https://trello.com/invite/b/68acc5a626e4614f12ee778f/ATTIb0400bfaba199996d200f64
       <td>Done</td>
     </tr>
     <tr>
-      <td rowspan="3">US14</td>
+      <td rowspan="3">US16</td>
       <td rowspan="3">Confirmar un orden</td>
       <td>T14.1</td>
       <td>API: Guardar Orden</td>
@@ -548,16 +594,6 @@ https://trello.com/invite/b/68acc5a626e4614f12ee778f/ATTIb0400bfaba199996d200f64
       <td>Done</td>
     </tr>
     <tr>
-      <td>US16</td>
-      <td>Calcular el total por plato</td>
-      <td>T16.1</td>
-      <td>FE: Cálculo Automático</td>
-      <td>Implementar la lógica en el componente Angular para calcular y mostrar el precio total al cambiar la cantidad.</td>
-      <td>5</td>
-      <td>Romina Maita</td>
-      <td>Done</td>
-    </tr>
-    <tr>
       <td>US17</td>
       <td>Cancelar creación de orden</td>
       <td>T17.1</td>
@@ -565,42 +601,6 @@ https://trello.com/invite/b/68acc5a626e4614f12ee778f/ATTIb0400bfaba199996d200f64
       <td>Implementar la función de cancelar que limpia el formulario de la orden y retorna a la vista de historial de órdenes.</td>
       <td>3</td>
       <td>Romina Maita</td>
-      <td>Done</td>
-    </tr>
-    <tr>
-      <td rowspan="2">US18</td>
-      <td rowspan="2">Visualización de Reportes Financieros Diarios</td>
-      <td>T18.1</td>
-      <td>API: Reporte Diario</td>
-      <td>Desarrollar el endpoint para obtener ingresos y gastos diarios y su variación respecto al día anterior.</td>
-      <td>12</td>
-      <td>Werner Lang</td>
-      <td>Done</td>
-    </tr>
-    <tr>
-      <td>T18.2</td>
-      <td>FE: Vista de Reportes Diarios</td>
-      <td>Crear la interfaz de reportes en Angular para mostrar los datos diarios con la lógica de variación (+/-).</td>
-      <td>15</td>
-      <td>Werner Lang</td>
-      <td>Done</td>
-    </tr>
-    <tr>
-      <td rowspan="2">US19</td>
-      <td rowspan="2">Navegación entre Períodos de Tiempo</td>
-      <td>T19.1</td>
-      <td>API: Reportes Semanales/Mensuales</td>
-      <td>Crear endpoints que permitan agregar los datos de ingresos y gastos por semana y mes.</td>
-      <td>10</td>
-      <td>Werner Lang</td>
-      <td>Done</td>
-    </tr>
-    <tr>
-      <td>T19.2</td>
-      <td>FE: Tabs de Navegación</td>
-      <td>Implementar la navegación (Daily, Weekly, Monthly Tabs) en Angular para cambiar la vista de reportes.</td>
-      <td>8</td>
-      <td>Werner Lang</td>
       <td>Done</td>
     </tr>
   </tbody>
@@ -727,7 +727,7 @@ A continuación se presentan los archivos `.feature` correspondientes:
     And no me permite guardar el plato
 ```
 
-- US11 - Visualización y Control de Órdenes Registradas
+- US09 - Visualización y Control de Órdenes Registradas
 
 ```Feature: Visualización y Control de Órdenes Registradas
   Como dueño de restaurante
@@ -752,50 +752,7 @@ A continuación se presentan los archivos `.feature` correspondientes:
     And puedo ver el resumen de los platos pedidos en esa orden
 ```
 
-- US12 - Inicio del Registro de una Nueva Orden
-
-```Feature: Inicio del Registro de una Nueva Orden
-  Como dueño de restaurante
-  Quiero registrar una nueva orden
-  Para mantener actualizado el historial de órdenes
-
-  Scenario: Navegación al formulario de nueva orden
-    Given que estoy en la sección "Orders"
-    When hago clic en el botón principal "New Order"
-    Then el sistema me redirige a la pantalla o formulario de "Add New Order"
-```
-
-- US13 - Detalle de Creación de Orden
-
-```Feature: Detalle de Creación de Orden
-  Como dueño de restaurante
-  Quiero registrar los detalles de un nuevo orden (mesa, plato, fecha)
-  Para llevar un control digital de las órdenes
-
-  Scenario: Agregar un plato al detalle de la orden
-    Given que estoy en la pantalla "Add New Order"
-    When selecciono el Número de Mesa
-    And selecciono un Plato del menú y su Cantidad
-    Then el plato se añade a la tabla de detalles del orden
-    And la tabla de detalles muestra la Cantidad, el Precio Unitario y el Precio Total calculado para ese plato
-```
-
-- US14 - Finalización y Registro de un Orden
-
-```Feature: Finalización y Registro de un Orden
-  Como dueño de restaurante
-  Quiero confirmar un orden
-  Para que quede registrado en el sistema y se actualice el inventario
-
-  Scenario: Confirmación exitosa y registro del orden
-    Given que he completado todos los detalles del orden con al menos un plato
-    When presiono el botón "Confirm Order"
-    Then el sistema guarda el orden completo en la base de datos
-    And el stock de los productos utilizados se descuenta del inventario
-    And el orden aparece en el historial de órdenes
-```
-
-- US16 - Cálculo Automático del Total de Plato
+- US10 - Cálculo Automático del Total de Plato
 
 ```Feature: Cálculo Automático del Total de Plato
   Como dueño de restaurante
@@ -808,22 +765,7 @@ A continuación se presentan los archivos `.feature` correspondientes:
     Then el sistema actualiza automáticamente el campo "Precio Total" a $30.00
 ```
 
-- US17 - Cancelación de Orden en Progreso
-
-```Feature: Cancelación de Orden en Progreso
-  Como dueño de restaurante
-  Quiero poder cancelar la creación de un orden
-  Para evitar guardar información incorrecta o incompleta
-
-  Scenario: Cancelar y limpiar el formulario
-    Given que he comenzado a registrar una orden con algunos platos agregados
-    When presiono el botón "Cancel"
-    Then el sistema limpia todos los datos del formulario de "Add New Order"
-    And no se guarda ningún registro de orden en la base de datos
-    And soy redirigido a la vista de historial de órdenes
-```
-
-- US18 - Visualización de Reportes Financieros Diarios
+- US11 - Visualización de Reportes Financieros Diarios
 
 ```Feature: Visualización de Reportes Financieros Diarios
   Como dueño de restaurante
@@ -843,7 +785,7 @@ A continuación se presentan los archivos `.feature` correspondientes:
     And debo ver un indicador de porcentaje de cambio de gastos respecto al día anterior
 ```
 
-- US19 - Navegación de Períodos de Tiempo en Reportes
+- US12 - Navegación de Períodos de Tiempo en Reportes
 
 ```Feature: Navegación de Períodos de Tiempo en Reportes
   Como dueño de restaurante
@@ -861,6 +803,64 @@ A continuación se presentan los archivos `.feature` correspondientes:
     When hago clic en la pestaña de navegación "Monthly"
     Then los datos financieros se actualizan para mostrar el agregado del mes en curso
     And todos los gráficos y tablas muestran información mensual
+```
+
+- US14 - Inicio del Registro de una Nueva Orden
+
+```Feature: Inicio del Registro de una Nueva Orden
+  Como dueño de restaurante
+  Quiero registrar una nueva orden
+  Para mantener actualizado el historial de órdenes
+
+  Scenario: Navegación al formulario de nueva orden
+    Given que estoy en la sección "Orders"
+    When hago clic en el botón principal "New Order"
+    Then el sistema me redirige a la pantalla o formulario de "Add New Order"
+```
+
+- US15 - Detalle de Creación de Orden
+
+```Feature: Detalle de Creación de Orden
+  Como dueño de restaurante
+  Quiero registrar los detalles de un nuevo orden (mesa, plato, fecha)
+  Para llevar un control digital de las órdenes
+
+  Scenario: Agregar un plato al detalle de la orden
+    Given que estoy en la pantalla "Add New Order"
+    When selecciono el Número de Mesa
+    And selecciono un Plato del menú y su Cantidad
+    Then el plato se añade a la tabla de detalles del orden
+    And la tabla de detalles muestra la Cantidad, el Precio Unitario y el Precio Total calculado para ese plato
+```
+
+- US16 - Finalización y Registro de un Orden
+
+```Feature: Finalización y Registro de un Orden
+  Como dueño de restaurante
+  Quiero confirmar un orden
+  Para que quede registrado en el sistema y se actualice el inventario
+
+  Scenario: Confirmación exitosa y registro del orden
+    Given que he completado todos los detalles del orden con al menos un plato
+    When presiono el botón "Confirm Order"
+    Then el sistema guarda el orden completo en la base de datos
+    And el stock de los productos utilizados se descuenta del inventario
+    And el orden aparece en el historial de órdenes
+```
+
+- US17 - Cancelación de Orden en Progreso
+
+```Feature: Cancelación de Orden en Progreso
+  Como dueño de restaurante
+  Quiero poder cancelar la creación de un orden
+  Para evitar guardar información incorrecta o incompleta
+
+  Scenario: Cancelar y limpiar el formulario
+    Given que he comenzado a registrar una orden con algunos platos agregados
+    When presiono el botón "Cancel"
+    Then el sistema limpia todos los datos del formulario de "Add New Order"
+    And no se guarda ningún registro de orden en la base de datos
+    And soy redirigido a la vista de historial de órdenes
 ```
 
 ---
@@ -893,7 +893,7 @@ La aplicación *FoodFlow* fue desarrollada bajo una arquitectura **basada en mic
 
 | Microservicio         | Descripción funcional                                              | Endpoints principales                          |
 |-----------------------|--------------------------------------------------------------------|------------------------------------------------|
-| **Auth Service**      | Manejo de registro, login y autenticación JWT.                     | `/api/v1/auth/sign-up`, `/api/v1/auth/sign-in` |
+| **IAM Service**       | Manejo de registro, login y autenticación JWT.                     | `/api/v1/auth/sign-up`, `/api/v1/auth/sign-in` |
 | **Menu Service**      | CRUD de platos del menú.                                           | `/api/v1/menu`, `/api/v1/menu/{id}`            |
 | **Inventory Service** | Control de inventario, stock, y validaciones.                      | `/api/v1/inventory`, `/api/v1/inventory/{id}`  |
 | **Orders Service**    | Gestión de órdenes, confirmaciones y cálculos totales.             | `/api/v1/orders`, `/api/v1/orders/{id}`        |
@@ -975,5 +975,5 @@ https://trello.com/invite/b/68acc5a626e4614f12ee778f/ATTIb0400bfaba199996d200f64
 ---
 
  **Conclusión del Sprint 1:**  
- El equipo completó la implementación de todos los módulos principales de *FoodFlow*, exceptuando las historias de usuario **US07, US08, US09, US10, US15 y US20**, las cuales quedaron planificadas para el siguiente sprint.  
+ El equipo completó la implementación de todos los módulos principales de *FoodFlow*, exceptuando las historias de usuario **US07, US08 y US13**, las cuales quedaron planificadas para el siguiente sprint.  
  Se cumplieron los objetivos de desarrollo, validación e integración de los microservicios, logrando un producto funcional y listo para su despliegue controlado.
