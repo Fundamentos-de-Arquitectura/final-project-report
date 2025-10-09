@@ -306,4 +306,7 @@ Esta sección presenta el Empathy Map desarrollado para el User Persona. El proc
 <img width="774" height="652" alt="image" src="https://github.com/user-attachments/assets/77ab6fd0-017d-4cae-a71d-3fe5ef1c2174" />
 
 ### 2.3.4 As-is Scenario Mapping
-<img width="1151" height="687" alt="image" src="https://github.com/user-attachments/assets/23c02bfc-9ef3-4dc4-982b-0b9f2e41a32a" />
+
+<img width="866" height="595" alt="image" src="https://github.com/user-attachments/assets/4b90976d-fe02-4fd8-b28b-9b58e7b1f2d9" />
+
+
