@@ -47,6 +47,9 @@ El estilo adoptado es **RESTful**, con comunicación **HTTP/JSON** y documentaci
 
 El sistema tiene como actor principal al **dueño del restaurante**, quien accede desde una interfaz web Angular.
 
+<img width="267" height="620" alt="contexto" src="https://github.com/user-attachments/assets/67481017-f88b-4c69-b8d5-e9dac63b09fe" />
+
+
 **Flujo general:**
 
 1. El usuario accede al frontend (Angular).
@@ -66,6 +69,22 @@ Las vistas arquitectónicas se organizan de acuerdo con el modelo **C4**:
 - **Code View:** refleja clases y entidades base (Java Spring Boot).
 
 Estas vistas garantizan trazabilidad entre requerimientos y decisiones arquitectónicas, siguiendo el método **ADD**.
+
+Diagrama de actvidad
+
+
+
+Diagrama de estados
+
+
+Diagrama de clases 
+
+
+Diagrama de contenedores 
+
+
+
+Diagrama de componentes
 
 ---
 
