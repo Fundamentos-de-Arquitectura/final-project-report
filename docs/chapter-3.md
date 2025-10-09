@@ -48,7 +48,8 @@ Para la planeación y desarrollo del proyecto, se han definido las siguientes é
 
 ## 3.3 Impact Map
 
-<img width="1202" height="1600" alt="impact" src="https://github.com/user-attachments/assets/480f1f01-8447-47e6-acbb-6e020f3f417f" />
+<img width="1240" height="1221" alt="impac" src="https://github.com/user-attachments/assets/df7fd0d7-95bb-451e-80ac-245f69cad627" />
+
 
 ## 3.4 Alcance
 
