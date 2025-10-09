@@ -13,7 +13,7 @@ Cada prueba se enfocó en verificar los criterios de aceptación de los **User S
 ### US03 - Visualizar inventario actual - gherkin:
 Feature: Visualizar inventario actual
 Como dueño de restaurante
-Quiero ver una tabla con el stock, costo unitario y unidad de medida
+Quiero ver una tabla con el stock, costo unitario y unidad de medida de cada producto
 Para controlar el inventario de manera clara y rápida
 
 Scenario: Visualización del inventario
@@ -29,7 +29,7 @@ Para mantener actualizado mi inventario
 
 Scenario: Registro exitoso de producto
 Given que estoy en la sección "Add New Product"
-When ingreso nombre, stock, costo unitario y unidad de medida válidos
+When ingreso el nombre del producto, stock, costo unitario y unidad de medida válidos
 And presiono "Add Product"
 Then el producto se añade a la tabla del inventario con los datos correctos
 And aparece un mensaje de confirmación
@@ -37,7 +37,7 @@ And aparece un mensaje de confirmación
 ### US05 - Validar campos al agregar producto - gherkin:
 Feature: Validar campos al agregar producto
 Como dueño de restaurante
-Quiero que el sistema valide los campos obligatorios
+Quiero que el sistema valide los campos obligatorios al agregar un producto
 Para evitar errores en el registro del inventario
 
 Scenario: Validación de campos obligatorios

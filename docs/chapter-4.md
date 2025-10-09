@@ -72,26 +72,26 @@ Estas vistas garantizan trazabilidad entre requerimientos y decisiones arquitect
 
 Diagrama de actvidad
 
-<img width="3578" height="3217" alt="Untitled diagram-2025-10-09-034604" src="https://github.com/user-attachments/assets/c55947bf-afc2-4729-8492-a3c308429ab6" />
+<img width="3508" height="700" alt="Untitled diagram-2025-10-09-034604" src="https://github.com/user-attachments/assets/c55947bf-afc2-4729-8492-a3c308429ab6" />
 
 Diagrama de estados
 
-<img width="7233" height="1969" alt="Untitled diagram-2025-10-09-035453" src="https://github.com/user-attachments/assets/12a5a58e-0f0b-46bd-96e9-97859e9c63ab" />
+<img alt="Untitled diagram-2025-10-09-035453" src="https://github.com/user-attachments/assets/12a5a58e-0f0b-46bd-96e9-97859e9c63ab" />
 
 Diagrama de clases 
 
-<img width="15211" height="2558" alt="Untitled diagram-2025-10-09-034906" src="https://github.com/user-attachments/assets/7cd76b45-2db5-4829-947f-626c5e9c8989" />
+<img alt="Untitled diagram-2025-10-09-034906" src="https://github.com/user-attachments/assets/7cd76b45-2db5-4829-947f-626c5e9c8989" />
 
 
-<img width="1374" height="743" alt="1" src="https://github.com/user-attachments/assets/215ac1e6-a2cf-402c-860a-5bc39099118a" />
+<img alt="1" src="https://github.com/user-attachments/assets/215ac1e6-a2cf-402c-860a-5bc39099118a" />
 
-<img width="511" height="737" alt="2" src="https://github.com/user-attachments/assets/7de7aabb-a9af-430c-8132-bd98b56e7e32" />
+<img alt="2" src="https://github.com/user-attachments/assets/7de7aabb-a9af-430c-8132-bd98b56e7e32" />
 
-<img width="391" height="719" alt="3" src="https://github.com/user-attachments/assets/375c8a3e-7681-464c-b13c-a81289038fe0" />
+<img alt="3" src="https://github.com/user-attachments/assets/375c8a3e-7681-464c-b13c-a81289038fe0" />
 
-<img width="1249" height="733" alt="4" src="https://github.com/user-attachments/assets/7b090aca-b29f-4046-b750-085e7ca219ab" />
+<img alt="4" src="https://github.com/user-attachments/assets/7b090aca-b29f-4046-b750-085e7ca219ab" />
 
-<img width="1180" height="659" alt="5" src="https://github.com/user-attachments/assets/050f0fe3-540b-4dd1-ac65-31cc6efa786f" />
+<img alt="5" src="https://github.com/user-attachments/assets/050f0fe3-540b-4dd1-ac65-31cc6efa786f" />
 
 
 # Tabla de Características del Diagrama de Clases
@@ -169,19 +169,19 @@ Diagrama de clases
 
 ## Diagrama de contenedores 
 
-<img width="1647" height="1683" alt="contenedores" src="https://github.com/user-attachments/assets/2b0231c1-0869-40ee-ba53-8645b19eb128" />
+<img alt="contenedores" src="https://github.com/user-attachments/assets/2b0231c1-0869-40ee-ba53-8645b19eb128" />
 
 ## Diagrama de componentes
 
-<img width="4600" height="5428" alt="c1" src="https://github.com/user-attachments/assets/5a142364-277e-4e40-984a-3a65dc4e2def" />
+<img alt="c1" src="https://github.com/user-attachments/assets/5a142364-277e-4e40-984a-3a65dc4e2def" />
 
-<img width="5350" height="6628" alt="c2" src="https://github.com/user-attachments/assets/12d23836-b139-49b1-88ec-9cfb1eaead3a" />
+<img alt="c2" src="https://github.com/user-attachments/assets/12d23836-b139-49b1-88ec-9cfb1eaead3a" />
 
-<img width="5350" height="9028" alt="c3" src="https://github.com/user-attachments/assets/9f8e1fd3-5006-4cb7-beb9-24bf79dac2ff" />
+<img alt="c3" src="https://github.com/user-attachments/assets/9f8e1fd3-5006-4cb7-beb9-24bf79dac2ff" />
 
-<img width="4621" height="11179" alt="c4" src="https://github.com/user-attachments/assets/40a2610b-85ad-444b-b91b-f518b05fc4b9" />
+<img alt="c4" src="https://github.com/user-attachments/assets/40a2610b-85ad-444b-b91b-f518b05fc4b9" />
 
-<img width="5350" height="10161" alt="c5" src="https://github.com/user-attachments/assets/ade772bc-0968-4f07-877c-70e7b11e9132" />
+<img alt="c5" src="https://github.com/user-attachments/assets/ade772bc-0968-4f07-877c-70e7b11e9132" />
 
 ---
 
@@ -189,7 +189,7 @@ Diagrama de clases
 
 La base de datos **MySQL** mantiene las entidades descritas en los capítulos anteriores:
 
-<img width="4782" height="3457" alt="Untitled diagram-2025-10-09-040617" src="https://github.com/user-attachments/assets/e360620e-0a50-40c8-951a-b29ca1736343" />
+<img alt="Untitled diagram-2025-10-09-040617" src="https://github.com/user-attachments/assets/e360620e-0a50-40c8-951a-b29ca1736343" />
 
 ## Entidades del Sistema
 
