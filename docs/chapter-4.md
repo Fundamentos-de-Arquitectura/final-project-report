@@ -106,7 +106,7 @@ La base de datos **MySQL** mantiene las entidades descritas en los capítulos an
 
 ### 4.2.1 Design Purpose
 
-La arquitectura de **FoodFlow** busca ofrecer una plataforma modular y segura para la gestión de inventarios, menú y reportes financieros en tiempo real, asegurando continuidad y escalabilidad futura.
+La arquitectura de FoodFlow está diseñada para cumplir con los objetivos del negocio, priorizando tres atributos de calidad clave: **Seguridad, Usabilidad y Desempeño**. Estos son los drivers arquitectónicos más importantes. Adicionalmente, la plataforma también considera atributos de calidad generales como la **Mantenibilidad** y **Escalabilidad**, los cuales, si bien son secundarios, soportan la evolución a largo plazo de los atributos principales.
 
 ---
 
@@ -167,10 +167,10 @@ La arquitectura de **FoodFlow** busca ofrecer una plataforma modular y segura pa
 **Objetivo de la Iteración 1:** Establecer la arquitectura base del sistema FoodFlow que soporte el dashboard financiero y la gestión básica de inventario, asegurando rendimiento adecuado y modularidad para futuras expansiones.
 
 **Drivers Seleccionados:**
-- **(Desempeño):** Respuesta en menos de 3 segundos
-- **(Funcionalidad):** Dashboard con reportes visuales
-- **(Funcionalidad):** Gestión de inventario
-- **(Constraints):** Arquitectura modular
+- **(Driver de Negocio - Propósito):** Dashboard Interactivo.
+- **(Driver de Negocio - Propósito):** Gestión de Inventario.
+- **(Atributo de Calidad - Desempeño):** El sistema muestra el reporte de inventario en una tabla con un tiempo de respuesta ≤ 3 segundos.
+- **(Mantenibilidad):** Se elige un diseño modular para facilitar futuras mejoras de **Usabilidad** y **Desempeño** sin alterar la estabilidad del sistema.
 
 ### 4.3.1.3 Choose One or More Elements of the System to Refine
 
@@ -185,16 +185,15 @@ La arquitectura de **FoodFlow** busca ofrecer una plataforma modular y segura pa
 **Conceptos de Diseño Seleccionados:**
 
 1. **Arquitectura de Microservicios**
-  - Satisface CON-01 (modularidad)
-  - Facilita escalabilidad independiente de módulos
+  - Satisface el atributo de **Mantenibilidad**, que a su vez es clave para la evolución a largo plazo de la **Usabilidad** y el **Desempeño**. Al ser modular, permite mejorar o escalar servicios de forma independiente sin afectar la experiencia del usuario.
 
 2. **Patrón Model-View-Controller (MVC)**
-  - Separación clara de responsabilidades
-  - Satisface UC-01 y UC-02 (funcionalidades del dashboard e inventario)
+  - Proporciona una separación clara de responsabilidades dentro de cada microservicio.
+  - Satisface los drivers de negocio **"Dashboard Interactivo"** y **"Gestión de Inventario"** al organizar la lógica de presentación, negocio y datos.
 
 3. **Base de Datos Relacional con Índices Optimizados**
-- Satisface rendimiento en consultas
-- Integridad de datos financieros
+- Satisface el atributo de calidad de **Desempeño** en las consultas.
+- Asegura la integridad de los datos financieros.
 
 ### 4.3.1.5 Instantiate Architectural Elements, Allocate Responsibilities, and Define Interfaces
 - **Frontend Service**: UI en Angular, consume APIs REST.

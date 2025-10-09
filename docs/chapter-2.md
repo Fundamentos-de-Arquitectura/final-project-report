@@ -278,8 +278,7 @@ Los artefactos incluidos User Persona, User Task Matrix, User Journey Maps, Empa
 
 ### 2.3.2 User Task Matrix
 
-En esta sección, se presenta la matriz de tareas de los usuarios, que muestra las actividades realizadas por los dueños
-y empleados de restaurantes, junto con su frecuencia e importancia. Esta matriz ayuda a identificar las tareas clave y
+En esta sección, se presenta la matriz de tareas de los usuarios, que muestra las actividades realizadas por los dueños junto con su frecuencia e importancia. Esta matriz ayuda a identificar las tareas clave y
 su relevancia para cada tipo de usuario.
 
 Para ello, usamos el user persona creado en la sección anterior tomando a Sofía Ríos, segmento: Dueños de restaurantes
