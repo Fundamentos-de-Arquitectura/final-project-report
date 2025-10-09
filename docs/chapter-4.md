@@ -169,6 +169,7 @@ Diagrama de clases
 
 Diagrama de contenedores 
 
+<img width="1647" height="1683" alt="contenedores" src="https://github.com/user-attachments/assets/2b0231c1-0869-40ee-ba53-8645b19eb128" />
 
 
 Diagrama de componentes
