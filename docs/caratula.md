@@ -195,7 +195,7 @@ Para el desarrollo de este informe se utilizó GitHub como plataforma de colabor
 <br>
 <br>
 
-**TB2:**
+**TP:**
 <br>
 <img width="918" height="475" alt="insights" src="https://github.com/user-attachments/assets/7265feb4-21b9-4065-8000-0e802fee2751" />
 <br>
