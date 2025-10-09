@@ -1,270 +1,171 @@
 # Capítulo IV: Product Architecture Design
 
-## 4.1 Design Concepts, ViewPoints & ER Diagrams
-El presente diseño se realiza aplicando el método Attribute-Driven Design (ADD), identificando principios, enfoques, estilos y patrones arquitectónicos
+## 4.1 Design Concepts, Viewpoints & ER Diagrams
+
 ### 4.1.1 Principles Statements
-Para el diseño de la arquitectura representada en el diagrama, se establecen los siguientes principios:
 
-- **Desacoplamiento de microservicios**  
-  Cada servicio (Subscription, Reports, Inventory, Orders, Profiles) se diseña y despliega de forma independiente, facilitando la escalabilidad horizontal, el mantenimiento y la posibilidad de reemplazar o actualizar componentes sin afectar al resto.
+La arquitectura de **FoodFlow** se construye bajo principios que aseguran coherencia con los objetivos definidos en los capítulos previos:
 
-  Cada microservicio se desarrolla y despliega con su propia base de datos.
-  Esto asegura independencia en el ciclo de vida y permite escalar o modificar servicios sin afectar al resto.
+- **Desacoplamiento:** cada módulo opera como microservicio independiente para permitir evolución y despliegue aislado.
+- **Seguridad por diseño:** control de acceso mediante JWT, cifrado TLS y roles definidos.
+- **Escalabilidad horizontal:** cada microservicio puede replicarse según la carga.
+- **Mantenibilidad:** separación clara de capas (Controller, Service, Repository) y uso de patrones consistentes.
+- **Usabilidad y accesibilidad:** la interfaz Angular sigue lineamientos Material Design y prioriza fluidez en dispositivos móviles.
+- **Observabilidad:** logs y métricas por servicio para detectar errores o caídas.
 
-- **Seguridad por diseño**  
-  Se integra la seguridad en todos los niveles, desde el API Gateway con Spring Cloud Gateway hasta la autenticación y autorización gestionadas por el servicio Profile.  
-  Se utilizan conexiones seguras y políticas de acceso basadas en roles.
+Estos principios derivan de los requerimientos no funcionales (RNF) y la visión del Capítulo I orientada a reducir pérdidas y mejorar la toma de decisiones.
 
-  Todas las funcionalidades de la plataforma requieren autenticación previa mediante login con JWT (JSON Web Tokens), gestionado por el microservicio Profile.
-  Las contraseñas se almacenan con algoritmos de hash seguro y la comunicación entre frontend y backend se asegura mediante HTTPS/TLS.
-
-  El message broker (Apache Kafka) se configura con autenticación SASL y cifrado en tránsito.
-
-- **Escalabilidad y alta disponibilidad**  
-  Los contenedores de base de datos MySQL y el Message Broker (Apache Kafka) se preparan para replicación y balanceo, garantizando tolerancia a fallos y crecimiento según demanda.
-  La arquitectura orientada a servicios permite procesar reportes financieros en paralelo y responder eficientemente a consultas frecuentes.
-
-- **Reutilización de componentes**  
-  La lógica de negocio común se abstrae en bibliotecas y APIs compartidas entre los microservicios para evitar duplicación de código y facilitar la coherencia en las respuestas.
-  <br><br>
-- **Observabilidad y monitoreo**  
-  Se prioriza la incorporación de métricas, trazas y logs centralizados que permitan detectar incidentes y facilitar el mantenimiento preventivo.
- 
-- **Consistencia de interfaz**  
-  La Single Page Application (SPA) en Angular mantiene un diseño coherente y unificado para los usuarios finales, integrando la Landing Page con las distintas funcionalidades sin interrumpir la experiencia de navegación.
-  La sincronización entre órdenes e inventario se maneja mediante eventos asincrónicos en el broker, aplicando el principio de eventual consistency. Esto reduce la dependencia de transacciones distribuidas.
+---
 
 ### 4.1.2 Approaches Statements, Architectural Styles & Patterns
 
-#### Approaches Statements
-- **Domain-Driven Design (DDD)**
-  La arquitectura se modela en función de los bounded contexts identificados: Orders, Inventory, Reports, IAM, Profiles y Subscriptions. Cada uno refleja reglas de negocio claras y aisladas, lo que permite separar responsabilidades y reducir la complejidad del dominio.
+El sistema adopta una arquitectura de **microservicios con enfoque DDD (Domain-Driven Design)**.  
+Cada *bounded context* se implementa como un servicio independiente desplegable en contenedores.
 
-- **Attribute-Driven Design (ADD)**  
-  Las decisiones de arquitectura priorizan atributos de calidad como usabilidad, seguridad y desempeño, asegurando que los servicios cumplan los requisitos no funcionales.
- 
-- **Event-Driven Architecture**  
-  La comunicación asíncrona se utiliza en los procesos que requieren sincronización entre servicios sin bloquear la operación del sistema, como la relación entre Orders e Inventory. Cuando una orden ya registrada en el sistema actualiza el consumo de insumos, se publica un evento que el microservicio de inventario procesa para reflejar la reducción en stock.
-  Esto permite manejar de forma eficiente escenarios de alto volumen de órdenes y reducir el acoplamiento entre servicios.
+| Bounded Context        | Microservicio           | Descripción                                                                             |
+|------------------------|-------------------------|-----------------------------------------------------------------------------------------|
+| Inventario             | Inventory Service       | Control de productos, cantidades y alertas de stock.                                    |
+| Gestión de Menú        | Menu Management Service | Administración de los platos de la carta, con sus precios, categorías y disponibilidad. |
+| Reportes               | Reports Service         | Generación de informes financieros y operativos.                                        |
+| Usuarios y Seguridad   | IAM Service             | Autenticación y autorización basada en roles.                                           |
+| Perfiles               | Profiles Service        | Datos personales y configuraciones de usuario.                                          |
+| Suscripciones          | Subscriptions Service   | Gestión de planes SaaS y periodos de servicio.                                          |
+| Órdenes (solo lectura) | Orders Service          | Muestra información estática o preconfigurada para pruebas, sin operaciones CRUD.       |
 
-#### Architectural Styles
-- **Microservicios**  
-  La aplicación se divide en servicios independientes, cada uno con su propia base de datos y ciclo de vida, comunicándose a través de APIs y mensajería.
-  
-- **Cliente-Servidor**  
-  El frontend (Landing Page + SPA Angular) actúa como cliente que consume los servicios expuestos en el backend.
-  
-- **API Gateway Pattern**  
-  Spring Cloud Gateway centraliza la entrada de las solicitudes, proporcionando enrutamiento, autenticación y balanceo de carga.
-  
-#### Patrones
-- **Modelo-Vista-Controlador (MVC)**  
-  Implementado en el frontend Angular para mantener la separación de responsabilidades entre la vista, la lógica de presentación y los datos.
-  <br><br>
-- **Circuit Breaker**  
-  Para manejar fallos temporales en la comunicación entre microservicios y garantizar resiliencia.
-  
-- **Database per Service**  
-  Cada microservicio cuenta con su propia base de datos MySQL para asegurar independencia de datos y evitar cuellos de botella.
-  
-- **Publisher-Subscriber**  
-  Apache Kafka permite la distribución de eventos a múltiples consumidores, clave para la actualización de inventarios en tiempo real.
-  
+El **API Gateway** centraliza peticiones, aplica seguridad y distribuye tráfico hacia los microservicios internos.  
+El estilo adoptado es **RESTful**, con comunicación **HTTP/JSON** y documentación de endpoints mediante **Swagger**.
+
+#### Patrones aplicados:
+- Repository + Service Layer: aislamiento de persistencia.
+- Factory Method: instanciación controlada de entidades.
+- Observer: alertas automáticas ante cambios en stock.
+- Strategy: formatos de reportes (PDF, CSV).
+- Template Method: flujo de generación de reportes.
+- Singleton: control del contexto de seguridad y configuración.
+
+---
+
 ### 4.1.3 Context Diagram
 
-El diagrama de contexto ilustra la interacción entre los usuarios, el frontend y los microservicios del backend, destacando las principales rutas de comunicación y los flujos de datos.
+El sistema tiene como actor principal al **propietario del restaurante**, quien accede desde una interfaz web Angular.  
+En futuras versiones se contempla añadir **empleados o contadores** como roles secundarios.
 
-<img width="276" height="557" alt="image" src="https://github.com/user-attachments/assets/fbb14dd3-77b0-4e1d-b029-77c18f19b80f" />
+**Flujo general:**
 
-Nuestro único usuario es el dueño del restaurante, quien accede a la plataforma a través de una Landing Page y una Single Page Application (SPA) desarrollada en Angular. 
-El servicio externo que usaremos es IzyPay, que se encargará de procesar los pagos realizados por los clientes del restaurante. 
+1. El usuario accede al frontend (Angular).
+2. El API Gateway enruta solicitudes según el servicio.
+3. Los microservicios procesan o devuelven datos desde la base MySQL.
+4. El usuario recibe la respuesta o visualiza información consolidada en el dashboard.
 
-### 4.1.4 Approach Driven ViewPoints Diagrams
-El diseño arquitectónico de FoodFlow se representa mediante diferentes puntos de vista, siguiendo las buenas prácticas de modelado (UML y C4 Model). Estos diagramas buscan capturar cómo interactúan los componentes, cómo fluye la información y cómo se organizan las entidades de dominio.
+---
 
-**Diagramas UML:**
-<br>
-<br>
-- Diagrama de actividad:
-<img width="3840" height="3344" alt="diagram_activity" src="https://github.com/user-attachments/assets/a38db829-32e0-42aa-9343-204af86dc8d3" />
+### 4.1.4 Approach-Driven Viewpoints Diagrams
 
-<br>
-<br>
+Las vistas arquitectónicas se organizan de acuerdo con el modelo **C4**:
 
-- Diagrama de estados:
+- **Context View:** define límites entre usuario, frontend y backend.
+- **Container View:** representa los microservicios y sus interacciones REST.
+- **Component View:** muestra controladores, servicios y repositorios por dominio.
+- **Code View:** refleja clases y entidades base (Java Spring Boot).
 
-<img width="3840" height="939" alt="state_diagram" src="https://github.com/user-attachments/assets/c8f5771f-1628-42cf-9ffd-7e12a9b5f5a5" />
+Estas vistas garantizan trazabilidad entre requerimientos y decisiones arquitectónicas, siguiendo el método **ADD**.
 
-<br>
-<br>
+---
 
-- Diagrama de clases:
-<img width="3840" height="591" alt="class_diagram" src="https://github.com/user-attachments/assets/3e9598b4-027c-4b42-9605-197721d13c6f" />
+### 4.1.5 Relational Database Diagram
 
-<br>
-<br>
+La base de datos **MySQL** mantiene las entidades descritas en los capítulos anteriores:
 
-**Diagramas C4:**
-**Containers diagram:**
-<img width="2236" height="2218" alt="containers" src="https://github.com/user-attachments/assets/5be1ba30-97d8-40d2-91f0-1bf0befa3f93" />
-<br>
-<br>
+- **Usuario** (idUsuario, nombre, correo, rol, contraseñaHash)
+- **Producto** (idProducto, nombre, categoría, precioUnitario, stockActual)
+- **Plato** (idPlato, nombre, descripción, precio, categoría, disponible)
+- **Reporte** (idReporte, tipo, fechaGeneración, idUsuario)
+- **Suscripción** (idSuscripción, plan, fechaInicio, fechaFin, idUsuario)
 
-**Components diagrams:**
-- Subscription component diagram:
-<img width="4600" height="5428" alt="subscription_component" src="https://github.com/user-attachments/assets/f13c188b-7b87-41bd-b146-e81c43afc821" />
-<br>
-<br>
-- Reports component diagram:
-<img width="5350" height="6628" alt="reports_component" src="https://github.com/user-attachments/assets/da998903-4813-49a2-8bb9-a70550d0a29a" />
-  <br>
-  <br>
-- Inventory component diagram:
-<img width="5350" height="9028" alt="inventory_component" src="https://github.com/user-attachments/assets/b5396072-3911-4947-8f24-941416e4b2d2" />
-  <br>
-  <br>
-- Order component diagram:
-<img width="4621" height="11179" alt="order_component" src="https://github.com/user-attachments/assets/ba60b12b-5d46-4417-bd76-b351a9582129" />
-  <br>
-  <br>
-- Profile component diagram:
-<img width="5350" height="10161" alt="profile_component" src="https://github.com/user-attachments/assets/a340c6d7-e2b5-4a09-95a2-bc129254aa77" />
-  <br>
-  <br>
+**Relaciones principales:**
 
-### 4.1.5 Relational/Non Relational Database Diagram
-<img width="579" height="681" alt="bd" src="https://github.com/user-attachments/assets/ea427efc-5df4-4fd1-bced-3c10796279c8" />
-<br>
-<br>
+- Usuario (1) — (N) Reporte
+- Usuario (1) — (1) Suscripción
+- Producto y Plato se gestionan en contextos distintos (Inventario vs Menú).
+- Cada reporte puede incluir referencias a ambas entidades según el módulo origen.
+
+---
 
 ### 4.1.6 Design Patterns
 
-A continuación, se describen los patrones de diseño qeu se aplicarán:
+| Microservicio   | Patrón principal           | Finalidad                                     |
+|-----------------|----------------------------|-----------------------------------------------|
+| Inventory       | Repository / Observer      | Sincronización de stock y emisión de alertas. |
+| Menu Management | Repository / Factory       | Alta, baja y edición de platos de la carta.   |
+| Reports         | Strategy / Template Method | Generación y formato de informes.             |
+| IAM             | Singleton / Proxy          | Control de autenticación.                     |
+| Subscriptions   | Repository / Observer      | Renovaciones y vencimientos.                  |
+| Orders          | Repository (solo lectura)  | Consulta de datos estáticos de ejemplo.       |
 
-| Patrón                                | Propósito general                                                        | Aplicación en FoodFlow / microservicios                                                                                                                                           | Justificación contextual                                                                                                             |
-|---------------------------------------|--------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------|
-| **Singleton**                         | Garantizar que una clase tenga una única instancia                       | El microservicio **Profile** implementa un único punto de control para la autenticación, la emisión de tokens y la gestión de roles de usuario.                                   | Se asegura un manejo consistente y centralizado de la seguridad, evitando estados inconsistentes en la gestión de credenciales.      |
-| **Factory Method / Abstract Factory** | Crear objetos de una familia sin depender de su implementación concreta  | El microservicio **Reports** utiliza fábricas para generar diferentes tipos de reportes (diario, semanal, mensual) y adaptadores de persistencia para distintas fuentes de datos. | Facilita la extensión de nuevos formatos de reportes sin modificar la lógica cliente, manteniendo flexibilidad en el procesamiento.  |
-| **Strategy**                          | Encapsular algoritmos intercambiables detrás de una interfaz común       | En **Reports** se aplican diferentes estrategias de cálculo de pérdidas y ganancias, como costo promedio, según la necesidad del análisis financiero.                             | Permite cambiar o agregar métodos de cálculo sin alterar el resto del sistema, garantizando flexibilidad en el análisis contable.    |
-| **Observer**                          | Permitir que objetos se suscriban a cambios en otro objeto               | El microservicio **Inventory** actualiza sus módulos internos de alertas cuando cambia el stock de un producto, notificando al dueño en caso de que un insumo se agote.           | Los componentes internos reaccionan automáticamente a cambios en inventario, generando alertas sin acoplarse directamente al núcleo. |
-| **Decorator**                         | Agregar responsabilidades a objetos dinámicamente                        | El **API Gateway** y sus middleware incorporan validaciones adicionales como logging, control de acceso y verificación de tokens de forma dinámica.                               | Permite añadir capas transversales sin modificar la lógica base de enrutamiento, reforzando seguridad y trazabilidad de peticiones.  |
-| **Adapter**                           | Permitir que clases con interfaces incompatibles trabajen juntas         | **Inventory** dispone de adaptadores que permiten integrar librerías externas de cálculo de costos o conectores con sistemas de terceros.                                         | Asegura compatibilidad con APIs externas y facilita la interoperabilidad con herramientas ajenas al núcleo de la plataforma.         |
-| **Template Method**                   | Definir el esqueleto de un algoritmo dejando pasos concretos a subclases | En **Reports** se define un flujo general de generación de reportes, delegando pasos específicos como filtrado de datos o agregación a subclases especializadas.                  | Reduce duplicación de lógica común entre diferentes tipos de reportes, manteniendo un proceso estándar y extensible.                 |
+---
 
 ### 4.1.7 Tactics
-A continuación, se describen las tácticas arquitectónicas implementadas en la arquitectura de FoodFlow para abordar los atributos de calidad identificados:
 
-**Seguridad**
+| Atributo de calidad | Táctica aplicada                                 |
+|---------------------|--------------------------------------------------|
+| Seguridad           | JWT, HTTPS, roles definidos en base a usuario.   |
+| Rendimiento         | Cache de consultas y paginación en reportes.     |
+| Disponibilidad      | Circuit breaker y balanceo básico en gateway.    |
+| Usabilidad          | UI Angular con navegación intuitiva.             |
+| Mantenibilidad      | Separación en capas y documentación Swagger.     |
+| Escalabilidad       | Contenerización de servicios con Docker Compose. |
 
-- Autenticación y Autorización Centralizada: el microservicio Profile administra las credenciales de los dueños de restaurante mediante login con JWT, garantizando control de acceso uniforme.
-
-- Protección de datos sensibles: las contraseñas se almacenan con algoritmos de hash, evitando exposición de información crítica.
-
-- API Gateway seguro: se asegura que todas las peticiones pasen por el Gateway, donde se validan los tokens antes de redirigir a los microservicios.
-
-- Conexiones seguras: se recomienda el uso de HTTPS/TLS para proteger la comunicación entre frontend y backend.
-
-**Desempeño**
-- Comunicación asíncrona con Kafka: la interacción entre Orders e Inventory se realiza mediante eventos, evitando bloqueos y permitiendo procesar un gran volumen de órdenes sin afectar la experiencia del usuario.
-
-- Database per Service: cada microservicio usa su propia base de datos MySQL, lo que elimina cuellos de botella de acceso a datos compartidos.
-
-- Proyecciones para reportes: el microservicio Reports mantiene vistas materializadas alimentadas por eventos de Orders e Inventory, reduciendo el tiempo de respuesta en consultas financieras.
-
-**Usabilidad**
- 
-- Dashboards visuales: los reportes se presentan con gráficos comprensibles, reduciendo la curva de aprendizaje para los dueños de restaurantes.
-
-- Consistencia en interfaz: la SPA en Angular mantiene un diseño uniforme y una navegación fluida.
-
-- Feedback inmediato: el sistema entrega mensajes claros al usuario, como alertas cuando un producto de inventario está por agotarse.
-
-**Resiliencia y disponibilidad**
-- Circuit Breaker y Retry: se utilizan en llamadas síncronas para evitar cascadas de fallos y reintentar operaciones bajo condiciones controladas.
-
-- Eventual Consistency: se adopta para sincronizar órdenes e inventario mediante eventos, reduciendo dependencia de transacciones distribuidas.
-
-- Logs básicos y monitoreo: cada microservicio expone métricas mínimas para supervisar su estado y detectar fallos de forma preventiva.
-
-**Escalabilidad**
-
-- Despliegue independiente de microservicios: cada servicio se ejecuta en contenedores aislados, lo que facilita la escalabilidad selectiva.
-
-- Particionamiento en Kafka: los eventos se distribuyen por claves como restaurantId, permitiendo paralelismo y procesamiento balanceado en escenarios de alto volumen.
+---
 
 ## 4.2 Architectural Drivers
 
-### 4.1.8 Design Purpose
+### 4.2.1 Design Purpose
 
-FoodFlow tiene como propósito fundamental proporcionar una plataforma segura y escalable que permita a los dueños de restaurantes gestionar de manera eficiente sus finanzas y operaciones.
-La arquitectura se orienta a cumplir con los siguientes objetivos:
+La arquitectura de **FoodFlow** busca ofrecer una plataforma modular y segura para la gestión de inventarios, menú y reportes financieros en tiempo real, asegurando continuidad y escalabilidad futura.
 
-| Objetivo                                   | Descripción                                                                                                                                                                                                   |
-|--------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Soporte a la gestión financiera**        | Permitir la generación de reportes claros y confiables sobre ingresos, pérdidas y balances, reduciendo significativamente el tiempo que el dueño invierte en cálculos manuales.                               |
-| **Automatización de procesos internos**    | Sincronizar automáticamente las órdenes con el inventario, evitando errores de registro manual y reflejando en tiempo real las pérdidas por insumos y las ganancias por ventas.                               |
-| **Escalabilidad y mantenimiento a futuro** | Diseñar el sistema bajo el estilo de microservicios, facilitando la evolución del producto, el despliegue independiente de componentes y la incorporación de nuevas funcionalidades o integraciones externas. |
-| **Seguridad como eje principal**           | Proteger la información sensible de los usuarios mediante autenticación centralizada, control de accesos y cifrado en la comunicación entre servicios.                                                        |
-| **Usabilidad y simplicidad**               | Garantizar que la interfaz sea intuitiva y accesible, con dashboards visuales que permitan al dueño interpretar su estado financiero en menos de un minuto.                                                   |
+---
 
-### 4.1.9 Primary Functionality (Primary User Stories)
+### 4.2.2 Primary Functionality (Primary User Stories)
 
-En esta sección se presentan las historias de usuario principales que guían el desarrollo de la arquitectura de la aplicación. Estas historias reflejan las necesidades y expectativas del dueño del restaurante, asegurando que la solución propuesta cumpla con los requisitos funcionales esenciales.
+| Código | User Story resumida                             |
+|--------|-------------------------------------------------|
+| US01   | Registrar y actualizar productos en inventario. |
+| US03   | Recibir alertas por stock mínimo.               |
+| US06   | Administrar platos del menú.                    |
+| US07   | Generar reportes financieros y de operaciones.  |
+| US09   | Visualizar métricas en dashboard.               |
+| US11   | Autenticarse y gestionar perfil de usuario.     |
 
-| Orden | User Story Id | Título                                        | Descripción                                                                                                                                                                                | Story Points |
-|:------|:--------------|:----------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-------------|
-| 1     | US1           | Visualizar ingresos y pérdidas                | Como dueño de restaurante quiero ver en el dashboard un resumen de mis ingresos y pérdidas para conocer rápidamente la situación financiera de mi negocio.                                 | 8            |
-| 2     | US18          | Visualización de Reportes Financieros Diarios | Como dueño de restaurante, quiero ver mis ingresos y gastos diarios en un dashboard centralizado para tomar decisiones informadas sobre el rendimiento financiero de mi negocio.           | 8            |
-| 3     | US19          | Navegación entre Períodos de Tiempo           | Como dueño de restaurante, quiero poder alternar entre reportes diarios, semanales y mensuales para analizar tendencias en diferentes períodos de tiempo.                                  | 8            |
-| 4     | US20          | Análisis de Categorías de Gastos              | Como dueño de restaurante, quiero visualizar el desglose de mis gastos por categorías para identificar áreas donde puedo optimizar costos.                                                 | 8            |
-| 5     | US3           | Visualizar inventario actual                  | Como dueño de restaurante quiero ver una tabla con el stock, costo unitario y unidad de medida de cada producto para controlar el inventario de manera clara y rápida.                     | 5            |
-| 6     | US11          | Visualizar órdenes existentes                 | Como dueño de restaurante quiero ver en una tabla las órdenes realizadas con su mesa, platos, precio total y fecha para llevar un control claro y rápido de los pedidos.                   | 5            |
-| 7     | US2           | Identificar platos más populares              | Como dueño de restaurante quiero ver un listado de mis platos más vendidos para saber cuáles son los más rentables y tomar decisiones sobre el menú.                                       | 5            |
-| 8     | US6           | Agregar Nuevo Plato                           | Como dueño de restaurante, quiero agregar nuevos platos al menú para mantener mi oferta actualizada y atractiva para los clientes.                                                         | 5            |
-| 9     | US8           | Visualizar Información Completa del Menú      | Como dueño de restaurante, quiero visualizar toda la información de mis platos (nombre, descripción, precio, ingredientes) en una tabla organizada para tener control total sobre mi menú. | 5            |
+---
 
-### 4.1.10 Quality Attribute Scenarios
-Aquí se detallan los escenarios de calidad que guían las decisiones arquitectónicas, asegurando que la solución cumpla con los requisitos no funcionales esenciales para el éxito del proyecto.
-### 4.1.11 Constraints
-- Uso de microservicios con bases de datos independientes (MySQL) para cada servicio.
-- Comunicación asíncrona entre Orders e Inventory mediante Apache Kafka.
-- Implementación de un API Gateway con Spring Cloud Gateway para centralizar el acceso a los microservicios.
-- Desarrollo del frontend como una Single Page Application (SPA) en Angular.
-- Autenticación y autorización gestionadas por un microservicio IAM utilizando JWT.
-- No utilizaremos IOT ni Machine Learning en esta versión del producto.
-- El tiempo de desarrollo es limitado, por lo que se priorizarán las funcionalidades esenciales para el lanzamiento inicial. Tiempo estimado de 3 meses.
+### 4.2.3 Quality Attribute Scenarios
 
-### 4.1.12 Architectural Concerns
+| Atributo       | Estímulo                  | Entorno       | Respuesta                 | Medida              |
+|----------------|---------------------------|---------------|---------------------------|---------------------|
+| Desempeño      | Usuario solicita reporte  | Carga normal  | Respuesta en <3s          | Tiempo de respuesta |
+| Seguridad      | Login desde red pública   | Producción    | Validación JWT + HTTPS    | Token válido        |
+| Usabilidad     | Primer ingreso            | Nueva sesión  | Guía inicial en dashboard | Comprensión <1 min  |
+| Disponibilidad | Falla del Reports Service | Pico de carga | Circuit breaker activo    | 99% uptime          |
+| Escalabilidad  | Incremento de usuarios    | Producción    | Réplica de microservicios | CPU <70%            |
 
-**Seguridad de la información**
-- Proteger las credenciales de acceso de los dueños de restaurante.
-- Garantizar que solo usuarios autenticados puedan consultar reportes financieros y modificar el inventario.
-- Evitar fugas de datos sensibles mediante cifrado en tránsito y almacenamiento seguro de contraseñas.
-- Consistencia de datos entre órdenes e inventario
-- Asegurar que cada orden registrada impacte correctamente en el inventario.
-- Manejar escenarios de falta de stock y mantener un estado coherente en la plataforma.
-- Desempeño en generación de reportes
-- Los reportes diarios, semanales y mensuales deben generarse en tiempos razonables aun con un alto volumen de registros.
-- Evitar bloqueos o latencias excesivas que perjudiquen la experiencia del usuario.
+---
 
-**Usabilidad para dueños de restaurantes**
-- Interfaz intuitiva y clara, con dashboards que faciliten la interpretación de métricas financieras.
-- Reducción del tiempo de análisis manual a través de visualizaciones gráficas y alertas automáticas.
+### 4.2.4 Constraints
 
-**Escalabilidad de la solución**
-- Capacidad de desplegar y escalar microservicios de manera independiente.
-- Asegurar que el sistema soporte crecimiento en número de órdenes y productos gestionados.
+- Tecnologías fijas: **Angular, Spring Boot, MySQL**.
+- Despliegue inicial local, con opción futura a nube.
+- Presupuesto acotado: sin infraestructura redundante.
+- Servicio **Orders** permanece en modo lectura (mock).
+- El módulo de menú gestiona únicamente los platos, no los pedidos.
 
-**Resiliencia frente a fallos**
-- Evitar que un fallo en un microservicio afecte la disponibilidad de toda la plataforma.
-- Manejar interrupciones temporales en la comunicación entre servicios mediante mecanismos de recuperación.
+---
 
-**Mantenibilidad y evolución**
-- Estructura modular que permita añadir nuevas funcionalidades (ej. otros tipos de reportes o integraciones externas) sin modificar el núcleo de la aplicación.
-- Documentación clara para facilitar el trabajo de nuevos desarrolladores en el futuro.
-- Restricciones tecnológicas
-- Uso exclusivo de Angular en frontend, Spring Boot en backend y MySQL en las bases de datos.
-- Despliegue en Azure, evitando dependencias en proveedores alternativos.
+### 4.2.5 Architectural Concerns
+
+- Mantener coherencia de datos entre Inventory y Menu Management.
+- Evitar duplicación de entidades compartidas (por ejemplo, Producto vs Plato).
+- Asegurar versionado de APIs en gateway.
+- Establecer logs unificados y monitoreo básico por servicio.
 
 ## 4.3 ADD Iterations
 
