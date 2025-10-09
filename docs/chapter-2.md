@@ -160,15 +160,15 @@ En esta sección se aborda la información recolectada de cada entrevista incluy
 - _Entrevista 1_
 
 
-| Nombre               | Clara                                                                                                                                                                                                                             |
-|----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Apellido             | Canahualpa                                                                                                                                                                                                                        |
-| Edad                 | 49                                                                                                                                                                                                                                |
-| Distrito             | La Molina                                                                                                                                                                                                                         |
+| Nombre               | Clara                                                                                                                           |
+|----------------------|---------------------------------------------------------------------------------------------------------------------------------|
+| Apellido             | Canahualpa                                                                                                                      |
+| Edad                 | 49                                                                                                                              |
+| Distrito             | La Molina                                                                                                                       |
 | Evidencia            | <img width="967" height="290" alt="12" src="https://github.com/user-attachments/assets/e8053896-d2d0-4f92-9c76-e892319ca6bf" /> |
-| Url                  | https://upcedupe-my.sharepoint.com/:v:/g/personal/u202213765_upc_edu_pe/EQbGCZQqNStEiOr3ASX3J74BIwBZ_cqT66YpSpBcX0tiAA?e=BfCmc6                                                                                                   |
-| Inicio de entrevista | 00:00:01                                                                                                                                                                                                                          |
-| Fin de entrevista    | 00:11:19                                                                                                                                                                                                                          |
+| Url                  | https://upcedupe-my.sharepoint.com/:v:/g/personal/u202213765_upc_edu_pe/EQbGCZQqNStEiOr3ASX3J74BIwBZ_cqT66YpSpBcX0tiAA?e=BfCmc6 |
+| Inicio de entrevista | 00:00:01                                                                                                                        |
+| Fin de entrevista    | 00:11:19                                                                                                                        |
 
 - Distrito de residencia:
 - Estado civil:
@@ -188,15 +188,15 @@ En síntesis, Clara se enfoca principalmente en la producción y el control bás
 
 - _Entrevista 2_
 
-| Nombre               | Liliana                                                                                                                                                                                                                           |
-|----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|\
-| Apellido             | Barrera                                                                                                                                                                                                                           |
-| Edad                 | 52 años                                                                                                                                                                                                                           |
-| Distrito             | Los Olivos                                                                                                                                                                                                                        |
+| Nombre               | Liliana                                                                                                                               |
+|----------------------|---------------------------------------------------------------------------------------------------------------------------------------|
+| Apellido             | Barrera                                                                                                                               |
+| Edad                 | 52 años                                                                                                                               |
+| Distrito             | Los Olivos                                                                                                                            |
 | Evidencia            | <img width="1006" height="296" alt="barrera" src="https://github.com/user-attachments/assets/dbee5e0a-a6ad-4b38-960d-82c18a16e80e" /> |
-| Url                  | https://goo.su/bD7IT                                                                                                                                                                                                              |
-| Inicio de entrevista | 00:11:28                                                                                                                                                                                                                          |    
-| Fin de entrevista    | 00:17:40                                                                                                                                                                                                                          |
+| Url                  | https://goo.su/bD7IT                                                                                                                  |
+| Inicio de entrevista | 00:11:28                                                                                                                              |    
+| Fin de entrevista    | 00:17:40                                                                                                                              |
 
 - Distrito de residencia: Los Olivos
 - Estado civil: Casada
@@ -216,15 +216,15 @@ la seguridad de los datos.
 
 - _Entrevista 3_
 
-| Nombre               | Gonzalo                                                                                                                                                                                                                           |
-|----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Apellido             | Elio                                                                                                                                                                                                                              |
-| Edad                 | 58 años                                                                                                                                                                                                                           |
-| Distrito             | San Isidro                                                                                                                                                                                                                        |
+| Nombre               | Gonzalo                                                                                                                             |
+|----------------------|-------------------------------------------------------------------------------------------------------------------------------------|
+| Apellido             | Elio                                                                                                                                |
+| Edad                 | 58 años                                                                                                                             |
+| Distrito             | San Isidro                                                                                                                          |
 | Evidencia            | <img width="936" height="434" alt="werner" src="https://github.com/user-attachments/assets/8391123a-2d53-45e7-bf9b-407177041d5f" /> |
-| Url                  | https://goo.su/bD7IT                                                                                                                                                                                                              |
-| Inicio de entrevista | 00:17:44                                                                                                                                                                                                                          |
-| Fin de entrevista    | 00:28:10                                                                                                                                                                                                                          |
+| Url                  | https://goo.su/bD7IT                                                                                                                |
+| Inicio de entrevista | 00:17:44                                                                                                                            |
+| Fin de entrevista    | 00:28:10                                                                                                                            |
 
 - Distrito de residencia: San Isidro
 - Estado civil: Conviviente
