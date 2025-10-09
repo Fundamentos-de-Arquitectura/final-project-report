@@ -573,6 +573,16 @@ A continuación se resume la evidencia obtenida:
 | Órdenes       | `/api/v1/orders`                                | Registro, visualización y confirmación de órdenes       | Passed |
 
 
+### Orders:
+
+<img width="1920" height="1080" alt="orders" src="https://github.com/user-attachments/assets/6d4fbb15-acfb-4c9c-a57a-e2ab4b4e03a3" />
+
+<img width="1476" height="882" alt="endpoints" src="https://github.com/user-attachments/assets/ac09ef8f-61c0-418b-9e99-a53eb5b3a04b" />
+
+### Inventory
+
+<img width="1349" height="776" alt="inventory" src="https://github.com/user-attachments/assets/370b8c4f-6fa2-4786-90b0-bd10946005ab" />
+
 ---
 
 #### 5.3.1.5 Microservices Documentation Evidence for Sprint Review
@@ -639,7 +649,8 @@ La metodología aplicada fue Scrum, con reuniones de seguimiento semanales para 
 - **Discord / WhatsApp:** reuniones de planificación, retrospectiva y revisión de sprint.
 
 ##### GitHub Insights:
-<!-- Insertar aquí capturas de GitHub Insights -->
+
+
 
 ---
 
