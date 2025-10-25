@@ -107,7 +107,7 @@ El atributo más crítico es la Usabilidad, ya que el usuario objetivo no tiene 
 
 | ID    | Categoría      | Descripción                                                                                                       | Relación           |
 |-------|----------------|-------------------------------------------------------------------------------------------------------------------|--------------------|
-| RNF01 | Usabilidad     | La interfaz debe ser intuitiva y accesible para usuarios sin conocimientos contables o técnicos.                  | QA / Usabilidad    |
+| RNF01 | Usabilidad     | La interfaz debe ser intuitiva y accesible para usuarios sin conocimientos contables o técnicos en un tiempo máximo de 3 horas.                  | QA / Usabilidad    |
 | RNF02 | Usabilidad     | Los gráficos y reportes deben presentarse en formato visual claro, con etiquetas y leyendas comprensibles.        | QA / Reportes      |
 | RNF03 | Usabilidad     | El sistema debe permitir la navegación entre módulos (menú, órdenes, reportes).                	                  | QA / Usabilidad    |
 | RNF04 | Rendimiento    | El sistema debe responder a las búsquedas de platos en menos de 2 segundos.                                       | QA / Rendimiento   |
