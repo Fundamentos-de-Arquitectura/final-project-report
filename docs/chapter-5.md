@@ -589,3 +589,206 @@ https://trello.com/invite/b/68acc5a626e4614f12ee778f/ATTIb0400bfaba199996d200f64
 
  **Conclusión del Sprint 1:**  
  El equipo completó con éxito la implementación de los módulos de Inventario y Órdenes, cumpliendo con los objetivos de desarrollo, validación e integración de los microservicios correspondientes. Las funcionalidades de Dashboard, Reportes y Menú quedan planificadas para futuros sprints.
+
+### 5.3.2 Sprint 2
+
+#### 5.3.2.1 Sprint Backlog 2
+
+**Objetivo del Sprint:**  
+Construir las funcionalidades básicas para la gestión de subscriptions, IAM y profiles e integrar orders e inventory con Apache Kafka..
+
+**Avance general:**  
+En este sprint, el equipo se enfocó en construir las funcionalidades básicas para la gestión de de subscriptions, IAM y profiles e integración de inventory y orders con Apache Kafka. Todas las historias de usuario planificadas para estos dos módulos fueron implementadas, probadas y documentadas conforme a los criterios de aceptación.
+
+**Herramienta utilizada:** Trello  
+**URL del tablero:**
+
+---
+
+#### 5.3.2.2 Development Evidence for Sprint Review
+
+##### 5.3.2.2.1 Subscriptions Service
+
+| Repository             | Branch                       | Commit ID | Commit Message                                                          | Commit Message Body                                                          | Committed on |
+|------------------------|------------------------------|-----------|-------------------------------------------------------------------------|------------------------------------------------------------------------------|--------------|
+| `subscription-service` | `develop`                    | `a1b2c3d` | `Fix: typo`                                                             | Corrección menor de error tipográfico en el código.                          | 25/10/2025   |
+| `subscription-service` | `develop`                    | `b2c3d4e` | `Subscription Service details`                                          | Añadidos detalles y mejoras en la configuración del servicio de suscripción. | 25/10/2025   |
+| `subscription-service` | `develop`                    | `c3d4e5f` | `Merge pull request #5 from /testing`                                   | Integración de cambios desde la rama de pruebas.                             | 25/10/2025   |
+| `subscription-service` | `testing`                    | `d4e5f6g` | `fix(domain): add jsonIgnoreProperties to avoid serialization problems` | Añadido `@JsonIgnoreProperties` para evitar problemas de serialización.      | 24/10/2025   |
+| `subscription-service` | `testing`                    | `e5f6g7h` | `fix: delete unnecessary dependency`                                    | Eliminada dependencia innecesaria del proyecto.                              | 24/10/2025   |
+| `subscription-service` | `testing`                    | `f6g7h8i` | `feat(test): add pom and app props`                                     | Agregados archivos `pom.xml` y `application.properties` para pruebas.        | 23/10/2025   |
+| `subscription-service` | `develop`                    | `g7h8i9j` | `Merge pull request #4 from feature/add-interfaces`                     | Combinada la rama con la capa de interfaces.                                 | 23/10/2025   |
+| `subscription-service` | `feature/add-interfaces`     | `h8i9j0k` | `feat(interfaces): add controller`                                      | Implementado controlador principal para gestión de suscripciones.            | 23/10/2025   |
+| `subscription-service` | `develop`                    | `i9j0k1l` | `Merge pull request #3 from feature/add-infrastructure`                 | Fusionada la capa de infraestructura.                                        | 23/10/2025   |
+| `subscription-service` | `develop`                    | `j0k1l2m` | `Merge pull request #2 from feature/add-application`                    | Integrada capa de aplicación.                                                | 23/10/2025   |
+| `subscription-service` | `feature/add-infrastructure` | `k1l2m3n` | `feat(infrastructure): add infrastructure layer`                        | Añadida la capa de infraestructura al proyecto.                              | 23/10/2025   |
+| `subscription-service` | `feature/add-application`    | `l2m3n4o` | `feat(application): add SubscriptionService todo infrastructure`        | Creado `SubscriptionService` pendiente de integración con infraestructura.   | 23/10/2025   |
+| `subscription-service` | `develop`                    | `m3n4o5p` | `Merge pull request #1 from feature/add-domain`                         | Añadida la capa de dominio al proyecto.                                      | 23/10/2025   |
+| `subscription-service` | `feature/add-domain`         | `n4o5p6q` | `feat(application): add dtos`                                           | Creación de los DTOs para comunicación entre capas.                          | 23/10/2025   |
+| `subscription-service` | `feature/add-domain`         | `o5p6q7r` | `feat(model): add domain service`                                       | Añadido servicio de dominio base.                                            | 23/10/2025   |
+| `subscription-service` | `feature/add-domain`         | `p6q7r8s` | `feat(model): add domain repositories`                                  | Implementación inicial de repositorios de dominio.                           | 23/10/2025   |
+| `subscription-service` | `feature/add-domain`         | `q7r8s9t` | `feat(model): add domain model entities`                                | Definidas entidades principales del modelo de dominio.                       | 23/10/2025   |
+| `subscription-service` | `main`                       | `r8s9t0u` | `Initial commit`                                                        | Configuración inicial del repositorio.                                       | 23/10/2025   |
+| `subscription-service` | `main`                       | `s9t0u1v` | `initial commit`                                                        | Versión preliminar del repositorio base.                                     | 23/10/2025   |
+
+##### 5.3.2.2.2 IAM Service
+
+| Repository         | Branch | Commit ID | Commit Message          | Commit Message Body                                       | Committed on |
+|--------------------|--------|-----------|-------------------------|-----------------------------------------------------------|--------------|
+| `IAM-microservice` | `main` | `t1u2v3w` | `chore: initial commit` | Commit inicial. Adición de todo el microservicio a Github | 26/10/2025   |
+
+##### 5.3.2.2.3 Inventory Service
+
+| Repository          | Branch | Commit ID | Commit Message                                                                            | Commit Message Body                                                                        | Committed on |
+|---------------------|--------|-----------|-------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------|--------------|
+| `inventory-service` | `main` | `u1v2w3x` | `fix: typo and unnecessary comments`                                                      | Corrección de errores tipográficos y eliminación de comentarios innecesarios en el código. | 29/10/2025   |
+| `inventory-service` | `main` | `v2w3x4y` | `fix: typo`                                                                               | Ajuste menor de redacción en el código fuente.                                             | 29/10/2025   |
+| `inventory-service` | `main` | `w3x4y5z` | `fix: typo`                                                                               | Corrección de error tipográfico en una clase o archivo específico.                         | 29/10/2025   |
+| `inventory-service` | `main` | `x4y5z6a` | `fix: delete docker compose that was for testing message broker`                          | Eliminado archivo Docker Compose usado únicamente para pruebas con el message broker.      | 29/10/2025   |
+| `inventory-service` | `main` | `y5z6a7b` | `feat(inventory): add docker compose for kafka and change application variable for ports` | Añadido archivo Docker Compose para Kafka y ajustes de puertos en variables de aplicación. | 24/10/2025   |
+| `inventory-service` | `main` | `z6a7b8c` | `feat(inventory): change variables for it to work with broker`                            | Modificadas variables de entorno para compatibilidad con el message broker.                | 24/10/2025   |
+| `inventory-service` | `main` | `a7b8c9d` | `feat(inventory): add kafka configuration`                                                | Configuración inicial de Kafka en el servicio de inventario.                               | 24/10/2025   |
+| `inventory-service` | `main` | `b8c9d0e` | `feat(inventory): add dependencies for broker and events on domain`                       | Agregadas dependencias necesarias para manejar eventos y comunicación con el broker.       | 24/10/2025   |
+| `inventory-service` | `main` | `c9d0e1f` | `chore: Initial commit`                                                                   | Commit inicial del repositorio.                                                            | 08/10/2025   |
+
+###### 5.3.2.2.4 Orders Service
+
+| Repository       | Branch | Commit ID | Commit Message                                               | Commit Message Body                                                                | Committed on |
+|------------------|--------|-----------|--------------------------------------------------------------|------------------------------------------------------------------------------------|--------------|
+| `orders-service` | `main` | `d0e1f2g` | `Merge pull request #1 from Fundamentos-de-Arquitectura/dev` | Integración de los cambios de la rama `dev` al main del proyecto.                  | 29/10/2025   |
+| `orders-service` | `dev`  | `e1f2g3h` | `feat: modify service impl to publish order event to kafka`  | Modificada la implementación del servicio para publicar eventos de orden en Kafka. | 26/10/2025   |
+| `orders-service` | `dev`  | `f2g3h4i` | `feat: add event producer`                                   | Añadido productor de eventos para enviar mensajes al broker Kafka.                 | 26/10/2025   |
+| `orders-service` | `dev`  | `g3h4i5j` | `feat: add kafka configuration`                              | Configurada la conexión y propiedades de Kafka en el servicio.                     | 26/10/2025   |
+| `orders-service` | `dev`  | `h4i5j6k` | `feat: add events`                                           | Creación de clases y estructuras para eventos de dominio.                          | 26/10/2025   |
+| `orders-service` | `dev`  | `i5j6k7l` | `feat: add poml and application for kafka`                   | Añadidos `pom.xml` y propiedades de aplicación para Kafka.                         | 26/10/2025   |
+| `orders-service` | `dev`  | `j6k7l8m` | `fix: typo`                                                  | Corrección de error tipográfico menor.                                             | 08/10/2025   |
+| `orders-service` | `main` | `k7l8m9n` | `chore: initial commit`                                      | Commit inicial del proyecto.                                                       | 08/10/2025   |
+
+---
+
+#### 5.3.2.3 Testing Suite Evidence for Sprint Review
+
+Las pruebas BDD se desarrollaron con **Gherkin** para las User Stories implementadas.  
+A continuación se presentan los archivos `.feature` correspondientes:
+
+---
+
+#### 5.3.2.4 Execution Evidence for Sprint Review
+
+Durante el Sprint 2 se ejecutaron las pruebas de los módulos desarrollados en el backend y frontend, verificando la correcta interacción entre los servicios y la interfaz de usuario.  
+La ejecución de los escenarios Gherkin se realizó utilizando la metodología **BDD (Behavior Driven Development)**, a través de los `.feature files` definidos para cada historia de usuario implementada.
+
+Los resultados de la ejecución validaron la correcta respuesta de los endpoints RESTful del backend y su coherencia con las funcionalidades del frontend.  
+A continuación se resume la evidencia obtenida:
+
+| Módulo        | Endpoint principal      | Resultado de ejecución                            | Estado |
+|---------------|-------------------------|---------------------------------------------------|--------|
+| Inventory     | `/api/v1/inventory`     | Listado, registro y validación de productos       | Passed |
+| Orders        | `/api/v1/orders`        | Registro, visualización y confirmación de órdenes | Passed |
+| Subscriptions | `/api/v1/subscriptions` | Gestión de suscripciones                          | Passed |
+
+
+### Orders:
+
+<img width="1920" height="1080" alt="orders" src="https://github.com/user-attachments/assets/6d4fbb15-acfb-4c9c-a57a-e2ab4b4e03a3" />
+
+<img width="1476" height="882" alt="endpoints" src="https://github.com/user-attachments/assets/ac09ef8f-61c0-418b-9e99-a53eb5b3a04b" />
+
+### Inventory
+
+<img width="1349" height="776" alt="inventory" src="https://github.com/user-attachments/assets/370b8c4f-6fa2-4786-90b0-bd10946005ab" />
+
+### Subscriptions
+
+
+---
+
+#### 5.3.2.5 Microservices Documentation Evidence for Sprint Review
+
+La aplicación *FoodFlow* fue desarrollada bajo una arquitectura **basada en microservicios RESTful**, donde cada dominio del negocio se implementa de forma independiente para asegurar modularidad, escalabilidad y mantenibilidad del sistema.
+
+En este sprint, el foco estuvo en los siguientes microservicios:
+
+| Microservicio             | Descripción funcional                                                       | Endpoints principales                                                                                                  |
+|---------------------------|-----------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|
+| **Inventory Service**     | Control de inventario, stock, y validaciones.                               | `/api/v1/inventory`, `/api/v1/inventory/{id}`                                                                          |
+| **Orders Service**        | Gestión de órdenes, confirmaciones y cálculos totales.                      | `/api/v1/orders`, `/api/v1/orders/{id}`                                                                                |
+| **Subscriptions Service** | Gestión de suscripciones, suscripciones activas y suscripciones canceladas. | `/api/v1/subscriptions`, `/api/v1/subscriptions/{id}`, `/api/v1/subscriptions/plans`, `/api/v1/subscriptions/{userId}` |
+
+##### Documentación API:
+Toda la documentación del backend fue generada automáticamente con **Swagger (OpenAPI)**, donde se describen los endpoints, modelos de datos y respuestas HTTP.
+
+
+##### Integración:
+Cada microservicio será desplegado de manera independiente, comunicándose entre sí mediante HTTP.  
+El gateway unificará las peticiones hacia los servicios de dominio y gestionará los encabezados de autenticación JWT.
+Apache Kafka será el encargado de la integración entre los servicios de Orders e Inventory, permitiendo una comunicación asíncrona y escalable.
+
+---
+
+#### 5.3.2.6 Software Deployment Evidence for Sprint Review
+
+El despliegue de *FoodFlow* se realizó en un entorno cloud utilizando un servidor FreeSQL para la base de datos relacional MySQL, y un entorno web para el frontend.  
+Se implementó un pipeline de despliegue siguiendo el flujo GitFlow, con integración continua y versionamiento controlado.
+
+
+##### Configuración general de despliegue:
+
+| Componente            | Tecnología            | Descripción                                         |
+|-----------------------|-----------------------|-----------------------------------------------------|
+| **Backend**           | Java Spring Boot      | Desplegado como conjunto de microservicios RESTful. |
+| **Frontend**          | Angular + Material UI | Dashboard interactivo con reportes y gráficos.      |
+| **Base de Datos**     | MySQL                 | Gestión de datos financieros, platos e inventarios. |
+| **Documentación API** | Swagger (OpenAPI)     | Publicación de especificaciones REST.               |
+
+##### Proceso de despliegue:
+
+1. **Commit en rama `develop`** → validación de tests automáticos.
+2. **Verificación** mediante consultas de endpoints desde Postman.
+
+**Evidencia visual del despliegue:**
+**Backend desplegado en FreeSQL:**
+<br>
+
+**Frontend desplegado en netlify:** https://deplokeep.netlify.app/pages/login-owner
+
+<br>
+
+**Landing Page desplegada en Vercel:** https://landing-page-silk-nine-71.vercel.app/
+
+---
+
+#### 5.3.2.7 Team Collaboration Insights during Sprint
+
+Durante el Sprint 2, el equipo de desarrollo mantuvo una comunicación constante utilizando herramientas ágiles y colaborativas.  
+La metodología aplicada fue Scrum, con reuniones de seguimiento semanales para la revisión del progreso y resolución de bloqueos.
+
+##### Herramientas utilizadas:
+- **Trello:** gestión del backlog, tareas y definición del flujo Kanban.
+- **GitHub:** control de versiones y revisión de código mediante Pull Requests.
+- **Discord / WhatsApp:** reuniones de planificación, retrospectiva y revisión de sprint.
+
+##### GitHub Insights:
+
+
+
+---
+
+#### 5.3.2.8 Kanban Board
+
+Durante el Sprint 2 se empleó un tablero Kanban en **Trello** para gestionar las historias de usuario, priorizar tareas y monitorear el avance del sprint.
+
+El tablero se estructuró con las siguientes columnas:
+- **To Do:** Tareas seleccionadas para el sprint actual.
+- **Doing** Tareas en desarrollo.
+- **Done:** Historias completadas y verificadas.
+
+**URL del tablero de Trello:**
+
+**Captura del tablero Kanban:**
+
+
+---
+
+**Conclusión del Sprint 2:**  
+El equipo completó con éxito la implementación de Subcriptions, Profiles, IAM y la correcta integración de Apache Kafka con Inventory y Orders. Cumpliendo con los objetivos de desarrollo, validación e integración de los microservicios correspondientes. Las funcionalidades frontend de Dashboard, Reportes quedan planificadas para futuros sprints.
