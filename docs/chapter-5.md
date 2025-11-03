@@ -879,6 +879,7 @@ A continuación se resume la evidencia obtenida:
 
 ### IAM 
 
+<img width="1319" height="713" alt="image" src="https://github.com/user-attachments/assets/fe243064-79c0-4e80-81ad-61128abe71fa" />
 
 
 ---
