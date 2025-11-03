@@ -950,6 +950,7 @@ La metodología aplicada fue Scrum, con reuniones de seguimiento semanales para 
 
 ##### GitHub Insights:
 
+<img width="901" height="450" alt="image" src="https://github.com/user-attachments/assets/ef6373ab-15a0-4dfa-9d6b-aef6215ad3b2" />
 
 
 ---
