@@ -598,7 +598,7 @@ https://trello.com/invite/b/68acc5a626e4614f12ee778f/ATTIb0400bfaba199996d200f64
 Construir las funcionalidades básicas para la gestión de subscriptions, IAM y profiles e integrar orders e inventory con Apache Kafka..
 
 **Avance general:**  
-En este sprint, el equipo se enfocó en construir las funcionalidades básicas para la gestión de de subscriptions, IAM y profiles e integración de inventory y orders con Apache Kafka. Todas las historias de usuario planificadas para estos dos módulos fueron implementadas, probadas y documentadas conforme a los criterios de aceptación.
+En este sprint, el equipo se enfocó en construir las funcionalidades básicas para la gestión de subscriptions, IAM y profiles e integración de inventory y orders con Apache Kafka. Todas las historias de usuario planificadas para estos dos módulos fueron implementadas, probadas y documentadas conforme a los criterios de aceptación.
 
 **Herramienta utilizada:** Trello  
 **URL del tablero:** https://trello.com/invite/b/6908f5bbfb6116c0fb9f808d/ATTI6ffb173398dc4a8f401d2e79128763caA0B1AA18/sprint-2-foodflow
@@ -664,6 +664,13 @@ En este sprint, el equipo se enfocó en construir las funcionalidades básicas p
 | `orders-service` | `dev`  | `j6k7l8m` | `fix: typo`                                                  | Corrección de error tipográfico menor.                                             | 08/10/2025   |
 | `orders-service` | `main` | `k7l8m9n` | `chore: initial commit`                                      | Commit inicial del proyecto.                                                       | 08/10/2025   |
 
+
+##### 5.3.2.2.5 Profiles Service
+
+| Repository         | Branch | Commit ID | Commit Message                                                                   | Commit Message Body                              | Committed on |
+|--------------------|--------|-----------|----------------------------------------------------------------------------------|--------------------------------------------------|--------------|
+| `profiles-service` | `main` | `l9m0n1o` | `feat: initialize profiles microservice with basic structure and configurations` | Servicio implementado, push directo desde local. | 30/10/2025   |
+
 ---
 
 #### 5.3.2.3 Testing Suite Evidence for Sprint Review
@@ -681,11 +688,13 @@ La ejecución de los escenarios Gherkin se realizó utilizando la metodología *
 Los resultados de la ejecución validaron la correcta respuesta de los endpoints RESTful del backend y su coherencia con las funcionalidades del frontend.  
 A continuación se resume la evidencia obtenida:
 
-| Módulo        | Endpoint principal      | Resultado de ejecución                            | Estado |
-|---------------|-------------------------|---------------------------------------------------|--------|
-| Inventory     | `/api/v1/inventory`     | Listado, registro y validación de productos       | Passed |
-| Orders        | `/api/v1/orders`        | Registro, visualización y confirmación de órdenes | Passed |
-| Subscriptions | `/api/v1/subscriptions` | Gestión de suscripciones                          | Passed |
+| Módulo        | Endpoint principal                           | Resultado de ejecución                            | Estado |
+|---------------|----------------------------------------------|---------------------------------------------------|--------|
+| Inventory     | `/api/v1/inventory`                          | Listado, registro y validación de productos       | Passed |
+| Orders        | `/api/v1/orders`                             | Registro, visualización y confirmación de órdenes | Passed |
+| Subscriptions | `/api/v1/subscriptions`                      | Gestión de suscripciones                          | Passed |
+| Profiles      | `/api/v1/profiles`                           | Gestión de perfiles de usuario                    | Passed |
+| IAM           | `/api/v1/accounts`, `/api/v1/authentication` | Gestión de autenticación de usuario               | Passed |
 
 
 ### Orders:
@@ -700,6 +709,9 @@ A continuación se resume la evidencia obtenida:
 
 ### Subscriptions
 
+### Profiles
+
+### IAM 
 
 ---
 
@@ -709,11 +721,13 @@ La aplicación *FoodFlow* fue desarrollada bajo una arquitectura **basada en mic
 
 En este sprint, el foco estuvo en los siguientes microservicios:
 
-| Microservicio             | Descripción funcional                                                       | Endpoints principales                                                                                                  |
-|---------------------------|-----------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|
-| **Inventory Service**     | Control de inventario, stock, y validaciones.                               | `/api/v1/inventory`, `/api/v1/inventory/{id}`                                                                          |
-| **Orders Service**        | Gestión de órdenes, confirmaciones y cálculos totales.                      | `/api/v1/orders`, `/api/v1/orders/{id}`                                                                                |
-| **Subscriptions Service** | Gestión de suscripciones, suscripciones activas y suscripciones canceladas. | `/api/v1/subscriptions`, `/api/v1/subscriptions/{id}`, `/api/v1/subscriptions/plans`, `/api/v1/subscriptions/{userId}` |
+| Microservicio             | Descripción funcional                                                       | Endpoints principales                                                                                                                             |
+|---------------------------|-----------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Inventory Service**     | Control de inventario, stock, y validaciones.                               | `/api/v1/inventory`, `/api/v1/inventory/{id}`                                                                                                     |
+| **Orders Service**        | Gestión de órdenes, confirmaciones y cálculos totales.                      | `/api/v1/orders`, `/api/v1/orders/{id}`                                                                                                           |
+| **Subscriptions Service** | Gestión de suscripciones, suscripciones activas y suscripciones canceladas. | `/api/v1/subscriptions`, `/api/v1/subscriptions/{id}`, `/api/v1/subscriptions/plans`, `/api/v1/subscriptions/{userId}`                            |
+| **Profiles Service**      | Gestión de perfiles de usuario, creación y actualización.                   | `/api/v1/profiles`, `/api/v1/profiles/{profilesId}`                                                                                               |
+| **IAM Service**           | Gestión de autenticación de usuario, registro e inicio de sesión.           | `/api/v1/accounts`, `/api/v1/accounts/{accountsId}`, `/api/v1/authentication`, `/api/v1/authentication/sign-in`, `/api/v1/authentication/sign-up` |
 
 ##### Documentación API:
 Toda la documentación del backend fue generada automáticamente con **Swagger (OpenAPI)**, donde se describen los endpoints, modelos de datos y respuestas HTTP.
@@ -781,7 +795,8 @@ Durante el Sprint 2 se empleó un tablero Kanban en **Trello** para gestionar la
 El tablero se estructuró con las siguientes columnas:
 - **To Do:** Tareas seleccionadas para el sprint actual.
 - **Doing** Tareas en desarrollo.
-- **Done:** Historias completadas y verificadas.
+- **To Review:** Tareas realizadas, pendientes de revisión.
+- **Done:** Tareas completadas y revisadas.
 
 **URL del tablero de Trello:** https://trello.com/invite/b/6908f5bbfb6116c0fb9f808d/ATTI6ffb173398dc4a8f401d2e79128763caA0B1AA18/sprint-2-foodflow
 
@@ -792,7 +807,8 @@ El tablero se estructuró con las siguientes columnas:
 <img width="1145" height="595" alt="image" src="https://github.com/user-attachments/assets/9027b7d4-1060-4b84-8fcf-4de41ca6c0a7" />
 
 <br>
+
 ---
 
 **Conclusión del Sprint 2:**  
-El equipo completó con éxito la implementación de Subcriptions, Profiles, IAM y la correcta integración de Apache Kafka con Inventory y Orders. Cumpliendo con los objetivos de desarrollo, validación e integración de los microservicios correspondientes. Las funcionalidades frontend de Dashboard, Reportes quedan planificadas para futuros sprints.
+El equipo completó con éxito la implementación de Subscriptions, Profiles, IAM y la correcta integración de Apache Kafka con Inventory y Orders. Cumpliendo con los objetivos de desarrollo, validación e integración de los microservicios correspondientes. Las funcionalidades frontend de Dashboard, servicio Reportes y servicio Menú quedan planificadas para futuros sprints.
