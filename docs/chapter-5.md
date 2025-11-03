@@ -330,12 +330,12 @@ https://trello.com/invite/b/68acc5a626e4614f12ee778f/ATTIb0400bfaba199996d200f64
 
 #### 5.3.1.2 Development Evidence for Sprint Review
 
-| Repository         | Branch                      | Commit ID | Commit Message                                  | Commit Message Body                                          | Committed on |
-|--------------------|-----------------------------|-----------|-------------------------------------------------|--------------------------------------------------------------|--------------|
-| `foodflow-backend` | `feature/inventory-module`  | `c19ad45` | `feat: implement inventory CRUD operations`     | Added controller, services, and models for inventory management. | 02/09/2025   |
-| `foodflow-backend` | `feature/orders-module`     | `d22ce35` | `feat: add order creation and confirmation`     | Implemented endpoints for creating and confirming orders.    | 03/09/2025   |
-| `foodflow-backend` | `fix/stock-update`          | `e33de12` | `fix: correct stock update on order confirmation` | Ensured inventory stock is correctly updated after an order. | 04/09/2025   |
-| `foodflow-backend` | `refactor/order-calculation`| `f42bd73` | `refactor: improve order total calculation`     | Optimized the logic for calculating order totals.            | 04/09/2025   |
+| Repository          | Branch                       | Commit ID | Commit Message                                    | Commit Message Body                                              | Committed on |
+|---------------------|------------------------------|-----------|---------------------------------------------------|------------------------------------------------------------------|--------------|
+| `Inventory Service` | `feature/inventory-module`   | `c19ad45` | `feat: implement inventory CRUD operations`       | Added controller, services, and models for inventory management. | 02/09/2025   |
+| `Orders Service`    | `feature/orders-module`      | `d22ce35` | `feat: add order creation and confirmation`       | Implemented endpoints for creating and confirming orders.        | 03/09/2025   |
+| `Inventory Service` | `fix/stock-update`           | `e33de12` | `fix: correct stock update on order confirmation` | Ensured inventory stock is correctly updated after an order.     | 04/09/2025   |
+| `Orders Service`    | `refactor/order-calculation` | `f42bd73` | `refactor: improve order total calculation`       | Optimized the logic for calculating order totals.                | 04/09/2025   |
 
 ---
 
@@ -415,62 +415,6 @@ A continuación se presentan los archivos `.feature` correspondientes:
     Then el sistema actualiza automáticamente el campo "Precio Total" a $30.00
 ```
 
-- US14 - Crear un nuevo orden
-
-```Feature: Crear un nuevo orden
-  Como dueño de restaurante
-  Quiero registrar un nuevo orden con los detalles de la mesa, platos y fecha
-  Para llevar un control digital de las órdenes
-
-  Scenario: Registro exitoso de un nuevo orden
-    Given que estoy en la sección "Add New Order"
-    When ingreso los detalles de la mesa, platos y fecha válidos
-    And presiono "Save Order"
-    Then el nuevo orden se registra correctamente en el sistema
-    And aparece un mensaje de confirmación
-```
-
-- US15 - Confirmar un orden
-
-```Feature: Confirmar un orden
-  Como dueño de restaurante
-  Quiero confirmar un orden para que quede registrado en el sistema y se actualice el inventario
-  Para asegurar la consistencia de los datos
-
-  Scenario: Confirmación exitosa de un orden
-    Given que he completado todos los detalles del orden
-    When presiono el botón "Confirm Order"
-    Then el sistema guarda el orden completo en la base de datos
-    And actualiza el inventario correctamente
-```
-
-- US16 - Cancelar creación de orden
-
-```Feature: Cancelar creación de orden
-  Como dueño de restaurante
-  Quiero cancelar la creación de un orden
-  Para evitar guardar información incorrecta o incompleta
-
-  Scenario: Cancelación exitosa de un orden
-    Given que he comenzado a registrar una orden
-    When presiono el botón "Cancel"
-    Then el sistema limpia todos los datos del formulario
-    And no guarda ningún registro de orden en la base de datos
-```
-
-- US17 - Visualizar historial de órdenes
-
-```Feature: Visualizar historial de órdenes
-  Como dueño de restaurante
-  Quiero ver un historial de órdenes realizadas
-  Para analizar tendencias y patrones de consumo
-
-  Scenario: Visualización del historial de órdenes
-    Given que estoy en la sección "Order History"
-    When ingreso al sistema
-    Then puedo ver una tabla con todas las órdenes realizadas
-    And cada fila incluye detalles como mesa, platos, precio total y fecha
-```
 
 ---
 
@@ -603,6 +547,23 @@ En este sprint, el equipo se enfocó en construir las funcionalidades básicas p
 **Herramienta utilizada:** Trello  
 **URL del tablero:** https://trello.com/invite/b/6908f5bbfb6116c0fb9f808d/ATTI6ffb173398dc4a8f401d2e79128763caA0B1AA18/sprint-2-foodflow
 
+
+| User Story Id | Título                                  | Descripción                                                                                                                                                                      | Estimado (horas) | Encargado          |
+|:--------------|:----------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-----------------|:-------------------|
+| **US03**      | Visualizar inventario actual            | Como dueño de restaurante quiero ver una tabla con el stock, costo unitario y unidad de medida de cada producto para controlar el inventario de manera clara y rápida.           | 6                | Werner Lang        |
+| **US04**      | Agregar un nuevo producto al inventario | Como dueño de restaurante quiero registrar un nuevo producto con su nombre, stock, costo unitario y unidad de medida para mantener actualizado mi inventario.                    | 5                | Werner Lang        |
+| **US05**      | Validar campos al agregar producto      | Como dueño de restaurante quiero que el sistema valide los campos obligatorios al agregar un producto para evitar errores en el registro del inventario.                         | 3                | Werner Lang        |
+| **US09**      | Visualizar órdenes existentes           | Como dueño de restaurante quiero ver en una tabla las órdenes realizadas con su mesa, platos, precio total y fecha para llevar un control claro y rápido de los órdenes.         | 6                | Werner Lang        |
+| **US14**      | Visualizar Planes de Suscripción        | Como dueño de restaurante, quiero ver los diferentes planes de suscripción disponibles (gratuito, estándar y premium) para conocer las opciones y beneficios antes de decidirme. | 5                | Paolo Torres       |
+| **US15**      | Suscribirse al Plan Premium             | Como dueño de restaurante, quiero poder suscribirme al plan premium para acceder a funcionalidades avanzadas que mejoren la gestión de mi negocio.                               | 5                | Paolo Torres       |
+| **US16**      | Cancelar Suscripción                    | Como dueño de restaurante, quiero poder cancelar mi suscripción de pago para dejar de usar el plan premium cuando ya no lo considere necesario.                                  | 4                | Paolo Torres       |
+| **US17**      | Visualizar Perfil de Usuario            | Como dueño de restaurante, quiero ver mi información personal y detalles de cuenta en la sección “Profile” para poder revisar mis datos registrados.                             | 4                | Romina Maita       |
+| **US18**      | Actualizar Datos del Perfil             | Como dueño de restaurante, quiero actualizar mi información personal (nombre, correo, contraseña, imagen de perfil) para mantener mi cuenta al día.                              | 5                | Romina Maita       |
+| **US19**      | Iniciar Sesión                          | Como dueño de restaurante, quiero iniciar sesión en el sistema con mi correo y contraseña para acceder de forma segura a mis datos y funcionalidades.                            | 6                | Romina Maita       |
+| **US20**      | Crear Cuenta Nueva                      | Como dueño de restaurante, quiero crear una cuenta ingresando mis datos básicos (nombre, correo, contraseña) para comenzar a usar el sistema.                                    | 6                | Romina Maita       |
+
+
+
 ---
 
 #### 5.3.2.2 Development Evidence for Sprint Review
@@ -677,6 +638,208 @@ En este sprint, el equipo se enfocó en construir las funcionalidades básicas p
 
 Las pruebas BDD se desarrollaron con **Gherkin** para las User Stories implementadas.  
 A continuación se presentan los archivos `.feature` correspondientes:
+
+## US03 - Visualizar Inventario Actual
+```gherkin
+Feature: Visualizar Inventario Actual
+  Como dueño de restaurante
+  Quiero ver una tabla con el stock, costo unitario y unidad de medida de cada producto
+  Para controlar el inventario de manera clara y rápida
+
+  Scenario: Visualización de la tabla de inventario
+    Given que tengo productos registrados en mi inventario
+    When navego a la sección "Inventory Management"
+    Then debo ver una tabla con el listado de todos los productos
+    And la tabla debe mostrar las columnas: Producto, Stock Actual, Costo Unitario y Unidad de Medida
+```
+
+## US04 - Agregar Nuevo Producto al Inventario
+```gherkin
+Feature: Agregar Nuevo Producto al Inventario
+  Como dueño de restaurante
+  Quiero registrar un nuevo producto con sus datos
+  Para mantener actualizado mi inventario
+
+  Scenario: Registro exitoso de producto
+    Given que estoy en la sección "Add New Product"
+    When ingreso un Nombre, Stock (numérico), Costo Unitario (numérico) y Unidad de Medida válidos
+    And presiono el botón "Add Product"
+    Then el nuevo producto se añade a la tabla del inventario
+    And veo un mensaje de confirmación "Producto añadido exitosamente"
+```
+
+## US05 - Validar Campos al Agregar Producto
+```gherkin
+Feature: Validar Campos al Agregar Producto
+  Como dueño de restaurante
+  Quiero que el sistema valide los campos obligatorios y de formato
+  Para evitar errores en el registro del inventario
+
+  Scenario: Intento de registro con datos incompletos o inválidos
+    Given que estoy en el formulario para registrar un nuevo producto
+    When dejo el campo "Costo Unitario" vacío o ingreso texto en lugar de un número
+    And presiono el botón "Add Product"
+    Then el sistema muestra un mensaje de error específico junto al campo
+    And el producto no se guarda en el inventario
+```
+
+## US09 - Visualizar Órdenes Existentes
+```gherkin
+Feature: Visualizar Órdenes Existentes
+  Como dueño de restaurante
+  Quiero ver las órdenes registradas con sus detalles clave
+  Para llevar un control claro y rápido de las órdenes
+
+  Scenario: Visualización inicial de órdenes en la tabla
+    Given que tengo órdenes registradas en el sistema
+    When navego a la sección "Orders"
+    Then debo ver una tabla con las órdenes
+    And la tabla muestra las columnas: Mesa, Platos, Precio Total y Fecha
+```
+
+## US14 - Visualizar Planes de Suscripción
+```gherkin
+Feature: Visualizar Planes de Suscripción
+  Como dueño de restaurante
+  Quiero ver los diferentes planes de suscripción disponibles
+  Para conocer las opciones y beneficios antes de decidirme
+
+  Scenario: Mostrar lista de planes disponibles
+    Given que accedo a la sección "Subscriptions"
+    When el sistema carga los datos de los planes
+    Then debo ver una lista con los nombres, precios y beneficios de cada plan
+    And los planes deben incluir: Gratuito, Estándar y Premium
+
+  Scenario: Error al cargar planes
+    Given que accedo a la sección "Subscriptions"
+    When el servidor no responde correctamente
+    Then debo ver un mensaje "No se pudieron cargar los planes. Intente nuevamente."
+```
+
+## US15 - Suscribirse al Plan Premium
+```gherkin
+Feature: Suscribirse al Plan Premium
+  Como dueño de restaurante
+  Quiero poder suscribirme al plan premium
+  Para acceder a funcionalidades avanzadas de gestión
+
+  Scenario: Suscripción exitosa
+    Given que estoy en la sección "Subscriptions" y tengo un método de pago válido
+    When selecciono el plan "Premium" y confirmo el pago
+    Then el sistema activa mi suscripción premium
+    And veo un mensaje de confirmación "Suscripción activada correctamente"
+
+  Scenario: Error en el pago
+    Given que estoy en la sección "Subscriptions"
+    When intento suscribirme pero el método de pago es rechazado
+    Then el sistema muestra un mensaje "Error en la transacción, intente nuevamente"
+```
+
+## US16 - Cancelar Suscripción
+```gherkin
+Feature: Cancelar Suscripción
+  Como dueño de restaurante
+  Quiero cancelar mi suscripción premium
+  Para dejar de usar el plan de pago cuando ya no lo necesite
+
+  Scenario: Cancelación exitosa de suscripción
+    Given que tengo una suscripción premium activa
+    When hago clic en "Cancel Subscription" y confirmo la acción
+    Then el sistema cambia mi plan a "Free Plan"
+    And muestra un mensaje de confirmación "Suscripción cancelada correctamente"
+
+  Scenario: Cancelación abortada por el usuario
+    Given que tengo una suscripción premium activa
+    When hago clic en "Cancel Subscription" pero cierro el diálogo sin confirmar
+    Then la suscripción permanece activa
+```
+
+## US17 - Visualizar Perfil de Usuario
+```gherkin
+Feature: Visualizar Perfil de Usuario
+  Como dueño de restaurante
+  Quiero ver mi información personal y detalles de cuenta
+  Para revisar mis datos registrados
+
+  Scenario: Mostrar datos del perfil
+    Given que estoy autenticado en el sistema
+    When navego a la sección "Profile"
+    Then debo ver mi nombre, correo e imagen de perfil
+    And el plan de suscripción actual
+
+  Scenario: Error al cargar perfil
+    Given que intento acceder a la sección "Profile"
+    When ocurre un error al recuperar la información
+    Then el sistema muestra un mensaje "No se pudo cargar el perfil. Reintente."
+```
+
+## US18 - Actualizar Datos del Perfil
+```gherkin
+Feature: Actualizar Datos del Perfil
+  Como dueño de restaurante
+  Quiero editar mi información personal y contraseña
+  Para mantener mis datos actualizados
+
+  Scenario: Actualización exitosa
+    Given que estoy en la sección "Profile"
+    When modifico mi nombre o correo y presiono "Guardar cambios"
+    Then el sistema actualiza mis datos
+    And muestra un mensaje "Cambios guardados correctamente"
+
+  Scenario: Validación de campos inválidos
+    Given que estoy editando mis datos
+    When ingreso un correo con formato incorrecto o dejo un campo vacío
+    Then el sistema muestra mensajes de error bajo los campos correspondientes
+```
+
+## US19 - Iniciar Sesión
+```gherkin
+Feature: Iniciar Sesión
+  Como dueño de restaurante
+  Quiero acceder al sistema con mi correo y contraseña
+  Para ingresar de forma segura a mis funcionalidades
+
+  Scenario: Inicio de sesión exitoso
+    Given que tengo una cuenta registrada
+    When ingreso mi correo y contraseña válidos y presiono "Login"
+    Then el sistema me redirige al dashboard principal
+
+  Scenario: Credenciales inválidas
+    Given que ingreso una contraseña incorrecta
+    When presiono "Login"
+    Then el sistema muestra un mensaje "Credenciales inválidas"
+
+  Scenario: Campos vacíos
+    Given que intento iniciar sesión sin completar los campos
+    When presiono "Login"
+    Then el sistema muestra un mensaje "Complete todos los campos"
+```
+
+## US20 - Crear Cuenta Nueva
+```gherkin
+Feature: Crear Cuenta Nueva
+  Como dueño de restaurante
+  Quiero registrarme en el sistema con mis datos básicos
+  Para comenzar a usar el sistema
+
+  Scenario: Registro exitoso
+    Given que estoy en la página de registro
+    When ingreso un nombre, correo y contraseña válidos y presiono "Sign Up"
+    Then el sistema crea mi cuenta
+    And muestra un mensaje "Cuenta creada exitosamente"
+    And me redirige a la página de inicio de sesión
+
+  Scenario: Campos inválidos
+    Given que intento registrarme con un correo en formato incorrecto o sin llenar todos los campos
+    When presiono "Sign Up"
+    Then el sistema muestra un mensaje de error "Por favor complete todos los campos correctamente"
+
+  Scenario: Correo duplicado
+    Given que intento crear una cuenta con un correo ya registrado
+    When presiono "Sign Up"
+    Then el sistema muestra un mensaje "El correo ingresado ya está en uso"
+```
+
 
 ---
 
