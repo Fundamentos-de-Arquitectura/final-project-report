@@ -8,7 +8,7 @@
 ## <div style="text-align: center;"> Fundamentos de Arquitectura de Software - Presencial</div>
 ## <div style="text-align: center;"> PROFESOR: Ernesto Ocampo Tello</div>
 ## <div style="text-align: center;"> NRC: 6339</div>
-## <div style="text-align: center;"> INFORME TP</div>
+## <div style="text-align: center;"> INFORME TB3</div>
 ## <div style="text-align: center;"> START UP: Go5U </div>
 ## <div style="text-align: center;"> PRODUCTO: FoodFlow </div>
 
@@ -202,6 +202,13 @@ Para el desarrollo de este informe se utilizó GitHub como plataforma de colabor
 <img width="918" height="475" alt="insights" src="https://github.com/user-attachments/assets/7265feb4-21b9-4065-8000-0e802fee2751" />
 <br>
 <br>
+
+**TB3:**
+<br>
+<img width="901" height="450" alt="image" src="https://github.com/user-attachments/assets/4d88ac77-c3a1-481a-be53-f45f7dd82a0b" />
+<br>
+<br>
+
 ## Student Outcome
 
 | Criterio específico                                                                                                                     | Acciones realizadas                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | Conclusiones                                                                                                                                                                                                                                                                                                                                                                      |
