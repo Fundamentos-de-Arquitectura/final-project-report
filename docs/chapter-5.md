@@ -601,7 +601,7 @@ Construir las funcionalidades básicas para la gestión de subscriptions, IAM y 
 En este sprint, el equipo se enfocó en construir las funcionalidades básicas para la gestión de de subscriptions, IAM y profiles e integración de inventory y orders con Apache Kafka. Todas las historias de usuario planificadas para estos dos módulos fueron implementadas, probadas y documentadas conforme a los criterios de aceptación.
 
 **Herramienta utilizada:** Trello  
-**URL del tablero:**
+**URL del tablero:** https://trello.com/invite/b/6908f5bbfb6116c0fb9f808d/ATTI6ffb173398dc4a8f401d2e79128763caA0B1AA18/sprint-2-foodflow
 
 ---
 
@@ -783,11 +783,15 @@ El tablero se estructuró con las siguientes columnas:
 - **Doing** Tareas en desarrollo.
 - **Done:** Historias completadas y verificadas.
 
-**URL del tablero de Trello:**
+**URL del tablero de Trello:** https://trello.com/invite/b/6908f5bbfb6116c0fb9f808d/ATTI6ffb173398dc4a8f401d2e79128763caA0B1AA18/sprint-2-foodflow
 
 **Captura del tablero Kanban:**
 
+<br>
 
+<img width="1550" height="772" alt="image" src="https://github.com/user-attachments/assets/c2965d26-2a1f-4788-8abb-a9fd9498aae3" />
+
+<br>
 ---
 
 **Conclusión del Sprint 2:**  
