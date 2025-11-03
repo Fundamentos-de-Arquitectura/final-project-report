@@ -870,6 +870,7 @@ A continuación se resume la evidencia obtenida:
 
 ### Subscriptions
 
+<img width="1376" height="606" alt="image" src="https://github.com/user-attachments/assets/447eb52e-d6d2-4f83-a4c1-7f64f433b1e7" />
 
 
 ### Profiles
