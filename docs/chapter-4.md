@@ -15,7 +15,6 @@ La arquitectura de **FoodFlow** se construye bajo principios que aseguran cohere
 Estos principios derivan de los requerimientos no funcionales (RNF) y la visión del Capítulo I orientada a reducir pérdidas y mejorar la toma de decisiones.
 
 
-
 ### 4.1.2 Approaches Statements, Architectural Styles & Patterns
 
 El sistema adopta una arquitectura de **microservicios con enfoque DDD (Domain-Driven Design)**.  
@@ -32,8 +31,9 @@ Cada *bounded context* se implementa como un servicio independiente desplegable 
 | Subscription    | Subscriptions Service | Gestión de planes SaaS y periodos de servicio.                                          |
 | Orders          | Orders Service        | Muestra información estática para pruebas, sin operaciones CRUD.                        |
 
-El **API Gateway** centraliza peticiones, aplica seguridad y distribuye tráfico hacia los microservicios internos.  
-El estilo adoptado es **RESTful**, con comunicación **HTTP/JSON** y documentación de endpoints mediante **Swagger**.
+**API Gateway** centraliza peticiones, aplica seguridad y distribuye tráfico hacia los microservicios internos.  
+El estilo adoptado es **RESTful**, con comunicación **REST Client** y documentación de endpoints mediante **Swagger**.
+Únicamente Inventory y Orders services se comunican con Apache Kafka.
 
 #### Patrones aplicados:
 - Repository + Service Layer: aislamiento de persistencia.
@@ -98,74 +98,74 @@ Diagrama de clases
 
 ## Servicio de Suscripción
 
-| Clase | Tipo | Descripción | Propósito |
-|-------|------|-------------|-----------|
-| **SubscriptionController** | Controlador | Maneja las peticiones HTTP relacionadas con suscripciones | Expone endpoints REST para que los usuarios puedan ver planes, suscribirse, consultar su suscripción y cancelarla |
-| **SubscriptionService** | Servicio | Contiene la lógica de negocio de las suscripciones | Orquesta el proceso completo: valida datos, procesa pagos, activa suscripciones y gestiona renovaciones |
-| **Subscription** | Entidad | Representa una suscripción activa de un usuario | Almacena información de la suscripción individual: qué usuario, qué plan eligió, cuándo inicia/termina, estado del pago |
-| **SubscriptionPlan** | Entidad/Catálogo | Representa los planes de suscripción disponibles | Define los diferentes planes que se ofrecen (Básico, Premium, Enterprise) con sus precios, características y límites |
-| **SubscriptionRepository** | Repositorio | Acceso a datos de suscripciones de usuarios | Maneja operaciones CRUD de las **suscripciones activas/históricas de usuarios**. Cada vez que un usuario se suscribe, se crea un registro aquí |
-| **PlanRepository** | Repositorio | Acceso a datos de planes disponibles | Maneja operaciones CRUD de los **planes que ofreces como negocio** (catálogo de productos). Son los planes base que no cambian por usuario |
-| **SubscriptionStatus** | Enum | Estados posibles de una suscripción | Rastrea el flujo: desde que el usuario selecciona un plan, valida pago, procesa, hasta que queda activa o falla |
-| **BillingPeriod** | Enum | Períodos de facturación | Define si el plan se cobra mensual, trimestral o anualmente |
-| **PaymentClient** | Cliente | Interfaz para procesar pagos | Se comunica con una pasarela de pago externa (Stripe, PayPal, etc.) para procesar transacciones |
-| **PaymentData** | DTO | Datos de pago del usuario | Encapsula información sensible: tarjeta, titular, fecha de expiración, CVV |
-| **PaymentResult** | DTO | Resultado del procesamiento de pago | Contiene si el pago fue exitoso, ID de transacción y mensajes de error si aplica |
+| Clase                      | Tipo             | Descripción                                               | Propósito                                                                                                                                      |
+|----------------------------|------------------|-----------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------|
+| **SubscriptionController** | Controlador      | Maneja las peticiones HTTP relacionadas con suscripciones | Expone endpoints REST para que los usuarios puedan ver planes, suscribirse, consultar su suscripción y cancelarla                              |
+| **SubscriptionService**    | Servicio         | Contiene la lógica de negocio de las suscripciones        | Orquesta el proceso completo: valida datos, procesa pagos, activa suscripciones y gestiona renovaciones                                        |
+| **Subscription**           | Entidad          | Representa una suscripción activa de un usuario           | Almacena información de la suscripción individual: qué usuario, qué plan eligió, cuándo inicia/termina, estado del pago                        |
+| **SubscriptionPlan**       | Entidad/Catálogo | Representa los planes de suscripción disponibles          | Define los diferentes planes que se ofrecen (Básico, Premium, Enterprise) con sus precios, características y límites                           |
+| **SubscriptionRepository** | Repositorio      | Acceso a datos de suscripciones de usuarios               | Maneja operaciones CRUD de las **suscripciones activas/históricas de usuarios**. Cada vez que un usuario se suscribe, se crea un registro aquí |
+| **PlanRepository**         | Repositorio      | Acceso a datos de planes disponibles                      | Maneja operaciones CRUD de los **planes que ofreces como negocio** (catálogo de productos). Son los planes base que no cambian por usuario     |
+| **SubscriptionStatus**     | Enum             | Estados posibles de una suscripción                       | Rastrea el flujo: desde que el usuario selecciona un plan, valida pago, procesa, hasta que queda activa o falla                                |
+| **BillingPeriod**          | Enum             | Períodos de facturación                                   | Define si el plan se cobra mensual, trimestral o anualmente                                                                                    |
+| **PaymentClient**          | Cliente          | Interfaz para procesar pagos                              | Se comunica con una pasarela de pago externa (Stripe, PayPal, etc.) para procesar transacciones                                                |
+| **PaymentData**            | DTO              | Datos de pago del usuario                                 | Encapsula información sensible: tarjeta, titular, fecha de expiración, CVV                                                                     |
+| **PaymentResult**          | DTO              | Resultado del procesamiento de pago                       | Contiene si el pago fue exitoso, ID de transacción y mensajes de error si aplica                                                               |
 
 ---
 
 ## Servicio de Inventario
 
-| Clase | Tipo | Descripción | Propósito |
-|-------|------|-------------|-----------|
-| **InventoryController** | Controlador | Maneja peticiones HTTP de inventario | Expone endpoints para registrar productos, actualizar stock y consultar inventario |
-| **InventoryService** | Servicio | Lógica de negocio del inventario | Gestiona operaciones de productos: crear, actualizar stock, descontar ingredientes usados en órdenes |
-| **Product** | Entidad | Representa un producto/ingrediente en inventario | Almacena información del producto: nombre, categoría, precio de compra, stock actual, proveedor |
-| **ProductStatus** | Enum | Estados del producto | Indica el estado del producto en el sistema: pendiente, registrado, stock disponible, bajo o agotado |
-| **ProductRepository** | Repositorio | Acceso a datos de productos | Maneja operaciones CRUD de productos en inventario |
+| Clase                   | Tipo        | Descripción                                      | Propósito                                                                                            |
+|-------------------------|-------------|--------------------------------------------------|------------------------------------------------------------------------------------------------------|
+| **InventoryController** | Controlador | Maneja peticiones HTTP de inventario             | Expone endpoints para registrar productos, actualizar stock y consultar inventario                   |
+| **InventoryService**    | Servicio    | Lógica de negocio del inventario                 | Gestiona operaciones de productos: crear, actualizar stock, descontar ingredientes usados en órdenes |
+| **Product**             | Entidad     | Representa un producto/ingrediente en inventario | Almacena información del producto: nombre, categoría, precio de compra, stock actual, proveedor      |
+| **ProductStatus**       | Enum        | Estados del producto                             | Indica el estado del producto en el sistema: pendiente, registrado, stock disponible, bajo o agotado |
+| **ProductRepository**   | Repositorio | Acceso a datos de productos                      | Maneja operaciones CRUD de productos en inventario                                                   |
 
 ---
 
 ## Servicio de Menú
 
-| Clase | Tipo | Descripción | Propósito |
-|-------|------|-------------|-----------|
-| **MenuController** | Controlador | Maneja peticiones HTTP del menú | Expone endpoints para crear platos y consultar el menú |
-| **MenuService** | Servicio | Lógica de negocio del menú | Gestiona la creación y consulta de platos disponibles para venta |
-| **Dish** | Entidad | Representa un plato del menú | Almacena información del plato: nombre, descripción, precio de venta, categoría |
-| **DishStatus** | Enum | Estados del plato | Indica si el plato está en proceso de creación o ya está registrado en el menú |
-| **DishRepository** | Repositorio | Acceso a datos de platos | Maneja operaciones CRUD de platos del menú |
+| Clase              | Tipo        | Descripción                     | Propósito                                                                       |
+|--------------------|-------------|---------------------------------|---------------------------------------------------------------------------------|
+| **MenuController** | Controlador | Maneja peticiones HTTP del menú | Expone endpoints para crear platos y consultar el menú                          |
+| **MenuService**    | Servicio    | Lógica de negocio del menú      | Gestiona la creación y consulta de platos disponibles para venta                |
+| **Dish**           | Entidad     | Representa un plato del menú    | Almacena información del plato: nombre, descripción, precio de venta, categoría |
+| **DishStatus**     | Enum        | Estados del plato               | Indica si el plato está en proceso de creación o ya está registrado en el menú  |
+| **DishRepository** | Repositorio | Acceso a datos de platos        | Maneja operaciones CRUD de platos del menú                                      |
 
 ---
 
 ## Servicio de Órdenes
 
-| Clase | Tipo | Descripción | Propósito |
-|-------|------|-------------|-----------|
-| **OrderController** | Controlador | Maneja peticiones HTTP de órdenes | Expone endpoints para cargar órdenes, consultarlas y filtrar por rango de fechas |
-| **OrderService** | Servicio | Lógica de negocio de órdenes | Procesa órdenes de venta, calcula totales, actualiza inventario y coordina con otros servicios |
-| **Order** | Entidad | Representa una orden de venta | Almacena información de la orden: número, items vendidos, total, fecha, estado de procesamiento |
-| **OrderItem** | Entidad | Representa un ítem dentro de una orden | Detalle de cada plato vendido: qué plato, cantidad, precio unitario, subtotal |
-| **OrderStatus** | Enum | Estados de la orden | Rastrea el procesamiento: cargada, procesando, actualizando stock, registrada, completada |
-| **OrderRepository** | Repositorio | Acceso a datos de órdenes | Maneja operaciones CRUD de órdenes, con filtros por fecha y estado |
-| **MessagingService** | Servicio de mensajería | Publica eventos entre microservicios | Comunica eventos importantes: orden procesada, actualización de stock, suscripción activada |
-| **StockUpdateEvent** | Evento | Evento de actualización de inventario | Mensaje que se envía cuando una orden requiere descontar stock |
-| **InventoryClient** | Cliente | Interfaz para comunicarse con Inventario | Permite al servicio de órdenes consultar y actualizar el inventario de otros microservicios |
+| Clase                | Tipo                   | Descripción                              | Propósito                                                                                       |
+|----------------------|------------------------|------------------------------------------|-------------------------------------------------------------------------------------------------|
+| **OrderController**  | Controlador            | Maneja peticiones HTTP de órdenes        | Expone endpoints para cargar órdenes, consultarlas y filtrar por rango de fechas                |
+| **OrderService**     | Servicio               | Lógica de negocio de órdenes             | Procesa órdenes de venta, calcula totales, actualiza inventario y coordina con otros servicios  |
+| **Order**            | Entidad                | Representa una orden de venta            | Almacena información de la orden: número, items vendidos, total, fecha, estado de procesamiento |
+| **OrderItem**        | Entidad                | Representa un ítem dentro de una orden   | Detalle de cada plato vendido: qué plato, cantidad, precio unitario, subtotal                   |
+| **OrderStatus**      | Enum                   | Estados de la orden                      | Rastrea el procesamiento: cargada, procesando, actualizando stock, registrada, completada       |
+| **OrderRepository**  | Repositorio            | Acceso a datos de órdenes                | Maneja operaciones CRUD de órdenes, con filtros por fecha y estado                              |
+| **MessagingService** | Servicio de mensajería | Publica eventos entre microservicios     | Comunica eventos importantes: orden procesada, actualización de stock, suscripción activada     |
+| **StockUpdateEvent** | Evento                 | Evento de actualización de inventario    | Mensaje que se envía cuando una orden requiere descontar stock                                  |
+| **InventoryClient**  | Cliente                | Interfaz para comunicarse con Inventario | Permite al servicio de órdenes consultar y actualizar el inventario de otros microservicios     |
 
 ---
 
 ## Servicio de Reportes
 
-| Clase | Tipo | Descripción | Propósito |
-|-------|------|-------------|-----------|
-| **ReportsController** | Controlador | Maneja peticiones HTTP de reportes | Expone endpoints para generar reportes de ingresos, pérdidas y consultar reportes almacenados |
-| **ReportsService** | Servicio | Lógica de negocio de reportes | Genera reportes consolidados obteniendo datos de órdenes e inventario, calcula métricas financieras |
-| **Report** | Entidad | Representa un reporte generado | Almacena metadatos del reporte: tipo, período, estado de generación, datos calculados |
-| **IncomeReport** | DTO | Reporte de ingresos | Contiene métricas de ventas: total de ventas, cantidad de órdenes, promedio por orden, ventas por plato y por día |
-| **LossReport** | DTO | Reporte de pérdidas/gastos | Contiene métricas de compras: total de compras, cantidad de compras, gastos por categoría y por día |
-| **ReportType** | Enum | Tipo de reporte | Define si es un reporte de ingresos o de pérdidas/gastos |
-| **ReportStatus** | Enum | Estados del reporte | Rastrea el proceso de generación: solicitado, generando, obteniendo datos, calculando, generado, almacenado |
-| **ReportRepository** | Repositorio | Acceso a datos de reportes | Maneja operaciones CRUD de reportes generados, con filtros por tipo y fecha |
+| Clase                 | Tipo        | Descripción                        | Propósito                                                                                                         |
+|-----------------------|-------------|------------------------------------|-------------------------------------------------------------------------------------------------------------------|
+| **ReportsController** | Controlador | Maneja peticiones HTTP de reportes | Expone endpoints para generar reportes de ingresos, pérdidas y consultar reportes almacenados                     |
+| **ReportsService**    | Servicio    | Lógica de negocio de reportes      | Genera reportes consolidados obteniendo datos de órdenes e inventario, calcula métricas financieras               |
+| **Report**            | Entidad     | Representa un reporte generado     | Almacena metadatos del reporte: tipo, período, estado de generación, datos calculados                             |
+| **IncomeReport**      | DTO         | Reporte de ingresos                | Contiene métricas de ventas: total de ventas, cantidad de órdenes, promedio por orden, ventas por plato y por día |
+| **LossReport**        | DTO         | Reporte de pérdidas/gastos         | Contiene métricas de compras: total de compras, cantidad de compras, gastos por categoría y por día               |
+| **ReportType**        | Enum        | Tipo de reporte                    | Define si es un reporte de ingresos o de pérdidas/gastos                                                          |
+| **ReportStatus**      | Enum        | Estados del reporte                | Rastrea el proceso de generación: solicitado, generando, obteniendo datos, calculando, generado, almacenado       |
+| **ReportRepository**  | Repositorio | Acceso a datos de reportes         | Maneja operaciones CRUD de reportes generados, con filtros por tipo y fecha                                       |
 
 ## Diagrama de contenedores 
 
@@ -196,14 +196,14 @@ La base de datos **MySQL** mantiene las entidades descritas en los capítulos an
 ### 1. USER (Usuario)
 Almacena la información de los usuarios del sistema.
 
-| Campo | Tipo | Descripción |
-|-------|------|-------------|
-| id | string (PK) | Identificador único del usuario |
-| email | string (UK) | Correo electrónico único del usuario |
-| name | string | Nombre completo del usuario |
-| role | string | Rol del usuario en el sistema (admin, user, etc.) |
-| created_at | datetime | Fecha de creación del registro |
-| updated_at | datetime | Fecha de última actualización |
+| Campo      | Tipo        | Descripción                                       |
+|------------|-------------|---------------------------------------------------|
+| id         | string (PK) | Identificador único del usuario                   |
+| email      | string (UK) | Correo electrónico único del usuario              |
+| name       | string      | Nombre completo del usuario                       |
+| role       | string      | Rol del usuario en el sistema (admin, user, etc.) |
+| created_at | datetime    | Fecha de creación del registro                    |
+| updated_at | datetime    | Fecha de última actualización                     |
 
 **Propósito**: Gestionar los usuarios que interactúan con el sistema y pueden adquirir suscripciones.
 
@@ -212,19 +212,19 @@ Almacena la información de los usuarios del sistema.
 ### 2. SUBSCRIPTION (Suscripción)
 Registra las suscripciones activas e históricas de los usuarios.
 
-| Campo | Tipo | Descripción |
-|-------|------|-------------|
-| id | string (PK) | Identificador único de la suscripción |
-| user_id | string (FK) | Referencia al usuario suscrito |
-| plan_id | string (FK) | Referencia al plan seleccionado |
-| status | string | Estado de la suscripción (ACTIVO, EXPIRADO, CANCELADO, etc.) |
-| start_date | datetime | Fecha de inicio de la suscripción |
-| end_date | datetime | Fecha de finalización de la suscripción |
-| auto_renew | boolean | Indica si la suscripción se renueva automáticamente |
-| payment_method | string | Método de pago utilizado |
-| transaction_id | string | ID de la transacción de pago |
-| created_at | datetime | Fecha de creación del registro |
-| updated_at | datetime | Fecha de última actualización |
+| Campo          | Tipo        | Descripción                                                  |
+|----------------|-------------|--------------------------------------------------------------|
+| id             | string (PK) | Identificador único de la suscripción                        |
+| user_id        | string (FK) | Referencia al usuario suscrito                               |
+| plan_id        | string (FK) | Referencia al plan seleccionado                              |
+| status         | string      | Estado de la suscripción (ACTIVO, EXPIRADO, CANCELADO, etc.) |
+| start_date     | datetime    | Fecha de inicio de la suscripción                            |
+| end_date       | datetime    | Fecha de finalización de la suscripción                      |
+| auto_renew     | boolean     | Indica si la suscripción se renueva automáticamente          |
+| payment_method | string      | Método de pago utilizado                                     |
+| transaction_id | string      | ID de la transacción de pago                                 |
+| created_at     | datetime    | Fecha de creación del registro                               |
+| updated_at     | datetime    | Fecha de última actualización                                |
 
 **Propósito**: Controlar el acceso de los usuarios a las funcionalidades del sistema según su plan activo.
 
@@ -233,18 +233,18 @@ Registra las suscripciones activas e históricas de los usuarios.
 ### 3. SUBSCRIPTION_PLAN (Plan de Suscripción)
 Define los diferentes planes de suscripción disponibles.
 
-| Campo | Tipo | Descripción |
-|-------|------|-------------|
-| id | string (PK) | Identificador único del plan |
-| name | string | Nombre del plan (Básico, Premium, Enterprise, etc.) |
-| description | string | Descripción detallada del plan |
-| price | decimal | Precio del plan |
-| billing_period | string | Periodo de facturación (MENSUAL, TRIMESTRAL, ANUAL) |
-| features | string | Lista de características incluidas (JSON o texto) |
-| max_users | int | Número máximo de usuarios permitidos |
-| max_orders | int | Número máximo de órdenes permitidas |
-| created_at | datetime | Fecha de creación del registro |
-| updated_at | datetime | Fecha de última actualización |
+| Campo          | Tipo        | Descripción                                         |
+|----------------|-------------|-----------------------------------------------------|
+| id             | string (PK) | Identificador único del plan                        |
+| name           | string      | Nombre del plan (Básico, Premium, Enterprise, etc.) |
+| description    | string      | Descripción detallada del plan                      |
+| price          | decimal     | Precio del plan                                     |
+| billing_period | string      | Periodo de facturación (MENSUAL, TRIMESTRAL, ANUAL) |
+| features       | string      | Lista de características incluidas (JSON o texto)   |
+| max_users      | int         | Número máximo de usuarios permitidos                |
+| max_orders     | int         | Número máximo de órdenes permitidas                 |
+| created_at     | datetime    | Fecha de creación del registro                      |
+| updated_at     | datetime    | Fecha de última actualización                       |
 
 **Propósito**: Definir las opciones de suscripción disponibles con sus características y limitaciones.
 
@@ -253,17 +253,17 @@ Define los diferentes planes de suscripción disponibles.
 ### 4. PAYMENT_TRANSACTION (Transacción de Pago)
 Registra todas las transacciones de pago relacionadas con suscripciones.
 
-| Campo | Tipo | Descripción |
-|-------|------|-------------|
-| id | string (PK) | Identificador único de la transacción |
-| subscription_id | string (FK) | Referencia a la suscripción asociada |
-| amount | decimal | Monto de la transacción |
-| currency | string | Moneda utilizada (USD, PEN, etc.) |
-| status | string | Estado de la transacción (EXITOSO, FALLIDO, PENDIENTE) |
-| transaction_id | string | ID único de la transacción del proveedor de pagos |
-| payment_method | string | Método de pago usado (tarjeta, PayPal, etc.) |
-| processed_at | datetime | Fecha y hora en que se procesó el pago |
-| created_at | datetime | Fecha de creación del registro |
+| Campo           | Tipo        | Descripción                                            |
+|-----------------|-------------|--------------------------------------------------------|
+| id              | string (PK) | Identificador único de la transacción                  |
+| subscription_id | string (FK) | Referencia a la suscripción asociada                   |
+| amount          | decimal     | Monto de la transacción                                |
+| currency        | string      | Moneda utilizada (USD, PEN, etc.)                      |
+| status          | string      | Estado de la transacción (EXITOSO, FALLIDO, PENDIENTE) |
+| transaction_id  | string      | ID único de la transacción del proveedor de pagos      |
+| payment_method  | string      | Método de pago usado (tarjeta, PayPal, etc.)           |
+| processed_at    | datetime    | Fecha y hora en que se procesó el pago                 |
+| created_at      | datetime    | Fecha de creación del registro                         |
 
 **Propósito**: Mantener un historial completo de todas las transacciones de pago para auditoría y seguimiento.
 
@@ -272,19 +272,19 @@ Registra todas las transacciones de pago relacionadas con suscripciones.
 ### 5. PRODUCT (Producto)
 Almacena información de los productos del inventario.
 
-| Campo | Tipo | Descripción |
-|-------|------|-------------|
-| id | string (PK) | Identificador único del producto |
-| name | string | Nombre del producto |
-| category | string | Categoría del producto |
-| purchase_price | decimal | Precio de compra del producto |
-| current_stock | int | Stock actual disponible |
-| unit | string | Unidad de medida (kg, unidad, litro, etc.) |
-| purchase_date | datetime | Fecha de compra del producto |
-| supplier | string | Proveedor del producto |
-| status | string | Estado del producto (DISPONIBLE, STOCK_BAJO, AGOTADO) |
-| created_at | datetime | Fecha de creación del registro |
-| updated_at | datetime | Fecha de última actualización |
+| Campo          | Tipo        | Descripción                                           |
+|----------------|-------------|-------------------------------------------------------|
+| id             | string (PK) | Identificador único del producto                      |
+| name           | string      | Nombre del producto                                   |
+| category       | string      | Categoría del producto                                |
+| purchase_price | decimal     | Precio de compra del producto                         |
+| current_stock  | int         | Stock actual disponible                               |
+| unit           | string      | Unidad de medida (kg, unidad, litro, etc.)            |
+| purchase_date  | datetime    | Fecha de compra del producto                          |
+| supplier       | string      | Proveedor del producto                                |
+| status         | string      | Estado del producto (DISPONIBLE, STOCK_BAJO, AGOTADO) |
+| created_at     | datetime    | Fecha de creación del registro                        |
+| updated_at     | datetime    | Fecha de última actualización                         |
 
 **Propósito**: Gestionar el inventario de productos y materia prima del negocio.
 
@@ -293,16 +293,16 @@ Almacena información de los productos del inventario.
 ### 6. DISH (Platillo)
 Contiene los platillos disponibles en el menú.
 
-| Campo | Tipo | Descripción |
-|-------|------|-------------|
-| id | string (PK) | Identificador único del platillo |
-| name | string | Nombre del platillo |
-| description | string | Descripción del platillo |
-| price | decimal | Precio de venta del platillo |
-| category | string | Categoría del platillo (entrada, principal, postre, etc.) |
-| status | string | Estado del platillo (DISPONIBLE, NO_DISPONIBLE) |
-| created_at | datetime | Fecha de creación del registro |
-| updated_at | datetime | Fecha de última actualización |
+| Campo       | Tipo        | Descripción                                               |
+|-------------|-------------|-----------------------------------------------------------|
+| id          | string (PK) | Identificador único del platillo                          |
+| name        | string      | Nombre del platillo                                       |
+| description | string      | Descripción del platillo                                  |
+| price       | decimal     | Precio de venta del platillo                              |
+| category    | string      | Categoría del platillo (entrada, principal, postre, etc.) |
+| status      | string      | Estado del platillo (DISPONIBLE, NO_DISPONIBLE)           |
+| created_at  | datetime    | Fecha de creación del registro                            |
+| updated_at  | datetime    | Fecha de última actualización                             |
 
 **Propósito**: Administrar el menú de platillos ofrecidos a los clientes.
 
@@ -311,16 +311,16 @@ Contiene los platillos disponibles en el menú.
 ### 7. ORDER (Orden)
 Registra las órdenes realizadas por los clientes.
 
-| Campo | Tipo | Descripción |
-|-------|------|-------------|
-| id | string (PK) | Identificador único de la orden |
-| order_number | string (UK) | Número único de orden para identificación |
-| total_amount | decimal | Monto total de la orden |
-| status | string | Estado de la orden (CARGADA, PROCESANDO, COMPLETADA) |
-| order_date | datetime | Fecha y hora en que se realizó la orden |
-| processed_at | datetime | Fecha y hora en que se procesó la orden |
-| created_at | datetime | Fecha de creación del registro |
-| updated_at | datetime | Fecha de última actualización |
+| Campo        | Tipo        | Descripción                                          |
+|--------------|-------------|------------------------------------------------------|
+| id           | string (PK) | Identificador único de la orden                      |
+| order_number | string (UK) | Número único de orden para identificación            |
+| total_amount | decimal     | Monto total de la orden                              |
+| status       | string      | Estado de la orden (CARGADA, PROCESANDO, COMPLETADA) |
+| order_date   | datetime    | Fecha y hora en que se realizó la orden              |
+| processed_at | datetime    | Fecha y hora en que se procesó la orden              |
+| created_at   | datetime    | Fecha de creación del registro                       |
+| updated_at   | datetime    | Fecha de última actualización                        |
 
 **Propósito**: Gestionar las órdenes de los clientes y su procesamiento.
 
@@ -329,16 +329,16 @@ Registra las órdenes realizadas por los clientes.
 ### 8. ORDER_ITEM (Item de Orden)
 Detalla los platillos incluidos en cada orden.
 
-| Campo | Tipo | Descripción |
-|-------|------|-------------|
-| id | string (PK) | Identificador único del item |
-| order_id | string (FK) | Referencia a la orden principal |
-| dish_id | string (FK) | Referencia al platillo ordenado |
-| dish_name | string | Nombre del platillo (desnormalizado) |
-| quantity | int | Cantidad de platillos ordenados |
-| unit_price | decimal | Precio unitario del platillo |
-| subtotal | decimal | Subtotal del item (cantidad × precio) |
-| created_at | datetime | Fecha de creación del registro |
+| Campo      | Tipo        | Descripción                           |
+|------------|-------------|---------------------------------------|
+| id         | string (PK) | Identificador único del item          |
+| order_id   | string (FK) | Referencia a la orden principal       |
+| dish_id    | string (FK) | Referencia al platillo ordenado       |
+| dish_name  | string      | Nombre del platillo (desnormalizado)  |
+| quantity   | int         | Cantidad de platillos ordenados       |
+| unit_price | decimal     | Precio unitario del platillo          |
+| subtotal   | decimal     | Subtotal del item (cantidad × precio) |
+| created_at | datetime    | Fecha de creación del registro        |
 
 **Propósito**: Detallar el contenido específico de cada orden.
 
@@ -347,22 +347,22 @@ Detalla los platillos incluidos en cada orden.
 ### 9. REPORT (Reporte)
 Almacena reportes generados del sistema.
 
-| Campo | Tipo | Descripción |
-|-------|------|-------------|
-| id | string (PK) | Identificador único del reporte |
-| type | string | Tipo de reporte (INCOME, LOSS) |
-| period_from | date | Fecha de inicio del periodo reportado |
-| period_to | date | Fecha de fin del periodo reportado |
-| total_income | decimal | Total de ingresos en el periodo |
-| total_loss | decimal | Total de pérdidas en el periodo |
-| net_profit | decimal | Ganancia neta (ingresos - pérdidas) |
-| profit_margin | decimal | Margen de ganancia porcentual |
-| status | string | Estado del reporte (GENERANDO, GENERADO, ALMACENADO) |
-| generated_at | datetime | Fecha de generación del reporte |
-| income_data | string | Datos de ingresos en formato JSON |
-| loss_data | string | Datos de pérdidas en formato JSON |
-| created_at | datetime | Fecha de creación del registro |
-| updated_at | datetime | Fecha de última actualización |
+| Campo         | Tipo        | Descripción                                          |
+|---------------|-------------|------------------------------------------------------|
+| id            | string (PK) | Identificador único del reporte                      |
+| type          | string      | Tipo de reporte (INCOME, LOSS)                       |
+| period_from   | date        | Fecha de inicio del periodo reportado                |
+| period_to     | date        | Fecha de fin del periodo reportado                   |
+| total_income  | decimal     | Total de ingresos en el periodo                      |
+| total_loss    | decimal     | Total de pérdidas en el periodo                      |
+| net_profit    | decimal     | Ganancia neta (ingresos - pérdidas)                  |
+| profit_margin | decimal     | Margen de ganancia porcentual                        |
+| status        | string      | Estado del reporte (GENERANDO, GENERADO, ALMACENADO) |
+| generated_at  | datetime    | Fecha de generación del reporte                      |
+| income_data   | string      | Datos de ingresos en formato JSON                    |
+| loss_data     | string      | Datos de pérdidas en formato JSON                    |
+| created_at    | datetime    | Fecha de creación del registro                       |
+| updated_at    | datetime    | Fecha de última actualización                        |
 
 **Propósito**: Generar y almacenar reportes financieros del negocio.
 
@@ -371,16 +371,16 @@ Almacena reportes generados del sistema.
 ### 10. INCOME_DETAIL (Detalle de Ingresos)
 Desglosa la información detallada de ingresos en un reporte.
 
-| Campo | Tipo | Descripción |
-|-------|------|-------------|
-| id | string (PK) | Identificador único del detalle |
-| report_id | string (FK) | Referencia al reporte principal |
-| total_sales | decimal | Total de ventas en el periodo |
-| order_count | int | Cantidad de órdenes procesadas |
-| average_order_value | decimal | Valor promedio por orden |
-| sales_by_dish | string | Ventas desglosadas por platillo (JSON) |
-| sales_by_day | string | Ventas desglosadas por día (JSON) |
-| created_at | datetime | Fecha de creación del registro |
+| Campo               | Tipo        | Descripción                            |
+|---------------------|-------------|----------------------------------------|
+| id                  | string (PK) | Identificador único del detalle        |
+| report_id           | string (FK) | Referencia al reporte principal        |
+| total_sales         | decimal     | Total de ventas en el periodo          |
+| order_count         | int         | Cantidad de órdenes procesadas         |
+| average_order_value | decimal     | Valor promedio por orden               |
+| sales_by_dish       | string      | Ventas desglosadas por platillo (JSON) |
+| sales_by_day        | string      | Ventas desglosadas por día (JSON)      |
+| created_at          | datetime    | Fecha de creación del registro         |
 
 **Propósito**: Proporcionar análisis detallado de los ingresos generados.
 
@@ -389,15 +389,15 @@ Desglosa la información detallada de ingresos en un reporte.
 ### 11. LOSS_DETAIL (Detalle de Pérdidas)
 Desglosa la información detallada de pérdidas en un reporte.
 
-| Campo | Tipo | Descripción |
-|-------|------|-------------|
-| id | string (PK) | Identificador único del detalle |
-| report_id | string (FK) | Referencia al reporte principal |
-| total_purchases | decimal | Total de compras en el periodo |
-| purchase_count | int | Cantidad de compras realizadas |
-| purchases_by_category | string | Compras desglosadas por categoría (JSON) |
-| purchases_by_day | string | Compras desglosadas por día (JSON) |
-| created_at | datetime | Fecha de creación del registro |
+| Campo                 | Tipo        | Descripción                              |
+|-----------------------|-------------|------------------------------------------|
+| id                    | string (PK) | Identificador único del detalle          |
+| report_id             | string (FK) | Referencia al reporte principal          |
+| total_purchases       | decimal     | Total de compras en el periodo           |
+| purchase_count        | int         | Cantidad de compras realizadas           |
+| purchases_by_category | string      | Compras desglosadas por categoría (JSON) |
+| purchases_by_day      | string      | Compras desglosadas por día (JSON)       |
+| created_at            | datetime    | Fecha de creación del registro           |
 
 **Propósito**: Proporcionar análisis detallado de las pérdidas o gastos incurridos.
 
@@ -405,15 +405,15 @@ Desglosa la información detallada de pérdidas en un reporte.
 
 ## Relaciones entre Entidades
 
-| Relación | Cardinalidad | Descripción |
-|----------|--------------|-------------|
-| USER → SUBSCRIPTION | 1:N | Un usuario puede tener múltiples suscripciones (historial de suscripciones actuales y pasadas) |
-| SUBSCRIPTION → SUBSCRIPTION_PLAN | N:1 | Cada suscripción pertenece a un plan específico; un plan puede ser usado por múltiples suscripciones |
-| SUBSCRIPTION → PAYMENT_TRANSACTION | 1:N | Una suscripción puede generar múltiples transacciones (pagos iniciales, renovaciones, intentos fallidos) |
-| ORDER → ORDER_ITEM | 1:N | Una orden contiene múltiples items; cada item pertenece a una única orden |
-| DISH → ORDER_ITEM | 1:N | Un platillo puede estar en múltiples items de orden; cada item referencia un único platillo |
-| REPORT → INCOME_DETAIL | 1:N | Un reporte puede tener múltiples detalles de ingresos (aunque típicamente será 1:1) |
-| REPORT → LOSS_DETAIL | 1:N | Un reporte puede tener múltiples detalles de pérdidas (aunque típicamente será 1:1) |
+| Relación                           | Cardinalidad | Descripción                                                                                              |
+|------------------------------------|--------------|----------------------------------------------------------------------------------------------------------|
+| USER → SUBSCRIPTION                | 1:N          | Un usuario puede tener múltiples suscripciones (historial de suscripciones actuales y pasadas)           |
+| SUBSCRIPTION → SUBSCRIPTION_PLAN   | N:1          | Cada suscripción pertenece a un plan específico; un plan puede ser usado por múltiples suscripciones     |
+| SUBSCRIPTION → PAYMENT_TRANSACTION | 1:N          | Una suscripción puede generar múltiples transacciones (pagos iniciales, renovaciones, intentos fallidos) |
+| ORDER → ORDER_ITEM                 | 1:N          | Una orden contiene múltiples items; cada item pertenece a una única orden                                |
+| DISH → ORDER_ITEM                  | 1:N          | Un platillo puede estar en múltiples items de orden; cada item referencia un único platillo              |
+| REPORT → INCOME_DETAIL             | 1:N          | Un reporte puede tener múltiples detalles de ingresos (aunque típicamente será 1:1)                      |
+| REPORT → LOSS_DETAIL               | 1:N          | Un reporte puede tener múltiples detalles de pérdidas (aunque típicamente será 1:1)                      |
 
 ---
 
