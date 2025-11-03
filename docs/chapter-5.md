@@ -562,8 +562,6 @@ En este sprint, el equipo se enfocó en construir las funcionalidades básicas p
 | **US19**      | Iniciar Sesión                          | Como dueño de restaurante, quiero iniciar sesión en el sistema con mi correo y contraseña para acceder de forma segura a mis datos y funcionalidades.                            | 6                | Romina Maita       |
 | **US20**      | Crear Cuenta Nueva                      | Como dueño de restaurante, quiero crear una cuenta ingresando mis datos básicos (nombre, correo, contraseña) para comenzar a usar el sistema.                                    | 6                | Romina Maita       |
 
-
-
 ---
 
 #### 5.3.2.2 Development Evidence for Sprint Review
@@ -612,7 +610,7 @@ En este sprint, el equipo se enfocó en construir las funcionalidades básicas p
 | `inventory-service` | `main` | `b8c9d0e` | `feat(inventory): add dependencies for broker and events on domain`                       | Agregadas dependencias necesarias para manejar eventos y comunicación con el broker.       | 24/10/2025   |
 | `inventory-service` | `main` | `c9d0e1f` | `chore: Initial commit`                                                                   | Commit inicial del repositorio.                                                            | 08/10/2025   |
 
-###### 5.3.2.2.4 Orders Service
+##### 5.3.2.2.4 Orders Service
 
 | Repository       | Branch | Commit ID | Commit Message                                               | Commit Message Body                                                                | Committed on |
 |------------------|--------|-----------|--------------------------------------------------------------|------------------------------------------------------------------------------------|--------------|
@@ -716,7 +714,7 @@ Feature: Visualizar Planes de Suscripción
     Then debo ver un mensaje "No se pudieron cargar los planes. Intente nuevamente."
 ```
 
-## US15 - Suscribirse al Plan Premium
+## US15 — Suscribirse al Plan Premium
 ```gherkin
 Feature: Suscribirse al Plan Premium
   Como dueño de restaurante
@@ -840,7 +838,6 @@ Feature: Crear Cuenta Nueva
     Then el sistema muestra un mensaje "El correo ingresado ya está en uso"
 ```
 
-
 ---
 
 #### 5.3.2.4 Execution Evidence for Sprint Review
@@ -872,9 +869,15 @@ A continuación se resume la evidencia obtenida:
 
 ### Subscriptions
 
+
+
 ### Profiles
 
+
+
 ### IAM 
+
+
 
 ---
 
