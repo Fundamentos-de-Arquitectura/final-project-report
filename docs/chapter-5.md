@@ -789,7 +789,7 @@ El tablero se estructuró con las siguientes columnas:
 
 <br>
 
-<img width="1550" height="772" alt="image" src="https://github.com/user-attachments/assets/c2965d26-2a1f-4788-8abb-a9fd9498aae3" />
+<img width="1145" height="595" alt="image" src="https://github.com/user-attachments/assets/9027b7d4-1060-4b84-8fcf-4de41ca6c0a7" />
 
 <br>
 ---
