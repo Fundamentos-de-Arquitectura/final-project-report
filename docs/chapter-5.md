@@ -875,7 +875,7 @@ A continuación se resume la evidencia obtenida:
 
 ### Profiles
 
-
+![WhatsApp Image 2025-11-03 at 7 30 38 PM](https://github.com/user-attachments/assets/61a69d80-891c-42c5-81ea-15d2b95f1d14)
 
 ### IAM 
 
