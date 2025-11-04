@@ -14,6 +14,8 @@ ventas y finanzas del negocio.
 
 <img width="869" height="544" alt="f" src="https://github.com/user-attachments/assets/080a297f-8905-4287-abb7-18aa668b8978" />
 
+<div style="page-break-after: always;"></div>
+
 ## 3.2 User Stories
 
 Para la planeación y desarrollo del proyecto, se han definido las siguientes épicas y user stories que describen las funcionalidades clave del sistema desde la perspectiva del usuario final, en este caso, el dueño de un restaurante.
@@ -55,10 +57,13 @@ Para la planeación y desarrollo del proyecto, se han definido las siguientes é
 | **US19**        | Iniciar Sesión                                | Como dueño de restaurante, quiero iniciar sesión en el sistema con mi correo y contraseña para acceder de forma segura a mis datos y funcionalidades.                                      | **Escenario 1: Inicio de sesión exitoso** Dado que tengo una cuenta registrada, cuando ingreso mi correo y contraseña válidos y hago clic en “Login”, entonces el sistema me autentica correctamente y me redirige al dashboard principal.<br><br>**Escenario 2: Credenciales inválidas** Dado que intento iniciar sesión, cuando ingreso un correo o contraseña incorrectos, entonces el sistema muestra un mensaje de error indicando que las credenciales son inválidas.<br><br>**Escenario 3: Campos vacíos** Dado que intento iniciar sesión sin llenar ambos campos, cuando hago clic en “Login”, entonces el sistema muestra un mensaje de advertencia solicitando completar todos los campos requeridos.                                                                                                                                                                                                                                                                                                                                        | Authentication            |
 | **US20**        | Crear Cuenta Nueva                            | Como dueño de restaurante, quiero crear una cuenta ingresando mis datos básicos (nombre, correo, contraseña) para comenzar a usar el sistema.                                              | **Escenario 1: Registro exitoso** Dado que estoy en la página de registro, cuando completo el formulario con datos válidos y hago clic en “Sign Up”, entonces el sistema crea mi cuenta, muestra un mensaje de confirmación y me redirige a la pantalla de inicio de sesión.<br><br>**Escenario 2: Validación de campos obligatorios** Dado que intento registrarme, cuando dejo un campo vacío o ingreso un correo inválido, entonces el sistema muestra un mensaje de error indicando los campos que deben corregirse.<br><br>**Escenario 3: Correo duplicado** Dado que intento crear una cuenta con un correo ya registrado, cuando hago clic en “Sign Up”, entonces el sistema muestra un mensaje indicando que el correo ya está en uso y no permite continuar.                                                                                                                                                                                                                                                                                   | Authentication            |
 
+<div style="page-break-after: always;"></div>
+
 ## 3.3 Impact Map
 
-<img width="1240" height="1221" alt="impac" src="https://github.com/user-attachments/assets/df7fd0d7-95bb-451e-80ac-245f69cad627" />
+<img width="800" height="900" alt="impac" src="https://github.com/user-attachments/assets/df7fd0d7-95bb-451e-80ac-245f69cad627" />
 
+<div style="page-break-after: always;"></div>
 
 ## 3.4 Alcance
 
