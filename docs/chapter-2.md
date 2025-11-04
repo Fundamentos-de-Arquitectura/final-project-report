@@ -106,6 +106,8 @@ En esta sección, se presenta un análisis de los competidores de FoodFlow y sus
   </tr>
 </table>
 
+<div style="page-break-after: always;"></div>
+
 ## 2.1.2. Estrategias y Tácticas Competitivas de FoodFlow
 
 | **Competidor**                                      | **Estrategia de FoodFlow**                                                                                                                                                          | **Tácticas concretas**                                                                                                                                                                                                                                                                                                             |
@@ -120,6 +122,8 @@ En esta sección, se presenta un análisis de los competidores de FoodFlow y sus
 2. **Go-to-Market en LATAM**: aprovechar la baja digitalización financiera de restaurantes en la región para ganar mercado más rápido que competidores globales.
 3. **Simplicidad como bandera**: mientras otros ofrecen robustez y complejidad, FoodFlow se mantiene ágil y fácil de usar.
 4. **Construcción de comunidad**: generar una red de dueños de restaurantes que compartan experiencias y testimonios.
+
+<div style="page-break-after: always;"></div>
 
 ## 2.2 Entrevistas
 En esta sección, se presentan los resultados de las entrevistas realizadas a dueños de restaurantes para comprender sus necesidades, desafíos y expectativas en relación con la gestión financiera y operativa de sus negocios. Se incluyen citas textuales y análisis de las respuestas obtenidas.
@@ -273,9 +277,11 @@ Enlace al formulario: https://forms.fillout.com/t/xcdy5bB5ZKus
 En esta sección se presenta el análisis detallado de la información recolectada durante las entrevistas realizadas a los distintos perfiles involucrados en la gestión financiera de restaurantes. El objetivo principal del proceso de Needfinding ha sido identificar necesidades reales, motivaciones, frustraciones y patrones de comportamiento de los usuarios para guiar el diseño de una solución centrada en ellos.<br>
 Los artefactos incluidos User Persona, User Task Matrix, User Journey Maps, Empathy Mapping y As-Is Scenario Mapping, permiten visualizar, sintetizar y comprender de manera estructurada la experiencia actual de los usuarios, sus tareas clave, emociones, puntos de dolor y oportunidades de mejora. Este análisis constituye la base para el diseño de soluciones alineadas con sus contextos y objetivos reales.
 
+<div style="page-break-after: always;"></div>
+
 ### 2.3.1 User Personas
 
-<img width="1050" height="1780" alt="up" src="https://github.com/user-attachments/assets/429040b1-6c9f-48b6-b20e-78ef7922135a" />
+<img width="200" height="100" alt="up" src="https://github.com/user-attachments/assets/429040b1-6c9f-48b6-b20e-78ef7922135a" />
 
 ### 2.3.2 User Task Matrix
 
@@ -300,10 +306,15 @@ Sofía representa a una dueña de restaurante experimentada enfocada en la optim
 mejoramiento de la eficiencia del negocio. Su enfoque está en actividades estratégicas como el manejo financiero 
 y la gestión de inventario, que realiza con alta frecuencia e importancia.
 
+<div style="page-break-after: always;"></div>
+
 ### 2.3.3 Empathy Map
 Esta sección presenta el Empathy Map desarrollado para el User Persona. El proceso de elaboración incluyó la reflexión colaborativa del equipo en torno a la experiencia, necesidades, pensamientos, emociones y percepciones de cada usuario. Este mapa permite profundizar en la comprensión de sus contextos y motivaciones, respondiendo preguntas clave sobre lo que ven, escuchan, piensan, sienten, dicen y hacen. A partir de este análisis, se identificaron sus Pains y Gains, los cuales servirán como base para el diseño de una propuesta de valor relevante. <br>
+
 #### Segmento Objetivo: Dueños de restaurantes. <br>
 <img width="774" height="652" alt="image" src="https://github.com/user-attachments/assets/77ab6fd0-017d-4cae-a71d-3fe5ef1c2174" />
+
+<div style="page-break-after: always;"></div>
 
 ### 2.3.4 As-is Scenario Mapping
 
