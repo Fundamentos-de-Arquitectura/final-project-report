@@ -281,7 +281,9 @@ Los artefactos incluidos User Persona, User Task Matrix, User Journey Maps, Empa
 
 ### 2.3.1 User Personas
 
-<img width="200" height="100" alt="up" src="https://github.com/user-attachments/assets/429040b1-6c9f-48b6-b20e-78ef7922135a" />
+<img width="700" height="900" alt="up" src="https://github.com/user-attachments/assets/429040b1-6c9f-48b6-b20e-78ef7922135a" />
+
+<div style="page-break-after: always;"></div>
 
 ### 2.3.2 User Task Matrix
 
