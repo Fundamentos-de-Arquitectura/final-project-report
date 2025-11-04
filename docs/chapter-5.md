@@ -175,12 +175,14 @@ El despliegue del backend se realiza en **FreeSQL** para la base de datos.
 3. Despliegue automatizado en entorno cloud
 4. Validación mediante Postman y Swagger
 
+<div style="page-break-after: always;"></div>
+
 **Deployment Diagram (C4):**
 
 ![WhatsApp Image 2025-10-05 at 12 18 28 PM](https://github.com/user-attachments/assets/d8251006-3dea-418b-9d0e-2b03b6d16923)
 
 
----
+<div style="page-break-after: always;"></div>
 
 ## 5.3 Microservices Implementation
 
@@ -326,7 +328,7 @@ https://trello.com/invite/b/68acc5a626e4614f12ee778f/ATTIb0400bfaba199996d200f64
   </tbody>
 </table>
 
----
+<div style="page-break-after: always;"></div>
 
 #### 5.3.1.2 Development Evidence for Sprint Review
 
@@ -416,7 +418,7 @@ A continuación se presentan los archivos `.feature` correspondientes:
 ```
 
 
----
+<div style="page-break-after: always;"></div>
 
 #### 5.3.1.4 Execution Evidence for Sprint Review
 
@@ -431,18 +433,21 @@ A continuación se resume la evidencia obtenida:
 | Inventario    | `/api/v1/inventory`                             | Listado, registro y validación de productos             | Passed |
 | Órdenes       | `/api/v1/orders`                                | Registro, visualización y confirmación de órdenes       | Passed |
 
+<div style="page-break-after: always;"></div>
 
 ### Orders:
 
-<img width="1920" height="1080" alt="orders" src="https://github.com/user-attachments/assets/6d4fbb15-acfb-4c9c-a57a-e2ab4b4e03a3" />
+<img alt="orders" src="https://github.com/user-attachments/assets/6d4fbb15-acfb-4c9c-a57a-e2ab4b4e03a3" />
 
-<img width="1476" height="882" alt="endpoints" src="https://github.com/user-attachments/assets/ac09ef8f-61c0-418b-9e99-a53eb5b3a04b" />
+
+<img  alt="endpoints" src="https://github.com/user-attachments/assets/ac09ef8f-61c0-418b-9e99-a53eb5b3a04b" />
 
 ### Inventory
 
-<img width="1349" height="776" alt="inventory" src="https://github.com/user-attachments/assets/370b8c4f-6fa2-4786-90b0-bd10946005ab" />
+<img alt="inventory" src="https://github.com/user-attachments/assets/370b8c4f-6fa2-4786-90b0-bd10946005ab" />
 
----
+
+<div style="page-break-after: always;"></div>
 
 #### 5.3.1.5 Microservices Documentation Evidence for Sprint Review
 
@@ -534,6 +539,9 @@ https://trello.com/invite/b/68acc5a626e4614f12ee778f/ATTIb0400bfaba199996d200f64
 
  **Conclusión del Sprint 1:**  
  El equipo completó con éxito la implementación de los módulos de Inventario y Órdenes, cumpliendo con los objetivos de desarrollo, validación e integración de los microservicios correspondientes. Las funcionalidades de Dashboard, Reportes y Menú quedan planificadas para futuros sprints.
+
+
+<div style="page-break-after: always;"></div>
 
 ### 5.3.2 Sprint 2
 
@@ -839,7 +847,7 @@ Feature: Crear Cuenta Nueva
     Then el sistema muestra un mensaje "El correo ingresado ya está en uso"
 ```
 
----
+<div style="page-break-after: always;"></div>
 
 #### 5.3.2.4 Execution Evidence for Sprint Review
 
@@ -858,31 +866,41 @@ A continuación se resume la evidencia obtenida:
 | IAM           | `/api/v1/accounts`, `/api/v1/authentication` | Gestión de autenticación de usuario               | Passed |
 
 
+<div style="page-break-after: always;"></div>
+
 ### Orders:
 
-<img width="1920" height="1080" alt="orders" src="https://github.com/user-attachments/assets/6d4fbb15-acfb-4c9c-a57a-e2ab4b4e03a3" />
+<img alt="orders" src="https://github.com/user-attachments/assets/6d4fbb15-acfb-4c9c-a57a-e2ab4b4e03a3" />
 
-<img width="1476" height="882" alt="endpoints" src="https://github.com/user-attachments/assets/ac09ef8f-61c0-418b-9e99-a53eb5b3a04b" />
+
+<img alt="endpoints" src="https://github.com/user-attachments/assets/ac09ef8f-61c0-418b-9e99-a53eb5b3a04b" />
+
+<div style="page-break-after: always;"></div>
 
 ### Inventory
 
-<img width="1349" height="776" alt="inventory" src="https://github.com/user-attachments/assets/370b8c4f-6fa2-4786-90b0-bd10946005ab" />
+<img alt="inventory" src="https://github.com/user-attachments/assets/370b8c4f-6fa2-4786-90b0-bd10946005ab" />
+
+<div style="page-break-after: always;"></div>
 
 ### Subscriptions
 
-<img width="1376" height="606" alt="image" src="https://github.com/user-attachments/assets/447eb52e-d6d2-4f83-a4c1-7f64f433b1e7" />
+<img alt="image" src="https://github.com/user-attachments/assets/447eb52e-d6d2-4f83-a4c1-7f64f433b1e7" />
 
+<div style="page-break-after: always;"></div>
 
 ### Profiles
 
 ![WhatsApp Image 2025-11-03 at 7 30 38 PM](https://github.com/user-attachments/assets/61a69d80-891c-42c5-81ea-15d2b95f1d14)
 
+<div style="page-break-after: always;"></div>
+
 ### IAM 
 
-<img width="1319" height="713" alt="image" src="https://github.com/user-attachments/assets/fe243064-79c0-4e80-81ad-61128abe71fa" />
+<img alt="image" src="https://github.com/user-attachments/assets/fe243064-79c0-4e80-81ad-61128abe71fa" />
 
 
----
+<div style="page-break-after: always;"></div>
 
 #### 5.3.2.5 Microservices Documentation Evidence for Sprint Review
 

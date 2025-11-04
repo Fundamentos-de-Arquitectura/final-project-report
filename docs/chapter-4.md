@@ -93,6 +93,7 @@ Diagrama de clases
 
 <img alt="5" src="https://github.com/user-attachments/assets/050f0fe3-540b-4dd1-ac65-31cc6efa786f" />
 
+<div style="page-break-after: always;"></div>
 
 # Tabla de Características del Diagrama de Clases
 
@@ -167,29 +168,43 @@ Diagrama de clases
 | **ReportStatus**      | Enum        | Estados del reporte                | Rastrea el proceso de generación: solicitado, generando, obteniendo datos, calculando, generado, almacenado       |
 | **ReportRepository**  | Repositorio | Acceso a datos de reportes         | Maneja operaciones CRUD de reportes generados, con filtros por tipo y fecha                                       |
 
+<div style="page-break-after: always;"></div>
+
 ## Diagrama de contenedores 
 
 <img alt="contenedores" src="https://github.com/user-attachments/assets/2b0231c1-0869-40ee-ba53-8645b19eb128" />
 
+<div style="page-break-after: always;"></div>
+
 ## Diagrama de componentes
 
-<img alt="c1" src="https://github.com/user-attachments/assets/5a142364-277e-4e40-984a-3a65dc4e2def" />
+<img width="800" height="900" alt="c1" src="https://github.com/user-attachments/assets/5a142364-277e-4e40-984a-3a65dc4e2def" />
 
-<img alt="c2" src="https://github.com/user-attachments/assets/12d23836-b139-49b1-88ec-9cfb1eaead3a" />
+<div style="page-break-after: always;"></div>
 
-<img alt="c3" src="https://github.com/user-attachments/assets/9f8e1fd3-5006-4cb7-beb9-24bf79dac2ff" />
+<img width="800" height="900" alt="c2" src="https://github.com/user-attachments/assets/12d23836-b139-49b1-88ec-9cfb1eaead3a" />
 
-<img alt="c4" src="https://github.com/user-attachments/assets/40a2610b-85ad-444b-b91b-f518b05fc4b9" />
+<div style="page-break-after: always;"></div>
 
-<img alt="c5" src="https://github.com/user-attachments/assets/ade772bc-0968-4f07-877c-70e7b11e9132" />
+<img width="800" height="900" alt="c3" src="https://github.com/user-attachments/assets/9f8e1fd3-5006-4cb7-beb9-24bf79dac2ff" />
 
----
+<div style="page-break-after: always;"></div>
+
+<img width="800" height="900" alt="c4" src="https://github.com/user-attachments/assets/40a2610b-85ad-444b-b91b-f518b05fc4b9" />
+
+<div style="page-break-after: always;"></div>
+
+<img width="800" height="900" alt="c5" src="https://github.com/user-attachments/assets/ade772bc-0968-4f07-877c-70e7b11e9132" />
+
+<div style="page-break-after: always;"></div>
 
 ### 4.1.5 Relational Database Diagram
 
 La base de datos **MySQL** mantiene las entidades descritas en los capítulos anteriores:
 
 <img alt="Untitled diagram-2025-10-09-040617" src="https://github.com/user-attachments/assets/e360620e-0a50-40c8-951a-b29ca1736343" />
+
+<div style="page-break-after: always;"></div>
 
 ## Entidades del Sistema
 
@@ -441,7 +456,7 @@ Desglosa la información detallada de pérdidas en un reporte.
 | Mantenibilidad      | Separación en capas y documentación Swagger.     |
 | Escalabilidad       | Contenerización de servicios con Docker Compose. |
 
----
+<div style="page-break-after: always;"></div>
 
 ## 4.2 Architectural Drivers
 
@@ -488,6 +503,8 @@ La arquitectura de FoodFlow está diseñada para cumplir con los objetivos del n
 - Evitar duplicación de entidades compartidas (por ejemplo, Producto vs Plato).
 - Asegurar versionado de APIs en gateway.
 - Establecer logs unificados y monitoreo básico por servicio.
+
+<div style="page-break-after: always;"></div>
 
 ## 4.3 ADD Iterations
 
@@ -543,6 +560,8 @@ La arquitectura de FoodFlow está diseñada para cumplir con los objetivos del n
 - **Data Service**: repositorios y transacciones.
 - **API Gateway**: entrada única al sistema.
 
+<div style="page-break-after: always;"></div>
+
 ### 4.3.1.6 Sketch Views (C4 & UML) and Record Design Decisions
 
 #### C4 Context
@@ -570,7 +589,8 @@ Usuario (Dueño) ──► Frontend (Angular) ──► API Gateway ──► Se
 | Optimizar consultas | Configuración DB | API Gateway básico | Estructura microservicios |
 |                     | Reports Service  | Endpoints reports  | Frontend base             |
 
----
+
+<div style="page-break-after: always;"></div>
 
 ## 4.3.2 Iteration 2: Business Logic and Integration
 
@@ -632,7 +652,7 @@ OrderService → Frontend (OK)
 | Auditoría de seguridad | Export Service | Validaciones orden  | Reports Service  |
 
 
----
+<div style="page-break-after: always;"></div>
 
 ## 4.3.3 Iteration 3: Performance Optimization & UX
 
@@ -675,7 +695,7 @@ OrderService → Frontend (OK)
 | Benchmarks    | UI responsive | CDN                   | Circuit breaker     |
 | Recovery plan |               | Monitoring dashboards | Health check system |
 
----
+<div style="page-break-after: always;"></div>
 
 ## 4.3.4 Iteration 4: Login & Authentication (IAM)
 
@@ -718,7 +738,7 @@ AuthService → Frontend (devuelve tokens)
 | MFA      | Middleware JWT | Validación tokens | Login/Sign-up/Refresh |
 | Auditing |                |                   | UserRepository        |
 
----
+<div style="page-break-after: always;"></div>
 
 ## 4.3.5 Iteration 5: Analytics Module
 
@@ -752,7 +772,7 @@ AuthService → Frontend (devuelve tokens)
 |-------------|--------------------|---------------|-----------|
 | Nuevos KPIs | Integración Charts | Validar datos | Analytics |
 
----
+<div style="page-break-after: always;"></div>
 
 ## 4.3.6 Iteration 6: Menu Module
 
@@ -787,7 +807,7 @@ AuthService → Frontend (devuelve tokens)
 |-------------|-------------------------|----------------|---------------------|
 | CRUD platos | Relación con inventario | Validar datos  | OrderService básico |
 
----
+<div style="page-break-after: always;"></div>
 
 ## 4.3.7 Iteration 7: Payment Integration (IzyPay)
 
@@ -823,7 +843,7 @@ IzyPay → [PaymentService] (webhook confirmación)
 |----------|----------------|-----------------------|--------------------|
 | Webhooks | PaymentService | Validar transacciones | Integración básica |
 
----
+<div style="page-break-after: always;"></div>
 
 ## 4.3.8 Iteration 8: Cloud Deployment & Scalability
 

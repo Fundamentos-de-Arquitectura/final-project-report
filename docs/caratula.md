@@ -1,18 +1,20 @@
-
-# <div style="text-align: center;"> UNIVERSIDAD PERUANA DE CIENCIAS APLICADAS
 <p align="center">
   <img src="https://github.com/Fundamentos-de-Arquitectura/final-project-report/blob/master/assets/logoupc.png?raw=true"  style="width:200px; height:auto;">
 </p>
 
-## <div style="text-align: center;">Carrera: Ingeniería de Software </div>
-## <div style="text-align: center;"> Fundamentos de Arquitectura de Software - Presencial</div>
-## <div style="text-align: center;"> PROFESOR: Ernesto Ocampo Tello</div>
-## <div style="text-align: center;"> NRC: 6339</div>
-## <div style="text-align: center;"> INFORME TB3</div>
-## <div style="text-align: center;"> START UP: Go5U </div>
-## <div style="text-align: center;"> PRODUCTO: FoodFlow </div>
+# <div style="text-align: center;"> UPC - Universidad Peruana de Ciencias Aplicadas
 
-### <div style="text-align: center;"> INTEGRANTES:</div>
+
+## <div style="text-align: center;">Carrera de Ingeniería de Software </div>
+## <div style="text-align: center;"> Fundamentos de Arquitectura de Software</div>
+## <div style="text-align: center;"> 2025-20 </div>
+## <div style="text-align: center;"> Sección: 6339 </div>
+## <div style="text-align: center;"> Docente: Ernesto Ocampo Tello</div>
+## <div style="text-align: center;"> Informe TB3</div>
+## <div style="text-align: center;"> Start Up: Go5U </div>
+## <div style="text-align: center;"> Producto: FoodFlow </div>
+
+### <div style="text-align: center;"> Team Members:</div>
 <div style="display: flex; justify-content: center;">
     <table>
       <thead>
@@ -40,6 +42,8 @@
 
 
 <div style="text-align: center;"> Ciclo 2025-20 </div>
+
+<div style="page-break-after: always;"></div>
 
 # Contenido
 ## Tabla de Contenidos
