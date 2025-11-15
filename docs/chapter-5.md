@@ -1498,8 +1498,6 @@ A continuación se resume la evidencia obtenida:
 
 <div style="page-break-after: always;"></div>
 
-# TODO: PONER FOTOS DEL FRONT EN EJECUCION 
-
 ### Orders:
 
 <img width="1314" height="643" alt="image" src="https://github.com/user-attachments/assets/cdec85ce-d46f-4e63-909b-439e9f88f207" />
@@ -1621,7 +1619,8 @@ La metodología aplicada fue Scrum, con reuniones de seguimiento semanales para 
 - **Discord / WhatsApp:** reuniones de planificación, retrospectiva y revisión de sprint.
 
 ##### GitHub Insights:
-# FOTO INSIGHTS
+
+
 
 ---
 
