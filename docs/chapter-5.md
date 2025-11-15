@@ -1078,7 +1078,22 @@ En este sprint, el equipo se enfocó en construir el frontend utilizando Angular
 ---
 
 #### 5.3.3.2 Development Evidence for Sprint Review
-# ToDo: Commits table
+
+| Repository             | Branch                    | Commit Id                                | Commit Message                                                                                 | Commit Message Body | Committed on  |
+|------------------------|---------------------------|------------------------------------------|------------------------------------------------------------------------------------------------|---------------------|---------------|
+| user/frontend_foodflow | main                      | a7d3196e68c3d3ec0fa22e4818c8e0dd00e34345 | initial commit                                                                                 | —                   | November, 4th |
+| user/frontend_foodflow | feature/app-shell-layout  | 51c007ecdd2c00f1ba6bf5bdf957ee88e259d06c | chore: initial setup                                                                           | —                   | November, 4th |
+| user/frontend_foodflow | feature/app-shell-layout  | 005dfea813b46e9f2940ae02e10e5fe1c19d6d52 | dix: delete favicon                                                                            | —                   | November, 4th |
+| user/frontend_foodflow | feature/app-shell-layout  | 7281883947e59bd7b293ee3868af40e1167d0eee | chore: add core components and their routes                                                    | —                   | November, 4th |
+| user/frontend_foodflow | feature_add-navigation    | b9d72cf7aeeb4fc1d5f04a7360ace46f7d06829b | chore: add first sight and clickable views for core components to the sidebar and their routes | —                   | November, 4th |
+| user/frontend_foodflow | feature_add-navigation    | 8b1cf66b703372f8c806b5815f3bebe9d5cf42ff | chore: add angular animations                                                                  | —                   | November, 4th |
+| user/frontend_foodflow | feature_add-navigation    | 51e8199a130c8c8c2d418224e85acd2c50a427df | fix: selector for every component                                                              | —                   | November, 5th |
+| user/frontend_foodflow | feature/inventory-view    | 0b62a0aca4dfa5ba15ef13295953a54fca504874 | feat(inventory): add inventory view and functionality                                          | —                   | November, 5th |
+| user/frontend_foodflow | feature/auth-views        | c74e0b39f28eb69265236ce44ea116e458638a4a | feat(auth): add login and signup view and functionality without token                          | —                   | November, 5th |
+| user/frontend_foodflow | feature/add-profile       | 2c95077cabf776e89a41e9a21a06d4c968e7a681 | feat(profile): add profile view with mock data                                                 | —                   | November, 5th |
+| user/frontend_foodflow | feature/add-profile       | 905818c79aa9c6cdd660effa378e980eb3695a0a | fix: adjust topbar and sidebar                                                                 | —                   | November, 5th |
+| user/frontend_foodflow | feature/add-subscriptions | c217fdc8bb6bc544d8b8840a615dac49621132de | feat(subscriptions): add subscriptions view                                                    | —                   | November, 5th |
+| user/frontend_foodflow | feature/add-i18n          | 5d34abb30f6cd97554c42b8b7e160b2020a0ec74 | feat(i18n): add i18n to topbar and sidebar                                                     | —                   | November, 5th |
 
 
 #### 5.3.2.3 Testing Suite Evidence for Sprint Review
