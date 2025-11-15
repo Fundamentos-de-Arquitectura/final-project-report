@@ -1000,3 +1000,373 @@ El tablero se estructuró con las siguientes columnas:
 
 **Conclusión del Sprint 2:**  
 El equipo completó con éxito la implementación de Subscriptions, Profiles, IAM y la correcta integración de Apache Kafka con Inventory y Orders. Cumpliendo con los objetivos de desarrollo, validación e integración de los microservicios correspondientes. Las funcionalidades frontend de Dashboard, servicio Reportes y servicio Menú quedan planificadas para futuros sprints.
+
+### 5.3.3 Sprint 3
+
+#### 5.3.3.1 Sprint Backlog 3
+
+**Objetivo del Sprint:**  
+Construir el frontend de la aplicación FoodFlow e integrar estos módulos con los microservicios backend desarrollados en sprints anteriores.
+
+**Avance general:**  
+En este sprint, el equipo se enfocó en construir el frontend utilizando Angular y Material UI, desarrollando las interfaces de usuario para cada uno de los microservicios implementados.
+
+**Herramienta utilizada:** Trello  
+**URL del tablero:** https://trello.com/invite/b/6918d1dd32d24a05a8947d0d/ATTIcb28cce09390930e99a29b316c61841e4EEB0CDA/sprint-3-foodflow
+
+
+
+---
+
+#### 5.3.3.2 Development Evidence for Sprint Review
+
+
+#### 5.3.2.3 Testing Suite Evidence for Sprint Review
+
+Las pruebas BDD se desarrollaron con **Gherkin** para las User Stories implementadas.  
+A continuación se presentan los archivos `.feature` correspondientes:
+
+## US03 - Visualizar Inventario Actual
+```gherkin
+Feature: Visualizar Inventario Actual
+  Como dueño de restaurante
+  Quiero ver una tabla con el stock, costo unitario y unidad de medida de cada producto
+  Para controlar el inventario de manera clara y rápida
+
+  Scenario: Visualización de la tabla de inventario
+    Given que tengo productos registrados en mi inventario
+    When navego a la sección "Inventory Management"
+    Then debo ver una tabla con el listado de todos los productos
+    And la tabla debe mostrar las columnas: Producto, Stock Actual, Costo Unitario y Unidad de Medida
+```
+
+## US04 - Agregar Nuevo Producto al Inventario
+```gherkin
+Feature: Agregar Nuevo Producto al Inventario
+  Como dueño de restaurante
+  Quiero registrar un nuevo producto con sus datos
+  Para mantener actualizado mi inventario
+
+  Scenario: Registro exitoso de producto
+    Given que estoy en la sección "Add New Product"
+    When ingreso un Nombre, Stock (numérico), Costo Unitario (numérico) y Unidad de Medida válidos
+    And presiono el botón "Add Product"
+    Then el nuevo producto se añade a la tabla del inventario
+    And veo un mensaje de confirmación "Producto añadido exitosamente"
+```
+
+## US05 - Validar Campos al Agregar Producto
+```gherkin
+Feature: Validar Campos al Agregar Producto
+  Como dueño de restaurante
+  Quiero que el sistema valide los campos obligatorios y de formato
+  Para evitar errores en el registro del inventario
+
+  Scenario: Intento de registro con datos incompletos o inválidos
+    Given que estoy en el formulario para registrar un nuevo producto
+    When dejo el campo "Costo Unitario" vacío o ingreso texto en lugar de un número
+    And presiono el botón "Add Product"
+    Then el sistema muestra un mensaje de error específico junto al campo
+    And el producto no se guarda en el inventario
+```
+
+## US09 - Visualizar Órdenes Existentes
+```gherkin
+Feature: Visualizar Órdenes Existentes
+  Como dueño de restaurante
+  Quiero ver las órdenes registradas con sus detalles clave
+  Para llevar un control claro y rápido de las órdenes
+
+  Scenario: Visualización inicial de órdenes en la tabla
+    Given que tengo órdenes registradas en el sistema
+    When navego a la sección "Orders"
+    Then debo ver una tabla con las órdenes
+    And la tabla muestra las columnas: Mesa, Platos, Precio Total y Fecha
+```
+
+## US14 - Visualizar Planes de Suscripción
+```gherkin
+Feature: Visualizar Planes de Suscripción
+  Como dueño de restaurante
+  Quiero ver los diferentes planes de suscripción disponibles
+  Para conocer las opciones y beneficios antes de decidirme
+
+  Scenario: Mostrar lista de planes disponibles
+    Given que accedo a la sección "Subscriptions"
+    When el sistema carga los datos de los planes
+    Then debo ver una lista con los nombres, precios y beneficios de cada plan
+    And los planes deben incluir: Gratuito, Estándar y Premium
+
+  Scenario: Error al cargar planes
+    Given que accedo a la sección "Subscriptions"
+    When el servidor no responde correctamente
+    Then debo ver un mensaje "No se pudieron cargar los planes. Intente nuevamente."
+```
+
+## US15 — Suscribirse al Plan Premium
+```gherkin
+Feature: Suscribirse al Plan Premium
+  Como dueño de restaurante
+  Quiero poder suscribirme al plan premium
+  Para acceder a funcionalidades avanzadas de gestión
+
+  Scenario: Suscripción exitosa
+    Given que estoy en la sección "Subscriptions" y tengo un método de pago válido
+    When selecciono el plan "Premium" y confirmo el pago
+    Then el sistema activa mi suscripción premium
+    And veo un mensaje de confirmación "Suscripción activada correctamente"
+
+  Scenario: Error en el pago
+    Given que estoy en la sección "Subscriptions"
+    When intento suscribirme pero el método de pago es rechazado
+    Then el sistema muestra un mensaje "Error en la transacción, intente nuevamente"
+```
+
+## US16 - Cancelar Suscripción
+```gherkin
+Feature: Cancelar Suscripción
+  Como dueño de restaurante
+  Quiero cancelar mi suscripción premium
+  Para dejar de usar el plan de pago cuando ya no lo necesite
+
+  Scenario: Cancelación exitosa de suscripción
+    Given que tengo una suscripción premium activa
+    When hago clic en "Cancel Subscription" y confirmo la acción
+    Then el sistema cambia mi plan a "Free Plan"
+    And muestra un mensaje de confirmación "Suscripción cancelada correctamente"
+
+  Scenario: Cancelación abortada por el usuario
+    Given que tengo una suscripción premium activa
+    When hago clic en "Cancel Subscription" pero cierro el diálogo sin confirmar
+    Then la suscripción permanece activa
+```
+
+## US17 - Visualizar Perfil de Usuario
+```gherkin
+Feature: Visualizar Perfil de Usuario
+  Como dueño de restaurante
+  Quiero ver mi información personal y detalles de cuenta
+  Para revisar mis datos registrados
+
+  Scenario: Mostrar datos del perfil
+    Given que estoy autenticado en el sistema
+    When navego a la sección "Profile"
+    Then debo ver mi nombre, correo e imagen de perfil
+    And el plan de suscripción actual
+
+  Scenario: Error al cargar perfil
+    Given que intento acceder a la sección "Profile"
+    When ocurre un error al recuperar la información
+    Then el sistema muestra un mensaje "No se pudo cargar el perfil. Reintente."
+```
+
+## US18 - Actualizar Datos del Perfil
+```gherkin
+Feature: Actualizar Datos del Perfil
+  Como dueño de restaurante
+  Quiero editar mi información personal y contraseña
+  Para mantener mis datos actualizados
+
+  Scenario: Actualización exitosa
+    Given que estoy en la sección "Profile"
+    When modifico mi nombre o correo y presiono "Guardar cambios"
+    Then el sistema actualiza mis datos
+    And muestra un mensaje "Cambios guardados correctamente"
+
+  Scenario: Validación de campos inválidos
+    Given que estoy editando mis datos
+    When ingreso un correo con formato incorrecto o dejo un campo vacío
+    Then el sistema muestra mensajes de error bajo los campos correspondientes
+```
+
+## US19 - Iniciar Sesión
+```gherkin
+Feature: Iniciar Sesión
+  Como dueño de restaurante
+  Quiero acceder al sistema con mi correo y contraseña
+  Para ingresar de forma segura a mis funcionalidades
+
+  Scenario: Inicio de sesión exitoso
+    Given que tengo una cuenta registrada
+    When ingreso mi correo y contraseña válidos y presiono "Login"
+    Then el sistema me redirige al dashboard principal
+
+  Scenario: Credenciales inválidas
+    Given que ingreso una contraseña incorrecta
+    When presiono "Login"
+    Then el sistema muestra un mensaje "Credenciales inválidas"
+
+  Scenario: Campos vacíos
+    Given que intento iniciar sesión sin completar los campos
+    When presiono "Login"
+    Then el sistema muestra un mensaje "Complete todos los campos"
+```
+
+## US20 - Crear Cuenta Nueva
+```gherkin
+Feature: Crear Cuenta Nueva
+  Como dueño de restaurante
+  Quiero registrarme en el sistema con mis datos básicos
+  Para comenzar a usar el sistema
+
+  Scenario: Registro exitoso
+    Given que estoy en la página de registro
+    When ingreso un nombre, correo y contraseña válidos y presiono "Sign Up"
+    Then el sistema crea mi cuenta
+    And muestra un mensaje "Cuenta creada exitosamente"
+    And me redirige a la página de inicio de sesión
+
+  Scenario: Campos inválidos
+    Given que intento registrarme con un correo en formato incorrecto o sin llenar todos los campos
+    When presiono "Sign Up"
+    Then el sistema muestra un mensaje de error "Por favor complete todos los campos correctamente"
+
+  Scenario: Correo duplicado
+    Given que intento crear una cuenta con un correo ya registrado
+    When presiono "Sign Up"
+    Then el sistema muestra un mensaje "El correo ingresado ya está en uso"
+```
+
+<div style="page-break-after: always;"></div>
+
+#### 5.3.2.4 Execution Evidence for Sprint Review
+
+Durante el Sprint 3 se ejecutaron las pruebas de los módulos desarrollados en el backend y frontend, verificando la correcta interacción entre los servicios y la interfaz de usuario.  
+La ejecución de los escenarios Gherkin se realizó utilizando la metodología **BDD (Behavior Driven Development)**, a través de los `.feature files` definidos para cada historia de usuario implementada.
+
+Los resultados de la ejecución validaron la correcta respuesta de los endpoints RESTful del backend y su coherencia con las funcionalidades del frontend.  
+A continuación se resume la evidencia obtenida:
+
+| Módulo          | Endpoint principal                           | Resultado de ejecución                            | Estado |
+|-----------------|----------------------------------------------|---------------------------------------------------|--------|
+| Inventory       | `/api/v1/inventory`                          | Listado, registro y validación de productos       | Passed |
+| Orders          | `/api/v1/orders`                             | Registro, visualización y confirmación de órdenes | Passed |
+| Subscriptions   | `/api/v1/subscriptions`                      | Gestión de suscripciones                          | Passed |
+| Menu Management | `/api/v1/menu`                               | Listado de platos disponibles en el restaurante   | Passed |
+| Profiles        | `/api/v1/profiles`                           | Gestión de perfiles de usuario                    | Passed |
+| IAM             | `/api/v1/accounts`, `/api/v1/authentication` | Gestión de autenticación de usuario               | Passed |
+
+
+<div style="page-break-after: always;"></div>
+
+### Orders:
+
+
+<div style="page-break-after: always;"></div>
+
+### Inventory
+
+<div style="page-break-after: always;"></div>
+
+### Subscriptions
+
+
+<div style="page-break-after: always;"></div>
+
+### Profiles
+
+<div style="page-break-after: always;"></div>
+
+### Menu
+
+<div style="page-break-after: always;"></div>
+
+### IAM
+
+<div style="page-break-after: always;"></div>
+
+
+#### 5.3.3.5 Microservices Documentation Evidence for Sprint Review
+
+La aplicación *FoodFlow* fue desarrollada bajo una arquitectura **basada en microservicios RESTful**, donde cada dominio del negocio se implementa de forma independiente para asegurar modularidad, escalabilidad y mantenibilidad del sistema.
+
+En este sprint, el foco estuvo en que los siguientes microservicios se integren correctamente con el frontend:
+
+| Microservicio             | Descripción funcional                                                       | Endpoints principales                                                                                                                             |
+|---------------------------|-----------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Inventory Service**     | Control de inventario, stock, y validaciones.                               | `/api/v1/inventory`, `/api/v1/inventory/{id}`                                                                                                     |
+| **Orders Service**        | Gestión de órdenes, confirmaciones y cálculos totales.                      | `/api/v1/orders`, `/api/v1/orders/{id}`                                                                                                           |
+| **Subscriptions Service** | Gestión de suscripciones, suscripciones activas y suscripciones canceladas. | `/api/v1/subscriptions`, `/api/v1/subscriptions/{id}`, `/api/v1/subscriptions/plans`, `/api/v1/subscriptions/{userId}`                            |
+| **Menu Service**          | Listado de platos disponibles en el restaurante                             | `/api/v1/menu`, `/api/v1/menu/{id}`                                                                                                               |
+| **Profiles Service**      | Gestión de perfiles de usuario, creación y actualización.                   | `/api/v1/profiles`, `/api/v1/profiles/{profilesId}`                                                                                               |
+| **IAM Service**           | Gestión de autenticación de usuario, registro e inicio de sesión.           | `/api/v1/accounts`, `/api/v1/accounts/{accountsId}`, `/api/v1/authentication`, `/api/v1/authentication/sign-in`, `/api/v1/authentication/sign-up` |
+
+##### Documentación API:
+Toda la documentación del backend fue generada automáticamente con **Swagger (OpenAPI)**, donde se describen los endpoints, modelos de datos y respuestas HTTP.
+
+
+##### Integración:
+Cada microservicio será desplegado de manera independiente, comunicándose entre sí mediante HTTP.  
+El gateway unificará las peticiones hacia los servicios de dominio y gestionará los encabezados de autenticación JWT.
+Apache Kafka será el encargado de la integración entre los servicios de Orders e Inventory, permitiendo una comunicación asíncrona y escalable.
+
+---
+
+#### 5.3.3.6 Software Deployment Evidence for Sprint Review
+
+El despliegue de *FoodFlow* se realizará en un entorno cloud utilizando un servidor FreeSQL para la base de datos relacional MySQL, y un entorno web para el frontend.  
+Se implementó un pipeline de despliegue siguiendo el flujo GitFlow, con integración continua y versionamiento controlado.
+
+
+##### Configuración general de despliegue:
+
+| Componente            | Tecnología            | Descripción                                         |
+|-----------------------|-----------------------|-----------------------------------------------------|
+| **Backend**           | Java Spring Boot      | Desplegado como conjunto de microservicios RESTful. |
+| **Frontend**          | Angular + Material UI | Dashboard interactivo con reportes y gráficos.      |
+| **Base de Datos**     | MySQL                 | Gestión de datos financieros, platos e inventarios. |
+| **Documentación API** | Swagger (OpenAPI)     | Publicación de especificaciones REST.               |
+
+##### Proceso de despliegue:
+
+1. **Commit en rama `develop`** → validación de tests automáticos.
+2. **Verificación** mediante consultas de endpoints desde Postman.
+
+**Evidencia visual del despliegue:**
+**Backend desplegado en FreeSQL:**
+<br>
+
+**Frontend desplegado en netlify:** https://deplokeep.netlify.app/pages/login-owner
+
+<br>
+
+**Landing Page desplegada en Vercel:** https://landing-page-silk-nine-71.vercel.app/
+
+---
+
+#### 5.3.3.7 Team Collaboration Insights during Sprint
+
+Durante el Sprint 3, el equipo de desarrollo mantuvo una comunicación constante utilizando herramientas ágiles y colaborativas.  
+La metodología aplicada fue Scrum, con reuniones de seguimiento semanales para la revisión del progreso y resolución de bloqueos.
+
+##### Herramientas utilizadas:
+- **Trello:** gestión del backlog, tareas y definición del flujo Kanban.
+- **GitHub:** control de versiones y revisión de código mediante Pull Requests.
+- **Discord / WhatsApp:** reuniones de planificación, retrospectiva y revisión de sprint.
+
+##### GitHub Insights:
+
+---
+
+#### 5.3.3.8 Kanban Board
+
+Durante el Sprint 3 se empleó un tablero Kanban en **Trello** para gestionar las historias de usuario, priorizar tareas y monitorear el avance del sprint.
+
+El tablero se estructuró con las siguientes columnas:
+- **To Do:** Tareas seleccionadas para el sprint actual.
+- **Doing** Tareas en desarrollo.
+- **To Review:** Tareas realizadas, pendientes de revisión.
+- **Done:** Tareas completadas y revisadas.
+
+**URL del tablero de Trello:** https://trello.com/invite/b/6918d1dd32d24a05a8947d0d/ATTIcb28cce09390930e99a29b316c61841e4EEB0CDA/sprint-3-foodflow
+**Captura del tablero Kanban:**
+
+<br>
+
+<br>
+
+---
+
+**Conclusión del Sprint 3:**  
+El equipo completó con éxito la integración del frontend con cada uno de los microservicios implementados en los pasados sprints. Cumpliendo con los objetivos de desarrollo, validación e integración de los microservicios correspondientes. El último sprint estará enfocado únicamente en el despliegue de la aplicación final.
+
