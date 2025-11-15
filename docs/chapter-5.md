@@ -1644,7 +1644,9 @@ El tablero se estructuró con las siguientes columnas:
 - **Done:** Tareas completadas y revisadas.
 
 **URL del tablero de Trello:** https://trello.com/invite/b/6918d1dd32d24a05a8947d0d/ATTIcb28cce09390930e99a29b316c61841e4EEB0CDA/sprint-3-foodflow
-**Captura del tablero Kanban:**
+<br>
+
+**Captura del tablero Kanban:** 
 
 <br>
 <img width="1143" height="587" alt="image" src="https://github.com/user-attachments/assets/37e47eeb-66fd-486f-a4a3-c9106f5097f8" />
