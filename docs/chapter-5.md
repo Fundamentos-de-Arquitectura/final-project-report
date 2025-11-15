@@ -1014,17 +1014,105 @@ En este sprint, el equipo se enfocó en construir el frontend utilizando Angular
 **Herramienta utilizada:** Trello  
 **URL del tablero:** https://trello.com/invite/b/6918d1dd32d24a05a8947d0d/ATTIcb28cce09390930e99a29b316c61841e4EEB0CDA/sprint-3-foodflow
 
-
+<table>
+    <tr>
+        <th>User Story Id</th>
+        <th>User Story Title</th>
+        <th>Task Id</th>
+        <th>Task Title</th>
+        <th>Description</th>
+        <th>Estimation (Hours)</th>
+        <th>Assigned To</th>
+        <th>Status</th>
+    </tr>
+    <tr><td>US01</td><td>Visualizar ingresos y pérdidas</td><td>T01.1</td><td>Crear endpoint financiero</td><td>Retorna ingresos, pérdidas y variación</td><td>5</td><td></td><td>Done</td></tr>
+    <tr><td>US01</td><td>Visualizar ingresos y pérdidas</td><td>T01.2</td><td>Diseñar widget del dashboard</td><td>Componente UI para métricas financieras</td><td>4</td><td></td><td>Done</td></tr>
+    <tr><td>US01</td><td>Visualizar ingresos y pérdidas</td><td>T01.3</td><td>Integrar datos en dashboard</td><td>Conectar backend con UI</td><td>4</td><td></td><td>Done</td></tr>
+    <tr><td>US02</td><td>Identificar platos más populares</td><td>T02.1</td><td>Crear servicio de ranking</td><td>Consulta/algoritmo Top 5</td><td>6</td><td></td><td>Done</td></tr>
+    <tr><td>US02</td><td>Identificar platos más populares</td><td>T02.2</td><td>Crear gráfico Top 5</td><td>Gráfico comparativo de ventas</td><td>4</td><td></td><td>Done</td></tr>
+    <tr><td>US02</td><td>Identificar platos más populares</td><td>T02.3</td><td>Integración con dashboard</td><td>Mostrar ranking dinámico</td><td>3</td><td></td><td>Done</td></tr>
+    <tr><td>US03</td><td>Visualizar inventario actual</td><td>T03.1</td><td>Construir tabla de inventario</td><td>Tabla con stock, costo y unidad</td><td>4</td><td></td><td>Done</td></tr>
+    <tr><td>US03</td><td>Visualizar inventario actual</td><td>T03.2</td><td>Crear endpoint de inventario</td><td>GET de productos</td><td>3</td><td></td><td>Done</td></tr>
+    <tr><td>US03</td><td>Visualizar inventario actual</td><td>T03.3</td><td>Integración UI–API</td><td>Cargar tabla con backend</td><td>2</td><td></td><td>Done</td></tr>
+    <tr><td>US04</td><td>Agregar nuevo producto</td><td>T04.1</td><td>Crear formulario</td><td>Inputs: nombre, stock, costo, unidad</td><td>3</td><td></td><td>Done</td></tr>
+    <tr><td>US04</td><td>Agregar nuevo producto</td><td>T04.2</td><td>Guardar producto</td><td>POST a la API</td><td>3</td><td></td><td>Done</td></tr>
+    <tr><td>US04</td><td>Agregar nuevo producto</td><td>T04.3</td><td>Actualizar tabla</td><td>Refresh automático</td><td>2</td><td></td><td>Done</td></tr>
+    <tr><td>US05</td><td>Validar campos producto</td><td>T05.1</td><td>Validación frontend</td><td>Required, solo números</td><td>3</td><td></td><td>Done</td></tr>
+    <tr><td>US05</td><td>Validar campos producto</td><td>T05.2</td><td>Mensajes de error</td><td>Errores en cada campo</td><td>2</td><td></td><td>Done</td></tr>
+    <tr><td>US06</td><td>Agregar nuevo plato</td><td>T06.1</td><td>Formulario de plato</td><td>Inputs: nombre, desc, precio</td><td>4</td><td></td><td>Done</td></tr>
+    <tr><td>US06</td><td>Agregar nuevo plato</td><td>T06.2</td><td>Validaciones de precio</td><td>No negativos, no texto</td><td>3</td><td></td><td>Done</td></tr>
+    <tr><td>US06</td><td>Agregar nuevo plato</td><td>T06.3</td><td>Integración backend</td><td>Guardar plato</td><td>3</td><td></td><td>Done</td></tr>
+    <tr><td>US06</td><td>Agregar nuevo plato</td><td>T06.4</td><td>Feedback UI</td><td>Mensaje + reset</td><td>2</td><td></td><td>Done</td></tr>
+    <tr><td>US07</td><td>Buscar platos</td><td>T07.1</td><td>Filtro en vivo</td><td>Buscar mientras escribe</td><td>3</td><td></td><td>Done</td></tr>
+    <tr><td>US07</td><td>Buscar platos</td><td>T07.2</td><td>Mensaje sin resultados</td><td>UI cuando no hay coincidencias</td><td>2</td><td></td><td>Done</td></tr>
+    <tr><td>US07</td><td>Buscar platos</td><td>T07.3</td><td>Limpiar búsqueda</td><td>Mostrar todos al borrar</td><td>1</td><td></td><td>Done</td></tr>
+    <tr><td>US08</td><td>Visualizar menú completo</td><td>T08.1</td><td>Tabla de platos</td><td>Nombre, descripción, precio, ingredientes</td><td>5</td><td></td><td>Done</td></tr>
+    <tr><td>US08</td><td>Visualizar menú completo</td><td>T08.2</td><td>Manejo lista vacía</td><td>Mensaje + formulario visible</td><td>2</td><td></td><td>Done</td></tr>
+    <tr><td>US09</td><td>Visualizar órdenes</td><td>T09.1</td><td>Tabla de órdenes</td><td>Mesa, platos, total, fecha</td><td>5</td><td></td><td>Done</td></tr>
+    <tr><td>US09</td><td>Visualizar órdenes</td><td>T09.2</td><td>Orden cronológica</td><td>Sort por fecha</td><td>2</td><td></td><td>Done</td></tr>
+    <tr><td>US10</td><td>Calcular total por plato</td><td>T10.1</td><td>Auto-cálculo</td><td>Subtotal = precio × cantidad</td><td>3</td><td></td><td>Done</td></tr>
+    <tr><td>US11</td><td>Reportes diarios</td><td>T11.1</td><td>Ingresos diarios</td><td>Valor + variación</td><td>4</td><td></td><td>Done</td></tr>
+    <tr><td>US11</td><td>Reportes diarios</td><td>T11.2</td><td>Gastos diarios</td><td>Valor + variación</td><td>4</td><td></td><td>Done</td></tr>
+    <tr><td>US12</td><td>Navegación temporal</td><td>T12.1</td><td>Vista semanal</td><td>Datos agregados por semana</td><td>4</td><td></td><td>Done</td></tr>
+    <tr><td>US12</td><td>Navegación temporal</td><td>T12.2</td><td>Vista mensual</td><td>Datos agregados por mes</td><td>4</td><td></td><td>Done</td></tr>
+    <tr><td>US13</td><td>Categorías de gastos</td><td>T13.1</td><td>Desglose por categoría</td><td>Mostrar categorías y montos</td><td>4</td><td></td><td>Done</td></tr>
+    <tr><td>US13</td><td>Categorías de gastos</td><td>T13.2</td><td>Comparación visual</td><td>Gráficos comparativos</td><td>3</td><td></td><td>Done</td></tr>
+    <tr><td>US14</td><td>Ver planes de suscripción</td><td>T14.1</td><td>Lista de planes</td><td>Nombre, precio, beneficios</td><td>4</td><td></td><td>Done</td></tr>
+    <tr><td>US14</td><td>Ver planes de suscripción</td><td>T14.2</td><td>Manejo de error</td><td>Error al cargar planes</td><td>2</td><td></td><td>Done</td></tr>
+    <tr><td>US15</td><td>Suscribirse al plan premium</td><td>T15.1</td><td>Proceso de pago</td><td>Validar método de pago</td><td>5</td><td></td><td>Done</td></tr>
+    <tr><td>US15</td><td>Suscribirse al plan premium</td><td>T15.2</td><td>Manejo de errores</td><td>Tarjeta rechazada u otros</td><td>3</td><td></td><td>Done</td></tr>
+    <tr><td>US16</td><td>Cancelar suscripción</td><td>T16.1</td><td>Confirmar cancelación</td><td>Diálogo de confirmación</td><td>3</td><td></td><td>Done</td></tr>
+    <tr><td>US16</td><td>Cancelar suscripción</td><td>T16.2</td><td>Acceso hasta fin de periodo</td><td>Mostrar fecha de término</td><td>2</td><td></td><td>Done</td></tr>
+    <tr><td>US17</td><td>Ver perfil de usuario</td><td>T17.1</td><td>Cargar datos personales</td><td>Nombre, correo, plan</td><td>4</td><td></td><td>Done</td></tr>
+    <tr><td>US17</td><td>Ver perfil de usuario</td><td>T17.2</td><td>Manejo de error</td><td>Reintentar carga</td><td>2</td><td></td><td>Done</td></tr>
+    <tr><td>US18</td><td>Actualizar perfil</td><td>T18.1</td><td>Editar datos</td><td>Nombre, correo</td><td>4</td><td></td><td>Done</td></tr>
+    <tr><td>US18</td><td>Actualizar perfil</td><td>T18.2</td><td>Validaciones</td><td>Campos obligatorios</td><td>3</td><td></td><td>Done</td></tr>
+    <tr><td>US18</td><td>Actualizar perfil</td><td>T18.3</td><td>Actualizar contraseña</td><td>Cambio de contraseña</td><td>3</td><td></td><td>Done</td></tr>
+    <tr><td>US19</td><td>Iniciar sesión</td><td>T19.1</td><td>Validar credenciales</td><td>Login exitoso</td><td>3</td><td></td><td>Done</td></tr>
+    <tr><td>US19</td><td>Iniciar sesión</td><td>T19.2</td><td>Manejo de errores</td><td>Credenciales inválidas</td><td>2</td><td></td><td>Done</td></tr>
+    <tr><td>US20</td><td>Crear cuenta nueva</td><td>T20.1</td><td>Formulario de registro</td><td>Inputs: nombre, correo, contraseña</td><td>4</td><td></td><td>Done</td></tr>
+    <tr><td>US20</td><td>Crear cuenta nueva</td><td>T20.2</td><td>Validaciones</td><td>Correo inválido, campos vacíos</td><td>3</td><td></td><td>Done</td></tr>
+    <tr><td>US20</td><td>Crear cuenta nueva</td><td>T20.3</td><td>Correo duplicado</td><td>No permitir registro repetido</td><td>2</td><td></td><td>Done</td></tr>
+</table>
 
 ---
 
 #### 5.3.3.2 Development Evidence for Sprint Review
+# ToDo: Commits table
 
 
 #### 5.3.2.3 Testing Suite Evidence for Sprint Review
 
-Las pruebas BDD se desarrollaron con **Gherkin** para las User Stories implementadas.  
+Las pruebas BDD se desarrollaron con **Gherkin** para las User Stories en su totalidad..  
 A continuación se presentan los archivos `.feature` correspondientes:
+
+## US01 - Visualizar Ingresos y Pérdidas
+```gherkin
+Feature: Visualizar Ingresos y Pérdidas
+  Como dueño de restaurante
+  Quiero ver un resumen de mis ingresos y pérdidas en el dashboard
+  Para conocer rápidamente la situación financiera de mi negocio
+
+  Scenario: Visualización del resumen financiero
+    Given que estoy en la pantalla principal del dashboard
+    When ingreso al sistema
+    Then debo visualizar el monto total de ingresos y pérdidas
+    And debo ver el porcentaje de variación correspondiente
+```
+
+## US02 - Identificar Platos Más Populares
+```gherkin
+Feature: Identificar Platos Más Populares
+  Como dueño de restaurante
+  Quiero ver un listado de los platos más vendidos
+  Para identificar cuáles son los más rentables
+
+  Scenario: Visualización del Top 5 de platos
+    Given que accedo al dashboard
+    When consulto la sección "Top 5 Dishes"
+    Then debo ver un ranking de los platos más populares
+    And cada plato debe mostrar una barra comparativa de ventas
+```
 
 ## US03 - Visualizar Inventario Actual
 ```gherkin
@@ -1070,6 +1158,80 @@ Feature: Validar Campos al Agregar Producto
     And el producto no se guarda en el inventario
 ```
 
+## US06 - Agregar Nuevo Plato
+```gherkin
+Feature: Agregar Nuevo Plato
+  Como dueño de restaurante
+  Quiero agregar nuevos platos al menú
+  Para mantener mi oferta actualizada y atractiva para los clientes
+
+  Scenario: Agregar plato exitosamente
+    Given que estoy en la página de gestión de menú
+    When completo el formulario con nombre, descripción y precio válidos
+    And hago clic en "Add Dish"
+    Then el nuevo plato debe agregarse a la lista de platos existentes
+    And debo ver un mensaje de confirmación
+    And los campos del formulario deben limpiarse automáticamente
+
+  Scenario: Validación de campos obligatorios
+    Given que estoy en la página de gestión de menú
+    When intento agregar un plato sin completar todos los campos requeridos
+    And hago clic en "Add Dish"
+    Then el sistema debe mostrar mensajes de error indicando los campos faltantes
+    And el plato no debe agregarse a la lista
+
+  Scenario: Validación de precio
+    Given que estoy completando el formulario de nuevo plato
+    When ingreso un precio inválido (negativo, texto o vacío)
+    And hago clic en "Add Dish"
+    Then el sistema debe mostrar un mensaje de error sobre el formato del precio
+    And no debe permitir guardar el plato hasta corregir el valor
+```
+
+## US07 - Buscar Platos Existentes
+```gherkin
+Feature: Buscar Platos Existentes
+  Como dueño de restaurante
+  Quiero buscar platos específicos en mi menú
+  Para encontrar rápidamente la información que necesito
+
+  Scenario: Búsqueda exitosa
+    Given que tengo platos en mi lista de menú
+    When escribo el nombre de un plato en el campo de búsqueda
+    Then el sistema debe filtrar y mostrar los platos coincidentes en tiempo real
+
+  Scenario: Búsqueda sin resultados
+    Given que estoy en la página de gestión de menú
+    When busco un plato que no existe en mi menú
+    Then el sistema debe mostrar un mensaje indicando que no se encontraron resultados
+    And la tabla debe permanecer vacía
+
+  Scenario: Limpiar búsqueda
+    Given que he realizado una búsqueda previa
+    When borro el contenido del campo de búsqueda
+    Then se muestran nuevamente todos los platos del menú
+```
+
+## US08 - Visualizar Información Completa del Menú
+```gherkin
+Feature: Visualizar Información Completa del Menú
+  Como dueño de restaurante
+  Quiero visualizar toda la información de mis platos
+  Para tener control total sobre mi menú
+
+  Scenario: Visualización completa
+    Given que tengo platos registrados en mi sistema
+    When accedo a la página de gestión de menú
+    Then veo una tabla con nombre, descripción, precio, ingredientes y acciones disponibles
+    And la información está claramente organizada y es fácil de leer
+
+  Scenario: Manejo de lista vacía
+    Given que no tengo platos registrados
+    When accedo a la página de gestión de menú
+    Then veo un mensaje indicando que no hay platos disponibles
+    And el formulario para agregar nuevos platos está visible y accesible
+```
+
 ## US09 - Visualizar Órdenes Existentes
 ```gherkin
 Feature: Visualizar Órdenes Existentes
@@ -1082,6 +1244,78 @@ Feature: Visualizar Órdenes Existentes
     When navego a la sección "Orders"
     Then debo ver una tabla con las órdenes
     And la tabla muestra las columnas: Mesa, Platos, Precio Total y Fecha
+```
+## US10 — Calcular el Total por Plato
+```gherkin
+Feature: Calcular el Total por Plato
+  Como dueño de restaurante
+  Quiero que el sistema calcule automáticamente el precio total de cada plato
+  Para evitar errores de facturación manual
+
+  Scenario: Cálculo automático del total
+    Given que agrego un plato con su precio unitario
+    When especifico la cantidad
+    Then el sistema debe calcular y mostrar el precio total en la columna correspondiente
+```
+
+## US11 - Visualización de Reportes Financieros Diarios
+```gherkin
+Feature: Visualización de Reportes Financieros Diarios
+  Como dueño de restaurante
+  Quiero ver mis ingresos y gastos diarios
+  Para tomar decisiones informadas sobre el rendimiento financiero diario
+
+  Scenario: Visualización de ingresos diarios
+    Given que estoy en la sección de Reportes
+    When selecciono la pestaña "Daily"
+    Then debo ver el total de ingresos del día
+    And debo ver el porcentaje de cambio respecto al día anterior
+
+  Scenario: Visualización de gastos diarios
+    Given que estoy en la sección de Reportes
+    When reviso la sección de gastos diarios
+    Then debo ver el total de gastos del día
+    And debo ver el porcentaje de cambio respecto al día anterior
+```
+
+## US12 - Navegación entre Períodos de Tiempo
+```gherkin
+Feature: Navegación entre Períodos de Tiempo
+  Como dueño de restaurante
+  Quiero alternar entre reportes diarios, semanales y mensuales
+  Para analizar tendencias en diferentes períodos
+
+  Scenario: Cambio a vista semanal
+    Given que estoy visualizando reportes diarios
+    When hago clic en la pestaña "Weekly"
+    Then debo ver los datos financieros agregados de la semana actual
+    And la pestaña "Weekly" debe aparecer como activa
+
+  Scenario: Cambio a vista mensual
+    Given que estoy en cualquier vista de reportes
+    When selecciono la pestaña "Monthly"
+    Then debo ver los datos financieros del mes en curso
+    And todos los gráficos deben actualizarse para mostrar datos mensuales
+```
+
+## US13 - Análisis de Categorías de Gastos
+```gherkin
+Feature: Análisis de Categorías de Gastos
+  Como dueño de restaurante
+  Quiero visualizar el desglose de mis gastos por categoría
+  Para identificar áreas donde puedo optimizar costos
+
+  Scenario: Visualización de gastos por categoría
+    Given que estoy en la sección de reportes
+    When reviso la sección de gastos por categoría
+    Then debo ver las categorías con sus respectivos montos
+    And cada categoría debe tener una representación visual
+
+  Scenario: Comparación entre categorías
+    Given que tengo gastos en múltiples categorías
+    When visualizo el desglose de gastos
+    Then puedo comparar fácilmente qué categoría representa mayor gasto
+    And los datos deben estar claramente etiquetados
 ```
 
 ## US14 - Visualizar Planes de Suscripción
@@ -1249,6 +1483,8 @@ A continuación se resume la evidencia obtenida:
 
 <div style="page-break-after: always;"></div>
 
+# TODO: PONER FOTOS DEL FRONT EN EJECUCION 
+
 ### Orders:
 
 
@@ -1325,10 +1561,9 @@ Se implementó un pipeline de despliegue siguiendo el flujo GitFlow, con integra
 **Evidencia visual del despliegue:**
 **Backend desplegado en FreeSQL:**
 <br>
-
 **Frontend desplegado en netlify:** https://deplokeep.netlify.app/pages/login-owner
 
-<br>
+<br> <br>
 
 **Landing Page desplegada en Vercel:** https://landing-page-silk-nine-71.vercel.app/
 
@@ -1345,6 +1580,7 @@ La metodología aplicada fue Scrum, con reuniones de seguimiento semanales para 
 - **Discord / WhatsApp:** reuniones de planificación, retrospectiva y revisión de sprint.
 
 ##### GitHub Insights:
+# FOTO INSIGHTS
 
 ---
 
