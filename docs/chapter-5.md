@@ -1598,6 +1598,7 @@ El tablero se estructuró con las siguientes columnas:
 **Captura del tablero Kanban:**
 
 <br>
+<img width="1143" height="587" alt="image" src="https://github.com/user-attachments/assets/37e47eeb-66fd-486f-a4a3-c9106f5097f8" />
 
 <br>
 
