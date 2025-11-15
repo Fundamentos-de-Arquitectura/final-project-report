@@ -24,8 +24,6 @@ Cada *bounded context* se implementa como un servicio independiente desplegable 
 |-----------------|-----------------------|-----------------------------------------------------------------------------------------|
 | Inventory       | Inventory Service     | Control de productos y cantidades.                                                      |
 | Menu            | Menu Service          | Administración de los platos de la carta, con sus precios, categorías y disponibilidad. |
-| Report          | Reports Service       | Generación de informes financieros y operativos.                                        |
-| Analytics       | Reports Service       | Visualización y análisis de métricas de negocio.                                        |
 | IAM             | IAM Service           | Autenticación y autorización basada en roles.                                           |
 | Profiles        | Profiles Service      | Datos personales y configuraciones de usuario.                                          |
 | Subscription    | Subscriptions Service | Gestión de planes SaaS y periodos de servicio.                                          |
@@ -152,21 +150,6 @@ Diagrama de clases
 | **MessagingService** | Servicio de mensajería | Publica eventos entre microservicios     | Comunica eventos importantes: orden procesada, actualización de stock, suscripción activada     |
 | **StockUpdateEvent** | Evento                 | Evento de actualización de inventario    | Mensaje que se envía cuando una orden requiere descontar stock                                  |
 | **InventoryClient**  | Cliente                | Interfaz para comunicarse con Inventario | Permite al servicio de órdenes consultar y actualizar el inventario de otros microservicios     |
-
----
-
-## Servicio de Reportes
-
-| Clase                 | Tipo        | Descripción                        | Propósito                                                                                                         |
-|-----------------------|-------------|------------------------------------|-------------------------------------------------------------------------------------------------------------------|
-| **ReportsController** | Controlador | Maneja peticiones HTTP de reportes | Expone endpoints para generar reportes de ingresos, pérdidas y consultar reportes almacenados                     |
-| **ReportsService**    | Servicio    | Lógica de negocio de reportes      | Genera reportes consolidados obteniendo datos de órdenes e inventario, calcula métricas financieras               |
-| **Report**            | Entidad     | Representa un reporte generado     | Almacena metadatos del reporte: tipo, período, estado de generación, datos calculados                             |
-| **IncomeReport**      | DTO         | Reporte de ingresos                | Contiene métricas de ventas: total de ventas, cantidad de órdenes, promedio por orden, ventas por plato y por día |
-| **LossReport**        | DTO         | Reporte de pérdidas/gastos         | Contiene métricas de compras: total de compras, cantidad de compras, gastos por categoría y por día               |
-| **ReportType**        | Enum        | Tipo de reporte                    | Define si es un reporte de ingresos o de pérdidas/gastos                                                          |
-| **ReportStatus**      | Enum        | Estados del reporte                | Rastrea el proceso de generación: solicitado, generando, obteniendo datos, calculando, generado, almacenado       |
-| **ReportRepository**  | Repositorio | Acceso a datos de reportes         | Maneja operaciones CRUD de reportes generados, con filtros por tipo y fecha                                       |
 
 <div style="page-break-after: always;"></div>
 
@@ -359,31 +342,7 @@ Detalla los platillos incluidos en cada orden.
 
 ---
 
-### 9. REPORT (Reporte)
-Almacena reportes generados del sistema.
-
-| Campo         | Tipo        | Descripción                                          |
-|---------------|-------------|------------------------------------------------------|
-| id            | string (PK) | Identificador único del reporte                      |
-| type          | string      | Tipo de reporte (INCOME, LOSS)                       |
-| period_from   | date        | Fecha de inicio del periodo reportado                |
-| period_to     | date        | Fecha de fin del periodo reportado                   |
-| total_income  | decimal     | Total de ingresos en el periodo                      |
-| total_loss    | decimal     | Total de pérdidas en el periodo                      |
-| net_profit    | decimal     | Ganancia neta (ingresos - pérdidas)                  |
-| profit_margin | decimal     | Margen de ganancia porcentual                        |
-| status        | string      | Estado del reporte (GENERANDO, GENERADO, ALMACENADO) |
-| generated_at  | datetime    | Fecha de generación del reporte                      |
-| income_data   | string      | Datos de ingresos en formato JSON                    |
-| loss_data     | string      | Datos de pérdidas en formato JSON                    |
-| created_at    | datetime    | Fecha de creación del registro                       |
-| updated_at    | datetime    | Fecha de última actualización                        |
-
-**Propósito**: Generar y almacenar reportes financieros del negocio.
-
----
-
-### 10. INCOME_DETAIL (Detalle de Ingresos)
+### 9. INCOME_DETAIL (Detalle de Ingresos)
 Desglosa la información detallada de ingresos en un reporte.
 
 | Campo               | Tipo        | Descripción                            |
@@ -401,7 +360,7 @@ Desglosa la información detallada de ingresos en un reporte.
 
 ---
 
-### 11. LOSS_DETAIL (Detalle de Pérdidas)
+### 10. LOSS_DETAIL (Detalle de Pérdidas)
 Desglosa la información detallada de pérdidas en un reporte.
 
 | Campo                 | Tipo        | Descripción                              |
@@ -427,8 +386,6 @@ Desglosa la información detallada de pérdidas en un reporte.
 | SUBSCRIPTION → PAYMENT_TRANSACTION | 1:N          | Una suscripción puede generar múltiples transacciones (pagos iniciales, renovaciones, intentos fallidos) |
 | ORDER → ORDER_ITEM                 | 1:N          | Una orden contiene múltiples items; cada item pertenece a una única orden                                |
 | DISH → ORDER_ITEM                  | 1:N          | Un platillo puede estar en múltiples items de orden; cada item referencia un único platillo              |
-| REPORT → INCOME_DETAIL             | 1:N          | Un reporte puede tener múltiples detalles de ingresos (aunque típicamente será 1:1)                      |
-| REPORT → LOSS_DETAIL               | 1:N          | Un reporte puede tener múltiples detalles de pérdidas (aunque típicamente será 1:1)                      |
 
 ---
 
@@ -441,7 +398,6 @@ Desglosa la información detallada de pérdidas en un reporte.
 | Reports       | Strategy / Template Method | Generación y formato de informes.           |
 | IAM           | Singleton / Proxy          | Control de autenticación.                   |
 | Subscriptions | Repository / Observer      | Renovaciones y vencimientos.                |
-| Orders        | Repository (solo lectura)  | Consulta de datos estáticos de ejemplo.     |
 
 ---
 
