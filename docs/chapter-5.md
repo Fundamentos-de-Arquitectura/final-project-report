@@ -1502,27 +1502,53 @@ A continuación se resume la evidencia obtenida:
 
 ### Orders:
 
+<img width="1314" height="643" alt="image" src="https://github.com/user-attachments/assets/cdec85ce-d46f-4e63-909b-439e9f88f207" />
+
 
 <div style="page-break-after: always;"></div>
 
 ### Inventory
 
+<img width="1311" height="642" alt="image" src="https://github.com/user-attachments/assets/f32fd6d5-55db-4cac-8acd-b738b0dc72fb" />
+
+
 <div style="page-break-after: always;"></div>
 
 ### Subscriptions
+
+<img width="1316" height="637" alt="image" src="https://github.com/user-attachments/assets/f0722071-c8e3-48cb-bb4b-0e59c772d6f8" />
 
 
 <div style="page-break-after: always;"></div>
 
 ### Profiles
 
+<img width="1313" height="637" alt="image" src="https://github.com/user-attachments/assets/d3271811-8b56-48b4-b694-c22c18ec1acc" />
+
+
 <div style="page-break-after: always;"></div>
 
 ### Menu
 
+<img width="1298" height="643" alt="image" src="https://github.com/user-attachments/assets/be1d5477-c6bf-46bc-9d18-f551ab9acb48" />
+
+<br>
+
+<img width="1291" height="636" alt="image" src="https://github.com/user-attachments/assets/505ce5fe-2996-4ed3-a32d-fbc623728ee6" />
+
+<br>
+
 <div style="page-break-after: always;"></div>
 
 ### IAM
+
+<img width="1297" height="637" alt="image" src="https://github.com/user-attachments/assets/b6b7f765-386a-487b-b658-cfb7e9e074fd" />
+
+<br>
+
+<img width="1294" height="640" alt="image" src="https://github.com/user-attachments/assets/6a1cff0b-2480-4f5a-8575-49f8e5d1e211" />
+
+<br>
 
 <div style="page-break-after: always;"></div>
 
