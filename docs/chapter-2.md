@@ -170,7 +170,7 @@ En esta sección se aborda la información recolectada de cada entrevista incluy
 | Edad                 | 49                                                                                                                              |
 | Distrito             | La Molina                                                                                                                       |
 | Evidencia            | <img width="967" height="290" alt="12" src="https://github.com/user-attachments/assets/e8053896-d2d0-4f92-9c76-e892319ca6bf" /> |
-| Url                  | https://upcedupe-my.sharepoint.com/:v:/g/personal/u202213765_upc_edu_pe/EQbGCZQqNStEiOr3ASX3J74BIwBZ_cqT66YpSpBcX0tiAA?e=BfCmc6 |
+| Url                  | https://acortar.link/Vu9w5X |
 | Inicio de entrevista | 00:00:01                                                                                                                        |
 | Fin de entrevista    | 00:11:19                                                                                                                        |
 
