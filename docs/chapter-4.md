@@ -155,7 +155,7 @@ Diagrama de clases
 
 ## Diagrama de contenedores 
 
-<img alt="contenedores" src="https://github.com/user-attachments/assets/2b0231c1-0869-40ee-ba53-8645b19eb128" />
+<img width="768" height="644" alt="image" src="https://github.com/user-attachments/assets/c6c25010-6daf-41f5-9237-b14559196036" />
 
 <div style="page-break-after: always;"></div>
 
