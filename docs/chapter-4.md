@@ -161,23 +161,27 @@ Diagrama de clases
 
 ## Diagrama de componentes
 
-<img width="800" height="900" alt="c1" src="https://github.com/user-attachments/assets/5a142364-277e-4e40-984a-3a65dc4e2def" />
+<img width="701" height="1063" alt="diagrama1" src="https://github.com/user-attachments/assets/2d580a34-2f3f-49ec-9508-a8a56df1682b" />
 
 <div style="page-break-after: always;"></div>
 
-<img width="800" height="900" alt="c2" src="https://github.com/user-attachments/assets/12d23836-b139-49b1-88ec-9cfb1eaead3a" />
+<img width="1405" height="1066" alt="diagrama2" src="https://github.com/user-attachments/assets/5c092cc9-ecfc-43f7-b901-c80e98dc1eb7" />
 
 <div style="page-break-after: always;"></div>
 
-<img width="800" height="900" alt="c3" src="https://github.com/user-attachments/assets/9f8e1fd3-5006-4cb7-beb9-24bf79dac2ff" />
+<img width="1180" height="1056" alt="diagrama3" src="https://github.com/user-attachments/assets/120b5b59-1c3d-4a4b-803c-5ce3b665f47f" />
 
 <div style="page-break-after: always;"></div>
 
-<img width="800" height="900" alt="c4" src="https://github.com/user-attachments/assets/40a2610b-85ad-444b-b91b-f518b05fc4b9" />
+<img width="1721" height="1079" alt="diagrama4" src="https://github.com/user-attachments/assets/c1224c87-0f51-48d7-9c75-e616c2d8c307" />
 
 <div style="page-break-after: always;"></div>
 
-<img width="800" height="900" alt="c5" src="https://github.com/user-attachments/assets/ade772bc-0968-4f07-877c-70e7b11e9132" />
+<img width="1903" height="1058" alt="diagrama5" src="https://github.com/user-attachments/assets/e84589f2-89e6-4ddc-b84d-b217d55b47cc" />
+
+<div style="page-break-after: always;"></div>
+
+<img width="1477" height="1056" alt="diagrama6" src="https://github.com/user-attachments/assets/1e1b8f8f-760b-49ba-ad09-317c82944ec9" />
 
 <div style="page-break-after: always;"></div>
 
