@@ -7,7 +7,7 @@
 
 ## <div style="text-align: center;">Carrera de Ingeniería de Software </div>
 ## <div style="text-align: center;"> Fundamentos de Arquitectura de Software</div>
-## <div style="text-align: center;"> 202520 </div>
+## <div style="text-align: center;"> Periodo: 202520 </div>
 ## <div style="text-align: center;"> Sección: 6339 </div>
 ## <div style="text-align: center;"> Docente: Ernesto Ocampo Tello</div>
 ## <div style="text-align: center;"> Informe TB4</div>
