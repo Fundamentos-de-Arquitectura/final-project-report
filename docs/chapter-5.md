@@ -2209,6 +2209,57 @@ La colaboración efectiva y el uso de herramientas adecuadas fueron clave para e
 
 #### 5.4.2. Cloud Architecture Deployment in Azure
 
+Se realizó el deployment de los microservicios usando Azure. <br>
+
+<img width="1314" height="677" alt="image" src="https://github.com/user-attachments/assets/0dd59859-981b-4567-997c-6ff005bbe0e4" />
+
+<br>
+
+<img width="1315" height="675" alt="image" src="https://github.com/user-attachments/assets/c7f5f1cf-3d55-4194-9d25-4e453ae62d67" />
+
+<br>
+
+Para ello, se realizaron los siguientes pasos: <br>
+
+1. Se creo el grupo de recursos: <br>
+
+ <img width="1315" height="680" alt="image" src="https://github.com/user-attachments/assets/fad2761f-9983-4681-925e-389cd150f25d" />
+
+<br>
+
+2. Se crean el servidor de base datos, container registry y el plan de servicios
+
+<br>
+
+<img width="1351" height="680" alt="image" src="https://github.com/user-attachments/assets/0535b89b-7ebc-485d-86f2-d5bcea89e66f" />
+
+<br>
+
+3. Usando la extensión de Azure para JetBrains, se sube cada microservicio a su respectivo app service <br>
+
+<img width="468" height="310" alt="image" src="https://github.com/user-attachments/assets/3fb6ba99-1585-427c-a768-ca8a10d062ed" />
+
+<br>
+
+4. Se configura para que esté abierto a redes en cada uno de los app service <br>
+
+<img width="1311" height="639" alt="image" src="https://github.com/user-attachments/assets/ca37d334-5e16-4d61-a7d2-e1ecbcfa5175" />
+
+<br>
+
+5. Revisar logs en caso de errores (muy recomendado) <br>
+
+<img width="1309" height="634" alt="image" src="https://github.com/user-attachments/assets/2968de2e-3429-43c0-aa06-b8c2d16007e5" />
+
+<br>
+
+6. Revisar estado de los microservicios en Eureka <br>
+
+<img width="1315" height="376" alt="image" src="https://github.com/user-attachments/assets/d189d929-376d-41b2-a256-b6d1f764ec87" />
+
+<br>
+
+Nota: En caso de que haya instancias "fantasma" o también llamadas "zombie", siempre que esté en "Down" no habrá conflicto. <br>
 
 
 ## Conclusiones
