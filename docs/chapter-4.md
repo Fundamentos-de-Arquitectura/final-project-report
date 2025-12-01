@@ -189,7 +189,7 @@ Diagrama de clases
 
 La base de datos **MySQL** mantiene las entidades descritas en los capítulos anteriores:
 
-<img alt="Untitled diagram-2025-10-09-040617" src="https://github.com/user-attachments/assets/e360620e-0a50-40c8-951a-b29ca1736343" />
+![WhatsApp Image 2025-11-30 at 9 21 40 PM](https://github.com/user-attachments/assets/59d10088-aa49-4da6-a5b4-be8bac062fe1)
 
 <div style="page-break-after: always;"></div>
 
