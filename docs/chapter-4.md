@@ -428,12 +428,12 @@ La arquitectura de FoodFlow está diseñada para cumplir con los objetivos del n
 
 ### 4.2.2 Primary Functionality (Primary User Stories)
 
-| Código | User Story resumida                             |
-|--------|-------------------------------------------------|
-| US04   | Registrar y actualizar productos en inventario. |
-| US06   | Administrar platos del menú.                    |
-| US11   | Generar reportes financieros y de operaciones.  |
-| US01   | Visualizar métricas en dashboard.               |
+| Código | User Story resumida                            |
+|--------|------------------------------------------------|
+| US04   | Registrar productos en inventario.             |
+| US06   | Ingresar platos en el menú.                    |
+| US11   | Generar reportes financieros y de operaciones. |
+| US01   | Visualizar métricas en dashboard.              |
 
 ---
 
@@ -537,10 +537,10 @@ Usuario (Dueño) ──► Frontend (Angular) ──► API Gateway ──► Se
 
 #### Design Decisions
 
-| Decisión       | Justificación               | Alternativas  | Trade-off                 |
-|----------------|-----------------------------|---------------|---------------------------|
-| Microservicios | Modularidad y escalabilidad | Monolito, SOA | Mayor complejidad inicial |
-| MySQL          | Integridad ACID             | PostgreSQL    | Menos flexibilidad NoSQL  |
+| Decisión       | Justificación               | Alternativas | Trade-off                 |
+|----------------|-----------------------------|--------------|---------------------------|
+| Microservicios | Modularidad y escalabilidad | Monolito     | Mayor complejidad inicial |
+| MySQL          | Integridad ACID             | PostgreSQL   | Menos flexibilidad NoSQL  |
 
 ### 4.3.1.7 Analysis of Current Design and Review Iteration Goal (Kanban Board)
 
