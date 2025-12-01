@@ -2130,13 +2130,24 @@ Durante el Sprint 4 se realizaron pruebas de aceptación para asegurar que todos
 Los resultados de la ejecución validaron que todas las funcionalidades implementadas en los sprints anteriores operaban según lo esperado, sin errores críticos.
 
 
+
+
 #### 5.3.4.5 Microservices Documentation Evidence for Sprint Review
 
 Los microservicios de *FoodFlow* fueron desplegados en un entorno cloud utilizando Azure, asegurando su accesibilidad y rendimiento óptimo.
 
 En este sprint, el foco principal fue el despliegue de los microservicios.
 
+Siendo los links de cada uno hacia la documentación en Swagger: <br>
 
+- IAM: https://iam-microservice-app.azurewebsites.net/swagger-ui/index.html <br>
+- Inventory Management: https://inventory-microservice-app.azurewebsites.net/swagger-ui/index.html <br>
+- Order Management: https://orders-microservice-app.azurewebsites.net/swagger-ui/index.html <br>
+- Profile Management: https://profiles-microservice-app.azurewebsites.net/swagger-ui/index.html <br>
+- Subscription Management: https://subscription-microservice-app.azurewebsites.net/swagger-ui/index.html <br>
+- Menu Management: https://menu-microservice-app.azurewebsites.net/swagger-ui/index.html <br>
+
+- Eureka! : https://foodflow-service-registry.azurewebsites.net <br>
 
 #### 5.3.4.6 Software Deployment Evidence for Sprint Review
 
@@ -2145,18 +2156,18 @@ El despliegue de la aplicación *FoodFlow* se realizó exitosamente en Azure, ut
 
 *Configuración del entorno de despliegue:*
 
-| Componente        | Servicio Azure                | Detalles de Configuración                          |
-|-------------------|-------------------------------|---------------------------------------------------|
-| Backend           | Azure App Service             | Configurado para autoescalado y alta disponibilidad|
-| Frontend          | Azure App Service             | Desplegado con CDN para optimizar la entrega      |
-| Base de Datos     | Azure SQL Database            | Configurada con copias de seguridad automáticas   |
+| Componente    | Servicio Azure     | Detalles de Configuración                           |
+|---------------|--------------------|-----------------------------------------------------|
+| Backend       | Azure App Service  | Configurado para autoescalado y alta disponibilidad |
+| Frontend      | Azure App Service  | Desplegado con CDN para optimizar la entrega        |
+| Base de Datos | Azure SQL Database | Configurada con copias de seguridad automáticas     |
 
 *Proceso de despliegue:*
-1. Construcción del proyecto utilizando pipelines de CI/CD en Azure DevOps.
+1. Construcción del proyecto.
 2. Despliegue automático al entorno de producción tras la aprobación de las pruebas.
 3. Monitoreo continuo del rendimiento y la disponibilidad post-despliegue.
 4. Notificación al equipo sobre el estado del despliegue y cualquier incidencia.
-5. Verificación final de la funcionalidad completa de la aplicación en el entorno cloud.
+5. Verificación final de la funcionalidad completa en el entorno cloud.
 
 **Evidencia visual del despliegue:**
 
