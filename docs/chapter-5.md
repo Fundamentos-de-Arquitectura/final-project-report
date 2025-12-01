@@ -2202,3 +2202,36 @@ El tablero se estructuró con las siguientes columnas:
 El equipo logro deplegar exitosamente los microservicios usando Azure, 
 completando todas las historias de usuario planificadas y asegurando la calidad del software a través de pruebas exhaustivas. 
 La colaboración efectiva y el uso de herramientas adecuadas fueron clave para el éxito del sprint.
+
+## 5.4. Microservices Deployment
+
+#### 5.4.1. Cloud Architecture Diagram
+
+#### 5.4.2. Cloud Architecture Deployment in Azure
+
+
+
+## Conclusiones
+
+### **1. Conclusión de objetivo**
+*Foodflow* cumple su objetivo principal al permitir un monitoreo financiero continuo y claro, brindando a los propietarios de restaurantes una visión precisa de la salud económica de su negocio. Esto facilita decisiones estratégicas oportunas, evitando pérdidas y maximizando la rentabilidad sin necesidad de conocimientos contables avanzados.
+
+### **2. Conclusión técnica**
+La solución se sustenta en tecnologías web inteligentes que integran dashboards dinámicos, análisis de flujos de caja, rentabilidad por plato y tendencias de ventas. Estos elementos convierten datos complejos en información accesible, automatizada y accionable, optimizando la gestión financiera del restaurante.
+
+### **3. Conclusión estratégica**
+Gracias a su enfoque preventivo y basado en datos, *foodflow* se posiciona como una herramienta innovadora en el sector gastronómico. Su visión de alcanzar el liderazgo en Latinoamérica en 2 años refleja una estrategia clara y orientada a resolver problemas reales de eficiencia económica en los restaurantes.
+
+---
+
+## Recomendaciones finales
+
+### **1. Reforzar la propuesta de valor con métricas visuales**
+Incorporar gráficos, KPIs destacados y ejemplos visuales del dashboard ayudará a demostrar de forma concreta cómo *foodflow* transforma datos en decisiones estratégicas.
+
+### **2. Integrar casos de uso o escenarios reales**
+Presentar escenarios simples basados en situaciones comunes de restaurantes permitirá ilustrar de manera práctica cómo la plataforma previene pérdidas y optimiza la rentabilidad.
+
+### **3. Definir un roadmap hacia la meta del 80% de adopción**
+Es recomendable incluir un plan de crecimiento que detalle estrategias de penetración, alianzas, pilotos iniciales y acciones de retención de usuarios para fortalecer la viabilidad de la visión planteada.
+
