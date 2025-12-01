@@ -2129,8 +2129,21 @@ Durante el Sprint 4 se realizaron pruebas de aceptación para asegurar que todos
 
 Los resultados de la ejecución validaron que todas las funcionalidades implementadas en los sprints anteriores operaban según lo esperado, sin errores críticos.
 
+<img width="1356" height="620" alt="image" src="https://github.com/user-attachments/assets/8018f49a-ccef-4386-af19-e854ab901380" />
 
+<br>
 
+<img width="1359" height="619" alt="image" src="https://github.com/user-attachments/assets/b99b6b6c-a0d2-4d24-bd2a-3257e6ab3656" />
+
+<br>
+
+<img width="1359" height="606" alt="image" src="https://github.com/user-attachments/assets/b7bd2351-ee66-400f-bf19-28ec83b7eda9" />
+
+<br>
+
+<img width="1359" height="621" alt="image" src="https://github.com/user-attachments/assets/69ecf83a-4fa8-46a0-94f9-f48aa0029fbd" />
+
+<br>
 
 #### 5.3.4.5 Microservices Documentation Evidence for Sprint Review
 
