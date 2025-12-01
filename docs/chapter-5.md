@@ -2160,9 +2160,24 @@ El despliegue de la aplicación *FoodFlow* se realizó exitosamente en Azure, ut
 
 **Evidencia visual del despliegue:**
 
-**Frontend desplegado en Azure:**
+<img width="1295" height="593" alt="image" src="https://github.com/user-attachments/assets/6184a2fd-0473-4e65-8798-545f998f7d19" />
 
-**Landing Page desplegada en Vercel:**
+<br>
+
+<img width="1317" height="638" alt="image" src="https://github.com/user-attachments/assets/4bcad9c0-35ca-452f-b174-fd7fac280dab" />
+
+<br>
+
+<img width="1312" height="639" alt="image" src="https://github.com/user-attachments/assets/2bb346f7-988d-4efe-9c91-9286c2dbc149" />
+
+<br>
+
+**Landing Page desplegada en Vercel:** 
+
+<img width="1316" height="679" alt="image" src="https://github.com/user-attachments/assets/b57aa7e9-5d42-4b45-a4af-c22303ff3433" />
+
+<br>
+
 
 #### 5.3.4.7 Team Collaboration Insights during Sprint
 
@@ -2175,12 +2190,15 @@ Durante el Sprint 4, el equipo de desarrollo mantuvo una comunicación constante
 
 *GitHub Insights del Sprint 4:*
 
-Insights del reporte:
+Insights del reporte: <br>
+
+<img width="912" height="456" alt="image" src="https://github.com/user-attachments/assets/7f5eb52c-e2cb-4d08-97d6-48d04708fe26" />
+
+<br>
 
 Insights del frontend:
 
 Insights del backend:
-
 
 
 #### 5.3.4.8 Kanban Board
@@ -2206,6 +2224,9 @@ La colaboración efectiva y el uso de herramientas adecuadas fueron clave para e
 ## 5.4. Microservices Deployment
 
 #### 5.4.1. Cloud Architecture Diagram
+
+![WhatsApp Image 2025-11-30 at 11 23 07 PM](https://github.com/user-attachments/assets/f666451b-c4d6-400d-a050-335bf202c992)
+
 
 #### 5.4.2. Cloud Architecture Deployment in Azure
 
