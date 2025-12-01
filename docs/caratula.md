@@ -224,7 +224,7 @@ Para el desarrollo de este informe se utilizó GitHub como plataforma de colabor
 
 **TF**
 <br>
-
+![WhatsApp Image 2025-11-30 at 7 44 52 PM](https://github.com/user-attachments/assets/120b86a9-afa8-4618-8b98-d9d8b8a74b89)
 <br>
 
 ## Student Outcome
