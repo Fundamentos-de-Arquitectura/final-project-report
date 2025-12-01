@@ -2222,8 +2222,48 @@ Insights del reporte: <br>
 
 Insights del frontend:
 
+![insightFrontEnd.png](../assets/insightFrontEnd.png)
+
 Insights del backend:
 
+**Subscription-Service:**
+![insightSubscription.png](../assets/insightSubscription.png)
+
+**Profiles-Service:**
+
+![insightProfiles.png](../assets/insightProfiles.png)
+
+**Orders-Service:**
+
+![insightOrder.png](../assets/insightOrder.png)
+
+**Menu-Service:**
+
+![insightMenu.png](../assets/insightMenu.png)
+
+**Inventory-Service:**
+
+![insightInventory.png](../assets/insightInventory.png)
+
+**IAM-Service:**
+
+![insightIAM.png](../assets/insightIAM.png)
+
+**Service-Registry:**
+
+![insightServiceRegistry.png](../assets/insightServiceRegistry.png)
+
+**Config-Server:**
+
+![insightConfigServer.png](../assets/insightConfigServer.png)
+
+**Api-Gateway:**
+
+![insightAPIGateway.png](../assets/insightAPIGateway.png)
+
+**Message-Broker:**
+
+![insightMessageBroker.png](../assets/insightMessageBroker.png)
 
 #### 5.3.4.8 Kanban Board
 Durante el Sprint 4 se empleó un tablero Kanban en Trello para gestionar las historias de usuario, priorizar tareas y monitorear el avance del sprint.
