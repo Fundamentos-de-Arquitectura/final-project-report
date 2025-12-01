@@ -101,28 +101,28 @@ El atributo más crítico es la Usabilidad, ya que el usuario objetivo no tiene 
 
 ## Requisitos Funcionales (RF):
 
-| ID   | Nombre                             | Descripción                                                                                                                | Relación                        |
-|------|------------------------------------|----------------------------------------------------------------------------------------------------------------------------|---------------------------------|
-| RF01 | Búsqueda de platos                 | El sistema debe permitir la búsqueda de platos existentes por nombre en tiempo real.                                       | Gestión de Menú                 |
-| RF02 | Mensaje de búsqueda vacía          | El sistema debe mostrar mensajes cuando no se encuentren resultados en la búsqueda.                                        | QA / Usabilidad                 |
-| RF03 | Limpiar búsqueda                   | El sistema debe permitir limpiar el campo de búsqueda y mostrar nuevamente todos los platos.                               | Gestión de Menú                 |
-| RF04 | Visualización de menú              | El sistema debe mostrar una tabla con todos los platos registrados, incluyendo nombre, descripción, precio e ingredientes. | Gestión de Menú                 |
-| RF05 | Lista vacía de menú                | El sistema debe mostrar un mensaje cuando no existan platos y habilitar el formulario para añadir nuevos.                  | QA / Gestión de Menú            |
-| RF06 | Gestión de menú                    | El sistema debe permitir agregar, editar y eliminar platos del menú.                                                       | Gestión de Menú                 |
-| RF07 | Visualización de órdenes           | El sistema debe mostrar en una tabla todas las órdenes registradas, incluyendo: mesa, platos, precio total y fecha.        | Gestión de Órdenes              |
-| RF08 | Orden cronológica                  | El sistema debe ordenar las órdenes de forma cronológica por defecto.                                                      | Gestión de Órdenes              |
-| RF09 | Cálculo automático de totales      | El sistema debe calcular automáticamente el precio total por plato (precio unitario × cantidad).                           | Gestión de Órdenes              |
-| RF10 | Reportes diarios                   | El sistema debe mostrar reportes de ingresos y gastos diarios con porcentaje de variación respecto al día anterior.        | Gestión de Reportes             |
-| RF11 | Navegación entre períodos          | El sistema debe permitir alternar entre reportes diarios, semanales y mensuales mediante pestañas de navegación.           | Gestión de Reportes             |
-| RF12 | Reporte de gastos por categoría    | El sistema debe mostrar el desglose de gastos por categorías con representación visual (gráficos o diagramas).             | Gestión de Reportes             |
-| RF13 | Comparación de categorías de gasto | El sistema debe permitir comparar visualmente categorías de gasto para identificar la de mayor impacto.                    | Gestión de Reportes             |
+| ID   | Nombre                             | Descripción                                                                                                                | Relación             |
+|------|------------------------------------|----------------------------------------------------------------------------------------------------------------------------|----------------------|
+| RF01 | Búsqueda de platos                 | El sistema debe permitir la búsqueda de platos existentes por nombre en tiempo real.                                       | Gestión de Menú      |
+| RF02 | Búsqueda vacía                     | El sistema debe mostrar una lista vacía cuando no se encuentren platos relacionados a la búsqueda.                         | QA / Usabilidad      |
+| RF03 | Limpiar búsqueda                   | El sistema debe permitir limpiar el campo de búsqueda y mostrar nuevamente todos los platos.                               | Gestión de Menú      |
+| RF04 | Visualización de menú              | El sistema debe mostrar una tabla con todos los platos registrados, incluyendo nombre, descripción, precio e ingredientes. | Gestión de Menú      |
+| RF05 | Lista vacía de menú                | El sistema debe habilitar el formulario para añadir nuevos.                                                                | QA / Gestión de Menú |
+| RF06 | Gestión de menú                    | El sistema debe permitir agregar platos del menú.                                                                          | Gestión de Menú      |
+| RF07 | Visualización de órdenes           | El sistema debe mostrar en una tabla todas las órdenes registradas, incluyendo: mesa, platos, precio total y fecha.        | Gestión de Órdenes   |
+| RF08 | Orden cronológica                  | El sistema debe ordenar las órdenes de forma cronológica por defecto.                                                      | Gestión de Órdenes   |
+| RF09 | Cálculo automático de totales      | El sistema debe calcular automáticamente el precio total por plato (precio unitario × cantidad).                           | Gestión de Órdenes   |
+| RF10 | Reportes diarios                   | El sistema debe mostrar reportes de ingresos y gastos diarios con porcentaje de variación respecto al día anterior.        | Gestión de Reportes  |
+| RF11 | Navegación entre períodos          | El sistema debe permitir alternar entre reportes diarios, semanales y mensuales mediante pestañas de navegación.           | Gestión de Reportes  |
+| RF12 | Reporte de gastos por categoría    | El sistema debe mostrar el desglose de gastos por categorías con representación visual (gráficos o diagramas).             | Gestión de Reportes  |
+| RF13 | Comparación de categorías de gasto | El sistema debe permitir comparar visualmente categorías de gasto para identificar la de mayor impacto.                    | Gestión de Reportes  |
 
 ## Requisitos No Funcionales (RNF):
 
 | ID    | Categoría      | Descripción                                                                                                                             | Relación           |
 |-------|----------------|-----------------------------------------------------------------------------------------------------------------------------------------|--------------------|
 | RNF01 | Usabilidad     | La interfaz debe ser intuitiva y accesible para usuarios sin conocimientos contables o técnicos en un tiempo máximo de 3 horas.         | QA / Usabilidad    |
-| RNF02 | Usabilidad     | Los gráficos y reportes deben presentarse en formato visual claro, con etiquetas y leyendas comprensibles.                              | QA / Reportes      |
+| RNF02 | Usabilidad     | Los gráficos y reportes deben presentarse en formato visual claro, con etiquetas y leyendas 100% comprensibles.                         | QA / Reportes      |
 | RNF03 | Usabilidad     | El sistema debe permitir la navegación entre módulos instantáneamente.                	                                                 | QA / Usabilidad    |
 | RNF04 | Rendimiento    | El sistema debe responder a las búsquedas de platos en menos de 2 segundos.                                                             | QA / Rendimiento   |
 | RNF05 | Rendimiento    | La carga de reportes no debe superar los 5 segundos, incluso con datos de un año de operación.                                          | QA / Reportes      |
