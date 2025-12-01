@@ -91,7 +91,7 @@ Durante la implementación se desarrolló una **librería interna reutilizable**
 
 - Estructura estandarizada de respuestas JSON.
 - Validación de entrada de datos.
-- Middleware de autenticación basado en JWT.
+- Middleware de autenticación basada en JWT.
 
 Esto permitió mantener consistencia, minimizar redundancia y simplificar la depuración.
 
@@ -1663,7 +1663,7 @@ El equipo completó con éxito la integración del frontend con cada uno de los 
 #### 5.3.4.1 Sprint Backlog 4
 
 **Objetivo del Sprint:**  
-Deployar la aplicación *FoodFlow* en un entorno cloud, asegurando su correcta funcionalidad y accesibilidad para los usuarios finales.
+Desplegar la aplicación *FoodFlow* en un entorno cloud, asegurando su correcta funcionalidad y accesibilidad para los usuarios finales.
 
 **Avance general:**  
 En este sprint, el equipo se centrará en el despliegue de la aplicación completa, incluyendo tanto el backend como el frontend.
@@ -2125,16 +2125,16 @@ Feature: Crear Cuenta Nueva
 
 #### 5.3.4.4 Execution Evidence for Sprint Review
 
-Durante el Sprint 4 se realizaron pruebas de integración y de aceptación para asegurar que todos los componentes del sistema funcionaran correctamente tras el despliegue en el entorno cloud.
+Durante el Sprint 4 se realizaron pruebas de aceptación para asegurar que todos los componentes del sistema funcionaran correctamente tras el despliegue en el entorno cloud.
 
 Los resultados de la ejecución validaron que todas las funcionalidades implementadas en los sprints anteriores operaban según lo esperado, sin errores críticos.
 
 
 #### 5.3.4.5 Microservices Documentation Evidence for Sprint Review
 
-La aplicación *FoodFlow* fue desplegada en un entorno cloud utilizando Azure, asegurando su accesibilidad y rendimiento óptimo.
+Los microservicios de *FoodFlow* fueron desplegados en un entorno cloud utilizando Azure, asegurando su accesibilidad y rendimiento óptimo.
 
-En este sprint, el foco principal fue el despliegue de la aplicación completa, incluyendo tanto el backend como el frontend.
+En este sprint, el foco principal fue el despliegue de los microservicios.
 
 
 
@@ -2188,10 +2188,10 @@ Durante el Sprint 4 se empleó un tablero Kanban en Trello para gestionar las hi
 
 El tablero se estructuró con las siguientes columnas:
 
-**To Do:** Tareas seleccionadas para el sprint actual.
-**Doing:** Tareas en desarrollo.
-**To Review:** Tareas realizadas, pendientes de revisión.
-**Done:** Tareas completadas y revisadas.
+**To Do:** Tareas seleccionadas para el sprint actual.<br>
+**Doing:** Tareas en desarrollo.<br>
+**To Review:** Tareas realizadas, pendientes de revisión.<br>
+**Done:** Tareas completadas y revisadas.<br>
 **URL del tablero de Trello:** https://trello.com/invite/b/692a5bac11db449bd1d10a17/ATTI73c620683565db9d0a99685c05de2e2a8BFA5BF9/sprint-4-foodflow
 
 **Captura del tablero Kanban:**
@@ -2199,6 +2199,6 @@ El tablero se estructuró con las siguientes columnas:
 ![Trello_Kanban_Sprint_4.jpg](../assets/Trello_Kanban_Sprint_4.jpg)
 
 **Conclusión del Sprint 4:**
-El equipo logro deplegar exitosamente la aplicación en un entorno cloud, 
+El equipo logro deplegar exitosamente los microservicios usando Azure, 
 completando todas las historias de usuario planificadas y asegurando la calidad del software a través de pruebas exhaustivas. 
 La colaboración efectiva y el uso de herramientas adecuadas fueron clave para el éxito del sprint.
