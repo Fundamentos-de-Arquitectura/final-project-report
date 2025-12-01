@@ -807,7 +807,7 @@ IzyPay → [PaymentService] (webhook confirmación)
 
 ## 4.3.8 Iteration 8: Cloud Deployment & Scalability
 
-
+![WhatsApp Image 2025-11-30 at 8 46 34 PM (1)](https://github.com/user-attachments/assets/1d3498b9-9b71-48e0-880b-26bd56df2827)
 
 ### 4.3.8.1 Architectural Design Backlog 8
 
