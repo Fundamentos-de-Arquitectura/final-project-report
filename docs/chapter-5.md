@@ -1668,8 +1668,8 @@ Desplegar la aplicación *FoodFlow* en un entorno cloud, asegurando su correcta 
 **Avance general:**  
 En este sprint, el equipo se centrará en el despliegue de la aplicación completa, incluyendo tanto el backend como el frontend.
 
-**Herramienta utilizada:** Trello  
-**URL del tablero:**
+**Herramienta utilizada:** Trello  <br>
+**URL del tablero:** https://trello.com/invite/b/692a5bac11db449bd1d10a17/ATTI73c620683565db9d0a99685c05de2e2a8BFA5BF9/sprint-4-foodflow <br>
 
 <table>
     <tr>
